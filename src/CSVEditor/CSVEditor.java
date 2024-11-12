@@ -4,6 +4,8 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CSVEditor extends CSVReader{
     public CSVEditor() throws Exception{
@@ -52,8 +54,83 @@ public class CSVEditor extends CSVReader{
         currentLines.remove(lineIndex);
         return true;
     }
+    
+    public boolean operationsDB(int mode, ArrayList<String> newLine, int lineIndex){
+        switch (mode) {
+            case 1: // ADD
+            {
+                String tempLine = inputLineFormatter(newLine);
+                if (tempLine == null) return false;
+                try {
+                    if (addNewLine(tempLine)) {
+                        if (DEBUG) System.out.println("addNewLine Done");
+                        if (overcast()) {
+                            if (DEBUG) System.out.println("overcast Done");
+                            return true;
+                        }
+                        return false;
+                    }
+                    else {
+                        if (DEBUG) System.out.println("addNewLine failed");
+                        return false;
+                    }
+                } catch (Exception e) {
+                    if (DEBUG) e.printStackTrace();
+                    return false;
+                }
+            }
+            case 2: // EDIT
+            {
+                String tempLine = inputLineFormatter(newLine);
+                if (tempLine == null) return false;
+                try {
+                    if (editLine(lineIndex, tempLine)) {
+                        if (overcast()) {
+                            if (DEBUG) System.out.println("overcast Done");
+                            return true;
+                        }
+                        return false;
+                    }
+                    else {
+                        if (DEBUG) System.out.println("editLine failed");
+                        return false;
+                    }
+                } catch (Exception e) {
+                    if (DEBUG) e.printStackTrace();
+                    return false;
+                }
+            }
+
+            case 3: // DELETE
+                try{
+                    if (deleteLine(lineIndex)) {
+                        if (overcast()) {
+                            if (DEBUG) System.out.println("overcast Done");
+                            return true;
+                        }
+                        return false;
+                    }
+                    else {
+                        if (DEBUG) System.out.println("deleteLine failed");
+                        return false;
+                    }
+                } catch (Exception e) {
+                    if (DEBUG) e.printStackTrace();
+                    return false;
+                }
+
+            default:
+                if (DEBUG) System.out.println("invalid mode");
+                return false;
+        }
+    }
 
     protected boolean overcast() {
+        if (currentLines == null) {
+            if (DEBUG) System.out.println("currentLines is null");
+            readAll();
+        }
+
         if (!isUserCSVExists()) usersCSVCreator();
         if (!isLastCSVExists()) lastCSVCreator();
         if (!isTempUserCSVExists()) tempUsersCSVCreator();
@@ -77,7 +154,61 @@ public class CSVEditor extends CSVReader{
         if (DEBUG) System.out.println("renamed temp.csv to user.csv");
         if (DEBUG) System.out.println("Done");
         return true;
+    }
 
+    public ArrayList<String> outputLineFormatter(int lineIndex){
+        if (currentLines == null) readAll();
+        if (lineIndex < 0 || lineIndex > currentLines.size() - 1) return null;
+        ArrayList<String> line =  new ArrayList<>(List.of(currentLines.get(lineIndex).split(",")));
+        if (line.size() >= 10) return line;
+        return null;
+    }
+
+//    protected boolean saveAndUpdate(){
+//        if (currentLines == null) {
+//            if (DEBUG) System.out.println("currentLines is null");
+//            return false;
+//        }
+//        if (overcast()) {
+//            if (DEBUG) System.out.println("overcast Done");
+//        } else {
+//            if (DEBUG) System.out.println("overcast failed");
+//            return false;
+//        }
+//        readAll();
+//    }
+    
+    private boolean isValidString(String str){
+        return str != null && !str.isEmpty();
+    }
+    
+    private boolean isValidDigit(String str){
+        if (isValidString(str)) {
+            try {
+                Integer.parseInt(str);
+                return true;
+            } catch (NumberFormatException e){
+                return false;
+            }
+        }
+        return false;
+    }
+    
+    protected boolean isFormatValid(ArrayList<String> line){
+        if (line.size() < 10) return false;
+        return (isValidString(line.get(0))) && (isValidString(line.get(1))) && (isValidString(line.get(2)))
+                && (isValidDigit(line.get(3)))
+                && (isValidString(line.get(4))) && (isValidDigit(line.get(5)))
+                && (isValidString(line.get(6))) && (isValidDigit(line.get(7)))
+                && (isValidString(line.get(8))) && (isValidDigit(line.get(9)));
+    }
+
+    public String inputLineFormatter(ArrayList<String> line){
+        if (currentLines == null) readAll();
+        if (isFormatValid(line)) {
+            return String.join(",", line);
+        }
+        return null;
     }
 
     public static void main(String[] args) {

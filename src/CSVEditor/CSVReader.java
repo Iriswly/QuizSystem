@@ -13,6 +13,11 @@ public class CSVReader extends CSVBase {
         super();
     }
 
+    public int getLineCount(){
+        if (currentLines == null) return 0;
+        else return currentLines.size();
+    }
+
     protected boolean readAll() {
         currentLines.clear();
         if (isUserCSVExists()) {
@@ -46,6 +51,7 @@ public class CSVReader extends CSVBase {
         return currentLines.get(index);
     }
 
+    // Warning: this method would be ABORTED!!! (USELESS)
     public String nextLine() throws Exception {
         if (currentLineIndex > currentLines.size() - 1) {
             currentLineIndex = 0;
@@ -145,6 +151,8 @@ public class CSVReader extends CSVBase {
     }
 
     public ArrayList<Integer> matchCol(String matchWord, int colIndex, int mode) {
+        // I recommend using this function to search the exact unit
+        // because there is checking step in the function
         if (colIndex < 0 || colIndex > MAX_COL_NUM - 1) return null;
 
         return switch (mode) {
@@ -194,13 +202,20 @@ public class CSVReader extends CSVBase {
 
     public ArrayList<Integer> matchCol_fuzzy_unit_first(String matchWord, int colIndex) {
         ArrayList<Integer> allMatches = matchCol_fuzzy_unit_all(matchWord, colIndex);
-        return new ArrayList<>(allMatches.subList(0, 1));
+        if (allMatches.isEmpty()) {
+            return new ArrayList<>();
+        }
+        return new ArrayList<>(allMatches.subList(0, Math.min(1, allMatches.size()))); // 返回第一个匹配项
     }
 
     public ArrayList<Integer> matchCol_exactly_unit_first(String matchWord, int colIndex) {
         ArrayList<Integer> allMatches = matchCol_exactly_unit_all(matchWord, colIndex);
-        return new ArrayList<>(allMatches.subList(0, 1));
+        if (allMatches.isEmpty()) {
+            return new ArrayList<>();
+        }
+        return new ArrayList<>(allMatches.subList(0, Math.min(1, allMatches.size()))); // 返回第一个匹配项
     }
+
 
     public static void main(String[] args) {
         try {
