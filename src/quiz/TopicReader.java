@@ -101,37 +101,8 @@ public class TopicReader {
     }
 
     public static void main(String[] args) {
-        // 问题1
-        Option option1 = new Option("Mars", false);
-        Option option2 = new Option("Venus", false);
-        Option option3 = new Option("Mercury", true);
-        Option option4 = new Option("Jupiter", false);
-        Option[] options1 = {option1, option2, option3, option4};
-        Question astronomyQuestion1 = new Question("astronomy", Difficulty.MEDIUM,
-                "Which planet is the closest to the Sun?", options1);
-
-        // 问题3
-        Option option5 = new Option("Black Hole", true);
-        Option option6 = new Option("White Dwarf", false);
-        Option option7 = new Option("Neutron Star", false);
-        Option option8 = new Option("Red Giant", false);
-        Option[] options2 = {option5, option6, option7, option8};
-        Question astronomyQuestion2 = new Question("astronomy", Difficulty.HARD,
-                "What do we call a region in space where the gravitational pull is so strong that nothing can escape?", options2);
-
-        // 问题3
-        Option option9 = new Option("Existence is an illusion", false);
-        Option option10 = new Option("Cogito, ergo sum", true);
-        Option option11 = new Option("Morality is subjective", false);
-        Option option12 = new Option("I don't know", false);
-        Option[] options3 = {option9, option10, option11, option12};
-        Question philosophyQuestion1 = new Question("philosophy", Difficulty.EASY,
-                "What is Descartes famous philosophical statement?", options3);
-
-        // 创建 QuestionProvider 实例并添加问题
-        QuestionProvider questionProvider = new QuestionProvider(astronomyQuestion1);
-        questionProvider.addQuestion(astronomyQuestion2);
-        questionProvider.addQuestion(philosophyQuestion1);
+        // 创建 QuestionProvider 实例
+        QuestionProvider questionProvider = new QuestionProvider();
 
         // 显示主题选择
         TopicReader topicReader = new TopicReader();
@@ -139,14 +110,18 @@ public class TopicReader {
         topicReader.selectTopic();
 
         // 根据选择的主题获取问题
-        String[][] selectedQuestions = questionProvider.getSelectedQuestions(topicReader);
+        String selectedTopic = topicReader.getTopicToSelect();
+        String[][] selectedQuestions = questionProvider.getSelectedQuestions(selectedTopic);
+
         if (selectedQuestions != null && selectedQuestions.length > 0) {
             for (int row = 0; row < selectedQuestions.length; row++) {
-                System.out.println("Question " + (row+1) + ": ");
-                for (int col = 0; col < selectedQuestions[row].length; col++) {
-                    System.out.println("selectedQuestions[" + row + "][" + col + "] = " + selectedQuestions[row][col]);
+                if (selectedQuestions[row] != null) { // 检查非空行
+                    System.out.println("Question " + (row + 1) + ": " + selectedQuestions[row][3]); // 显示问题陈述
+                    for (int col = 0; col < selectedQuestions[row].length; col++) {
+                        System.out.println("selectedQuestions[" + row + "][" + col + "]: " + selectedQuestions[row][col]);
+                    }
+                    System.out.println();
                 }
-                System.out.println();
             }
         } else {
             System.out.println("No questions found for the selected topic.");
@@ -154,3 +129,5 @@ public class TopicReader {
     }
 
 }
+
+
