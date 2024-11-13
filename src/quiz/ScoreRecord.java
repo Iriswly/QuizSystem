@@ -48,7 +48,7 @@ public class ScoreRecord {
                 boolean isCorrect = checkAnswer(finalQuestions[i], userAnswer);
                 if (isCorrect) {
                     System.out.println("Correct!");
-                    score++;
+                    score=score+100/finalQuestions.length;
                 } else {
                     System.out.println("Incorrect!");
                 }
@@ -57,7 +57,7 @@ public class ScoreRecord {
             }
 
             // 显示最终得分
-            System.out.println("Your final score: " + score + "/" + finalQuestions.length);
+            System.out.println("Your final score: " + score + "/100" );
         }
 
 
