@@ -177,13 +177,13 @@ public class InsertQuestion {
 
 
         System.out.println("Inserting question 1...");
-        questionProvider.addQuestion(astronomyQuestion1);
+        //questionProvider.addQuestion(astronomyQuestion1);
 
         System.out.println("Inserting question 2...");
-        questionProvider.addQuestion(astronomyQuestion2);
+        //questionProvider.addQuestion(astronomyQuestion2);
 
         System.out.println("Inserting question 3...");
-        questionProvider.addQuestion(philosophyQuestion1);
+        //questionProvider.addQuestion(philosophyQuestion1);
 
         System.out.println("Questions have been inserted successfully!");
     }
