@@ -2,17 +2,27 @@ package CSVEditor;
 
 import java.io.File;
 
+/*
+ * CSVBase 的作用：
+ * 提供文件路径，文件是否存在等基本功能
+ */
 public class CSVBase {
     protected final String RESOURCES_PATH = "resources";
     protected final String FILEPATH = RESOURCES_PATH + "/users.csv";
     protected final String TEMP_FILEPATH = RESOURCES_PATH + "/temp_users.csv";
     protected final String LAST_FILEPATH = RESOURCES_PATH + "/last.csv";
     protected final int MAX_COL_NUM = 10; // remember to -1 when using it
+
+    // DEBUG 模式默认打开用来输出日志
     protected static final boolean DEBUG = true;
 
     private File file;
     private File temp_file;
 
+
+    /* constructor
+     * 检查users.csv 是否存在，如果不存在就创建，创建失败就报错 Exception
+     */
     public CSVBase() throws Exception{
         this.file = new File(FILEPATH);
         if (!isUserCSVExists()){
@@ -29,6 +39,10 @@ public class CSVBase {
         }
     }
 
+    /*
+     * 判断users.csv文件是否存在
+     * @return boolean
+     */
     public boolean isUserCSVExists() {
         file = new File(FILEPATH);
         if (file.exists()){
@@ -38,6 +52,10 @@ public class CSVBase {
         return false;
     }
 
+    /*
+     * 判断temp_users.csv文件是否存在
+     * @return boolean
+     */
     public boolean isTempUserCSVExists() {
         temp_file  = new File(TEMP_FILEPATH);
         if (temp_file.exists()){
@@ -47,6 +65,10 @@ public class CSVBase {
         return false;
     }
 
+    /*
+     * 判断last.csv文件是否存在
+     * @return boolean
+     */
     public boolean isLastCSVExists() {
         File lastFile = new File(LAST_FILEPATH);
         if (file.exists()) {
@@ -56,6 +78,9 @@ public class CSVBase {
         return false;
     }
 
+    /*
+    创建resources路径，多用于resources不存在时的修补
+     */
     private boolean pathCreator() {
         File path = new File(RESOURCES_PATH);
         if (!path.exists()) {
@@ -72,6 +97,12 @@ public class CSVBase {
         return true;
     }
 
+    /*
+    根据传入的路径创建csv文件
+    即 既可以创建temp_users.csv 也可以创建users.csv
+    先检查resources路径存在与否，如果不存在创建一个，再创建文件
+    创建失败就报错或者返回false
+     */
     private boolean CSVCreator(String relevantPath) {
         if (!pathCreator()) {
             if (DEBUG) System.out.println("create resource folder Failed");
@@ -94,21 +125,33 @@ public class CSVBase {
         }
     }
 
+    /*
+    创建users.csv文件
+     */
     protected boolean usersCSVCreator() {
         if (!isUserCSVExists()) return CSVCreator(FILEPATH);
         return true;
     }
 
+    /*
+    创建temp_users.csv文件
+     */
     protected boolean tempUsersCSVCreator() {
         if (!isTempUserCSVExists()) return CSVCreator(TEMP_FILEPATH);
         else return true;
     }
 
+    /*
+     * 创建last.csv文件
+     */
     protected boolean lastCSVCreator() {
         if (!isLastCSVExists()) return CSVCreator(LAST_FILEPATH);
         else return true;
     }
 
+    /*
+     * 只是测试
+     */
     public static void main(String[] args) {
         // TODO: MAY BE A GENERAL LOGGER WILL BE IMPLEMENTED
         // LIKE Logger DEBUGGER_LOGGER = Logger.getLogger(Debugger.class.getName());

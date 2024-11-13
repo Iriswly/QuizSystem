@@ -12,6 +12,7 @@ public class CSVEditor extends CSVReader{
         super();
     }
 
+    // 将读入currentLines的数据写入temp_users.csv
     private boolean dumpAllToTemp() {
         if (!isTempUserCSVExists()) tempUsersCSVCreator();
         if (currentLines == null) {
@@ -30,6 +31,7 @@ public class CSVEditor extends CSVReader{
         return true;
     }
 
+    // 修改特定的行， 注意输入的line得是已经格式化好的
     protected boolean editLine(int lineIndex, String newLine) throws IndexOutOfBoundsException{
         if (currentLines == null) throw new IndexOutOfBoundsException("invalid currentLines");
         try {
@@ -42,19 +44,22 @@ public class CSVEditor extends CSVReader{
         return true;
     }
 
+    // 添加一行, 注意输入的line得是已经格式化好的
     protected boolean addNewLine(String newLine) throws Exception{
         if (currentLines == null) throw new Exception("invalid currentLines");
         currentLines.add(newLine);
         return true;
     }
 
+    // 删除一行
     protected boolean deleteLine(int lineIndex) throws Exception{
         if (currentLines == null) throw new Exception("invalid currentLines");
         if (lineIndex < 0 || lineIndex > currentLines.size() - 1) return false;
         currentLines.remove(lineIndex);
         return true;
     }
-    
+
+    // 提交修改到数数据库的外界用的api （虽然user类中又对它包装了一次）
     public boolean operationsDB(int mode, ArrayList<String> newLine, int lineIndex){
         switch (mode) {
             case 1: // ADD
@@ -125,6 +130,9 @@ public class CSVEditor extends CSVReader{
         }
     }
 
+    // 提交修改到数据库
+    // 先将users.csv 的修改提交到last.csv （历史记录，以后可能做备份恢复功能）
+    // 再将temp_csv 的修改提交到users.csv
     protected boolean overcast() {
         if (currentLines == null) {
             if (DEBUG) System.out.println("currentLines is null");
@@ -156,6 +164,7 @@ public class CSVEditor extends CSVReader{
         return true;
     }
 
+    // 数据库对外的输出格式的api
     public ArrayList<String> outputLineFormatter(int lineIndex){
         if (currentLines == null) readAll();
         if (lineIndex < 0 || lineIndex > currentLines.size() - 1) return null;
@@ -177,11 +186,13 @@ public class CSVEditor extends CSVReader{
 //        }
 //        readAll();
 //    }
-    
+
+    // 辅助函数
     private boolean isValidString(String str){
         return str != null && !str.isEmpty();
     }
-    
+
+    // 辅助函数
     private boolean isValidDigit(String str){
         if (isValidString(str)) {
             try {
@@ -193,7 +204,8 @@ public class CSVEditor extends CSVReader{
         }
         return false;
     }
-    
+
+    // 验证外部输入是否有效
     protected boolean isFormatValid(ArrayList<String> line){
         if (line.size() < 10) return false;
         return (isValidString(line.get(0))) && (isValidString(line.get(1))) && (isValidString(line.get(2)))
@@ -203,6 +215,7 @@ public class CSVEditor extends CSVReader{
                 && (isValidString(line.get(8))) && (isValidDigit(line.get(9)));
     }
 
+    // 外界的输入进入数据库的API
     public String inputLineFormatter(ArrayList<String> line){
         if (currentLines == null) readAll();
         if (isFormatValid(line)) {

@@ -5,19 +5,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * CSVReader
+ * 提供将users.csv 文件读入currentLines的函数
+ * 提供读取指定行
+ * 提供显示所有行（调试用）
+ * provides searching methods to get the line index of target line
+ */
 public class CSVReader extends CSVBase {
     protected List<String> currentLines = new ArrayList<>();
     protected int currentLineIndex;
 
     public CSVReader() throws Exception {
-        super();
+        super(); // 简单初始化一下CSVBase
     }
 
-    public int getLineCount(){
-        if (currentLines == null) return 0;
-        else return currentLines.size();
-    }
-
+    // 将用户信息保存在currentLines中
     protected boolean readAll() {
         currentLines.clear();
         if (isUserCSVExists()) {
@@ -38,12 +41,18 @@ public class CSVReader extends CSVBase {
         return true;
     }
 
+    // 获取一共有多少行 （多少个用户）
+    public int getLineCount(){
+        if (currentLines == null) return 0;
+        else return currentLines.size();
+    }
+
+    // 读取指定的一行 (使用行号指定）
     private String readLine(int index) throws Exception {
         if (currentLines == null) {
             if (DEBUG) System.out.println("invalid currentLines");
             throw new Exception("invalid currentLines");
         }
-        // the first line is reserved as header
         if (index < 0 || index > currentLines.size() - 1) {
             if (DEBUG) System.out.println("invalid index of line");
             throw new Exception("invalid index of line");
@@ -51,6 +60,7 @@ public class CSVReader extends CSVBase {
         return currentLines.get(index);
     }
 
+    // 读取下一行,可以用于遍历，但是现在没用了
     // Warning: this method would be ABORTED!!! (USELESS)
     public String nextLine() throws Exception {
         if (currentLineIndex > currentLines.size() - 1) {
@@ -62,6 +72,7 @@ public class CSVReader extends CSVBase {
         return readLine(currentLineIndex);
     }
 
+    // 展示所有行, 用于调试（DEBUG
     protected void showLines() {
         if (currentLines == null) {
             if (DEBUG) System.out.println("the lines are empty");
@@ -72,6 +83,7 @@ public class CSVReader extends CSVBase {
         }
     }
 
+    // 搜索行，返回行号，返回null表示没有找到
     public ArrayList<Integer> matchLine(String matchWord, int mode) {
         // the invalid hint would be provided as the null value
         // when the search result is zero, the returnedValue.size should be 0
@@ -87,6 +99,10 @@ public class CSVReader extends CSVBase {
         mode 2 = search all lines fuzzy ("Abc" = "ABC" = "abc")
         mode 3 = search the first line with unit matches
         mode 4 = search all lines that has the unit that matches (RECOMMENDED!)
+        mode 1 : 分辨大小写的搜索行内容，返回所有符合的行
+        mode 2 : 模糊搜索行内容，返回所有符合的行
+        mode 3 = 分辨大小写的搜索一行内的单元格，且只返回第一个发现的符合的行
+        mode 4 = 分辨大小写的搜索一行内的单元格，且返回所有符合的行
          */
         return switch (mode) {
             case 1 -> matchLines_exactly_all(matchWord, false);
@@ -150,15 +166,21 @@ public class CSVReader extends CSVBase {
         return matchResult;
     }
 
+    // 在指定的列中搜索符合的项
+    // 建议在第零列搜索Nickname用于用户独特性
     public ArrayList<Integer> matchCol(String matchWord, int colIndex, int mode) {
         // I recommend using this function to search the exact unit
         // because there is checking step in the function
         if (colIndex < 0 || colIndex > MAX_COL_NUM - 1) return null;
 
         return switch (mode) {
+            // 模糊搜索,返回所有符合的行号
             case 1 -> matchCol_fuzzy_unit_all(matchWord, colIndex);
+            // 精确搜索,返回所有符合的行号
             case 2 -> matchCol_exactly_unit_all(matchWord, colIndex);
+            // 模糊搜索,返回第一个符合的行号
             case 3 -> matchCol_fuzzy_unit_first(matchWord, colIndex);
+            // 精确搜索,返回第一个符合的行号
             case 4 -> matchCol_exactly_unit_first(matchWord, colIndex);
             default -> {
                 if (DEBUG) System.out.println("invalid mode");
@@ -167,6 +189,7 @@ public class CSVReader extends CSVBase {
         };
     }
 
+    // 将由行组成的数据变为由一个个单元格组成的二维数组
     private ArrayList<ArrayList<String>> convert2D() {
         ArrayList<ArrayList<String>> data = new ArrayList<>();
         for (String line : currentLines) {
