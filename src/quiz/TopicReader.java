@@ -209,7 +209,7 @@ public class TopicReader {
         //！！！！！！！！！！！题库更新后改成10
 
         // 显示最终选中的题目
-        if (finalQuestions.length == 0) {
+        /*if (finalQuestions.length == 0) {
             System.out.println("No questions found for the selected topic and difficulty.");
         } else {
             for (int i = 0; i < finalQuestions.length; i++) {
@@ -223,6 +223,9 @@ public class TopicReader {
                 }
                 System.out.println();
             }
-        }
+        }*/
+        // 创建 QuizGame 实例并开始答题
+        ScoreRecord Startquiz = new ScoreRecord();
+        Startquiz.displayQuestionsAndScore(finalQuestions);
     }
 }
