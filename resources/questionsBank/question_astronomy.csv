@@ -1,0 +1,3 @@
+ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,Option4,Correct4
+0,astronomy,MEDIUM,Which planet is the closest to the Sun?,Mars,false,Venus,false,Mercury,true,Jupiter,false
+1,astronomy,HARD,What do we call a region in space where the gravitational pull is so strong that nothing can escape?,Black Hole,true,White Dwarf,false,Neutron Star,false,Red Giant,false

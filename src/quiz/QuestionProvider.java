@@ -1,120 +1,133 @@
 package quiz;
 
+import CSVEditor_QuestionSystem.CSVBase;
 import xjtlu.cpt111.assignment.quiz.model.Question;
 import xjtlu.cpt111.assignment.quiz.model.Option;
+
+import Question.InsertQuestion;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class QuestionProvider {
 
     private String[][] questionStorage;
-    private int questionCount;
-    private int capacity;
+    private int questionCount = 0;
+    private int capacity = 10; // 固定容量为10，后续可扩展
+    private CSVBase csvBase;
 
-    public QuestionProvider(Question initialQuestion) {
-
-        // 初始化问题存储
-        this.capacity = 10;
+    public QuestionProvider() {
         this.questionStorage = new String[this.capacity][12];
         this.questionCount = 0;
-
-        // 添加问题
-        addQuestion(initialQuestion);
-    }
-
-    public boolean belongsToTopic(Question question) {
-        return question.getTopic() != null;
-    }
-
-    public boolean hasStatement(Question question) {
-        return question.getQuestionStatement() != null && !question.getQuestionStatement().isEmpty();
-    }
-
-    public boolean hasMultipleChoices(Question question) {
-        Option[] options = question.getOptions();
-        return options != null && options.length > 1;
-    }
-
-    public boolean oneCorrectAnswer(Question question) {
-        Option[] options = question.getOptions();
-        boolean[] trueFalseList = new boolean[options.length];
-        for (int i = 0; i < options.length; i++) {
-            trueFalseList[i] = options[i].isCorrectAnswer();
+        try {
+            this.csvBase = new CSVBase();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
-        int correctNum = 0;
-        for (int i = 0; i < options.length; i++) {
-            if (trueFalseList[i]) {
-                correctNum++;
-            }
-        }
-        return correctNum == 1;
-
-    }
-
-    public boolean passValidation(Question question) {
-        return this.belongsToTopic(question) && this.hasStatement(question) && this.hasMultipleChoices(question) && this.oneCorrectAnswer(question);
     }
 
     public void addQuestion(Question question) {
-        if (passValidation(question)) {
-            // 如果问题达到容量上限，扩充容量
+        try {
+            // 检查是否需要扩展存储空间
             if (questionCount >= capacity) {
-                increaseCapacity();
+                increaseCapacity(); // 扩展容量
             }
+            // 使用 InsertQuestion 进行插入，这会处理重复性检查
+            new InsertQuestion(question, questionCount); // 直接调用 InsertQuestion
 
-            // 存储问题到二维数组中
+            // 将问题存储到内存
             questionStorage[questionCount][0] = String.valueOf(questionCount);
             questionStorage[questionCount][1] = question.getTopic();
-
-            String[] difficulties = {"EASY", "MEDIUM", "HARD", "VERY_HARD"};
-            int difficultyIndex = question.getDifficulty().ordinal(); // 获取枚举的序号
-            questionStorage[questionCount][2] = difficulties[difficultyIndex];
+            questionStorage[questionCount][2] = question.getDifficulty().name();
             questionStorage[questionCount][3] = question.getQuestionStatement();
 
             Option[] options = question.getOptions();
             for (int i = 0; i < options.length; i++) {
-                questionStorage[questionCount][4 + i * 2] = options[i].getAnswer(); // 选项
-                questionStorage[questionCount][5 + i * 2] = String.valueOf(options[i].isCorrectAnswer()); // 正确性
+                questionStorage[questionCount][4 + i * 2] = options[i].getAnswer();
+                questionStorage[questionCount][5 + i * 2] = String.valueOf(options[i].isCorrectAnswer());
             }
 
             questionCount++;
-
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+            // 处理问题插入失败的情况，例如重复问题
+            System.out.println("Failed to add question: " + e.getMessage());
         }
     }
 
     private void increaseCapacity() {
-        int newCapacity = capacity + 10;
-        String[][] newQuestionStorage = new String[newCapacity][12];
-
+        capacity += 10;
+        String[][] newQuestionStorage = new String[capacity][12];
         // 复制旧数组
-        for (int i = 0; i < questionStorage.length; i++) {
+        for (int i = 0; i < questionCount; i++) {
             newQuestionStorage[i] = questionStorage[i];
         }
+        questionStorage = newQuestionStorage;  // 更新存储
 
-        // 更新
-        questionStorage = newQuestionStorage;
-        capacity = newCapacity;
     }
 
-    public String[][] getSelectedQuestions(TopicReader topicReader) {
-        String selectedTopic = topicReader.getTopicToSelect();
-        String[][] selectedQuestions = new String[questionCount][12];
+    public String[][] getSelectedQuestions(String selectedTopic) {
+        String[][] selectedQuestions = new String[capacity][12];
         int sameTopicCount = 0;
 
+        String filePath = getCSVFilePath(selectedTopic);
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length >= 4 && parts[1].equals(selectedTopic)) {
+                    selectedQuestions[sameTopicCount++] = parts;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String[][] sameTopicQuestions = new String[sameTopicCount][];
+        System.arraycopy(selectedQuestions, 0, sameTopicQuestions, 0, sameTopicCount);
+        return sameTopicQuestions;
+    }
+
+    private String getCSVFilePath(String topic) {
+        switch (topic) {
+            case "philosophy": return CSVBase.FILEPATH_PHILOSOPHY;
+            case "psychology": return CSVBase.FILEPATH_PSYCHOLOGY;
+            case "astronomy": return CSVBase.FILEPATH_ASTRONOMY;
+            case "geography": return CSVBase.FILEPATH_GEOGRAPHY;
+            default: return CSVBase.FILEPATH_NEW + "/" + topic + ".csv"; // 默认路径
+        }
+    }
+
+    // 获取相同主题的问题并重新编号
+    public String[][] getSameTopicQuestions(String topicToSelect) {
+        // 统计相同主题问题的数量
+        int count = 0;
         for (int i = 0; i < questionCount; i++) {
-            // 筛选同一主题的问题
-            if (questionStorage[i][1].equals(selectedTopic)) {
-                selectedQuestions[sameTopicCount] = questionStorage[i];
-                sameTopicCount++;
+            if (questionStorage[i][1].equals(topicToSelect)) {
+                count++;
             }
         }
 
-        // 创建符合相同主题的问题
-        String[][] sameTopicQuestions = new String[sameTopicCount][];
-        for (int i = 0; i < sameTopicCount; i++) {
-            sameTopicQuestions[i] = selectedQuestions[i];
+        // 创建一个新的二维数组，用于存储重新编号的问题
+        String[][] sameTopicQuestions = new String[count][questionStorage[0].length];
+        int newIndex = 0;
+
+        for (int i = 0; i < questionCount; i++) {
+            if (questionStorage[i][1].equals(topicToSelect)) {
+                // 重新编号
+                sameTopicQuestions[newIndex][0] = String.valueOf(newIndex); // 新的编号
+                // 复制其他列
+                for (int j = 1; j < questionStorage[i].length; j++) {
+                    sameTopicQuestions[newIndex][j] = questionStorage[i][j];
+                }
+                newIndex++;
+            }
         }
 
         return sameTopicQuestions;
     }
-
 }
