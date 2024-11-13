@@ -15,7 +15,7 @@ public class QuestionProvider {
 
     private String[][] questionStorage;
     private int questionCount = 0;
-    private final int capacity = 10; // 固定容量为10，后续可扩展
+    private int capacity = 10; // 固定容量为10，后续可扩展
     private CSVBase csvBase;
 
     public QuestionProvider() {
@@ -31,28 +31,42 @@ public class QuestionProvider {
 
     public void addQuestion(Question question) {
         try {
+            // 检查是否需要扩展存储空间
+            if (questionCount >= capacity) {
+                increaseCapacity(); // 扩展容量
+            }
             // 使用 InsertQuestion 进行插入，这会处理重复性检查
             new InsertQuestion(question, questionCount); // 直接调用 InsertQuestion
-            if (questionCount < capacity) {
-                questionStorage[questionCount][0] = String.valueOf(questionCount);
-                questionStorage[questionCount][1] = question.getTopic();
-                questionStorage[questionCount][2] = question.getDifficulty().name();
-                questionStorage[questionCount][3] = question.getQuestionStatement();
 
-                Option[] options = question.getOptions();
-                for (int i = 0; i < options.length; i++) {
-                    questionStorage[questionCount][4 + i * 2] = options[i].getAnswer();
-                    questionStorage[questionCount][5 + i * 2] = String.valueOf(options[i].isCorrectAnswer());
-                }
+            // 将问题存储到内存
+            questionStorage[questionCount][0] = String.valueOf(questionCount);
+            questionStorage[questionCount][1] = question.getTopic();
+            questionStorage[questionCount][2] = question.getDifficulty().name();
+            questionStorage[questionCount][3] = question.getQuestionStatement();
 
-                questionCount++;
+            Option[] options = question.getOptions();
+            for (int i = 0; i < options.length; i++) {
+                questionStorage[questionCount][4 + i * 2] = options[i].getAnswer();
+                questionStorage[questionCount][5 + i * 2] = String.valueOf(options[i].isCorrectAnswer());
             }
+
+            questionCount++;
         } catch (IOException e) {
             e.printStackTrace();
         } catch (IllegalArgumentException e) {
             // 处理问题插入失败的情况，例如重复问题
             System.out.println("Failed to add question: " + e.getMessage());
         }
+    }
+
+    private void increaseCapacity() {
+        capacity += 10;
+        String[][] newQuestionStorage = new String[capacity][12];
+        // 复制旧数组
+        for (int i = 0; i < questionCount; i++) {
+            newQuestionStorage[i] = questionStorage[i];
+        }
+        questionStorage = newQuestionStorage;  // 更新存储
 
     }
 
@@ -66,6 +80,13 @@ public class QuestionProvider {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts.length >= 4 && parts[1].equals(selectedTopic)) {
+                    // 检查是否需要扩展 selectedQuestions 数组
+                    if (sameTopicCount >= selectedQuestions.length) {
+                        // 创建一个新的数组，大小增加
+                        String[][] newSelectedQuestions = new String[selectedQuestions.length + 10][12]; // 每次扩展10
+                        System.arraycopy(selectedQuestions, 0, newSelectedQuestions, 0, selectedQuestions.length);
+                        selectedQuestions = newSelectedQuestions; // 更新引用
+                    }
                     selectedQuestions[sameTopicCount++] = parts;
                 }
             }
@@ -73,6 +94,7 @@ public class QuestionProvider {
             e.printStackTrace();
         }
 
+        // 创建返回数组
         String[][] sameTopicQuestions = new String[sameTopicCount][];
         System.arraycopy(selectedQuestions, 0, sameTopicQuestions, 0, sameTopicCount);
         return sameTopicQuestions;
