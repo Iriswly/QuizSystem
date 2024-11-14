@@ -11,7 +11,7 @@ public class Register extends UserInfo {
     //注册或登陆界面
     public void displayMenu() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome! Are you a new user? (yes/no)");
+        System.out.println("Welcome! Are you a new user? (Yes/No)");
         String choice = scanner.nextLine().trim().toLowerCase();
 
         if (choice.equals("yes")) {
@@ -26,6 +26,8 @@ public class Register extends UserInfo {
 
     // 注册新用户界面
     private void registerNewUser(Scanner scanner) {
+
+        //昵称
         String nickname;
         while (true) {
             System.out.println("Enter your nickname:");
@@ -36,10 +38,28 @@ public class Register extends UserInfo {
                 break;
             }
         }
+
+        //真名
         System.out.println("Enter your real name:");
         String realName = scanner.nextLine();
-        System.out.println("Create a password (8-16 characters):");
-        String password = scanner.nextLine();
+
+        //密码
+        String password;
+        while (true) {
+            System.out.println("Create a password (8-16 characters):");
+            password = scanner.nextLine();
+            int passwordScore = calculatePasswordScore(password);
+            if (passwordScore < 50) {
+                System.out.println("Password security level is low. Please set a stronger password.");
+            } else if (passwordScore <= 75) {
+                System.out.println("Password security level is good. Password accepted.");
+                break;
+            } else {
+                System.out.println("Password security level is excellent. Password accepted.");
+                break;
+            }
+        }
+
 
         if (Register(nickname, realName, password)) {
             System.out.println("Registration successful! Please log in.");
@@ -68,28 +88,6 @@ public class Register extends UserInfo {
                             String realName,
                             String password) {
 
-        /*int searchResult = searchUserLineIndex(nickname);
-        if (searchResult == -1) {
-            if (DEBUG) System.out.println("Account not found");
-            return false;
-        }
-        ArrayList<String> profile = getProfile(searchResult);
-        if (profile == null) {
-            if (DEBUG) System.out.println("Profile not found");
-            return false;
-        }
-        if (DEBUG) System.out.println("Profile: " + profile);
-        if (password.equals(profile.get(2))) {
-            if (!loginSetter(profile)) {
-                if (DEBUG) System.out.println("Login failed");
-                return false;
-            }
-            return isLogin();
-        } else {
-            // TODO: UI / MENU interface needed here
-            return false;
-        }
-    }*/
 
 //是否有同昵称
         if (searchUserLineIndex(nickname) != -1) {
@@ -125,6 +123,31 @@ public class Register extends UserInfo {
             return false;
         }
     }
+
+    // 计算密码强度
+    private int calculatePasswordScore(String password) {
+        int score = 0;
+        boolean hasLower = false,//是否有小写字母
+                hasUpper = false,//是否有大写字母
+                hasDigit = false, //是否有数字
+                hasSpecial = false;//是否有特殊字符
+        for (char c : password.toCharArray()) {
+            if (Character.isLowerCase(c) && !hasLower) {
+                score += 5;
+                hasLower = true;
+            } else if (Character.isUpperCase(c) && !hasUpper) {
+                score += 10;
+                hasUpper = true;
+            } else if (Character.isDigit(c) && !hasDigit) {
+                score += 5;
+                hasDigit = true;
+            } else if (!Character.isLetterOrDigit(c) && !hasSpecial) {
+                score += 10;
+                hasSpecial = true;
+            }
+        }
+        return Math.min(score, 25) * 4; //每一项的最大得分为25，总分为100分
+    }
     public static void main(String[] args) {
         try {
             Register register = new Register();
@@ -133,6 +156,30 @@ public class Register extends UserInfo {
             e.printStackTrace();
         }
     }
+
+    /*int searchResult = searchUserLineIndex(nickname);
+        if (searchResult == -1) {
+            if (DEBUG) System.out.println("Account not found");
+            return false;
+        }
+        ArrayList<String> profile = getProfile(searchResult);
+        if (profile == null) {
+            if (DEBUG) System.out.println("Profile not found");
+            return false;
+        }
+        if (DEBUG) System.out.println("Profile: " + profile);
+        if (password.equals(profile.get(2))) {
+            if (!loginSetter(profile)) {
+                if (DEBUG) System.out.println("Login failed");
+                return false;
+            }
+            return isLogin();
+        } else {
+            // TODO: UI / MENU interface needed here
+            return false;
+        }
+    }*/
+
 
 
 
