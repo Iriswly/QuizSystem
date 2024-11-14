@@ -16,24 +16,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/lib" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/lib/javafx-sdk-23.0.1/src/javafx.base" />
-          <root url="file://$MODULE_DIR$/lib/javafx-sdk-23.0.1/src/javafx.controls" />
-          <root url="file://$MODULE_DIR$/lib/javafx-sdk-23.0.1/src/javafx.fxml" />
-          <root url="file://$MODULE_DIR$/lib/javafx-sdk-23.0.1/src/javafx.graphics" />
-          <root url="file://$MODULE_DIR$/lib/javafx-sdk-23.0.1/src/javafx.media" />
-          <root url="file://$MODULE_DIR$/lib/javafx-sdk-23.0.1/src/javafx.swing" />
-          <root url="file://$MODULE_DIR$/lib/javafx-sdk-23.0.1/src/javafx.web" />
-        </SOURCES>
-        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" exported="" name="lib" level="project" />
   </component>
 </module>

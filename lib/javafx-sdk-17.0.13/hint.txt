@@ -1,0 +1,4 @@
+--module-path "CHANGE_ME!" --add-modules javafx.controls,javafx.fxml
+the --module-path (CHANGE_ME) should be the abs path in your pc...
+like \
+--module-path "E:\1-01 StirbFurMich\QuizSystem\lib\javafx-sdk-17.0.13\lib" --add-modules javafx.controls,javafx.fxml
