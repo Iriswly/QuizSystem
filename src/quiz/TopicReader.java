@@ -120,7 +120,7 @@ public class TopicReader {
     }
 
     // 根据选择的主题筛选难度题目
-    public String[][] filterQuestionsByDifficulty(String[][] questions, String selectedDifficulty) {
+    public static String[][] QuestionsByDifficulty(String[][] questions, String Difficulty) {
         // 确保问题数组非空
         if (questions == null || questions.length == 0) {
             return new String[0][0]; // 返回空数组
@@ -128,47 +128,97 @@ public class TopicReader {
 
         int count = 0;
         // 遍历一遍问题数组，计算符合条件的题目数量
-        for (String[] question : questions) {
-            if (question[2].equalsIgnoreCase(selectedDifficulty)) {
+        for (int i = 0; i < questions.length; i++) {
+            if (questions[i][2].equals(Difficulty)) {
                 count++;
             }
         }
 
         // 创建符合条件的题目数组
-        String[][] filteredQuestions = new String[count][12];
+        String[][] Questionsbydifficulty = new String[count][];
         int index = 0;
 
         // 再次遍历题目，填充符合条件的题目
-        for (String[] question : questions) {
-            if (question[2].equalsIgnoreCase(selectedDifficulty)) {
-                filteredQuestions[index++] = question;
+        for (int i = 0; i < questions.length; i++) {
+            if (questions[i][2].equals(Difficulty)) {
+                Questionsbydifficulty[index++] = questions[i];
             }
         }
 
-        return filteredQuestions;
+        return Questionsbydifficulty;
+    }
+    // 从某个难度的题库中随机选择题目
+    private static String[][] selectRandomlyFromCategory(String[][] questions, int numQuestions, String[][] selectedQuestions, int startIndex) {
+        for (int i = 0; i < numQuestions; i++) {
+            if (questions.length == 0) break;  // 防止题目数不足
+
+            // 使用 Math.random() 来生成随机数
+            int randomIndex = (int) (Math.random() * questions.length);
+
+            // 确保选择的题目没有重复
+            while (questions[randomIndex] == null) {
+                randomIndex = (int) (Math.random() * questions.length);
+            }
+
+            selectedQuestions[startIndex + i] = questions[randomIndex];
+            questions[randomIndex] = null; // 标记该题目已选择，防止重复
+        }
+
+        return selectedQuestions;
     }
 
-    // 从筛选出的题目中随机选择指定数量的题目
-    public String[][] randomlySelectQuestions(String[][] questions, int numQuestions) {
-        if (questions.length == 0) {
-            System.out.println("Error: No questions available to select.");
-            return new String[0][0]; // 返回空数组
+    // 根据用户选择的难度，按比例随机选择题目
+    public static String[][] QuizQuestion(String[][] questions, int numQuestions, String difficulty) {
+        // 根据难度决定比例
+        double easyPercentage = 0, mediumPercentage = 0, hardPercentage = 0, veryHardPercentage = 0;
+
+        switch (difficulty) {
+            case "EASY":
+                easyPercentage = 0.6;
+                mediumPercentage = 0.3;
+                hardPercentage = 0.1;
+                break;
+            case "MEDIUM":
+                easyPercentage = 0.4;
+                mediumPercentage = 0.4;
+                hardPercentage = 0.2;
+                break;
+            case "HARD":
+                easyPercentage = 0.3;
+                mediumPercentage = 0.3;
+                hardPercentage = 0.4;
+                break;
+            case "VERY_HARD":
+                mediumPercentage = 0.3;
+                hardPercentage = 0.3;
+                veryHardPercentage = 0.4;
+                break;
         }
 
-        String[][] finalQuestions = new String[Math.min(numQuestions, questions.length)][];
-        boolean[] selectedIndices = new boolean[questions.length];
+        // 计算每个难度需要选择的题目数量
+        int easyCount = (int) (numQuestions * easyPercentage);
+        int mediumCount = (int) (numQuestions * mediumPercentage);
+        int hardCount = (int) (numQuestions * hardPercentage);
+        int veryHardCount = (int) (numQuestions * veryHardPercentage);
 
-        for (int i = 0; i < finalQuestions.length; i++) {
-            int randomIndex;
-            do {
-                randomIndex = (int) (Math.random() * questions.length); // 使用 Math.random() 生成随机数
-            } while (selectedIndices[randomIndex]);
+        // 筛选每个难度的题目
+        String[][] easyQuestions = QuestionsByDifficulty(questions, "EASY");
+        String[][] mediumQuestions = QuestionsByDifficulty(questions, "MEDIUM");
+        String[][] hardQuestions = QuestionsByDifficulty(questions, "HARD");
+        String[][] veryHardQuestions = QuestionsByDifficulty(questions, "VERY_HARD");
 
-            finalQuestions[i] = questions[randomIndex];
-            selectedIndices[randomIndex] = true; // 标记该题目为已选择
-        }
+        // 按比例从每个难度中选择题目
+        String[][] quizquestions = new String[numQuestions][12];
+        int index = 0;
+        quizquestions  = selectRandomlyFromCategory(easyQuestions, easyCount, quizquestions, index);
+        index += easyCount;
+        quizquestions  = selectRandomlyFromCategory(mediumQuestions, mediumCount, quizquestions, index);
+        index += mediumCount;
+        quizquestions  = selectRandomlyFromCategory(hardQuestions, hardCount, quizquestions, index);
+        index += hardCount;
+        quizquestions  = selectRandomlyFromCategory(veryHardQuestions, veryHardCount, quizquestions, index);
 
-        return finalQuestions;
+        return quizquestions ;
     }
 
     public static void main(String[] args) {
