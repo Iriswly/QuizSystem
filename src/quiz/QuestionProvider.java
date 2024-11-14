@@ -80,6 +80,13 @@ public class QuestionProvider {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts.length >= 4 && parts[1].equals(selectedTopic)) {
+                    // 检查是否需要扩展 selectedQuestions 数组
+                    if (sameTopicCount >= selectedQuestions.length) {
+                        // 创建一个新的数组，大小增加
+                        String[][] newSelectedQuestions = new String[selectedQuestions.length + 10][12]; // 每次扩展10
+                        System.arraycopy(selectedQuestions, 0, newSelectedQuestions, 0, selectedQuestions.length);
+                        selectedQuestions = newSelectedQuestions; // 更新引用
+                    }
                     selectedQuestions[sameTopicCount++] = parts;
                 }
             }
@@ -87,6 +94,7 @@ public class QuestionProvider {
             e.printStackTrace();
         }
 
+        // 创建返回数组
         String[][] sameTopicQuestions = new String[sameTopicCount][];
         System.arraycopy(selectedQuestions, 0, sameTopicQuestions, 0, sameTopicCount);
         return sameTopicQuestions;
