@@ -130,8 +130,8 @@ public class InsertQuestion {
 
     private String getCSVFilePath(String topic) {
         switch (topic) {
-            case "philosophy":
-                return CSVBase.FILEPATH_PHILOSOPHY;
+            case "mathematics":
+                return CSVBase.FILEPATH_MATHEMATICS;
             case "psychology":
                 return CSVBase.FILEPATH_PSYCHOLOGY;
             case "astronomy":
@@ -172,7 +172,7 @@ public class InsertQuestion {
         Option option11 = new Option("Morality is subjective", false);
         Option option12 = new Option("I don't know", false);
         Option[] options3 = {option9, option10, option11, option12};
-        Question philosophyQuestion1 = new Question("philosophy", Difficulty.EASY,
+        Question mathematicsQuestion1 = new Question("geography", Difficulty.EASY,
                 "What is Descartes famous philosophical statement?", options3);
 
 
@@ -183,7 +183,7 @@ public class InsertQuestion {
         //questionProvider.addQuestion(astronomyQuestion2);
 
         System.out.println("Inserting question 3...");
-        //questionProvider.addQuestion(philosophyQuestion1);
+        //questionProvider.addQuestion(mathematicsQuestion1);
 
         System.out.println("Questions have been inserted successfully!");
     }

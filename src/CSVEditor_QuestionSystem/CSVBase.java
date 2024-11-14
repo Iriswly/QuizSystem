@@ -5,7 +5,7 @@ import java.io.File;
 public class CSVBase {
     protected final static String RESOURCES_PATH = "resources/questionsBank";
     public final static String FILEPATH_NEW = RESOURCES_PATH + "/subfolder";
-    public final static String FILEPATH_PHILOSOPHY = RESOURCES_PATH + "/question_philosophy.csv";
+    public final static String FILEPATH_MATHEMATICS = RESOURCES_PATH + "/question_mathematics.csv";
     public final static String FILEPATH_PSYCHOLOGY = RESOURCES_PATH + "/question_psychology.csv";
     public final static String FILEPATH_ASTRONOMY = RESOURCES_PATH + "/question_astronomy.csv";
     public final static String FILEPATH_GEOGRAPHY = RESOURCES_PATH + "/question_geography.csv";
@@ -19,8 +19,8 @@ public class CSVBase {
     }
 
     private void createInitialFiles() throws Exception {
-        if (!isQuestionCSVExists(FILEPATH_PHILOSOPHY)) {
-            CSVCreator(FILEPATH_PHILOSOPHY);
+        if (!isQuestionCSVExists(FILEPATH_MATHEMATICS)) {
+            CSVCreator(FILEPATH_MATHEMATICS);
         }
         if (!isQuestionCSVExists(FILEPATH_PSYCHOLOGY)) {
             CSVCreator(FILEPATH_PSYCHOLOGY);

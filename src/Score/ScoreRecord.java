@@ -5,7 +5,34 @@ import quiz.TopicReader;
 import quiz.QuestionProvider;
 
 public class ScoreRecord {
+    // 存储所有的 session 记录
+    private String[][] sessionInfo = new String[0][3];  // 初始时空数组，表示没有记录
+    // 记录一轮答题的topic, difficulty, score
+    public void recordSession(String topic, String difficulty, int score) {
+        // 扩展 sessionInfo 数组
+        String[][] newSessionInfo = new String[sessionInfo.length + 1][3];
 
+        // 复制旧数据到新数组
+        for (int i = 0; i < sessionInfo.length; i++) {
+            newSessionInfo[i] = sessionInfo[i];
+        }
+
+        // 将新记录添加到新数组
+        newSessionInfo[sessionInfo.length][0] = topic;
+        newSessionInfo[sessionInfo.length][1] = difficulty;
+        newSessionInfo[sessionInfo.length][2] = Integer.toString(score);
+
+        // 更新 sessionInfo 数组
+        sessionInfo = newSessionInfo;
+    }
+    // 显示所有记录
+    public void displayAllSessions() {
+        System.out.println("All Sessions: ");
+        for (int i = 0; i < sessionInfo.length; i++) {
+            System.out.println("Session " + (i + 1) + ": Topic : " + sessionInfo[i][0] +
+                    ", Difficulty : " + sessionInfo[i][1] + ", Score : " + sessionInfo[i][2]);
+        }
+    }
     // 判断是否是有效的选项
     private boolean isValidAnswer(String userAnswer) {
         return userAnswer.equals("A") || userAnswer.equals("B") || userAnswer.equals("C") || userAnswer.equals("D");
@@ -33,9 +60,15 @@ public class ScoreRecord {
     }
 
     // 显示题目并让用户作答
-    public void displayQuestionsAndScore(String[][] finalQuestions) {
+    public void displayQuestionsAndScore(String[][] finalQuestions,TopicReader topicReader) {
         Scanner sc = new Scanner(System.in);
         int score = 0;
+        String topic = topicReader.getTopicToSelect();
+        String difficulty = topicReader.getDifficultyToSelect();
+
+        // 记录题目、选项、用户答案、正确答案
+        String[][] questionDetails = new String[finalQuestions.length][7];  // 存储题目相关信息
+        String[][] sessionInfo = new String[1][3];  // 存储话题、难度、得分
 
         // 遍历每一道题
         for (int i = 0; i < finalQuestions.length; i++) {
@@ -43,8 +76,11 @@ public class ScoreRecord {
 
             // 显示选项
             String[] questionNum = new String[]{"A", "B", "C", "D"};
-            for (int j = 0; j < 4; j++) { // 假设每个问题都有4个选项
+            for (int j = 0; j < 4; j++) {
                 System.out.println(questionNum[j] + ": " + finalQuestions[i][4 + j * 2]);
+                if ("TRUE".equals(finalQuestions[i][5 + j * 2])) {
+                    questionDetails[i][5] = finalQuestions[i][4 + j * 2];  // 记录正确答案的选项字母
+                }
             }
 
 
@@ -64,58 +100,120 @@ public class ScoreRecord {
                     validAnswer = true;  // 输入合法，则跳出循环
                 }
             }
+// 将题目、选项、用户答案、正确答案记录到 questionDetails 数组
 
-
+            questionDetails[i][0] = finalQuestions[i][3];  // 问题
+            questionDetails[i][1] = finalQuestions[i][4];  // 选项A
+            questionDetails[i][2] = finalQuestions[i][6];  // 选项B
+            questionDetails[i][3] = finalQuestions[i][8];  // 选项C
+            questionDetails[i][4] = finalQuestions[i][10]; // 选项D
+            questionDetails[i][6] = userAnswer;//用户答案
             // 判断用户答案是否正确
             boolean isCorrect = checkAnswer(finalQuestions[i], userAnswer);
+
             if (isCorrect) {
                 System.out.println("Correct!");
                 score = score + 100 / finalQuestions.length;
             } else {
                 System.out.println("Incorrect!");
             }
-
+            // 记录题目详情
+            questionDetails[i][0] = finalQuestions[i][3];  // 问题内容
+            for (int j = 0; j < 4; j++) {
+                questionDetails[i][j + 1] = finalQuestions[i][4 + j * 2];  // 选项
+            }
             System.out.println(); // 分隔下一题
         }
 
+        System.out.println("Your answers for this session: ");
+            for (int i = 0; i < questionDetails.length; i++) {
+                if (questionDetails[i][0] != null) {
+                    System.out.println("Question " + (i + 1) + ": " + questionDetails[i][0]);
+                    System.out.println("Options: ");
+                    System.out.println("A: " + questionDetails[i][1]);
+                    System.out.println("B: " + questionDetails[i][2]);
+                    System.out.println("C: " + questionDetails[i][3]);
+                    System.out.println("D: " + questionDetails[i][4]);
+                    System.out.println("Correct answer: " + questionDetails[i][5]);
+                    System.out.println("Your answer: " + questionDetails[i][6]);
+                    System.out.println();
+                }
+            }
+        System.out.println();
         // 显示最终得分
         System.out.println("Your final score: " + score + "/100");
+        // 假设在某次答题后获得了分数 score
+        recordSession(topic, difficulty, score);  // 记录当前 session
+
+        // 显示所有 session 记录
+        displayAllSessions();
+        }
+    // 处理用户是否继续做题的选择
+    public boolean askContinue() {
+        Scanner sc = new Scanner(System.in);
+        String userChoice = "";
+        boolean validChoice = false;
+
+        while (!validChoice) {
+            System.out.print("Do you want to continue (yes/no)? ");
+            userChoice = sc.nextLine().trim().toLowerCase();  // 去除多余空格并转换为小写
+
+            if (userChoice.equals("yes")) {
+                validChoice = true;
+                return true;
+            } else if (userChoice.equals("no")) {
+                validChoice = true;
+                return false;
+            } else {
+                System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+            }
+        }
+        return false; // 默认返回false，如果进入了while会退出循环返回值
     }
+
+
+
 
 
     public static void main(String[] args) {
-        // 创建 QuestionProvider 实例
+        // 创建三个类的实例
         QuestionProvider questionProvider = new QuestionProvider();
+        ScoreRecord scoreRecord = new ScoreRecord();
 
-        // 显示主题选择
-        TopicReader topicReader = new TopicReader();
-        topicReader.showTopic();
-        topicReader.selectTopic();
-        topicReader.selectDifficulty();
+        do {
+            TopicReader topicReader = new TopicReader();
+            topicReader.showTopic();
+            topicReader.selectTopic();
+            topicReader.selectDifficulty();
 
-        // 获取选择主题的题目
-        String selectedTopic = topicReader.getTopicToSelect();
-        System.out.println("Selected Topic: " + selectedTopic);
-        String[][] selectedQuestions = questionProvider.getSelectedQuestions(selectedTopic);
-        System.out.println("Number of selected questions: " + (selectedQuestions != null ? selectedQuestions.length : 0));
+            // 获取选择主题的题目
+            String selectedTopic = topicReader.getTopicToSelect();
+            System.out.println("Selected Topic: " + selectedTopic);
+            String[][] selectedQuestions = questionProvider.getSelectedQuestions(selectedTopic);
+            System.out.println("Number of selected questions: " + (selectedQuestions != null ? selectedQuestions.length : 0));
 
-        // 按题目难度分类该主题题目
-        String[][] easyQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "EASY");
-        System.out.println("Number of easy questions: " + (easyQuestions != null ? easyQuestions.length : 0));
-        String[][] mediumQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "MEDIUM");
-        System.out.println("Number of medium questions: " + (mediumQuestions != null ? mediumQuestions.length : 0));
-        String[][] hardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "HARD");
-        System.out.println("Number of hard questions: " + (hardQuestions != null ? hardQuestions.length : 0));
-        String[][] veryhardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "VERY_HARD");
-        System.out.println("Number of veryhard questions: " + (veryhardQuestions != null ? veryhardQuestions.length : 0));
+            // 按题目难度分类该主题题目
+            String[][] easyQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "EASY");
+            System.out.println("Number of easy questions: " + (easyQuestions != null ? easyQuestions.length : 0));
+            String[][] mediumQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "MEDIUM");
+            System.out.println("Number of medium questions: " + (mediumQuestions != null ? mediumQuestions.length : 0));
+            String[][] hardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "HARD");
+            System.out.println("Number of hard questions: " + (hardQuestions != null ? hardQuestions.length : 0));
+            String[][] veryhardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "VERY_HARD");
+            System.out.println("Number of veryhard questions: " + (veryhardQuestions != null ? veryhardQuestions.length : 0));
 
 
-        // 根据用户选择的难度等级随机选择题目
-        String selectedDifficulty = topicReader.getDifficultyToSelect();
-        String[][] quizQuestions = TopicReader.QuizQuestion(selectedQuestions, 20, selectedDifficulty);
-        System.out.println("Number of quiz questions: " + (quizQuestions != null ? quizQuestions.length : 0));
-        // 创建 ScoreRecord 实例并开始答题
-        ScoreRecord startQuiz = new ScoreRecord();
-        startQuiz.displayQuestionsAndScore(quizQuestions);
+            // 根据用户选择的难度等级随机选择题目
+            String selectedDifficulty = topicReader.getDifficultyToSelect();
+            String[][] quizQuestions = TopicReader.QuizQuestion(selectedQuestions, 10, selectedDifficulty);
+            System.out.println("Number of quiz questions: " + (quizQuestions != null ? quizQuestions.length : 0));
+
+            // 创建 ScoreRecord 实例并开始答题
+            scoreRecord.displayQuestionsAndScore(quizQuestions, topicReader);
+
+        } while (scoreRecord.askContinue());
+
+        System.out.println("Exiting...");
     }
 }
+

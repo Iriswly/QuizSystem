@@ -11,7 +11,7 @@ public class TopicReader {
     private String topicToSelect;   // 用户选择的主题
     private final String[] difficulties = {"EASY", "MEDIUM", "HARD", "VERY_HARD"}; // 难度级别
     private String difficultyToSelect;   // 用户选择的难度
-    private final String[] topicArray = {"philosophy", "psychology", "astronomy", "geography"};
+    private final String[] topicArray = {"mathematics", "psychology", "astronomy", "geography"};
     private final int[] index = {1, 2, 3, 4};
 
     public TopicReader() {
@@ -74,7 +74,7 @@ public class TopicReader {
                 // 检查topic是否有效
                 for (int i = 0; i < topicArray.length; i++) {
                     String s = topicArray[i];
-                    if (s.equals(inputTopic)) {
+                    if (s.equalsIgnoreCase(inputTopic)) {
                         topicToSelect = inputTopic;
                         break;
                     }
@@ -100,13 +100,32 @@ public class TopicReader {
         }
 
         Scanner sc = new Scanner(System.in);
-        int choice;
-        do {
+        int choice= -1;
+        // 循环直到输入合法
+        while (true) {
             System.out.print("Enter difficulty index (1-4): ");
-            choice = sc.nextInt();
-        } while (choice < 1 || choice > difficulties.length);
 
+            // 检查用户输入是否为整数
+            if (sc.hasNextInt()) {
+                choice = sc.nextInt();
+
+                // 检查输入的数字是否在有效范围内
+                if (choice >= 1 && choice <= difficulties.length) {
+                    break;  // 输入合法，跳出循环
+                } else {
+                    System.out.println("Invalid choice. Please enter a number between 1 and " + difficulties.length + ".");
+                }
+            } else {
+                System.out.println("Invalid input. Please enter a valid number.");
+                sc.nextLine();  // 清除缓冲区中的非数字输入
+            }
+        }
+
+        // 设置选定的难度
         difficultyToSelect = difficulties[choice - 1];
+        System.out.println("Selected successfully!");
+        System.out.println("Your difficulty is: " + difficultyToSelect);
+        System.out.println();
     }
 
     // 获取选择的难度

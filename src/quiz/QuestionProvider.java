@@ -102,7 +102,7 @@ public class QuestionProvider {
 
     private String getCSVFilePath(String topic) {
         switch (topic) {
-            case "philosophy": return CSVBase.FILEPATH_PHILOSOPHY;
+            case "mathematics": return CSVBase.FILEPATH_MATHEMATICS;
             case "psychology": return CSVBase.FILEPATH_PSYCHOLOGY;
             case "astronomy": return CSVBase.FILEPATH_ASTRONOMY;
             case "geography": return CSVBase.FILEPATH_GEOGRAPHY;

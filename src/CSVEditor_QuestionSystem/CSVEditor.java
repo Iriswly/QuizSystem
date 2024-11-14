@@ -117,7 +117,7 @@ public class CSVEditor extends CSVReader {
 
         dumpAllToTemp();
 
-        File userCSV = new File(FILEPATH_PHILOSOPHY);
+        File userCSV = new File(FILEPATH_MATHEMATICS);
         File lastCSV = new File(LAST_FILEPATH);
         File tempCSV = new File(TEMP_FILEPATH);
 

@@ -19,7 +19,7 @@ public class CSVReader extends CSVBase {
 
     protected boolean readAll() {
         currentLines.clear();
-        String[] filePaths = {FILEPATH_PHILOSOPHY, FILEPATH_PSYCHOLOGY, FILEPATH_ASTRONOMY, FILEPATH_GEOGRAPHY};
+        String[] filePaths = {FILEPATH_MATHEMATICS, FILEPATH_PSYCHOLOGY, FILEPATH_ASTRONOMY, FILEPATH_GEOGRAPHY};
 
         for (String filePath : filePaths) {
             if (isQuestionCSVExists(filePath)) {
