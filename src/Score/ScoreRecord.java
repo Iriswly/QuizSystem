@@ -5,26 +5,31 @@ import quiz.TopicReader;
 import quiz.QuestionProvider;
 
 public class ScoreRecord {
+
+    // 判断是否是有效的选项
+    private boolean isValidAnswer(String userAnswer) {
+        return userAnswer.equals("A") || userAnswer.equals("B") || userAnswer.equals("C") || userAnswer.equals("D");
+    }
+
     // 判断用户答案是否正确
     private boolean checkAnswer(String[] question, String userAnswer) {
         // 选项字母与数组中的索引映射
         String[] questionNum = new String[]{"A", "B", "C", "D"};
         int index = -1;
-
+        //查看答案是否有效
         for (int i = 0; i < questionNum.length; i++) {
             if (userAnswer.equals(questionNum[i])) {
                 index = i;
                 break;
             }
         }
-
+        //输入非法答案则返回错误
         if (index == -1) {
-            System.out.println("Invalid input. Please enter A, B, C, or D.");
-            return false;
+            return false;//输入无效
         }
-
-        // 判断选项是否正确，finalQuestions[i][5 + index * 2] 存储的是正确答案标记
-        return "true".equals(question[5 + index * 2]);
+        //通过合法性检验后检测正确性
+        // finalQuestions[i][5 + index * 2] 存储的是正确答案标记
+        return "true".equalsIgnoreCase(question[5 + index * 2]);
     }
 
     // 显示题目并让用户作答
@@ -42,15 +47,30 @@ public class ScoreRecord {
                 System.out.println(questionNum[j] + ": " + finalQuestions[i][4 + j * 2]);
             }
 
-            // 获取用户答案
-            System.out.print("Your answer (A, B, C, D): ");
-            String userAnswer = sc.nextLine().toUpperCase();  // 读取用户输入并转为大写
+
+            // 先初始化用户答案和合法性，在后面的代码里验证合法以后再获取输入
+            String userAnswer = "";
+            boolean validAnswer = false;
+
+            // 循环直到用户输入合法答案
+            while (!validAnswer) {
+                System.out.print("Your answer (A, B, C, D): ");
+                userAnswer = sc.nextLine().toUpperCase();  // 读取用户输入并转为大写
+
+                // 判断用户输入是否有效
+                if (!isValidAnswer(userAnswer)) {
+                    System.out.println("Invalid input. Please enter A, B, C, or D.");
+                } else {
+                    validAnswer = true;  // 输入合法，则跳出循环
+                }
+            }
+
 
             // 判断用户答案是否正确
             boolean isCorrect = checkAnswer(finalQuestions[i], userAnswer);
             if (isCorrect) {
                 System.out.println("Correct!");
-                score=score+100/finalQuestions.length;
+                score = score + 100 / finalQuestions.length;
             } else {
                 System.out.println("Incorrect!");
             }
@@ -59,8 +79,9 @@ public class ScoreRecord {
         }
 
         // 显示最终得分
-        System.out.println("Your final score: " + score + "/100" );
+        System.out.println("Your final score: " + score + "/100");
     }
+
 
     public static void main(String[] args) {
         // 创建 QuestionProvider 实例
@@ -91,7 +112,7 @@ public class ScoreRecord {
 
         // 根据用户选择的难度等级随机选择题目
         String selectedDifficulty = topicReader.getDifficultyToSelect();
-        String[][] quizQuestions = TopicReader.QuizQuestion(selectedQuestions, 1, selectedDifficulty);
+        String[][] quizQuestions = TopicReader.QuizQuestion(selectedQuestions, 20, selectedDifficulty);
         System.out.println("Number of quiz questions: " + (quizQuestions != null ? quizQuestions.length : 0));
         // 创建 ScoreRecord 实例并开始答题
         ScoreRecord startQuiz = new ScoreRecord();
