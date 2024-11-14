@@ -72,21 +72,29 @@ public class ScoreRecord {
         topicReader.selectTopic();
         topicReader.selectDifficulty();
 
-        // 获取选择主题的题目并筛选难度
+        // 获取选择主题的题目
         String selectedTopic = topicReader.getTopicToSelect();
         System.out.println("Selected Topic: " + selectedTopic);
         String[][] selectedQuestions = questionProvider.getSelectedQuestions(selectedTopic);
         System.out.println("Number of selected questions: " + (selectedQuestions != null ? selectedQuestions.length : 0));
 
-        // 筛选题目
-        String[][] filteredQuestions = topicReader.filterQuestionsByDifficulty(selectedQuestions, topicReader.getDifficultyToSelect());
-        System.out.println("Number of filtered questions: " + (filteredQuestions != null ? filteredQuestions.length : 0));
+        // 按题目难度分类该主题题目
+        String[][] easyQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "EASY");
+        System.out.println("Number of easy questions: " + (easyQuestions != null ? easyQuestions.length : 0));
+        String[][] mediumQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "MEDIUM");
+        System.out.println("Number of medium questions: " + (mediumQuestions != null ? mediumQuestions.length : 0));
+        String[][] hardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "HARD");
+        System.out.println("Number of hard questions: " + (hardQuestions != null ? hardQuestions.length : 0));
+        String[][] veryhardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "VERY_HARD");
+        System.out.println("Number of veryhard questions: " + (veryhardQuestions != null ? veryhardQuestions.length : 0));
 
-        // 随机选择题目
-        String[][] finalQuestions = topicReader.randomlySelectQuestions(filteredQuestions, 2);
-        System.out.println("Number of final questions: " + (finalQuestions != null ? finalQuestions.length : 0));
+
+        // 根据用户选择的难度等级随机选择题目
+        String selectedDifficulty = topicReader.getDifficultyToSelect();
+        String[][] quizQuestions = TopicReader.QuizQuestion(selectedQuestions, 1, selectedDifficulty);
+        System.out.println("Number of quiz questions: " + (quizQuestions != null ? quizQuestions.length : 0));
         // 创建 ScoreRecord 实例并开始答题
         ScoreRecord startQuiz = new ScoreRecord();
-        startQuiz.displayQuestionsAndScore(finalQuestions);
+        startQuiz.displayQuestionsAndScore(quizQuestions);
     }
 }
