@@ -73,12 +73,11 @@ public class CSVEditor extends CSVReader{
                             if (DEBUG) System.out.println("overcast Done");
                             return true;
                         }
-                        return false;
                     }
                     else {
                         if (DEBUG) System.out.println("addNewLine failed");
-                        return false;
                     }
+                    return false;
                 } catch (Exception e) {
                     if (DEBUG) e.printStackTrace();
                     return false;
@@ -108,6 +107,11 @@ public class CSVEditor extends CSVReader{
 
             case 3: // DELETE
                 try{
+                    if (lineIndex == -1) {
+                        if (DEBUG) System.out.println("user not found");
+                        return false;
+                    }
+
                     if (deleteLine(lineIndex)) {
                         if (overcast()) {
                             if (DEBUG) System.out.println("overcast Done");

@@ -11,18 +11,18 @@ public class UserInfo extends UserBase {
     public boolean Login(String nickname, String password) {
         int searchResult = searchUserLineIndex(nickname);
         if (searchResult == -1) {
-            if (DEBUG) System.out.println("Account not found");
+            logger.log("Account not found");
             return false;
         }
         ArrayList<String> profile = getProfile(searchResult);
         if (profile == null) {
-            if (DEBUG) System.out.println("Profile not found");
+            logger.log("Profile not found");
             return false;
         }
-        if (DEBUG) System.out.println("Profile: " + profile);
+        logger.log("Profile: " + profile);
         if (password.equals(profile.get(2))) {
             if (!loginSetter(profile)) {
-                if (DEBUG) System.out.println("Login failed");
+                logger.log("Login failed");
                 return false;
             }
             return isLogin();
@@ -35,10 +35,10 @@ public class UserInfo extends UserBase {
     public boolean Logout() {
         // 将属性重置
         if (!logout()) { // 如果logout完还在登录状态
-            if (DEBUG) System.out.println("Logout failed");
+            logger.log("Logout failed");
             return false;
         } else {
-            if (DEBUG) System.out.println("Logout DONE!");
+            logger.log("Logout DONE!");
             return true;
         }
     }
@@ -48,7 +48,7 @@ public class UserInfo extends UserBase {
                             String password) {
         // 判断昵称是否已经存在
         if (searchUserLineIndex(nickname) != -1) {
-            if (DEBUG) System.out.println("Nickname already exists");
+            logger.log("Nickname already exists");
             // TODO: UI / MENU interface needed here
             return false;
         }
@@ -66,10 +66,10 @@ public class UserInfo extends UserBase {
         newProfile.add("_");
         newProfile.add("-1");
         if (csvEditor.operationsDB(1, newProfile, -1)) {
-            if (DEBUG) System.out.println("Register DONE!");
+            logger.log("Register DONE!");
             return true;
         } else {
-            if (DEBUG) System.out.println("Register failed");
+            logger.log("Register failed");
             return false;
         }
     }
@@ -92,7 +92,7 @@ public class UserInfo extends UserBase {
             testName3 = profile.get(8);
             testScore3 = Integer.parseInt(profile.get(9));
         } catch (Exception e) {
-            if (DEBUG) System.out.println("Invalid profile");
+            logger.log("Invalid profile");
         }
 
         return isLogin();
@@ -108,8 +108,19 @@ public class UserInfo extends UserBase {
     protected void tempAccountSetter(ArrayList<String> profile) {
         temp_nickname = profile.get(0);
         temp_password = profile.get(2);
-        if (DEBUG) System.out.println("Temp Account: " + temp_nickname);
-        if (DEBUG) System.out.println("Temp Password: " + temp_password);
+        logger.log("Temp Account: " + temp_nickname);
+        logger.log("Temp Password: " + temp_password);
+    }
+
+    // update current accounts' score
+    protected boolean updateScore(int score, String scoreName){
+        // check if login
+        if (!isLogin()) {
+
+            return false;
+                    }
+        return false;
+
     }
 
 

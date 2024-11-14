@@ -6,7 +6,8 @@ import java.util.ArrayList;
 
 public class UserBase {
     protected CSVEditor csvEditor = new CSVEditor();
-    protected final boolean DEBUG = true;
+    protected final boolean DEBUG = false;
+    protected Logger logger = new Logger(DEBUG);
 
     protected String nickname = null;
     protected String realName = null;
@@ -74,7 +75,7 @@ public class UserBase {
     }
 
     protected ArrayList<String> getProfile(int lineIndex){
-        if (DEBUG) System.out.println("Getting Profile on Line: " + lineIndex);
+        logger.log("Getting Profile on Line: " + lineIndex);
         if (lineIndex < 0 || lineIndex >= csvEditor.getLineCount()) {
             return null;
         }
@@ -82,18 +83,18 @@ public class UserBase {
     }
 
     protected ArrayList<String> findingAccountOnNickName(String nickname){
-        if (DEBUG) System.out.println("Finding Account on Nickname: " + nickname);
+        logger.log("Finding Account on Nickname: " + nickname);
         int lineIndex = searchUserLineIndex(nickname);
         if (lineIndex == -1) {
-            if (DEBUG) System.out.println("Account not found");
+            logger.log("Account not found");
             return null;
         }
         ArrayList<String> profile = getProfile(lineIndex);
         if (profile == null) {
-            if (DEBUG) System.out.println("Profile not found");
+            logger.log("Profile not found");
             return null;
         }
-        if (DEBUG) System.out.println("Profile: " + profile);
+        logger.log("Profile: " + profile);
         return profile;
     }
 
@@ -105,7 +106,8 @@ public class UserBase {
         return csvEditor.operationsDB(2, newProfile, -1);
     }
 
-    protected boolean deleteAccount_DB(int lineIndex){
+    protected boolean deleteAccount_DB(String nickName){
+        int lineIndex = searchUserLineIndex(nickName);
         return csvEditor.operationsDB(3, null, lineIndex);
     }
 }
