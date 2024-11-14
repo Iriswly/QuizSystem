@@ -304,7 +304,7 @@ ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,
 302,mathematics,MEDIUM,If a recipe requires 2 cups of sugar. how much sugar is needed for 3 recipes? ,4 cups,FALSE,6 cups,TRUE,5 cups,FALSE,8 cups,FALSE
 303,mathematics,MEDIUM,What is the result of 100 - 25 + 50? ,125,TRUE,130,FALSE,140,FALSE,120,FALSE
 304,mathematics,MEDIUM,What is the value of 10 x 10 x 2? ,250,FALSE,150,FALSE,100,FALSE,200,TRUE
-305,mathematics,MEDIUM,If a box contains 15 items and 5 are red. what fraction of the items are red? ,1ï¿½ï¿½3ï¿½ï¿½,TRUE,1ï¿½ï¿½4ï¿½ï¿½,FALSE,2ï¿½ï¿½3ï¿½ï¿½,FALSE,1ï¿½ï¿½2ï¿½ï¿½,FALSE
+305,mathematics,MEDIUM,If a box contains 15 items and 5 are red. what fraction of the items are red? ,1ÔÂ3ÈÕ,TRUE,1ÔÂ4ÈÕ,FALSE,2ÔÂ3ÈÕ,FALSE,1ÔÂ2ÈÕ,FALSE
 306,mathematics,MEDIUM,What is the perimeter of a square with a side length of 6? ,18,FALSE,30,FALSE,24,TRUE,20,FALSE
 307,mathematics,MEDIUM,What is the value of (3 + 5)2? ,49,FALSE,72,FALSE,56,FALSE,64,TRUE
 308,mathematics,MEDIUM,If you are driving 60 miles per hour. how long will it take you to drive 120 miles? ,2 hours,TRUE,4 hours,FALSE,1 hour,FALSE,3 hours,FALSE
@@ -381,7 +381,7 @@ ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,
 379,mathematics,HARD,What is the value of 4 + 3(5 - 2)? ,12,FALSE,13,TRUE,14,FALSE,10,FALSE
 380,mathematics,HARD,What is the equation of a line that passes through the points (1. 2) and (3. 4) ?,y = 3x - 1,FALSE,y = x + 1,TRUE,y = x - 1,FALSE,y = 2x,FALSE
 381,mathematics,HARD,What is the value of cos(0 degrees)? ,0,FALSE,1,TRUE,0.5,FALSE,-1,FALSE
-382,mathematics,HARD,If a rectangle has a length of 10 and a width of 5. what is its diagonal? ,ï¿½ï¿½75,FALSE,ï¿½ï¿½100,FALSE,ï¿½ï¿½50,FALSE,ï¿½ï¿½125,TRUE
+382,mathematics,HARD,If a rectangle has a length of 10 and a width of 5. what is its diagonal? ,¡Ì75,FALSE,¡Ì100,FALSE,¡Ì50,FALSE,¡Ì125,TRUE
 383,mathematics,HARD,What is the value of the expression 23 + 32? ,17,TRUE,15,FALSE,16,FALSE,18,FALSE
 384,mathematics,HARD,What is the derivative of x2 + 4x + 4? ,x + 4,FALSE,2x + 4,TRUE,2x + 2,FALSE,2x + 3,FALSE
 385,mathematics,HARD,What is the area of a rectangle with length 8 and width 3? ,20,FALSE,30,FALSE,28,FALSE,24,TRUE
@@ -427,7 +427,7 @@ ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,
 425,mathematics,HARD,What is the sum of the first five prime numbers? ,32,FALSE,28,TRUE,26,FALSE,30,FALSE
 426,mathematics,HARD,If a box has dimensions 2. 3. and 4. what is its volume? ,30,FALSE,24,TRUE,16,FALSE,20,FALSE
 427,mathematics,HARD,What is the value of the expression 5(x + 2) when x = 3? ,20,FALSE,25,TRUE,15,FALSE,30,FALSE
-428,mathematics,HARD,What is the probability of rolling a sum of 7 with two dice? ,1ï¿½ï¿½6ï¿½ï¿½,TRUE,1ï¿½ï¿½8ï¿½ï¿½,FALSE,1ï¿½ï¿½4ï¿½ï¿½,FALSE,1ï¿½ï¿½10ï¿½ï¿½,FALSE
+428,mathematics,HARD,What is the probability of rolling a sum of 7 with two dice? ,1ÔÂ6ÈÕ,TRUE,1ÔÂ8ÈÕ,FALSE,1ÔÂ4ÈÕ,FALSE,1ÔÂ10ÈÕ,FALSE
 429,mathematics,HARD,What is the equation of a line with slope 2 that passes through the point (1.3 )?,y = 2x - 1,FALSE,y = 2x + 2,FALSE,y = 2x + 3,FALSE,y = 2x + 1,TRUE
 430,mathematics,HARD,What is the value of the expression (x2 - 1)(x + 1) when x = 2? ,7,FALSE,9,TRUE,8,FALSE,10,FALSE
 431,mathematics,HARD,If the roots of the equation x2 + bx + c = 0 are 3 and 5. what is the value of b? ,5,FALSE,8,TRUE,15,FALSE,12,FALSE
@@ -444,7 +444,7 @@ ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,
 442,mathematics,HARD,What is the area of a trapezoid with bases 5 and 15 and height 4? ,50,FALSE,40,TRUE,30,FALSE,60,FALSE
 443,mathematics,HARD,If the roots of the polynomial x3 - 6x2 + 11x - 6 = 0 are a. b. and c. what is the value of a + b + c? ,10,FALSE,6,TRUE,9,FALSE,11,FALSE
 444,mathematics,HARD,What is the value of (2 + 3)3? ,150,FALSE,80,FALSE,100,FALSE,125,TRUE
-445,mathematics,HARD,If a right triangle has an angle of 30 degrees. what is the ratio of the lengths of the opposite and hypotenuse sides? ,1ï¿½ï¿½3ï¿½ï¿½,FALSE,1ï¿½ï¿½2ï¿½ï¿½,TRUE,3ï¿½ï¿½2ï¿½ï¿½,FALSE,1ï¿½ï¿½2ï¿½ï¿½,FALSE
+445,mathematics,HARD,If a right triangle has an angle of 30 degrees. what is the ratio of the lengths of the opposite and hypotenuse sides? ,1ÔÂ3ÈÕ,FALSE,1ÔÂ2ÈÕ,TRUE,3ÔÂ2ÈÕ,FALSE,1ÔÂ2ÈÕ,FALSE
 446,mathematics,HARD,What is the value of the expression 4(3x - 2) + 5 when x = 1? ,18,FALSE,15,FALSE,20,FALSE,17,TRUE
 447,mathematics,HARD,What is the result of the expression 102 - 62? ,70,FALSE,40,FALSE,50,FALSE,64,TRUE
 448,mathematics,HARD,If the circumference of a circle is 31.4 cm. what is the diameter? (Use ?? = 3.14) ,20 cm,FALSE,10 cm,TRUE,15 cm,FALSE,5 cm,FALSE
@@ -454,7 +454,7 @@ ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,
 452,mathematics,VERY_HARD,If the roots of the polynomial x2 - 6x + k = 0 are both equal. what is the value of k? ,0,FALSE,9,TRUE,12,FALSE,6,FALSE
 453,mathematics,VERY_HARD,What is the area of a circle with a radius of 10? (Use pi = 3.14) ,314,TRUE,300,FALSE,320,FALSE,310,FALSE
 454,mathematics,VERY_HARD,What is the value of the expression (2x - 3)(x + 4) when x = 5? ,29,TRUE,25,FALSE,30,FALSE,28,FALSE
-455,mathematics,VERY_HARD,In a triangle.  if one angle is 90 degrees and another is 45 degrees.  what is the length of the hypotenuse if the adjacent side is 1? ,ï¿½ï¿½2,TRUE,1,FALSE,ï¿½ï¿½3,FALSE,2,FALSE
+455,mathematics,VERY_HARD,In a triangle.  if one angle is 90 degrees and another is 45 degrees.  what is the length of the hypotenuse if the adjacent side is 1? ,¡Ì2,TRUE,1,FALSE,¡Ì3,FALSE,2,FALSE
 456,mathematics,VERY_HARD,What is the derivative of e^(2x)? ,e^(2x + 1),FALSE,2e^(x),FALSE,2e^(2x),TRUE,e^(2x),FALSE
 457,mathematics,VERY_HARD,What is the value of the expression log??(1000)? ,2,FALSE,3,TRUE,5,FALSE,4,FALSE
 458,mathematics,VERY_HARD,If a cylinder has a radius of 3 and height of 5. what is its volume? (Use pi = 3.14) ,140,FALSE,141.3,TRUE,150,FALSE,135,FALSE
@@ -462,31 +462,31 @@ ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,
 460,mathematics,VERY_HARD,What is the equation of a line that passes through the points (1. 2) and (2. 3)?,y = x + 1,TRUE,y = 2x,FALSE,y = 3x - 1,FALSE,y = x + 2,FALSE
 461,mathematics,VERY_HARD,What is the value of the expression (x - 1)(x + 2)(x - 3) when x = 4? ,8,FALSE,7,FALSE,6,TRUE,5,FALSE
 462,mathematics,VERY_HARD,If the function f(x) = x3 - 3x + 2. what are the critical points? ,1 and -1,TRUE,0 and 2,FALSE,-2 and 2,FALSE,3 and -3,FALSE
-463,mathematics,VERY_HARD,What is the value of ï¿½ï¿½ squared? ,9.87,TRUE,10,FALSE,7.5,FALSE,8.5,FALSE
+463,mathematics,VERY_HARD,What is the value of ¦Ð squared? ,9.87,TRUE,10,FALSE,7.5,FALSE,8.5,FALSE
 464,mathematics,VERY_HARD,What is the value of the determinant of the matrix [[1.2][3.4]]?,4,FALSE,2,FALSE,?2,TRUE,0,FALSE
 465,mathematics,VERY_HARD,If a rectangle has a length of 10 and a diagonal of 13. what is its width? ,15,FALSE,10,FALSE,12,FALSE,5,TRUE
-466,mathematics,VERY_HARD,What is the value of the expression sin(30 degrees)? ,ï¿½ï¿½2/2,FALSE,1ï¿½ï¿½2ï¿½ï¿½,TRUE,1,FALSE,ï¿½ï¿½3/2,FALSE
+466,mathematics,VERY_HARD,What is the value of the expression sin(30 degrees)? ,¡Ì2/2,FALSE,1ÔÂ2ÈÕ,TRUE,1,FALSE,¡Ì3/2,FALSE
 467,mathematics,VERY_HARD,If the polynomial P(x) = x3 - 3x2 + 2. what is P(2)? ,2,FALSE,1,FALSE,-1,FALSE,0,TRUE
 468,mathematics,VERY_HARD,What is the area of an ellipse with a semi-major axis of 4 and a semi-minor axis of 2? (Use pi = 3.14) ,28,FALSE,20,FALSE,30,FALSE,25.12,TRUE
 469,mathematics,VERY_HARD,What is the value of the expression (3x + 4)(2x - 1) when x = 1? ,18,FALSE,20,FALSE,21,FALSE,19,TRUE
 470,mathematics,VERY_HARD,What is the solution for x in the equation log(x) = 2? ,100,TRUE,50,FALSE,10,FALSE,20,FALSE
 471,mathematics,VERY_HARD,What is the limit of (x2 - 1)/(x - 1) as x approaches 1? ,2,TRUE,1,FALSE,0,FALSE,3,FALSE
-472,mathematics,VERY_HARD,What is the value of the series 1 + 1/2 + 1/3 + ... + 1/n as n approaches infinity? ,ï¿½ï¿½,TRUE,1,FALSE,2,FALSE,0,FALSE
-473,mathematics,VERY_HARD,What is the value of cos(45 degrees)? ,ï¿½ï¿½2/2,TRUE,1,FALSE,ï¿½ï¿½3/2,FALSE,1ï¿½ï¿½2ï¿½ï¿½,FALSE
+472,mathematics,VERY_HARD,What is the value of the series 1 + 1/2 + 1/3 + ... + 1/n as n approaches infinity? ,¡Þ,TRUE,1,FALSE,2,FALSE,0,FALSE
+473,mathematics,VERY_HARD,What is the value of cos(45 degrees)? ,¡Ì2/2,TRUE,1,FALSE,¡Ì3/2,FALSE,1ÔÂ2ÈÕ,FALSE
 474,mathematics,VERY_HARD,If the radius of a sphere is 5. what is its volume? (Use pi = 3.14) ,523.33,TRUE,500,FALSE,700,FALSE,600,FALSE
 475,mathematics,VERY_HARD,If f(x) = 3x2 + 2x - 1. what is f'(-1)? ,0,FALSE,2,FALSE,1,TRUE,-1,FALSE
 476,mathematics,VERY_HARD,What is the area of a triangle with sides of lengths 7.8. and 9?,26.83,TRUE,27,FALSE,30,FALSE,25,FALSE
 477,mathematics,VERY_HARD,What is the derivative of ln(x)? ,1/x,TRUE,1,FALSE,ln(x),FALSE,x,FALSE
-478,mathematics,VERY_HARD,What is the value of the expression ï¿½ï¿½(144) + ï¿½ï¿½(64)? ,16,TRUE,20,FALSE,18,FALSE,14,FALSE
-479,mathematics,VERY_HARD,What is the value of the series 1 + 1/4 + 1/9 + 1/16 + ... to n terms? ,ï¿½ï¿½2/6,TRUE,2,FALSE,1,FALSE,3,FALSE
+478,mathematics,VERY_HARD,What is the value of the expression ¡Ì(144) + ¡Ì(64)? ,16,TRUE,20,FALSE,18,FALSE,14,FALSE
+479,mathematics,VERY_HARD,What is the value of the series 1 + 1/4 + 1/9 + 1/16 + ... to n terms? ,¦Ð2/6,TRUE,2,FALSE,1,FALSE,3,FALSE
 480,mathematics,VERY_HARD,If a cone has a radius of 4 and a height of 6. what is its volume? (Use pi = 3.14) ,48,FALSE,52,FALSE,53,FALSE,50.24,TRUE
 481,mathematics,VERY_HARD,What is the equation of a parabola with vertex at (0.0) and opens upwards? ,y = x2 + c,FALSE,y = -ax2,FALSE,y = ax2,TRUE,y = x2 - c,FALSE
-482,mathematics,VERY_HARD,What is the value of sin(90 degrees)? ,1,TRUE,ï¿½ï¿½2,FALSE,ï¿½ï¿½3,FALSE,0,FALSE
+482,mathematics,VERY_HARD,What is the value of sin(90 degrees)? ,1,TRUE,¡Ì2,FALSE,¡Ì3,FALSE,0,FALSE
 483,mathematics,VERY_HARD,If a triangle has sides 3.4 and 5. is it a right triangle? ,No,FALSE,Depends on angles,FALSE,Yes,TRUE,Cannot determine,FALSE
 484,mathematics,VERY_HARD,What is the area of a regular hexagon with a side length of 6? ,80,FALSE,100,FALSE,93.53,TRUE,90,FALSE
 485,mathematics,VERY_HARD,What is the value of the expression 2^(3x) when x = 2? ,8,FALSE,16,FALSE,64,TRUE,32,FALSE
 486,mathematics,VERY_HARD,What is the value of the expression 4 + 4 + 4 + 4? ,18,FALSE,16,TRUE,12,FALSE,14,FALSE
-487,mathematics,VERY_HARD,If a polynomial is defined as P(x) = x? - 4x2. what are the critical points? ,ï¿½ï¿½4,FALSE, 0.ï¿½ï¿½2,TRUE,ï¿½ï¿½3,FALSE,ï¿½ï¿½1.0,FALSE
+487,mathematics,VERY_HARD,If a polynomial is defined as P(x) = x? - 4x2. what are the critical points? ,¡À4,FALSE, 0.¡À2,TRUE,¡À3,FALSE,¡À1.0,FALSE
 488,mathematics,VERY_HARD,What is the sum of the first n even numbers? ,n2 + n,FALSE,n(n + 1),TRUE,2n,FALSE,n2,FALSE
 489,mathematics,VERY_HARD,What is the derivative of 1/x? ,?x,FALSE,?1/x2,TRUE,1/x,FALSE,1/F,FALSE
 490,mathematics,VERY_HARD,What is the value of the expression 6!/(2!4!)? ,12,FALSE,15,TRUE,20,FALSE,10,FALSE
@@ -498,4 +498,4 @@ ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,
 496,mathematics,VERY_HARD,If the area of a parallelogram is 30 and the base is 10. what is its height? ,5,FALSE,3,TRUE,4,FALSE,6,FALSE
 497,mathematics,VERY_HARD,What is the derivative of cos(x)? ,sin(x),FALSE,cos(x),FALSE,?sin(x),TRUE,?cos(x),FALSE
 498,mathematics,VERY_HARD,What is the volume of a cylinder with height 10 and radius 3? (Use pi = 3.14) ,100,FALSE,94.2,TRUE,80,FALSE,90,FALSE
-499,mathematics,VERY_HARD,What is the value of the limit lim(x-->0)(sin(x)/x)? ,0,FALSE,-1,FALSE,2,FALSE,1,TRUE
+499,mathematics,VERY_HARD,What is the value of the limit lim(x¡ú0)(sin(x)/x)? ,0,FALSE,-1,FALSE,¡Þ,FALSE,1,TRUE
