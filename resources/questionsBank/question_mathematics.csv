@@ -1,0 +1,501 @@
+ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,Option4,Correct4
+0,mathematics,EASY,If a circle has radius R. what is the area of the circle? ,TRUE,FALSE,2piR,piR2,piR,FALSE,R2,FALSE
+1,mathematics,EASY,What is the value of 2 + 2? ,TRUE,3,FALSE,4,5,FALSE,22,FALSE
+2,mathematics,EASY,What is 3 x 3? ,9,6,FALSE,TRUE,12,FALSE,15,FALSE
+3,mathematics,EASY,What is the square root of 16? ,2,4,FALSE,TRUE,8,FALSE,6,FALSE
+4,mathematics,EASY,If you have 10 apples and you give away 2. how many do you have left? ,FALSE,9,8,TRUE,10,FALSE,7,FALSE
+5,mathematics,EASY,What is 15 - 5? ,10,FALSE,TRUE,5,20,FALSE,0,FALSE
+6,mathematics,EASY,What is 5 + 7? ,FALSE,10,12,TRUE,15,FALSE,13,FALSE
+7,mathematics,EASY,What is the value of 20 / 4? ,4,TRUE,FALSE,5,6,FALSE,2,FALSE
+8,mathematics,EASY,What is 6 - 2? ,TRUE,4,FALSE,3,5,FALSE,2,FALSE
+9,mathematics,EASY,What is 9 + 1? ,FALSE,11,TRUE,10,9,FALSE,8,FALSE
+10,mathematics,EASY,If a triangle has a base of 4 and a height of 3. what is the area? ,12,FALSE,TRUE,6,7,FALSE,9,FALSE
+11,mathematics,EASY,What is the value of 1 + 1? ,FALSE,TRUE,3,2,1,FALSE,0,FALSE
+12,mathematics,EASY,If you have 5 oranges and you buy 3 more. how many do you have in total? ,7,8,TRUE,FALSE,6,FALSE,5,FALSE
+13,mathematics,EASY,What is 8 - 3? ,4,5,TRUE,FALSE,6,FALSE,3,FALSE
+14,mathematics,EASY,What is 4 x 2? ,6,TRUE,8,FALSE,9,FALSE,10,FALSE
+15,mathematics,EASY,If a book costs \$10 and you have \$50. how many books can you buy? ,5,FALSE,TRUE,4,6,FALSE,3,FALSE
+16,mathematics,EASY,What is 30 divided by 5? ,5,6,FALSE,TRUE,7,FALSE,8,FALSE
+17,mathematics,EASY,What is the value of 100 - 45? ,FALSE,55,TRUE,60,50,FALSE,40,FALSE
+18,mathematics,EASY,If a train travels 60 miles in 1 hour. how far will it travel in 2 hours? ,100 miles,TRUE,120 miles,FALSE,150 miles,FALSE,110 miles,FALSE
+19,mathematics,EASY,What is 7 + 3? ,11,10,FALSE,TRUE,9,FALSE,8,FALSE
+20,mathematics,EASY,What is 12 - 5? ,TRUE,6,FALSE,7,5,FALSE,8,FALSE
+21,mathematics,EASY,What is 9 x 0? ,0,FALSE,TRUE,1,9,FALSE,10,FALSE
+22,mathematics,EASY,If a rectangle has a length of 5 and a width of 4. what is the area? ,FALSE,TRUE,20,18,25,FALSE,12,FALSE
+23,mathematics,EASY,What is the value of 15 + 10? ,FALSE,20,TRUE,25,30,FALSE,10,FALSE
+24,mathematics,EASY,What is 2 x 5? ,20,TRUE,10,FALSE,5,FALSE,15,FALSE
+25,mathematics,EASY,What is 21 divided by 7? ,TRUE,FALSE,3,2,4,FALSE,5,FALSE
+26,mathematics,EASY,What is the sum of angles in a triangle? ,180 degrees,90 degrees,TRUE,FALSE,360 degrees,FALSE,270 degrees,FALSE
+27,mathematics,EASY,If you have \$20 and you spend \$5. how much do you have left? ,15,10,FALSE,TRUE,5,FALSE,20,FALSE
+28,mathematics,EASY,What is 50 - 25? ,FALSE,TRUE,25,20,30,FALSE,35,FALSE
+29,mathematics,EASY,What is 14 + 6? ,19,20,FALSE,TRUE,18,FALSE,21,FALSE
+30,mathematics,EASY,If a square has a side length of 3. what is its area? ,FALSE,TRUE,9,6,12,FALSE,3,FALSE
+31,mathematics,EASY,What is 18 divided by 3? ,TRUE,FALSE,6,5,4,FALSE,3,FALSE
+32,mathematics,EASY,What is 11 - 2? ,FALSE,10,TRUE,9,8,FALSE,7,FALSE
+33,mathematics,EASY,What is the perimeter of a rectangle with length 2 and width 3? ,FALSE,10,TRUE,6,5,FALSE,8,FALSE
+34,mathematics,EASY,What is the value of 2 x 3 + 4? ,TRUE,8,FALSE,10,6,FALSE,12,FALSE
+35,mathematics,EASY,What is 100 divided by 10? ,10,9,FALSE,TRUE,11,FALSE,12,FALSE
+36,mathematics,EASY,What is 16 - 7? ,9,TRUE,8,FALSE,10,FALSE,11,FALSE
+37,mathematics,EASY,What is 5 + 5 + 5? ,FALSE,10,15,TRUE,20,FALSE,5,FALSE
+38,mathematics,EASY,What is 22? ,FALSE,2,4,TRUE,8,FALSE,6,FALSE
+39,mathematics,EASY,If a cake is cut into 8 slices and you eat 3. how many slices are left? ,6,FALSE,TRUE,5,4,FALSE,3,FALSE
+40,mathematics,EASY,What is the value of 30 - 10 x 2? ,TRUE,FALSE,10,20,15,FALSE,5,FALSE
+41,mathematics,EASY,If 3 oranges cost \$2. how much do 6 oranges cost? ,2,TRUE,4,FALSE,6,FALSE,8,FALSE
+42,mathematics,EASY,What is 7 x 7? ,56,FALSE,49,TRUE,42,FALSE,36,FALSE
+43,mathematics,EASY,What is the value of 5 + 5 x 2? ,15,FALSE,TRUE,10,20,FALSE,25,FALSE
+44,mathematics,EASY,What is the sum of 1. 2 and 3?,5,FALSE,TRUE,6,4,FALSE,7,FALSE
+45,mathematics,EASY,If a pencil costs \$1. how much do 10 pencils cost? ,10,TRUE,FALSE,5,15,FALSE,20,FALSE
+46,mathematics,EASY,What is 4 + 4 + 4? ,FALSE,10,TRUE,12,8,FALSE,14,FALSE
+47,mathematics,EASY,What is 2 + 2 x 3? ,6,TRUE,8,FALSE,10,FALSE,4,FALSE
+48,mathematics,EASY,What is 6 x 6? ,30,FALSE,TRUE,36,42,FALSE,32,FALSE
+49,mathematics,EASY,If a cookie costs \$0.50. how many cookies can you buy with \$5? ,FALSE,TRUE,10,8,12,FALSE,15,FALSE
+50,mathematics,EASY,What is the value of 3 + 3? ,TRUE,FALSE,5,6,7,FALSE,8,FALSE
+51,mathematics,EASY,If a car travels 60 miles in 1 hour. how far will it travel in 3 hours? ,TRUE,180 miles,FALSE,120 miles,150 miles,FALSE,240 miles,FALSE
+52,mathematics,EASY,What is 12 / 4? ,2,3,TRUE,FALSE,4,FALSE,6,FALSE
+53,mathematics,EASY,What is 7 + 8? ,14,FALSE,TRUE,15,13,FALSE,12,FALSE
+54,mathematics,EASY,What is 20 - 5 - 5? ,10,15,FALSE,TRUE,20,FALSE,25,FALSE
+55,mathematics,EASY,What is the value of 1 + 1 + 1? ,3,TRUE,FALSE,2,4,FALSE,1,FALSE
+56,mathematics,EASY,What is 9 x 1? ,9,TRUE,8,FALSE,7,FALSE,10,FALSE
+57,mathematics,EASY,If a box contains 12 chocolates and you eat 4. how many are left? ,8,FALSE,TRUE,7,6,FALSE,5,FALSE
+58,mathematics,EASY,What is the perimeter of a square with side length 2? ,6,FALSE,TRUE,8,4,FALSE,10,FALSE
+59,mathematics,EASY,What is 8 - 3? ,4,5,FALSE,TRUE,6,FALSE,7,FALSE
+60,mathematics,EASY,What is the next number in the sequence 1. 2. 3 ....?,FALSE,5,TRUE,4,6,FALSE,7,FALSE
+61,mathematics,EASY,What is 100 - 50? ,TRUE,40,FALSE,50,60,FALSE,70,FALSE
+62,mathematics,EASY,What is 5 x 5? ,20,TRUE,FALSE,25,30,FALSE,35,FALSE
+63,mathematics,EASY,If a dozen eggs cost \$2. how much do 2 dozen eggs cost? ,4,TRUE,FALSE,3,5,FALSE,6,FALSE
+64,mathematics,EASY,What is 4 + 4? ,8,FALSE,TRUE,7,9,FALSE,6,FALSE
+65,mathematics,EASY,What is 3 + 2 + 1? ,5,FALSE,6,TRUE,4,FALSE,7,FALSE
+66,mathematics,EASY,What is 50 divided by 5? ,10,TRUE,FALSE,11,9,FALSE,12,FALSE
+67,mathematics,EASY,If a pizza is cut into 8 slices and you eat 2. how many slices are left? ,5,6,FALSE,TRUE,4,FALSE,3,FALSE
+68,mathematics,EASY,What is 10 - 0? ,FALSE,TRUE,10,5,0,FALSE,15,FALSE
+69,mathematics,EASY,What is the value of 2 + 3 x 4? ,14,FALSE,12,TRUE,10,FALSE,20,FALSE
+70,mathematics,EASY,If a toy costs \$15 and you have \$30. how many toys can you buy? ,FALSE,TRUE,2,1,3,FALSE,4,FALSE
+71,mathematics,EASY,What is 5 - 2? ,2,TRUE,3,FALSE,4,FALSE,5,FALSE
+72,mathematics,EASY,What is the area of a rectangle with length 5 and width 3? ,15,12,FALSE,TRUE,10,FALSE,20,FALSE
+73,mathematics,EASY,What is 1 + 1 + 1 + 1? ,TRUE,4,FALSE,3,5,FALSE,2,FALSE
+74,mathematics,EASY,What is 30 - 10? ,TRUE,FALSE,30,20,10,FALSE,15,FALSE
+75,mathematics,EASY,What is the value of 3 + 7? ,FALSE,9,10,TRUE,8,FALSE,11,FALSE
+76,mathematics,EASY,If a train travels 80 miles in 1 hour. how far will it travel in 4 hours? ,300 miles,TRUE,320 miles,FALSE,350 miles,FALSE,280 miles,FALSE
+77,mathematics,EASY,What is 1 x 100? ,TRUE,10,FALSE,100,1,FALSE,50,FALSE
+78,mathematics,EASY,What is the result of 24 divided by 6? ,6,FALSE,4,TRUE,5,FALSE,3,FALSE
+79,mathematics,EASY,What is 3 x 5? ,12,TRUE,15,FALSE,18,FALSE,10,FALSE
+80,mathematics,EASY,What is the value of 6 - 5? ,TRUE,1,2,FALSE,0,FALSE,3,FALSE
+81,mathematics,EASY,What is 50 + 50? ,FALSE,150,100,TRUE,200,FALSE,50,FALSE
+82,mathematics,EASY,If a shirt costs \$20 and you have \$60. how many shirts can you buy? ,3,FALSE,TRUE,2,4,FALSE,5,FALSE
+83,mathematics,EASY,What is the value of 10 - 2 - 3? ,FALSE,TRUE,5,4,6,FALSE,7,FALSE
+84,mathematics,EASY,What is 2 x 4? ,6,TRUE,8,FALSE,10,FALSE,12,FALSE
+85,mathematics,EASY,What is 16 / 4? ,4,3,TRUE,FALSE,5,FALSE,2,FALSE
+86,mathematics,EASY,What is 100 - 25? ,70,TRUE,FALSE,75,50,FALSE,80,FALSE
+87,mathematics,EASY,What is 3 + 3 + 3? ,9,TRUE,FALSE,8,7,FALSE,10,FALSE
+88,mathematics,EASY,If a bag contains 10 marbles and you take out 3. how many are left? ,7,FALSE,6,TRUE,5,FALSE,4,FALSE
+89,mathematics,EASY,What is 12 + 8? ,20,TRUE,FALSE,19,18,FALSE,21,FALSE
+90,mathematics,EASY,What is 1 + 2 + 4? ,7,6,TRUE,FALSE,5,FALSE,8,FALSE
+91,mathematics,EASY,What is 5 - 1? ,5,TRUE,FALSE,4,3,FALSE,2,FALSE
+92,mathematics,EASY,What is 45 + 5? ,55,50,FALSE,TRUE,60,FALSE,40,FALSE
+93,mathematics,EASY,If a car travels 40 miles in 1 hour. how far will it travel in 3 hours? ,120 miles,FALSE,100 miles,TRUE,80 miles,FALSE,150 miles,FALSE
+94,mathematics,EASY,What is 8 + 2? ,FALSE,TRUE,11,10,9,FALSE,8,FALSE
+95,mathematics,EASY,What is 75 - 25? ,50,TRUE,60,FALSE,40,FALSE,30,FALSE
+96,mathematics,EASY,What is 2 + 5? ,6,FALSE,TRUE,7,8,FALSE,9,FALSE
+97,mathematics,EASY,What is 6 x 2? ,TRUE,10,12,FALSE,14,FALSE,16,FALSE
+98,mathematics,EASY,If a dozen cookies cost \$5. how much do 2 dozen cookies cost? ,FALSE,TRUE,10,5,15,FALSE,12,FALSE
+99,mathematics,EASY,What is 100 / 5? ,25,TRUE,FALSE,20,15,FALSE,10,FALSE
+100,mathematics,EASY,What is 10 + 10? ,TRUE,FALSE,30,20,10,FALSE,15,FALSE
+101,mathematics,EASY,What is 7 - 4? ,3,FALSE,2,TRUE,4,FALSE,1,FALSE
+102,mathematics,EASY,What is 90 - 45? ,FALSE,45,40,TRUE,50,FALSE,35,FALSE
+103,mathematics,EASY,What is 4 x 4? ,FALSE,12,16,TRUE,18,FALSE,14,FALSE
+104,mathematics,EASY,What is the value of 20 + 30? ,FALSE,TRUE,50,40,60,FALSE,70,FALSE
+105,mathematics,EASY,If you have 8 candies and you eat 3. how many do you have left? ,FALSE,TRUE,5,6,4,FALSE,3,FALSE
+106,mathematics,EASY,What is 6 / 2? ,TRUE,3,FALSE,4,5,FALSE,2,FALSE
+107,mathematics,EASY,What is the perimeter of a rectangle with length 8 and width 3? ,24,22,FALSE,TRUE,20,FALSE,18,FALSE
+108,mathematics,EASY,What is 5 + 5? ,FALSE,TRUE,10,15,5,FALSE,20,FALSE
+109,mathematics,EASY,What is 30 divided by 6? ,6,FALSE,5,TRUE,4,FALSE,7,FALSE
+110,mathematics,EASY,What is 2 + 2 x 2? ,6,4,TRUE,FALSE,8,FALSE,10,FALSE
+111,mathematics,EASY,What is the value of 50 - 30? ,FALSE,20,TRUE,15,25,FALSE,10,FALSE
+112,mathematics,EASY,If a bottle holds 2 liters. how many liters are in 5 bottles? ,10 liters,TRUE,FALSE,5 liters,8 liters,FALSE,12 liters,FALSE
+113,mathematics,EASY,What is 7 + 6? ,12,FALSE,13,TRUE,14,FALSE,11,FALSE
+114,mathematics,EASY,What is 25 / 5? ,FALSE,5,TRUE,6,4,FALSE,3,FALSE
+115,mathematics,EASY,If a rectangle has a width of 4 and a length of 10. what is its area? ,FALSE,TRUE,14,40,44,FALSE,24,FALSE
+116,mathematics,EASY,What is the value of 2 + 3 + 5? ,10,FALSE,TRUE,9,8,FALSE,7,FALSE
+117,mathematics,EASY,What is 50 - 20 - 10? ,20,30,FALSE,TRUE,40,FALSE,10,FALSE
+118,mathematics,EASY,What is 8 + 12? ,20,21,TRUE,FALSE,22,FALSE,19,FALSE
+119,mathematics,EASY,What is 14 - 5? ,FALSE,9,TRUE,10,8,FALSE,7,FALSE
+120,mathematics,EASY,What is 3 x 3 x 3? ,TRUE,30,FALSE,27,24,FALSE,20,FALSE
+121,mathematics,EASY,If a candy costs \$0.25. how many can you buy with \$5? ,TRUE,FALSE,15,20,25,FALSE,30,FALSE
+122,mathematics,EASY,What is 10 + 15? ,25,20,FALSE,TRUE,30,FALSE,35,FALSE
+123,mathematics,EASY,What is 18 - 9? ,FALSE,TRUE,9,8,10,FALSE,7,FALSE
+124,mathematics,EASY,What is 4 + 5 + 1? ,FALSE,11,10,TRUE,9,FALSE,8,FALSE
+125,mathematics,EASY,What is 6 x 4? ,FALSE,24,TRUE,20,22,FALSE,26,FALSE
+126,mathematics,EASY,What is 100 + 200? ,FALSE,250,TRUE,300,350,FALSE,400,FALSE
+127,mathematics,EASY,What is 2 / 1? ,FALSE,3,2,TRUE,1,FALSE,4,FALSE
+128,mathematics,EASY,What is the area of a triangle with base 6 and height 4? ,TRUE,FALSE,10,12,14,FALSE,16,FALSE
+129,mathematics,EASY,What is 9 + 10? ,18,TRUE,FALSE,19,20,FALSE,21,FALSE
+130,mathematics,EASY,If a pencil costs \$0.50. how much do 4 pencils cost? ,2,1.5,FALSE,TRUE,1,FALSE,3,FALSE
+131,mathematics,EASY,What is 8 - 5? ,4,3,FALSE,TRUE,2,FALSE,5,FALSE
+132,mathematics,EASY,What is 15 + 5? ,TRUE,25,FALSE,20,15,FALSE,10,FALSE
+133,mathematics,EASY,What is 7 x 2? ,14,TRUE,FALSE,12,16,FALSE,10,FALSE
+134,mathematics,EASY,What is the value of 4 + 4 + 4? ,TRUE,12,FALSE,10,8,FALSE,14,FALSE
+135,mathematics,EASY,What is 90 - 30? ,TRUE,70,60,FALSE,50,FALSE,40,FALSE
+136,mathematics,EASY,What is 12 + 6? ,18,FALSE,17,TRUE,16,FALSE,19,FALSE
+137,mathematics,EASY,What is 5 + 9? ,TRUE,14,15,FALSE,13,FALSE,12,FALSE
+138,mathematics,EASY,What is the value of 40 / 5? ,6,TRUE,FALSE,8,5,FALSE,10,FALSE
+139,mathematics,EASY,What is 3 x 3 + 1? ,FALSE,TRUE,9,10,11,FALSE,8,FALSE
+140,mathematics,EASY,What is 20 - 5 - 5? ,10,15,TRUE,FALSE,20,FALSE,5,FALSE
+141,mathematics,EASY,What is the perimeter of a square with a side length of 4? ,FALSE,TRUE,16,12,10,FALSE,14,FALSE
+142,mathematics,EASY,What is 1 + 1 + 1 + 1 + 1? ,5,FALSE,TRUE,4,6,FALSE,7,FALSE
+143,mathematics,EASY,If a carton contains 12 eggs and you take 4. how many are left? ,7,TRUE,8,FALSE,6,FALSE,5,FALSE
+144,mathematics,EASY,What is 100 - 99? ,1,FALSE,TRUE,0,2,FALSE,3,FALSE
+145,mathematics,EASY,What is 7 + 8? ,TRUE,15,14,FALSE,16,FALSE,13,FALSE
+146,mathematics,EASY,What is 5 x 3? ,FALSE,10,15,TRUE,12,FALSE,14,FALSE
+147,mathematics,EASY,What is 8 - 2? ,6,5,TRUE,FALSE,7,FALSE,8,FALSE
+148,mathematics,EASY,What is 11 + 9? ,TRUE,20,FALSE,19,18,FALSE,21,FALSE
+149,mathematics,EASY,What is the value of 5 + 5 x 3? ,TRUE,FALSE,15,20,10,FALSE,25,FALSE
+150,mathematics,EASY,What is 6 + 6 + 6? ,FALSE,18,16,TRUE,14,FALSE,20,FALSE
+151,mathematics,EASY,What is 20 divided by 4? ,TRUE,FALSE,6,5,7,FALSE,8,FALSE
+152,mathematics,EASY,What is 100 + 50? ,TRUE,FALSE,150,140,160,FALSE,170,FALSE
+153,mathematics,EASY,What is 3 + 2 + 2? ,TRUE,FALSE,7,6,8,FALSE,5,FALSE
+154,mathematics,EASY,What is the value of 18 - 9? ,8,9,FALSE,TRUE,10,FALSE,7,FALSE
+155,mathematics,EASY,If a notebook costs \$3. how much do 5 notebooks cost? ,10,15,FALSE,TRUE,20,FALSE,12,FALSE
+156,mathematics,EASY,What is 6 x 3? ,18,TRUE,20,FALSE,16,FALSE,14,FALSE
+157,mathematics,EASY,What is 25 - 5? ,TRUE,15,FALSE,20,10,FALSE,25,FALSE
+158,mathematics,EASY,What is 40 / 8? ,6,5,FALSE,TRUE,4,FALSE,3,FALSE
+159,mathematics,EASY,What is 1 + 1 + 1 + 2? ,4,TRUE,5,FALSE,3,FALSE,6,FALSE
+160,mathematics,EASY,What is the area of a square with a side length of 3? ,9,6,FALSE,TRUE,12,FALSE,8,FALSE
+161,mathematics,EASY,What is 45 - 5? ,FALSE,35,40,TRUE,45,FALSE,50,FALSE
+162,mathematics,EASY,What is 10 x 1? ,FALSE,1,TRUE,10,2,FALSE,0,FALSE
+163,mathematics,EASY,What is 7 + 3 + 2? ,12,TRUE,FALSE,10,11,FALSE,13,FALSE
+164,mathematics,EASY,What is 100 - 75? ,TRUE,20,25,FALSE,15,FALSE,30,FALSE
+165,mathematics,EASY,If a bag holds 5 liters. how many liters are in 3 bags? ,TRUE,FALSE,10 liters,15 liters,20 liters,FALSE,5 liters,FALSE
+166,mathematics,EASY,What is 60 / 5? ,TRUE,10,12,FALSE,15,FALSE,20,FALSE
+167,mathematics,EASY,What is the perimeter of a rectangle with length 6 and width 2? ,FALSE,16,TRUE,12,10,FALSE,14,FALSE
+168,mathematics,EASY,What is 20 + 3? ,FALSE,TRUE,23,20,22,FALSE,24,FALSE
+169,mathematics,EASY,What is 10 - 6? ,5,FALSE,4,TRUE,3,FALSE,2,FALSE
+170,mathematics,EASY,What is 5 x 5? ,TRUE,25,20,FALSE,30,FALSE,15,FALSE
+171,mathematics,EASY,What is 8 divided by 2? ,TRUE,4,3,FALSE,5,FALSE,2,FALSE
+172,mathematics,EASY,What is the value of 10 - 2 x 2? ,FALSE,4,TRUE,6,8,FALSE,10,FALSE
+173,mathematics,EASY,If a fruit basket has 10 fruits and you eat 3. how many are left? ,7,FALSE,TRUE,6,5,FALSE,4,FALSE
+174,mathematics,EASY,What is 9 + 1? ,FALSE,11,TRUE,10,9,FALSE,8,FALSE
+175,mathematics,EASY,What is the value of 2 + 4 + 6? ,TRUE,14,FALSE,12,10,FALSE,8,FALSE
+176,mathematics,EASY,What is 15 + 10? ,FALSE,20,TRUE,25,30,FALSE,15,FALSE
+177,mathematics,EASY,What is 100 - 50 - 25? ,FALSE,30,25,TRUE,40,FALSE,20,FALSE
+178,mathematics,EASY,What is 50 / 10? ,FALSE,TRUE,4,5,6,FALSE,7,FALSE
+179,mathematics,EASY,What is 6 + 3 + 1? ,TRUE,FALSE,11,10,9,FALSE,8,FALSE
+180,mathematics,EASY,What is the value of 5 + 2 x 3? ,11,10,TRUE,FALSE,12,FALSE,13,FALSE
+181,mathematics,EASY,What is 12 - 4? ,TRUE,7,FALSE,8,6,FALSE,5,FALSE
+182,mathematics,EASY,What is 25 + 25? ,TRUE,45,50,FALSE,55,FALSE,40,FALSE
+183,mathematics,EASY,What is the area of a rectangle with length 5 and width 2? ,10,12,FALSE,TRUE,8,FALSE,15,FALSE
+184,mathematics,EASY,What is 7 - 5? ,FALSE,TRUE,2,3,1,FALSE,4,FALSE
+185,mathematics,EASY,What is the value of 100 + 200 - 50? ,TRUE,250,FALSE,150,300,FALSE,200,FALSE
+186,mathematics,EASY,What is 9 x 2? ,18,16,TRUE,FALSE,20,FALSE,14,FALSE
+187,mathematics,EASY,If a piece of bread costs \$2. how much do 3 pieces cost? ,FALSE,6,7,TRUE,8,FALSE,5,FALSE
+188,mathematics,EASY,What is 10 + 10 + 10? ,30,FALSE,20,TRUE,40,FALSE,25,FALSE
+189,mathematics,EASY,What is 36 / 6? ,5,FALSE,6,TRUE,7,FALSE,8,FALSE
+190,mathematics,EASY,What is 15 - 10? ,TRUE,4,FALSE,5,6,FALSE,3,FALSE
+191,mathematics,EASY,What is the value of 8 + 8 + 8? ,TRUE,FALSE,20,24,22,FALSE,26,FALSE
+192,mathematics,EASY,What is 60 - 30? ,30,40,FALSE,TRUE,20,FALSE,10,FALSE
+193,mathematics,EASY,What is the value of 3 + 3 + 3 + 1? ,TRUE,FALSE,9,10,8,FALSE,7,FALSE
+194,mathematics,EASY,What is the perimeter of a triangle with sides 3. 4. and 5?,TRUE,12,FALSE,10,8,FALSE,14,FALSE
+195,mathematics,EASY,What is 20 + 10 - 5? ,25,FALSE,TRUE,20,30,FALSE,15,FALSE
+196,mathematics,EASY,What is the value of 100 - 75 + 25? ,TRUE,45,FALSE,50,55,FALSE,60,FALSE
+197,mathematics,EASY,What is 24 / 3? ,TRUE,FALSE,8,6,7,FALSE,5,FALSE
+198,mathematics,EASY,What is 5 - 3 + 1? ,4,TRUE,3,FALSE,2,FALSE,1,FALSE
+199,mathematics,EASY,What is 14 + 6? ,TRUE,19,FALSE,20,21,FALSE,22,FALSE
+200,mathematics,MEDIUM,What is the value of x if 2x + 3 = 11? ,TRUE,3,FALSE,4,5,FALSE,2,FALSE
+201,mathematics,MEDIUM,What is the area of a triangle with base 10 and height 5? ,30,25,TRUE,FALSE,20,FALSE,15,FALSE
+202,mathematics,MEDIUM,If a car travels at 60 miles per hour. how far does it travel in 2.5 hours? ,TRUE,120 miles,150 miles,FALSE,180 miles,FALSE,100 miles,FALSE
+203,mathematics,MEDIUM,What is the value of (3 + 4) x 2? ,FALSE,12,TRUE,14,10,FALSE,16,FALSE
+204,mathematics,MEDIUM,What is the value of 52? ,25,FALSE,20,TRUE,30,FALSE,15,FALSE
+205,mathematics,MEDIUM,If the circumference of a circle is 31.4 cm. what is the radius? (Use ?? = 3.14) ,5 cm,FALSE,6 cm,TRUE,4 cm,FALSE,7 cm,FALSE
+206,mathematics,MEDIUM,What is the value of 12 x 8? ,TRUE,84,96,FALSE,72,FALSE,100,FALSE
+207,mathematics,MEDIUM,If a book costs \$15 and you buy 2 books. how much do you spend? ,30,FALSE,25,TRUE,20,FALSE,15,FALSE
+208,mathematics,MEDIUM,What is the value of 18 - 3 x 4? ,6,9,FALSE,TRUE,12,FALSE,15,FALSE
+209,mathematics,MEDIUM,If a rectangle has a length of 8 and a width of 3. what is its perimeter? ,22,TRUE,FALSE,24,20,FALSE,18,FALSE
+210,mathematics,MEDIUM,What is the value of (9 - 4)2? ,FALSE,TRUE,20,25,15,FALSE,30,FALSE
+211,mathematics,MEDIUM,What is the solution to 4x = 20? ,5,FALSE,4,TRUE,6,FALSE,7,FALSE
+212,mathematics,MEDIUM,If the angle is 90 degrees. what is the value of its supplement? ,180 degrees,90 degrees,FALSE,TRUE,270 degrees,FALSE,45 degrees,FALSE
+213,mathematics,MEDIUM,What is 15% of 200? ,TRUE,30,25,FALSE,35,FALSE,40,FALSE
+214,mathematics,MEDIUM,If a train departs at 2 PM and arrives at 5 PM. how long is the journey? ,FALSE,TRUE,3 hours,2 hours,4 hours,FALSE,5 hours,FALSE
+215,mathematics,MEDIUM,What is the volume of a cube with side length 3? ,TRUE,FALSE,27,9,18,FALSE,24,FALSE
+216,mathematics,MEDIUM,If a shirt is on sale for 20% off and costs \$50. how much is the discount? ,TRUE,10,15,FALSE,5,FALSE,20,FALSE
+217,mathematics,MEDIUM,What is the value of 72 - 5? ,FALSE,49,44,TRUE,39,FALSE,50,FALSE
+218,mathematics,MEDIUM,If you have 3 apples and you buy 5 more. how many apples do you have? ,TRUE,FALSE,7,8,9,FALSE,6,FALSE
+219,mathematics,MEDIUM,What is the result of 100 divided by 4 plus 5? ,25,TRUE,FALSE,30,35,FALSE,20,FALSE
+220,mathematics,MEDIUM,If a polygon has 6 sides. what is it called? ,Octagon,FALSE,TRUE,Hexagon,Quadrilateral,FALSE,Triangle,FALSE
+221,mathematics,MEDIUM,What is the value of 3 x (4 + 2)? ,20,TRUE,FALSE,18,15,FALSE,21,FALSE
+222,mathematics,MEDIUM,If a pizza is cut into 8 slices and you eat 3. how many slices are left? ,TRUE,FALSE,6,5,4,FALSE,3,FALSE
+223,mathematics,MEDIUM,What is the sum of the angles in a triangle? ,180 degrees,FALSE,TRUE,360 degrees,90 degrees,FALSE,270 degrees,FALSE
+224,mathematics,MEDIUM,What is 45 + 55? ,TRUE,90,100,FALSE,80,FALSE,110,FALSE
+225,mathematics,MEDIUM,If a number is multiplied by 0. what is the result? ,TRUE,0,FALSE,1,undefined,FALSE,1,FALSE
+226,mathematics,MEDIUM,If 2x = 10. what is the value of x? ,4,5,TRUE,FALSE,6,FALSE,3,FALSE
+227,mathematics,MEDIUM,What is the value of 9 + 6? ,15,TRUE,14,FALSE,16,FALSE,13,FALSE
+228,mathematics,MEDIUM,What is the greatest common divisor of 12 and 8? ,4,FALSE,2,TRUE,6,FALSE,8,FALSE
+229,mathematics,MEDIUM,What is the area of a rectangle with length 10 and width 2? ,25,FALSE,TRUE,20,30,FALSE,15,FALSE
+230,mathematics,MEDIUM,If the radius of a circle is 7. what is its diameter? ,FALSE,14,TRUE,21,7,FALSE,28,FALSE
+231,mathematics,MEDIUM,What is 81 - 36? ,FALSE,TRUE,50,45,40,FALSE,55,FALSE
+232,mathematics,MEDIUM,If a car uses 3 gallons of gas to travel 60 miles. how many miles can it travel on 1 gallon? ,15 miles,TRUE,20 miles,FALSE,25 miles,FALSE,30 miles,FALSE
+233,mathematics,MEDIUM,What is the value of ??64? ,6,FALSE,TRUE,8,10,FALSE,7,FALSE
+234,mathematics,MEDIUM,If a wheel rotates 360 degrees. how many complete turns has it made? ,1,TRUE,FALSE,2,0.5,FALSE,3,FALSE
+235,mathematics,MEDIUM,What is the least common multiple of 4 and 6? ,12,TRUE,24,FALSE,8,FALSE,10,FALSE
+236,mathematics,MEDIUM,What is the result of 15 divided by 3? ,TRUE,5,6,FALSE,4,FALSE,3,FALSE
+237,mathematics,MEDIUM,If a book is priced at \$12 and you pay with a \$20 bill. how much change do you get? ,7,FALSE,TRUE,8,10,FALSE,5,FALSE
+238,mathematics,MEDIUM,What is the value of 10% of 250? ,TRUE,FALSE,25,20,15,FALSE,30,FALSE
+239,mathematics,MEDIUM,If a triangle has two sides measuring 3 and 4. what is the length of the hypotenuse? ,5,6,TRUE,FALSE,7,FALSE,8,FALSE
+240,mathematics,MEDIUM,What is the sum of 8. 12. and 10?,FALSE,30,29,TRUE,31,FALSE,28,FALSE
+241,mathematics,MEDIUM,If you have a 50% chance of winning a game. what is the probability in decimal form? ,TRUE,0.5,FALSE,0.25,0.75,FALSE,1,FALSE
+242,mathematics,MEDIUM,What is (5 + 3) x (2 - 1)? ,8,TRUE,FALSE,6,10,FALSE,5,FALSE
+243,mathematics,MEDIUM,What is the value of 72 / 8? ,TRUE,8,9,FALSE,10,FALSE,6,FALSE
+244,mathematics,MEDIUM,If a car travels 100 miles in 2 hours. what is its speed in miles per hour? ,60,TRUE,FALSE,50,40,FALSE,70,FALSE
+245,mathematics,MEDIUM,What is the volume of a cylinder with radius 3 and height 5? (Use ?? = 3.14) ,TRUE,30,28.26,FALSE,24,FALSE,32,FALSE
+246,mathematics,MEDIUM,What is the value of 6 + 4 x 2? ,16,14,TRUE,FALSE,12,FALSE,10,FALSE
+247,mathematics,MEDIUM,If 2x + 4 = 12. what is the value of x? ,3,TRUE,FALSE,4,5,FALSE,6,FALSE
+248,mathematics,MEDIUM,What is 100 - (45 + 25)? ,TRUE,FALSE,30,20,40,FALSE,50,FALSE
+249,mathematics,MEDIUM,What is the area of a circle with a radius of 4? (Use ?? = 3.14) ,TRUE,45,50.24,FALSE,40,FALSE,55,FALSE
+250,mathematics,MEDIUM,What is the value of 7 x (3 + 2)? ,FALSE,40,TRUE,35,30,FALSE,25,FALSE
+251,mathematics,MEDIUM,If a triangle has angles measuring 60 and 80 degrees. what is the measure of the third angle? ,50 degrees,40 degrees,TRUE,FALSE,30 degrees,FALSE,20 degrees,FALSE
+252,mathematics,MEDIUM,What is the perimeter of a rectangle with sides of 5 and 10? ,30,25,FALSE,TRUE,20,FALSE,15,FALSE
+253,mathematics,MEDIUM,If a train travels 120 miles in 3 hours. what is its average speed? ,50 miles per hour,40 miles per hour,FALSE,TRUE,60 miles per hour,FALSE,30 miles per hour,FALSE
+254,mathematics,MEDIUM,What is the value of 12 x 12? ,TRUE,FALSE,144,150,120,FALSE,130,FALSE
+255,mathematics,MEDIUM,What is the result of 30% of 200? ,FALSE,60,TRUE,50,70,FALSE,40,FALSE
+256,mathematics,MEDIUM,If a right triangle has legs of length 3 and 4. what is the length of the hypotenuse? ,TRUE,5,FALSE,6,7,FALSE,8,FALSE
+257,mathematics,MEDIUM,What is the value of 5 x 6 - 10? ,TRUE,20,FALSE,25,30,FALSE,15,FALSE
+258,mathematics,MEDIUM,What is 64 divided by 8? ,TRUE,FALSE,8,7,9,FALSE,10,FALSE
+259,mathematics,MEDIUM,What is the value of (4 + 4 + 4) / 4? ,2,FALSE,3,TRUE,4,FALSE,5,FALSE
+260,mathematics,MEDIUM,If a recipe requires 2 cups of sugar and you want to make half the recipe. how much sugar do you need? ,TRUE,1 cup,1.5 cups,FALSE,2 cups,FALSE,0.5 cups,FALSE
+261,mathematics,MEDIUM,What is the value of 7 x 3 + 2? ,TRUE,21,23,FALSE,25,FALSE,20,FALSE
+262,mathematics,MEDIUM,If a ladder leans against a wall and reaches a height of 12 feet. how long is the ladder if it makes a 90-degree angle with the ground? ,10 feet,FALSE,12 feet,TRUE,14 feet,FALSE,15 feet,FALSE
+263,mathematics,MEDIUM,What is the sum of the first five prime numbers? ,FALSE,30,28,TRUE,26,FALSE,32,FALSE
+264,mathematics,MEDIUM,What is 80 divided by 4 plus 5? ,25,20,TRUE,FALSE,30,FALSE,15,FALSE
+265,mathematics,MEDIUM,If a box contains 24 items and you take out 6. how many items are left? ,TRUE,20,FALSE,18,22,FALSE,16,FALSE
+266,mathematics,MEDIUM,What is the value of 14 - 4 + 2? ,TRUE,12,10,FALSE,14,FALSE,16,FALSE
+267,mathematics,MEDIUM,If a person runs 10 miles in 1 hour. how long will it take to run 25 miles at the same pace? ,2.5 hours,FALSE,2 hours,TRUE,3 hours,FALSE,4 hours,FALSE
+268,mathematics,MEDIUM,What is the result of 5 + (3 x 2)? ,FALSE,10,TRUE,11,9,FALSE,12,FALSE
+269,mathematics,MEDIUM,What is the product of 4 and 5? ,TRUE,16,20,FALSE,24,FALSE,18,FALSE
+270,mathematics,MEDIUM,What is the square root of 81? ,9,TRUE,FALSE,10,8,FALSE,7,FALSE
+271,mathematics,MEDIUM,What is the value of 6 x 7 - 5? ,40,37,FALSE,TRUE,35,FALSE,30,FALSE
+272,mathematics,MEDIUM,What is 2 + 2 x 2? ,TRUE,8,6,FALSE,4,FALSE,5,FALSE
+273,mathematics,MEDIUM,If a car can travel 240 miles on 8 gallons of gas. how many miles can it travel on 1 gallon? ,TRUE,30 miles,FALSE,28 miles,32 miles,FALSE,35 miles,FALSE
+274,mathematics,MEDIUM,What is the area of a circle with a radius of 5? (Use ?? = 3.14) ,FALSE,80,78.5,TRUE,75,FALSE,70,FALSE
+275,mathematics,MEDIUM,If a triangle has a base of 10 and a height of 6. what is its area? ,FALSE,TRUE,60,30,20,FALSE,25,FALSE
+276,mathematics,MEDIUM,What is the value of 5 x 5 x 2? ,60,50,TRUE,FALSE,40,FALSE,30,FALSE
+277,mathematics,MEDIUM,What is 100 divided by (4 x 5)? ,TRUE,5,FALSE,10,15,FALSE,20,FALSE
+278,mathematics,MEDIUM,If a person reads 20 pages a day. how many pages will they read in 7 days? ,140,FALSE,150,TRUE,130,FALSE,120,FALSE
+279,mathematics,MEDIUM,What is the measure of an angle that is supplementary to a 70-degree angle? ,FALSE,110 degrees,90 degrees,TRUE,80 degrees,FALSE,100 degrees,FALSE
+280,mathematics,MEDIUM,What is the value of 8 + 12 - 5? ,FALSE,20,TRUE,15,10,FALSE,18,FALSE
+281,mathematics,MEDIUM,If a book has 300 pages and you read 25 pages a day. how many days will it take to finish the book? ,12 days,TRUE,10 days,FALSE,15 days,FALSE,14 days,FALSE
+282,mathematics,MEDIUM,What is the result of 8 - 3 x 2? ,TRUE,2,4,FALSE,3,FALSE,1,FALSE
+283,mathematics,MEDIUM,What is 22 + 18? ,40,FALSE,42,TRUE,38,FALSE,36,FALSE
+284,mathematics,MEDIUM,If a recipe calls for 4 cups of flour and you want to make half of it. how much flour do you need? ,2 cups,FALSE,TRUE,1.5 cups,3 cups,FALSE,4 cups,FALSE
+285,mathematics,MEDIUM,What is the value of 6 x 2 + 3? ,FALSE,18,15,TRUE,12,FALSE,9,FALSE
+286,mathematics,MEDIUM,What is the area of a square with a side length of 4? ,TRUE,16,FALSE,20,12,FALSE,18,FALSE
+287,mathematics,MEDIUM,If a train leaves at 3 PM and arrives at 6 PM. how long is the trip? ,TRUE,4 hours,FALSE,3 hours,2 hours,FALSE,1 hour,FALSE
+288,mathematics,MEDIUM,What is the value of 9 - (3 + 2)? ,5,4,FALSE,TRUE,7,FALSE,6,FALSE
+289,mathematics,MEDIUM,If a bag contains 10 marbles and you add 5 more. how many marbles are in the bag? ,FALSE,TRUE,10,15,20,FALSE,12,FALSE
+290,mathematics,MEDIUM,What is the value of 5 + (4 - 2) x 3? ,10,TRUE,11,FALSE,12,FALSE,9,FALSE
+291,mathematics,MEDIUM,If a bicycle costs \$200 and goes on sale for 25% off. how much will it cost? ,120,150,FALSE,TRUE,180,FALSE,160,FALSE
+292,mathematics,MEDIUM,What is the circumference of a circle with a diameter of 10? (Use ?? = 3.14) ,31.4,FALSE,30,TRUE,32,FALSE,28,FALSE
+293,mathematics,MEDIUM,What is 10 x (5 - 3)? ,TRUE,FALSE,15,20,30,FALSE,25,FALSE
+294,mathematics,MEDIUM,If the temperature is 20 degrees Celsius. what is it in Fahrenheit? (Use F = C x 9/5 + 32) ,68,TRUE,60,FALSE,70,FALSE,72,FALSE
+295,mathematics,MEDIUM,What is the value of 4 + 6 x 2? ,FALSE,14,TRUE,16,12,FALSE,10,FALSE
+296,mathematics,MEDIUM,What is the value of 9 x 4 - 5? ,TRUE,FALSE,31,28,32,FALSE,30,FALSE
+297,mathematics,MEDIUM,If a car travels 150 miles in 3 hours. what is its average speed? ,50 miles per hour,FALSE,40 miles per hour,TRUE,60 miles per hour,FALSE,70 miles per hour,FALSE
+298,mathematics,MEDIUM,What is the area of a trapezoid with bases 5 and 10 and height 4? ,30,TRUE,FALSE,25,20,FALSE,35,FALSE
+299,mathematics,MEDIUM,What is the value of 12 ?? 3 - 8? ,24,TRUE,28,FALSE,32,FALSE,30,FALSE
+300,mathematics,MEDIUM,If you invest \$100 at 5% interest for one year. how much interest will you earn? ,5,TRUE,FALSE,10,15,FALSE,20,FALSE
+301,mathematics,MEDIUM,What is the sum of the angles in a quadrilateral? ,TRUE,FALSE,180 degrees,360 degrees,90 degrees,FALSE,270 degrees,FALSE
+302,mathematics,MEDIUM,If a recipe requires 2 cups of sugar. how much sugar is needed for 3 recipes? ,6 cups,4 cups,FALSE,TRUE,5 cups,FALSE,8 cups,FALSE
+303,mathematics,MEDIUM,What is the result of 100 - 25 + 50? ,FALSE,125,TRUE,120,130,FALSE,140,FALSE
+304,mathematics,MEDIUM,What is the value of 10 x 10 x 2? ,150,200,FALSE,TRUE,100,FALSE,250,FALSE
+305,mathematics,MEDIUM,If a box contains 15 items and 5 are red. what fraction of the items are red? ,TRUE,1月3日,1月4日,FALSE,1月2日,FALSE,2月3日,FALSE
+306,mathematics,MEDIUM,What is the perimeter of a square with a side length of 6? ,20,TRUE,FALSE,24,18,FALSE,30,FALSE
+307,mathematics,MEDIUM,What is the value of (3 + 5)2? ,TRUE,FALSE,64,56,49,FALSE,72,FALSE
+308,mathematics,MEDIUM,If you are driving 60 miles per hour. how long will it take you to drive 120 miles? ,FALSE,TRUE,1 hour,2 hours,3 hours,FALSE,4 hours,FALSE
+309,mathematics,MEDIUM,What is the area of a rectangle with length 8 and width 5? ,FALSE,35,TRUE,40,45,FALSE,50,FALSE
+310,mathematics,MEDIUM,What is the value of 15 - (3 + 2)? ,TRUE,11,FALSE,10,12,FALSE,9,FALSE
+311,mathematics,MEDIUM,What is the value of 6 x (2 + 4)? ,TRUE,30,FALSE,36,24,FALSE,12,FALSE
+312,mathematics,MEDIUM,If a bag contains 20 marbles and you take out 5. how many marbles are left? ,FALSE,TRUE,10,15,20,FALSE,25,FALSE
+313,mathematics,MEDIUM,What is the value of 43? ,FALSE,TRUE,64,16,32,FALSE,48,FALSE
+314,mathematics,MEDIUM,If a pencil costs \$0.80. how much do 10 pencils cost? ,FALSE,TRUE,6,8,10,FALSE,5,FALSE
+315,mathematics,MEDIUM,What is the result of 2 + 2 x 2 - 1? ,5,FALSE,6,TRUE,4,FALSE,3,FALSE
+316,mathematics,MEDIUM,What is the value of 5 + 5 + 5 + 5? ,20,25,TRUE,FALSE,15,FALSE,18,FALSE
+317,mathematics,MEDIUM,What is the volume of a cylinder with a radius of 2 and a height of 5? (Use ?? = 3.14) ,25.12,FALSE,TRUE,20,30,FALSE,15,FALSE
+318,mathematics,MEDIUM,What is the result of 60 / (2 x 3)? ,5,FALSE,10,TRUE,15,FALSE,12,FALSE
+319,mathematics,MEDIUM,If a fruit basket contains 12 apples and you give away 4. how many apples do you have left? ,FALSE,10,8,TRUE,6,FALSE,5,FALSE
+320,mathematics,MEDIUM,What is 52 + 32? ,FALSE,TRUE,28,34,32,FALSE,30,FALSE
+321,mathematics,MEDIUM,If a car travels 90 miles in 1.5 hours. what is its average speed? ,FALSE,TRUE,60 miles per hour,70 miles per hour,50 miles per hour,FALSE,80 miles per hour,FALSE
+322,mathematics,MEDIUM,What is the value of 12 x (4 - 2)? ,24,20,FALSE,TRUE,28,FALSE,30,FALSE
+323,mathematics,MEDIUM,If an angle measures 45 degrees. what is its complement? ,FALSE,TRUE,90 degrees,45 degrees,60 degrees,FALSE,30 degrees,FALSE
+324,mathematics,MEDIUM,What is the value of (15 + 5) / 2? ,15,10,FALSE,TRUE,20,FALSE,5,FALSE
+325,mathematics,MEDIUM,If a store sells 3 shirts for \$15. how much is one shirt? ,4,5,TRUE,FALSE,6,FALSE,7,FALSE
+326,mathematics,MEDIUM,What is the result of 10 - 3 + 2? ,FALSE,TRUE,8,9,10,FALSE,7,FALSE
+327,mathematics,MEDIUM,If a book is on sale for \$12 and you have a coupon for 25% off. how much will you pay? ,TRUE,FALSE,9,8,10,FALSE,7,FALSE
+328,mathematics,MEDIUM,What is the sum of 1 + 2 + 3 + 4 + 5? ,TRUE,14,15,FALSE,16,FALSE,12,FALSE
+329,mathematics,MEDIUM,If you score 80% on a test with 50 questions. how many questions did you answer correctly? ,40,35,TRUE,FALSE,45,FALSE,50,FALSE
+330,mathematics,MEDIUM,What is the area of a triangle with base 5 and height 10? ,TRUE,25,30,FALSE,20,FALSE,15,FALSE
+331,mathematics,MEDIUM,If a box contains 12 chocolates and you eat 4. how many chocolates are left? ,FALSE,TRUE,8,10,6,FALSE,4,FALSE
+332,mathematics,MEDIUM,What is the value of 8 + 8 ?? 4? ,10,9,FALSE,TRUE,11,FALSE,12,FALSE
+333,mathematics,MEDIUM,If a car travels 60 miles in 1 hour. how far will it travel in 2.5 hours? ,150 miles,FALSE,120 miles,TRUE,100 miles,FALSE,180 miles,FALSE
+334,mathematics,MEDIUM,What is the value of 3 x (2 + 4)? ,TRUE,21,FALSE,18,24,FALSE,15,FALSE
+335,mathematics,MEDIUM,If you have \$100 and spend \$30. how much do you have left? ,70,FALSE,TRUE,60,50,FALSE,80,FALSE
+336,mathematics,MEDIUM,What is the value of (10 - 3) x 2? ,TRUE,12,FALSE,14,16,FALSE,10,FALSE
+337,mathematics,MEDIUM,If a rectangle has dimensions of 5 and 10. what is its area? ,50,TRUE,45,FALSE,40,FALSE,60,FALSE
+338,mathematics,MEDIUM,What is 70% of 200? ,140,TRUE,150,FALSE,160,FALSE,130,FALSE
+339,mathematics,MEDIUM,If a person jogs 4 miles in 30 minutes. how many miles do they jog in 1 hour? ,8 miles,FALSE,TRUE,6 miles,10 miles,FALSE,5 miles,FALSE
+340,mathematics,MEDIUM,What is the value of 5 + 10 / 2? ,TRUE,FALSE,10,12,8,FALSE,9,FALSE
+341,mathematics,MEDIUM,What is the result of 8 x 3 - 5? ,FALSE,20,19,TRUE,18,FALSE,17,FALSE
+342,mathematics,MEDIUM,If a box contains 30 candies and you take out 10. how many candies are left? ,FALSE,TRUE,25,20,15,FALSE,10,FALSE
+343,mathematics,MEDIUM,What is the value of 11 - (3 + 2)? ,5,FALSE,TRUE,6,7,FALSE,8,FALSE
+344,mathematics,MEDIUM,If a train covers 150 miles in 2.5 hours. what is its speed in miles per hour? ,60,TRUE,70,FALSE,50,FALSE,80,FALSE
+345,mathematics,MEDIUM,What is the value of 10 - 5 x 2? ,FALSE,0,TRUE,5,-5,FALSE,10,FALSE
+346,mathematics,MEDIUM,If a basketball team scores an average of 80 points per game. how many points will they score in 5 games? ,TRUE,FALSE,400,350,450,FALSE,300,FALSE
+347,mathematics,MEDIUM,What is the area of a rectangle that is 8 units long and 4 units wide? ,TRUE,FALSE,32,30,28,FALSE,34,FALSE
+348,mathematics,MEDIUM,If a square has a perimeter of 24. what is the length of one side? ,TRUE,6,FALSE,5,7,FALSE,8,FALSE
+349,mathematics,MEDIUM,What is the value of 50 divided by 5 plus 5? ,FALSE,15,10,TRUE,20,FALSE,25,FALSE
+350,mathematics,HARD,What is the solution to the equation 3x + 5 = 20? ,FALSE,10,5,TRUE,15,FALSE,7,FALSE
+351,mathematics,HARD,What is the value of the expression (2x2 + 3x - 5) if x = 2? ,TRUE,FALSE,7,5,9,FALSE,10,FALSE
+352,mathematics,HARD,If the roots of the equation x2 - 5x + 6 = 0 are a and b. what is the value of a + b? ,5,FALSE,TRUE,6,4,FALSE,3,FALSE
+353,mathematics,HARD,What is the integral of 2x dx? ,TRUE,x2 + 2 + C,x2 + C,FALSE,2x2 + C,FALSE,x2 + 2,FALSE
+354,mathematics,HARD,What is the value of log?(8)? ,3,TRUE,2,FALSE,4,FALSE,5,FALSE
+355,mathematics,HARD,If a triangle has sides of lengths 7. 24. and 25. is it a right triangle? ,No,FALSE,Yes,TRUE,Cannot determine,FALSE,Depends on angles,FALSE
+356,mathematics,HARD,What is the value of 7! (7 factorial)? ,FALSE,5040,720,TRUE,40320,FALSE,10080,FALSE
+357,mathematics,HARD,What is the value of the expression (3 + 4)2 - (5 + 6)? ,TRUE,36,32,FALSE,30,FALSE,28,FALSE
+358,mathematics,HARD,What is the derivative of sin(x)? ,sin(x),FALSE,cos(x),TRUE,1,FALSE,#NAME?,FALSE
+359,mathematics,HARD,If a circle has a radius of 5. what is its area? (Use ?? = 3.14) ,78.5,75,FALSE,TRUE,80,FALSE,85,FALSE
+360,mathematics,HARD,What is the sum of the interior angles of a hexagon? ,TRUE,FALSE,540 degrees,720 degrees,360 degrees,FALSE,180 degrees,FALSE
+361,mathematics,HARD,What is the solution to the system of equations: 2x + 3y = 6 and x - y = 1? ,(2. 1),(3. 0),FALSE,TRUE,(1. 2),FALSE,(0. 3),FALSE
+362,mathematics,HARD,What is the value of the expression 42 + 52? ,TRUE,41,FALSE,45,35,FALSE,25,FALSE
+363,mathematics,HARD,What is the value of sin(90 degrees)? ,0,1,FALSE,TRUE,0.5,FALSE,-1,FALSE
+364,mathematics,HARD,What is the result of the expression 3 + 2 x (8 - 3)? ,FALSE,13,15,TRUE,10,FALSE,12,FALSE
+365,mathematics,HARD,If f(x) = 2x3 - 3x + 1. what is f'(x)? ,TRUE,FALSE,6x2 + 3,6x2 - 3,2x2 - 3,FALSE,3x2 - 2,FALSE
+366,mathematics,HARD,What is the area of a trapezoid with bases 10 and 20 and height 5? ,TRUE,FALSE,70,75,80,FALSE,60,FALSE
+367,mathematics,HARD,What is the value of (5 + 3) x (10 - 2) / 2? ,40,TRUE,FALSE,32,30,FALSE,25,FALSE
+368,mathematics,HARD,If x2 - 4 = 0. what are the values of x? ,2 and -2,FALSE,4 and -4,TRUE,0 and 4,FALSE,1 and -1,FALSE
+369,mathematics,HARD,What is the sum of the first ten prime numbers? ,FALSE,TRUE,130,129,128,FALSE,131,FALSE
+370,mathematics,HARD,What is the product of the roots of the equation x2 - 10x + 21 = 0? ,10,TRUE,21,FALSE,5,FALSE,15,FALSE
+371,mathematics,HARD,What is the value of the expression (x2 + 2x + 1) when x = 3? ,16,18,FALSE,TRUE,20,FALSE,15,FALSE
+372,mathematics,HARD,If a polynomial is defined as P(x) = x3 - 3x2 + 2. what is P(2)? ,2,TRUE,4,FALSE,0,FALSE,-2,FALSE
+373,mathematics,HARD,What is the value of 5 raised to the power of 3? ,FALSE,100,125,TRUE,150,FALSE,200,FALSE
+374,mathematics,HARD,If the circumference of a circle is 31.4 cm. what is the radius? (Use ?? = 3.14) ,5 cm,TRUE,FALSE,6 cm,4 cm,FALSE,3 cm,FALSE
+375,mathematics,HARD,What is the solution to the equation 2(x - 3) = 8? ,8,TRUE,FALSE,6,4,FALSE,5,FALSE
+376,mathematics,HARD,What is the area of a circle with a diameter of 10? (Use ?? = 3.14) ,80,TRUE,78.5,FALSE,70,FALSE,75,FALSE
+377,mathematics,HARD,What is the value of the expression 9 - 3(2 + 1)? ,-1,TRUE,FALSE,0,1,FALSE,2,FALSE
+378,mathematics,HARD,If a right triangle has legs of length 6 and 8. what is the length of the hypotenuse? ,12,10,FALSE,TRUE,14,FALSE,8,FALSE
+379,mathematics,HARD,What is the value of 4 + 3(5 - 2)? ,FALSE,14,TRUE,13,12,FALSE,10,FALSE
+380,mathematics,HARD,What is the equation of a line that passes through the points (1. 2) and (3. 4) ?,TRUE,y = 2x,y = x + 1,FALSE,y = 3x - 1,FALSE,y = x - 1,FALSE
+381,mathematics,HARD,What is the value of cos(0 degrees)? ,1,FALSE,0,TRUE,-1,FALSE,0.5,FALSE
+382,mathematics,HARD,If a rectangle has a length of 10 and a width of 5. what is its diagonal? ,TRUE,FALSE,√100,√125,√75,FALSE,√50,FALSE
+383,mathematics,HARD,What is the value of the expression 23 + 32? ,16,17,TRUE,FALSE,15,FALSE,18,FALSE
+384,mathematics,HARD,What is the derivative of x2 + 4x + 4? ,x + 4,TRUE,2x + 4,FALSE,2x + 2,FALSE,2x + 3,FALSE
+385,mathematics,HARD,What is the area of a rectangle with length 8 and width 3? ,24,FALSE,30,TRUE,20,FALSE,28,FALSE
+386,mathematics,HARD,What is the solution to the equation 5x - 7 = 3? ,1,TRUE,2,FALSE,3,FALSE,4,FALSE
+387,mathematics,HARD,If a triangle has an area of 30 and a base of 10. what is its height? ,5,TRUE,6,FALSE,4,FALSE,3,FALSE
+388,mathematics,HARD,What is the value of 1 + 2 + 3 + ... + 100? ,FALSE,5000,5050,TRUE,5100,FALSE,5150,FALSE
+389,mathematics,HARD,What is the value of the expression (x - 1)2 when x = 4? ,FALSE,8,TRUE,9,10,FALSE,7,FALSE
+390,mathematics,HARD,What is the integral of x2 dx? ,FALSE,(1/2)x3 + C,TRUE,(1/3)x3 + C,(1/4)x3 + C,FALSE,x3 + C,FALSE
+391,mathematics,HARD,If the volume of a cube is 27. what is the length of one side? ,FALSE,3,4,TRUE,5,FALSE,6,FALSE
+392,mathematics,HARD,What is the value of (3 + 5) x (2 + 4)? ,56,TRUE,FALSE,48,40,FALSE,42,FALSE
+393,mathematics,HARD,What is the prime factorization of 60? ,FALSE,2 x 3 x 10,22 x 3 x 5,TRUE,3 x 20,FALSE,4 x 15,FALSE
+394,mathematics,HARD,What is the solution to the equation 4(x + 5) = 32? ,FALSE,TRUE,3,2,4,FALSE,1,FALSE
+395,mathematics,HARD,What is the area of a triangle with base 12 and height 5? ,25,TRUE,FALSE,30,35,FALSE,20,FALSE
+396,mathematics,HARD,What is the value of 2? + 3?? ,FALSE,70,97,TRUE,80,FALSE,90,FALSE
+397,mathematics,HARD,What is the greatest common divisor of 36 and 60? ,12,FALSE,TRUE,6,18,FALSE,10,FALSE
+398,mathematics,HARD,What is the solution to the equation 3x + 4 = 19? ,FALSE,TRUE,5,6,4,FALSE,7,FALSE
+399,mathematics,HARD,What is the value of the expression (4x - 3) when x = 2? ,TRUE,FALSE,8,5,6,FALSE,4,FALSE
+400,mathematics,HARD,If a polynomial is defined as P(x) = x3 - 2x + 1. what is P(1)? ,TRUE,0,FALSE,1,-1,FALSE,2,FALSE
+401,mathematics,HARD,What is the solution to the quadratic equation x2 - 9 = 0? ,9 and -9,TRUE,FALSE,3 and -3,0 and 9,FALSE,1 and -1,FALSE
+402,mathematics,HARD,What is the value of 7% of 200? ,12,FALSE,14,TRUE,10,FALSE,16,FALSE
+403,mathematics,HARD,What is the area of a parallelogram with base 10 and height 5? ,60,50,FALSE,TRUE,40,FALSE,30,FALSE
+404,mathematics,HARD,What is the sum of the first ten even numbers? ,100,TRUE,FALSE,110,120,FALSE,130,FALSE
+405,mathematics,HARD,What is the value of the expression 2x + 3y if x = 1 and y = 2? ,7,TRUE,8,FALSE,6,FALSE,5,FALSE
+406,mathematics,HARD,If a function f(x) = x2 - 4. what are the zeros of the function? ,4 and -4,2 and -2,TRUE,FALSE,1 and -1,FALSE,3 and -3,FALSE
+407,mathematics,HARD,What is the value of 5! - 4! ? ,FALSE,24,TRUE,20,16,FALSE,12,FALSE
+408,mathematics,HARD,What is the highest power of 2 that divides 64? ,FALSE,6,TRUE,5,4,FALSE,7,FALSE
+409,mathematics,HARD,What is the value of (x + 3)(x - 2) when x = 1? ,1,FALSE,TRUE,0,3,FALSE,-1,FALSE
+410,mathematics,HARD,What is the area of a sector with a radius of 6 and an angle of 60 degrees? ,10??,FALSE,12??,TRUE,15??,FALSE,8??,FALSE
+411,mathematics,HARD,If a car travels 150 miles at 50 miles per hour. how long does it take? ,2 hours,3 hours,FALSE,TRUE,4 hours,FALSE,5 hours,FALSE
+412,mathematics,HARD,What is the value of the expression (2 + 3)(4 - 1)? ,FALSE,15,TRUE,18,12,FALSE,10,FALSE
+413,mathematics,HARD,What is the product of the first five odd numbers? ,TRUE,945,1000,FALSE,900,FALSE,800,FALSE
+414,mathematics,HARD,What is the value of (x3 + 3x2 - x) if x = 2? ,20,FALSE,TRUE,22,24,FALSE,18,FALSE
+415,mathematics,HARD,If two angles are complementary and one measures 70 degrees. what is the other angle? ,TRUE,20 degrees,FALSE,30 degrees,40 degrees,FALSE,50 degrees,FALSE
+416,mathematics,HARD,What is the value of 22 + 32 + 42? ,25,29,FALSE,TRUE,30,FALSE,20,FALSE
+417,mathematics,HARD,If a polynomial is defined as P(x) = 3x2 - 6x. what is P(2)? ,TRUE,FALSE,6,0,12,FALSE,8,FALSE
+418,mathematics,HARD,What is the value of 10 - (3 + 2)? ,5,FALSE,TRUE,4,3,FALSE,6,FALSE
+419,mathematics,HARD,If the perimeter of a rectangle is 50 and the length is 15. what is the width? ,15,TRUE,10,FALSE,20,FALSE,25,FALSE
+420,mathematics,HARD,What is the area of a circle with a radius of 3? (Use ?? = 3.14) ,FALSE,TRUE,28.26,30,25,FALSE,27,FALSE
+421,mathematics,HARD,What is the value of x in the equation 2x + 3 = 11? ,5,FALSE,4,TRUE,3,FALSE,2,FALSE
+422,mathematics,HARD,What is the solution of the inequality 3x - 4 < 5? ,x < 4,x < 3,FALSE,TRUE,x > 3,FALSE,x > 4,FALSE
+423,mathematics,HARD,What is the area of a triangle with a base of 10 and a height of 6? ,FALSE,25,30,TRUE,20,FALSE,35,FALSE
+424,mathematics,HARD,What is the value of 72 - 22? ,45,50,FALSE,TRUE,40,FALSE,30,FALSE
+425,mathematics,HARD,What is the sum of the first five prime numbers? ,TRUE,30,FALSE,28,26,FALSE,32,FALSE
+426,mathematics,HARD,If a box has dimensions 2. 3. and 4. what is its volume? ,20,FALSE,TRUE,24,30,FALSE,16,FALSE
+427,mathematics,HARD,What is the value of the expression 5(x + 2) when x = 3? ,20,FALSE,25,TRUE,15,FALSE,30,FALSE
+428,mathematics,HARD,What is the probability of rolling a sum of 7 with two dice? ,FALSE,1月8日,TRUE,1月6日,1月10日,FALSE,1月4日,FALSE
+429,mathematics,HARD,What is the equation of a line with slope 2 that passes through the point (1.3 )?,y = 2x + 1,y = 2x + 2,FALSE,TRUE,y = 2x + 3,FALSE,y = 2x - 1,FALSE
+430,mathematics,HARD,What is the value of the expression (x2 - 1)(x + 1) when x = 2? ,9,FALSE,TRUE,8,10,FALSE,7,FALSE
+431,mathematics,HARD,If the roots of the equation x2 + bx + c = 0 are 3 and 5. what is the value of b? ,8,FALSE,15,TRUE,5,FALSE,12,FALSE
+432,mathematics,HARD,What is the value of the expression 8(2x - 3) if x = 4? ,34,FALSE,TRUE,20,30,FALSE,40,FALSE
+433,mathematics,HARD,If a function f(x) = x2 + 4. what is f(3)? ,FALSE,13,TRUE,10,12,FALSE,14,FALSE
+434,mathematics,HARD,What is the slope of the line that passes through the points (2.3) and (4.7)?,FALSE,TRUE,3,2,4,FALSE,1,FALSE
+435,mathematics,HARD,What is the value of the expression 10 - 3(2 + 1)? ,FALSE,0,TRUE,1,3,FALSE,2,FALSE
+436,mathematics,HARD,What is the product of the angles in a triangle? ,360 degrees,180 degrees,TRUE,FALSE,90 degrees,FALSE,270 degrees,FALSE
+437,mathematics,HARD,What is the value of the expression 5x - 4 when x = 2? ,TRUE,6,FALSE,4,8,FALSE,10,FALSE
+438,mathematics,HARD,What is the value of the expression 3(2 + 4) - 5? ,TRUE,13,FALSE,12,10,FALSE,15,FALSE
+439,mathematics,HARD,If a person invests \$1000 at an annual interest rate of 5%. what will be the total amount after 2 years with simple interest? ,1050,FALSE,TRUE,1100,1150,FALSE,1200,FALSE
+440,mathematics,HARD,What is the value of the expression (x - 4)(x + 2) when x = 6? ,FALSE,TRUE,8,10,12,FALSE,6,FALSE
+441,mathematics,HARD,What is the derivative of 3x2 - 2x + 1? ,TRUE,6x - 2,3x - 2,FALSE,3x2 - 2,FALSE,6x + 2,FALSE
+442,mathematics,HARD,What is the area of a trapezoid with bases 5 and 15 and height 4? ,50,FALSE,40,TRUE,30,FALSE,60,FALSE
+443,mathematics,HARD,If the roots of the polynomial x3 - 6x2 + 11x - 6 = 0 are a. b. and c. what is the value of a + b + c? ,11,FALSE,TRUE,6,10,FALSE,9,FALSE
+444,mathematics,HARD,What is the value of (2 + 3)3? ,125,TRUE,FALSE,100,150,FALSE,80,FALSE
+445,mathematics,HARD,If a right triangle has an angle of 30 degrees. what is the ratio of the lengths of the opposite and hypotenuse sides? ,TRUE,3月2日,FALSE,1月2日,1月2日,FALSE,1月3日,FALSE
+446,mathematics,HARD,What is the value of the expression 4(3x - 2) + 5 when x = 1? ,17,TRUE,15,FALSE,18,FALSE,20,FALSE
+447,mathematics,HARD,What is the result of the expression 102 - 62? ,40,FALSE,TRUE,64,50,FALSE,70,FALSE
+448,mathematics,HARD,If the circumference of a circle is 31.4 cm. what is the diameter? (Use ?? = 3.14) ,10 cm,15 cm,TRUE,FALSE,5 cm,FALSE,20 cm,FALSE
+449,mathematics,HARD,What is the area of a circle with a radius of 7? (Use ?? = 3.14) ,TRUE,FALSE,153.86,140,160,FALSE,180,FALSE
+450,mathematics,VERY_HARD,What is the integral of sin(x) dx? ,FALSE,TRUE,?cos(x) + C,cos(x) + C,sin(x) + C,FALSE,?sin(x) + C,FALSE
+451,mathematics,VERY_HARD,What is the solution to the equation 2^(x) = 16? ,FALSE,TRUE,4,2,3,FALSE,5,FALSE
+452,mathematics,VERY_HARD,If the roots of the polynomial x2 - 6x + k = 0 are both equal. what is the value of k? ,9,6,FALSE,TRUE,12,FALSE,0,FALSE
+453,mathematics,VERY_HARD,What is the area of a circle with a radius of 10? (Use pi = 3.14) ,TRUE,FALSE,314,300,310,FALSE,320,FALSE
+454,mathematics,VERY_HARD,What is the value of the expression (2x - 3)(x + 4) when x = 5? ,TRUE,29,FALSE,28,30,FALSE,25,FALSE
+455,mathematics,VERY_HARD,In a triangle.  if one angle is 90 degrees and another is 45 degrees.  what is the length of the hypotenuse if the adjacent side is 1? ,√3,FALSE,√2,TRUE,1,FALSE,2,FALSE
+456,mathematics,VERY_HARD,What is the derivative of e^(2x)? ,TRUE,e^(2x),2e^(2x),FALSE,2e^(x),FALSE,e^(2x + 1),FALSE
+457,mathematics,VERY_HARD,What is the value of the expression log??(1000)? ,2,FALSE,3,TRUE,4,FALSE,5,FALSE
+458,mathematics,VERY_HARD,If a cylinder has a radius of 3 and height of 5. what is its volume? (Use pi = 3.14) ,TRUE,141.3,FALSE,140,135,FALSE,150,FALSE
+459,mathematics,VERY_HARD,What is the sum of the angles in an octagon? ,720 degrees,FALSE,TRUE,1080 degrees,900 degrees,FALSE,640 degrees,FALSE
+460,mathematics,VERY_HARD,What is the equation of a line that passes through the points (1. 2) and (2. 3)?,TRUE,y = 2x,y = x + 1,FALSE,y = 3x - 1,FALSE,y = x + 2,FALSE
+461,mathematics,VERY_HARD,What is the value of the expression (x - 1)(x + 2)(x - 3) when x = 4? ,FALSE,7,6,TRUE,5,FALSE,8,FALSE
+462,mathematics,VERY_HARD,If the function f(x) = x3 - 3x + 2. what are the critical points? ,FALSE,TRUE,-2 and 2,1 and -1,3 and -3,FALSE,0 and 2,FALSE
+463,mathematics,VERY_HARD,What is the value of π squared? ,FALSE,TRUE,9.87,10,8.5,FALSE,7.5,FALSE
+464,mathematics,VERY_HARD,What is the value of the determinant of the matrix [[1.2][3.4]]?,TRUE,?2,2,FALSE,0,FALSE,4,FALSE
+465,mathematics,VERY_HARD,If a rectangle has a length of 10 and a diagonal of 13. what is its width? ,12,5,TRUE,FALSE,15,FALSE,10,FALSE
+466,mathematics,VERY_HARD,What is the value of the expression sin(30 degrees)? ,√3/2,1月2日,FALSE,TRUE,1,FALSE,√2/2,FALSE
+467,mathematics,VERY_HARD,If the polynomial P(x) = x3 - 3x2 + 2. what is P(2)? ,TRUE,0,FALSE,1,-1,FALSE,2,FALSE
+468,mathematics,VERY_HARD,What is the area of an ellipse with a semi-major axis of 4 and a semi-minor axis of 2? (Use pi = 3.14) ,TRUE,25.12,FALSE,20,30,FALSE,28,FALSE
+469,mathematics,VERY_HARD,What is the value of the expression (3x + 4)(2x - 1) when x = 1? ,TRUE,19,20,FALSE,18,FALSE,21,FALSE
+470,mathematics,VERY_HARD,What is the solution for x in the equation log(x) = 2? ,10,100,FALSE,TRUE,50,FALSE,20,FALSE
+471,mathematics,VERY_HARD,What is the limit of (x2 - 1)/(x - 1) as x approaches 1? ,TRUE,FALSE,2,1,0,FALSE,3,FALSE
+472,mathematics,VERY_HARD,What is the value of the series 1 + 1/2 + 1/3 + ... + 1/n as n approaches infinity? ,∞,TRUE,FALSE,1,2,FALSE,0,FALSE
+473,mathematics,VERY_HARD,What is the value of cos(45 degrees)? ,1月2日,√2/2,FALSE,TRUE,√3/2,FALSE,1,FALSE
+474,mathematics,VERY_HARD,If the radius of a sphere is 5. what is its volume? (Use pi = 3.14) ,TRUE,FALSE,523.33,500,600,FALSE,700,FALSE
+475,mathematics,VERY_HARD,If f(x) = 3x2 + 2x - 1. what is f'(-1)? ,1,-1,FALSE,TRUE,0,FALSE,2,FALSE
+476,mathematics,VERY_HARD,What is the area of a triangle with sides of lengths 7.8. and 9?,TRUE,30,FALSE,26.83,25,FALSE,27,FALSE
+477,mathematics,VERY_HARD,What is the derivative of ln(x)? ,1/x,TRUE,FALSE,x,ln(x),FALSE,1,FALSE
+478,mathematics,VERY_HARD,What is the value of the expression √(144) + √(64)? ,FALSE,16,18,TRUE,14,FALSE,20,FALSE
+479,mathematics,VERY_HARD,What is the value of the series 1 + 1/4 + 1/9 + 1/16 + ... to n terms? ,π2/6,2,TRUE,FALSE,1,FALSE,3,FALSE
+480,mathematics,VERY_HARD,If a cone has a radius of 4 and a height of 6. what is its volume? (Use pi = 3.14) ,50.24,TRUE,48,FALSE,52,FALSE,53,FALSE
+481,mathematics,VERY_HARD,What is the equation of a parabola with vertex at (0.0) and opens upwards? ,y = -ax2,FALSE,y = ax2,TRUE,y = x2 + c,FALSE,y = x2 - c,FALSE
+482,mathematics,VERY_HARD,What is the value of sin(90 degrees)? ,0,1,FALSE,TRUE,√2,FALSE,√3,FALSE
+483,mathematics,VERY_HARD,If a triangle has sides 3.4 and 5. is it a right triangle? ,TRUE,FALSE,Yes,No,Depends on angles,FALSE,Cannot determine,FALSE
+484,mathematics,VERY_HARD,What is the area of a regular hexagon with a side length of 6? ,FALSE,93.53,TRUE,90,80,FALSE,100,FALSE
+485,mathematics,VERY_HARD,What is the value of the expression 2^(3x) when x = 2? ,32,FALSE,64,TRUE,16,FALSE,8,FALSE
+486,mathematics,VERY_HARD,What is the value of the expression 4 + 4 + 4 + 4? ,FALSE,16,TRUE,14,12,FALSE,18,FALSE
+487,mathematics,VERY_HARD,If a polynomial is defined as P(x) = x? - 4x2. what are the critical points? , 0.±2,±1.0,FALSE,TRUE,±3,FALSE,±4,FALSE
+488,mathematics,VERY_HARD,What is the sum of the first n even numbers? ,FALSE,TRUE,n(n + 1),n2,2n,FALSE,n2 + n,FALSE
+489,mathematics,VERY_HARD,What is the derivative of 1/x? ,TRUE,1/x,FALSE,?1/x2,?x,FALSE,1/F,FALSE
+490,mathematics,VERY_HARD,What is the value of the expression 6!/(2!4!)? ,10,15,TRUE,FALSE,20,FALSE,12,FALSE
+491,mathematics,VERY_HARD,What is the area of a sector with a radius of 8 and a central angle of 45 degrees? (Use pi = 3.14) ,FALSE,10,TRUE,11.76,12,FALSE,9,FALSE
+492,mathematics,VERY_HARD,What is the limit of (x2 - 4)/(x - 2) as x approaches 2? ,TRUE,4,0,FALSE,2,FALSE,1,FALSE
+493,mathematics,VERY_HARD,What is the sum of the squares of the first five natural numbers? ,TRUE,55,60,FALSE,50,FALSE,45,FALSE
+494,mathematics,VERY_HARD,If the perimeter of a rectangle is 50 and the length is 15. what is its width? ,FALSE,12.5,10,TRUE,15,FALSE,20,FALSE
+495,mathematics,VERY_HARD,What is the integral of 1/x dx? ,FALSE,e^x + C,TRUE,ln|x| + C,x2/2 + C,FALSE,1/x + C,FALSE
+496,mathematics,VERY_HARD,If the area of a parallelogram is 30 and the base is 10. what is its height? ,3,4,FALSE,TRUE,5,FALSE,6,FALSE
+497,mathematics,VERY_HARD,What is the derivative of cos(x)? ,FALSE,?sin(x),TRUE,sin(x),?cos(x),FALSE,cos(x),FALSE
+498,mathematics,VERY_HARD,What is the volume of a cylinder with height 10 and radius 3? (Use pi = 3.14) ,94.2,90,TRUE,FALSE,100,FALSE,80,FALSE
+499,mathematics,VERY_HARD,What is the value of the limit lim(x→0)(sin(x)/x)? ,TRUE,FALSE,1,0,∞,FALSE,-1,FALSE
