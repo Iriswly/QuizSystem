@@ -97,8 +97,21 @@ public class UserBase {
         return profile;
     }
 
+
     protected boolean addAccount_DB(ArrayList<String> newProfile){
         return (csvEditor.operationsDB(1, newProfile, -1)) ;
+    }
+    // In UserBase class
+    protected boolean loginSetter(ArrayList<String> profile) {
+        // Implement the logic to set the login state
+        // For example, set a flag or update a session
+        return true; // Return true if login state is set successfully
+    }
+
+    protected boolean isLogin() {
+        // Implement the logic to check if the user is logged in
+        // For example, check a flag or session state
+        return true; // Return true if the user is logged in
     }
 
     protected boolean editAccountProfile_DB(ArrayList<String> newProfile){
