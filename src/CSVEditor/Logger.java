@@ -1,10 +1,10 @@
-package User;
+package CSVEditor;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Logger {
-    protected final String name = "User API";
+    protected final String name = "DB";
     private boolean ENABLE = false;
 
     public Logger(boolean enable) {

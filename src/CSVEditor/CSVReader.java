@@ -18,6 +18,7 @@ public class CSVReader extends CSVBase {
 
     public CSVReader() throws Exception {
         super(); // 简单初始化一下CSVBase
+        readAll();
     }
 
     // 将用户信息保存在currentLines中
@@ -29,13 +30,13 @@ public class CSVReader extends CSVBase {
                 while ((line = br.readLine()) != null) {
                     currentLines.add(line);
                 }
-                System.out.println("read all lines Done");
+                logger.log("read all lines Done");
             } catch (IOException e) {
                 if (DEBUG) e.printStackTrace();
                 return false;
             }
         } else {
-            System.out.println("Temp user csv does not exists");
+            logger.log("Temp user csv does not exists");
             return false;
         }
         return true;
@@ -50,11 +51,11 @@ public class CSVReader extends CSVBase {
     // 读取指定的一行 (使用行号指定）
     private String readLine(int index) throws Exception {
         if (currentLines == null) {
-            if (DEBUG) System.out.println("invalid currentLines");
+            if (DEBUG) logger.log("invalid currentLines");
             throw new Exception("invalid currentLines");
         }
         if (index < 0 || index > currentLines.size() - 1) {
-            if (DEBUG) System.out.println("invalid index of line");
+            if (DEBUG) logger.log("invalid index of line");
             throw new Exception("invalid index of line");
         }
         return currentLines.get(index);
@@ -75,11 +76,11 @@ public class CSVReader extends CSVBase {
     // 展示所有行, 用于调试（DEBUG
     protected void showLines() {
         if (currentLines == null) {
-            if (DEBUG) System.out.println("the lines are empty");
+            if (DEBUG) logger.log("the lines are empty");
             return;
         }
         for (String line : currentLines) {
-            System.out.println(line);
+            logger.log(line);
         }
     }
 
@@ -91,7 +92,7 @@ public class CSVReader extends CSVBase {
 
         // the matchWord should not contain any commas
         if (matchWord.contains(",")) {
-            if (DEBUG) System.out.println("the searching word should not contains any comma");
+            if (DEBUG) logger.log("the searching word should not contains any comma");
             return null;
         }
         /*
@@ -110,7 +111,7 @@ public class CSVReader extends CSVBase {
             case 3 -> matchLine_exactly_unit_first(matchWord);
             case 4 -> matchLines_exactly_unit_all(matchWord);
             default -> {
-                if (DEBUG) System.out.println("invalid mode");
+                if (DEBUG) logger.log("invalid mode");
                 yield null;
             }
         };
@@ -121,16 +122,16 @@ public class CSVReader extends CSVBase {
         for (int i = 0; i < currentLines.size(); i++) {
             String sentence = fuzzy ? currentLines.get(i).toLowerCase() : currentLines.get(i);
             if (sentence.contains(matchWord)) {
-                if (DEBUG) System.out.printf(
+                if (DEBUG) logger.log(
                         "fuzzy: {%b}, matching word: %s in sentence %s\n",
                         fuzzy,
                         matchWord,
                         sentence);
                 if (!matchResult.add(i)) {
-                    if (DEBUG) System.out.println("add failed");
+                    if (DEBUG) logger.log("add failed");
                     return null;
                 }
-                if (DEBUG) System.out.println("match result now: " + matchResult);
+                if (DEBUG) logger.log("match result now: " + matchResult);
             }
         }
         return matchResult;
@@ -183,7 +184,7 @@ public class CSVReader extends CSVBase {
             // 精确搜索,返回第一个符合的行号
             case 4 -> matchCol_exactly_unit_first(matchWord, colIndex);
             default -> {
-                if (DEBUG) System.out.println("invalid mode");
+                if (DEBUG) logger.log("invalid mode");
                 yield null;
             }
         };
@@ -207,7 +208,7 @@ public class CSVReader extends CSVBase {
             String item = fuzzy ? data2D.get(i).get(colIndex).toLowerCase() : data2D.get(i).get(colIndex);
             if (item.equals(matchWord)) {
                 if (DEBUG)
-                    System.out.println("matching word: " + matchWord + " in column " + colIndex + " in line " + i);
+                    logger.log("matching word: " + matchWord + " in column " + colIndex + " in line " + i);
                 matchResults.add(i);
             }
         }
@@ -253,46 +254,46 @@ public class CSVReader extends CSVBase {
             );
 
             // 示例 1：匹配所有行中包含“banana”的行（精确匹配，mode = 1）
-            System.out.println(1);
+            logger.log("1");
             ArrayList<Integer> result1 = reader.matchLine("banana", 1);
-            System.out.println("匹配所有行中包含 'banana' 的行（精确匹配，mode = 1）: " + result1);
+            logger.log("匹配所有行中包含 'banana' 的行（精确匹配，mode = 1）: " + result1);
 
             // 示例 2：匹配所有行中包含“APPLE”的行（模糊匹配，mode = 2）
-            System.out.println(2);
+            logger.log("2");
             ArrayList<Integer> result2 = reader.matchLine("APPLE", 2);
-            System.out.println("匹配所有行中包含 'APPLE' 的行（模糊匹配，mode = 2）: " + result2);
+            logger.log("匹配所有行中包含 'APPLE' 的行（模糊匹配，mode = 2）: " + result2);
 
             // 示例 3：匹配第一行包含单元格“kiwi”的行（精确单元匹配，mode = 3）
-            System.out.println(3);
+            logger.log("3");
             ArrayList<Integer> result3 = reader.matchLine("kiwi", 3);
-            System.out.println("匹配第一行包含单元格 'kiwi' 的行（精确单元匹配，mode = 3）: " + result3);
+            logger.log("匹配第一行包含单元格 'kiwi' 的行（精确单元匹配，mode = 3）: " + result3);
 
             // 示例 4：匹配所有行包含单元格“banana”的行（精确单元匹配，mode = 4）
-            System.out.println(4);
+            logger.log("4");
             ArrayList<Integer> result4 = reader.matchLine("banana", 4);
-            System.out.println("匹配所有行包含单元格 'banana' 的行（精确单元匹配，mode = 4）: " + result4);
+            logger.log("匹配所有行包含单元格 'banana' 的行（精确单元匹配，mode = 4）: " + result4);
 
             // 示例 5：在指定列中（第 1 列）模糊匹配“APPLE”单元格的行（mode = 1）
-            System.out.println(5);
+            logger.log("5");
             ArrayList<Integer> result5 = reader.matchCol("APPLE", 1, 1);
-            System.out.println("在指定列（第 1 列）模糊匹配 'APPLE' 的行（mode = 1）: " + result5);
+            logger.log("在指定列（第 1 列）模糊匹配 'APPLE' 的行（mode = 1）: " + result5);
 
             // 示例 6：在指定列中（第 2 列）精确匹配“grape”单元格的行（mode = 2）
-            System.out.println(6);
+            logger.log("6");
             ArrayList<Integer> result6 = reader.matchCol("grape", 2, 2);
-            System.out.println("在指定列（第 2 列）精确匹配 'grape' 的行（mode = 2）: " + result6);
+            logger.log("在指定列（第 2 列）精确匹配 'grape' 的行（mode = 2）: " + result6);
 
             // 示例 7：在指定列中（第 0 列）模糊匹配第一个出现的“apple”单元格的行（mode = 3）
-            System.out.println(7);
+            logger.log("7");
             ArrayList<Integer> result7 = reader.matchCol("apple", 0, 3);
-            System.out.println("在指定列（第 0 列）模糊匹配第一个出现的 'apple' 的行（mode = 3）: " + result7);
+            logger.log("在指定列（第 0 列）模糊匹配第一个出现的 'apple' 的行（mode = 3）: " + result7);
 
             // 示例 8：在指定列中（第 2 列）精确匹配所有“banana”单元格的行（mode = 4）
-            System.out.println(8);
+            logger.log("8");
             ArrayList<Integer> result8 = reader.matchCol("banana", 2, 4);
-            System.out.println("在指定列（第 2 列）精确匹配所有 'banana' 的行（mode = 4）: " + result8);
-            System.out.println();
-            System.out.println("DONE!!!");
+            logger.log("在指定列（第 2 列）精确匹配所有 'banana' 的行（mode = 4）: " + result8);
+            logger.log("");
+            logger.log("DONE!!!");
 
         } catch (Exception e) {
             e.printStackTrace();

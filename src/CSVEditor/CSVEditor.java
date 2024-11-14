@@ -1,35 +1,35 @@
 package CSVEditor;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CSVEditor extends CSVReader{
     public CSVEditor() throws Exception{
         super();
+        readAll();
     }
 
     // 将读入currentLines的数据写入temp_users.csv
     private boolean dumpAllToTemp() {
         if (!isTempUserCSVExists()) tempUsersCSVCreator();
         if (currentLines == null) {
-            if (DEBUG) System.out.println("currentLines is null");
+            if (DEBUG) logger.log("currentLines is null");
             return false;
         }
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(TEMP_FILEPATH)))  {
-            for (String line : currentLines){
-                bw.write(line + '\n');
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(TEMP_FILEPATH))) {
+            for (String line : currentLines) {
+                bw.write(line);
+                bw.newLine(); // 确保每行都换行
             }
-            System.out.println("dump all lines to temp csv Done");
+            logger.log("dump all lines to temp csv Done");
         } catch (IOException e) {
             if (DEBUG) e.printStackTrace();
             return false;
         }
         return true;
     }
+
 
     // 修改特定的行， 注意输入的line得是已经格式化好的
     protected boolean editLine(int lineIndex, String newLine) throws IndexOutOfBoundsException{
@@ -47,7 +47,15 @@ public class CSVEditor extends CSVReader{
     // 添加一行, 注意输入的line得是已经格式化好的
     protected boolean addNewLine(String newLine) throws Exception{
         if (currentLines == null) throw new Exception("invalid currentLines");
+        logger.log("========= TEMP DEBUG =========");
+        logger.log(currentLines.toString());
+        logger.log("========= TEMP DEBUG =========");
         currentLines.add(newLine);
+//        currentLines.add(newLine);
+//        currentLines.add(newLine);
+        logger.log("========= TEMP DEBUG =========");
+        logger.log(currentLines.toString());
+        logger.log("========= TEMP DEBUG =========");
         return true;
     }
 
@@ -68,14 +76,14 @@ public class CSVEditor extends CSVReader{
                 if (tempLine == null) return false;
                 try {
                     if (addNewLine(tempLine)) {
-                        if (DEBUG) System.out.println("addNewLine Done");
+                        if (DEBUG) logger.log("addNewLine Done");
                         if (overcast()) {
-                            if (DEBUG) System.out.println("overcast Done");
+                            if (DEBUG) logger.log("overcast Done");
                             return true;
                         }
                     }
                     else {
-                        if (DEBUG) System.out.println("addNewLine failed");
+                        if (DEBUG) logger.log("addNewLine failed");
                     }
                     return false;
                 } catch (Exception e) {
@@ -86,17 +94,24 @@ public class CSVEditor extends CSVReader{
             case 2: // EDIT
             {
                 String tempLine = inputLineFormatter(newLine);
-                if (tempLine == null) return false;
+                if (tempLine == null) {
+                    if (DEBUG) logger.log("EDIT failed: newLine is null");
+                    return false;
+                }
+                if (lineIndex == -1) {
+                    if (DEBUG) logger.log("user not found");
+                    return false;
+                }
                 try {
                     if (editLine(lineIndex, tempLine)) {
                         if (overcast()) {
-                            if (DEBUG) System.out.println("overcast Done");
+                            if (DEBUG) logger.log("overcast Done");
                             return true;
                         }
                         return false;
                     }
                     else {
-                        if (DEBUG) System.out.println("editLine failed");
+                        if (DEBUG) logger.log("editLine failed");
                         return false;
                     }
                 } catch (Exception e) {
@@ -108,19 +123,19 @@ public class CSVEditor extends CSVReader{
             case 3: // DELETE
                 try{
                     if (lineIndex == -1) {
-                        if (DEBUG) System.out.println("user not found");
+                        if (DEBUG) logger.log("user not found");
                         return false;
                     }
 
                     if (deleteLine(lineIndex)) {
                         if (overcast()) {
-                            if (DEBUG) System.out.println("overcast Done");
+                            if (DEBUG) logger.log("overcast Done");
                             return true;
                         }
                         return false;
                     }
                     else {
-                        if (DEBUG) System.out.println("deleteLine failed");
+                        if (DEBUG) logger.log("deleteLine failed");
                         return false;
                     }
                 } catch (Exception e) {
@@ -129,7 +144,7 @@ public class CSVEditor extends CSVReader{
                 }
 
             default:
-                if (DEBUG) System.out.println("invalid mode");
+                if (DEBUG) logger.log("invalid mode");
                 return false;
         }
     }
@@ -139,34 +154,54 @@ public class CSVEditor extends CSVReader{
     // 再将temp_csv 的修改提交到users.csv
     protected boolean overcast() {
         if (currentLines == null) {
-            if (DEBUG) System.out.println("currentLines is null");
-            readAll();
+            if (DEBUG) logger.log("currentLines is null");
+            readAll();  // 读取所有内容到 currentLines 中
+        }
+
+        // 调试输出：打印 currentLines 内容，检查是否包含所有行
+        if (DEBUG) {
+            logger.log("currentLines 内容:");
+            for (String line : currentLines) {
+                logger.log(line);
+            }
         }
 
         if (!isUserCSVExists()) usersCSVCreator();
         if (!isLastCSVExists()) lastCSVCreator();
-        if (!isTempUserCSVExists()) tempUsersCSVCreator();
-
-        // warning: one readAll function is needed before using this shit
-        dumpAllToTemp();
 
         File userCSV = new File(FILEPATH);
         File lastCSV = new File(LAST_FILEPATH);
-        File tempCSV = new File(TEMP_FILEPATH);
 
-        lastCSV.delete();
-        if (lastCSV.exists()) {
-            if (DEBUG) System.out.println("deleted last.csv FAILED");
+        // 将 users.csv 的内容复制到 last.csv 作为备份
+        try (FileInputStream fis = new FileInputStream(userCSV);
+             FileOutputStream fos = new FileOutputStream(lastCSV)) {
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = fis.read(buffer)) > 0) {
+                fos.write(buffer, 0, length);
+            }
+            if (DEBUG) logger.log("复制 users.csv 到 last.csv 成功");
+        } catch (IOException e) {
+            if (DEBUG) e.printStackTrace();
             return false;
         }
-        if (DEBUG) System.out.println("deleted last.csv");
-        if (!userCSV.renameTo(lastCSV)) return false;
-        if (DEBUG) System.out.println("renamed users.csv to last.csv");
-        if (!tempCSV.renameTo(userCSV)) return false;
-        if (DEBUG) System.out.println("renamed temp.csv to user.csv");
-        if (DEBUG) System.out.println("Done");
+
+        // 将 currentLines 写入 users.csv，确保 users.csv 始终是最新版本
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(userCSV))) {
+            for (String line : currentLines) {
+                bw.write(line);
+                bw.newLine();
+            }
+            if (DEBUG) logger.log("将最新内容写入 users.csv 完成");
+        } catch (IOException e) {
+            if (DEBUG) e.printStackTrace();
+            return false;
+        }
+
+        if (DEBUG) logger.log("提交修改完成");
         return true;
     }
+
 
     // 数据库对外的输出格式的api
     public ArrayList<String> outputLineFormatter(int lineIndex){
@@ -179,13 +214,13 @@ public class CSVEditor extends CSVReader{
 
 //    protected boolean saveAndUpdate(){
 //        if (currentLines == null) {
-//            if (DEBUG) System.out.println("currentLines is null");
+//            if (DEBUG) logger.log("currentLines is null");
 //            return false;
 //        }
 //        if (overcast()) {
-//            if (DEBUG) System.out.println("overcast Done");
+//            if (DEBUG) logger.log("overcast Done");
 //        } else {
-//            if (DEBUG) System.out.println("overcast failed");
+//            if (DEBUG) logger.log("overcast failed");
 //            return false;
 //        }
 //        readAll();
@@ -237,26 +272,26 @@ public class CSVEditor extends CSVReader{
             e.printStackTrace();
             return;
         }
-        System.out.println(1);
-        System.out.println();
+        logger.log("1");
+        logger.log("");
 
         writer.readAll();
 
-        System.out.println(2);
-        System.out.println();
+        logger.log("2");
+        logger.log("");
 
         writer.showLines();
 
-        System.out.println(3);
-        System.out.println();
+        logger.log("3");
+        logger.log("");
 
         if (!writer.dumpAllToTemp()){
-            System.out.println("failed to dump");
+            logger.log("failed to dump");
             return;
         }
 
-        System.out.println(4);
-        System.out.println();
+        logger.log("4");
+        logger.log("");
 
         try {
             writer.addNewLine("new line");
@@ -264,30 +299,30 @@ public class CSVEditor extends CSVReader{
             e.printStackTrace();
         }
 
-        System.out.println(5);
-        System.out.println();
+        logger.log("5");
+        logger.log("");
 
         try {
-            for (int i = 0; i < writer.currentLines.size(); i++) System.out.println(writer.nextLine());
+            for (int i = 0; i < writer.currentLines.size(); i++) logger.log(writer.nextLine());
         } catch (Exception e){
-            System.out.println("out now");
+            logger.log("out now");
         }
 
-        System.out.println(6);
-        System.out.println();
+        logger.log("6");
+        logger.log("");
 
         try {
-            writer.editLine(13, "edited line");
+            writer.editLine(1, "edited line");
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("shit");
+            logger.log("shit");
         }
         writer.showLines();
 
-        System.out.println(7);
-        System.out.println();
+        logger.log("7");
+        logger.log("");
 
         if (!writer.overcast()) {
-            System.out.println("overcast failed");
+            logger.log("overcast failed");
         }
     }
 

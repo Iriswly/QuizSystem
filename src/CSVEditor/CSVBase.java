@@ -15,10 +15,10 @@ public class CSVBase {
 
     // DEBUG 模式默认打开用来输出日志
     protected static final boolean DEBUG = true;
+    protected static Logger logger = new Logger(DEBUG);
 
     private File file;
     private File temp_file;
-
 
     /* constructor
      * 检查users.csv 是否存在，如果不存在就创建，创建失败就报错 Exception
@@ -27,13 +27,13 @@ public class CSVBase {
         this.file = new File(FILEPATH);
         if (!isUserCSVExists()){
             if (!usersCSVCreator()) {
-                if (DEBUG) System.out.println("create users.csv");
+                if (DEBUG) logger.log("create users.csv");
                 throw new Exception("file not found and create users.csv failed");
             }
             this.file = new File(FILEPATH);
             if (!this.file.exists()) if (DEBUG) {
-                System.out.println("constructor CSVBase constructor failed");
-                System.out.println("users.csv do not E after creating!");
+                logger.log("constructor CSVBase constructor failed");
+                logger.log("users.csv do not E after creating!");
                 throw new Exception("users.csv do not E after creating!");
             }
         }
@@ -46,7 +46,7 @@ public class CSVBase {
     public boolean isUserCSVExists() {
         file = new File(FILEPATH);
         if (file.exists()){
-            if (DEBUG) System.out.println("users.csv has been exists");
+            if (DEBUG) logger.log("users.csv has been exists");
             return true;
         }
         return false;
@@ -59,7 +59,7 @@ public class CSVBase {
     public boolean isTempUserCSVExists() {
         temp_file  = new File(TEMP_FILEPATH);
         if (temp_file.exists()){
-            if (DEBUG) System.out.println("temp_users.csv has been exists");
+            if (DEBUG) logger.log("temp_users.csv has been exists");
             return true;
         }
         return false;
@@ -72,7 +72,7 @@ public class CSVBase {
     public boolean isLastCSVExists() {
         File lastFile = new File(LAST_FILEPATH);
         if (file.exists()) {
-            if (DEBUG) System.out.println("last.csv has been exists");
+            if (DEBUG) logger.log("last.csv has been exists");
             return true;
         }
         return false;
@@ -84,16 +84,16 @@ public class CSVBase {
     private boolean pathCreator() {
         File path = new File(RESOURCES_PATH);
         if (!path.exists()) {
-            if (DEBUG) System.out.println("creating path resources");
+            if (DEBUG) logger.log("creating path resources");
             if (!path.mkdir()) {
-                System.out.println("path resources creation failed");
+                logger.log("path resources creation failed");
                 return false;
             }
         } else {
-            if (DEBUG) System.out.println("path resources has existed.");
+            if (DEBUG) logger.log("path resources has existed.");
             return true;
         }
-        if (DEBUG) System.out.println("path resources has been created");
+        if (DEBUG) logger.log("path resources has been created");
         return true;
     }
 
@@ -105,18 +105,18 @@ public class CSVBase {
      */
     private boolean CSVCreator(String relevantPath) {
         if (!pathCreator()) {
-            if (DEBUG) System.out.println("create resource folder Failed");
+            if (DEBUG) logger.log("create resource folder Failed");
             return false;
         }
-        if (DEBUG) System.out.printf("Creating %s file...\n", relevantPath);
+        if (DEBUG) logger.log("Creating %s file...\n", relevantPath);
         File user_csv = new File(relevantPath);
         try {
             if (user_csv.createNewFile()) {
-                if (DEBUG) System.out.printf("%s has been create\n", relevantPath);
+                if (DEBUG) logger.log("%s has been create\n", relevantPath);
                 // 关闭文件
                 return true;
             } else {
-                if (DEBUG) System.out.printf("%s already exists\n", relevantPath);
+                if (DEBUG) logger.log("%s already exists\n", relevantPath);
                 return false;
             }
         } catch (Exception e) {
@@ -162,21 +162,21 @@ public class CSVBase {
             if (CSVBase.DEBUG) e.printStackTrace();
             return;
         }
-        System.out.println(1);
-        System.out.println();
+        logger.log("1");
+        logger.log("");
         // test for usersCSVCreator there
         if (!base.usersCSVCreator()) {
-            System.out.println("create csv failed");
+            logger.log("create csv failed");
             return;
         }
-        System.out.println(2);
-        System.out.println();
+        logger.log("2");
+        logger.log("");
         // test for tempUsersCSVCreator
         if (!base.tempUsersCSVCreator()) {
-            System.out.println("create temp csv failed");
+            logger.log("create temp csv failed");
             return;
         }
-        System.out.println(3);
-        System.out.println();
+        logger.log("3");
+        logger.log("");
     }
 }
