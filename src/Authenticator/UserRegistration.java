@@ -15,8 +15,11 @@ public class UserRegistration extends UserBase {
     //主界面
     public void displayMenu() {
 
+        //Window window = new Window();
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome! Are you a new user? (yes/no):");
+        //window.printContent("Welcome! Are you a new user? (yes/no):");
         //System.out.println();
         String choice = scanner.nextLine().trim().toLowerCase();
 
