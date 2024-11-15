@@ -110,7 +110,12 @@ public class Menu {
     public void QuizMenu() {
         // 做题部分
         QuestionProvider questionProvider = new QuestionProvider();
-        ScoreRecord scoreRecord = new ScoreRecord();
+        ScoreRecord scoreRecord = null;
+        try {
+            scoreRecord = new ScoreRecord();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         do {
             window.top();
