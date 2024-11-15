@@ -7,13 +7,18 @@ import Appli.Window;
 import Appli.Menu;
 import User.UserInfo;
 
-public class ScoreRecord {
+public class ScoreRecord extends UserInfo{
 
     private Menu menu = new Menu();
     private String scorename="";
     private int Round=0;
     // 存储所有的 session 记录
     private String[][] sessionInfo = new String[0][3];  // 初始时空数组，表示没有记录
+
+    public ScoreRecord() throws Exception {
+        super();
+    }
+
 
     public String[] getAllScores() {
         String[] scores = new String[sessionInfo.length];
@@ -170,7 +175,7 @@ public class ScoreRecord {
             UserInfo userInfo = new UserInfo();
             String[] AllScore = getAllScores();
             scorename = "Round: " + Round;
-            userInfo.updateScore(Integer.parseInt(AllScore[Round-1]), scorename);
+            updateScore(Integer.parseInt(AllScore[Round-1]), scorename);
             System.out.println(AllScore[Round-1]);
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -208,7 +213,12 @@ public class ScoreRecord {
     public static void main(String[] args) {
         // 创建三个类的实例
         QuestionProvider questionProvider = new QuestionProvider();
-        ScoreRecord scoreRecord = new ScoreRecord();
+        ScoreRecord scoreRecord = null;
+        try {
+            scoreRecord = new ScoreRecord();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         int round=0;//计算做题次数
         do {
             TopicReader topicReader = new TopicReader();
