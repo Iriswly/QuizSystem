@@ -179,7 +179,7 @@ public class ShowMenu extends UserBase {
 
     public static void main(String[] args) {
         try {
-            UserRegistration register = new UserRegistration();
+            Register register = new Register();
             register.displayMenu();
         } catch (Exception e) {
             e.printStackTrace();

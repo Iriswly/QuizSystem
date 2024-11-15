@@ -15,7 +15,7 @@ public class QuizSystemAppli {
         // 注册登录部分
         menu.unloggedMenu();
         try {
-            Register register = new Register();
+            Register  register = new Register();
             menu.mainMenu();
         } catch (Exception e) {
             e.printStackTrace();
