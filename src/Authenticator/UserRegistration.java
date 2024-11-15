@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import Appli.Window;
 
-public class Register extends UserInfo {
-    public Register() throws Exception {
+public class UserRegistration extends UserInfo {
+    public UserRegistration() throws Exception {
             super();
     }
     //注册或登陆界面
@@ -169,7 +169,7 @@ public class Register extends UserInfo {
     }
     public static void main(String[] args) {
         try {
-            Register register = new Register();
+            UserRegistration register = new UserRegistration();
             register.displayMenu();
         } catch (Exception e) {
             e.printStackTrace();
