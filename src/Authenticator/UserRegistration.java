@@ -4,9 +4,11 @@ import User.UserInfo;
 import java.util.ArrayList;
 import java.util.Scanner;
 import Appli.Window;
+import Appli.Menu;
 
-public class UserRegistration extends UserInfo {
-    public UserRegistration() throws Exception {
+public class Register extends UserInfo {
+
+    public Register() throws Exception {
             super();
     }
     //注册或登陆界面
@@ -87,9 +89,10 @@ public class UserRegistration extends UserInfo {
 
             if (Login(nickname, password)) {
                 window.printContent("Login successful!");
-                // 进入主界面逻辑
-
+                // 登录状态为 true
+                window.bottom();
                 break; // 成功登录，退出循环
+
             } else {
                 window.printContent("Login failed. Please try again.");
                 window.printContent("Do you want to try password again? (Yes/No)");
@@ -108,7 +111,7 @@ public class UserRegistration extends UserInfo {
                             String password) {
         Window window = new Window();
 
-//是否有同昵称
+        //是否有同昵称
         if (searchUserLineIndex(nickname) != -1) {
             if (DEBUG) window.printContent("Nickname already exists");
             return false;
@@ -133,7 +136,7 @@ public class UserRegistration extends UserInfo {
         newProfile.add("_");
         newProfile.add("-1");
 
-        // Add new user to the database
+
         if (addAccount_DB(newProfile)) {
             if (DEBUG) window.printContent("User registered successfully");
             return true;
@@ -167,9 +170,10 @@ public class UserRegistration extends UserInfo {
         }
         return Math.min(score, 25) * 4; //每一项的最大得分为25，总分为100分
     }
+
     public static void main(String[] args) {
         try {
-            UserRegistration register = new UserRegistration();
+            Register register = new Register();
             register.displayMenu();
         } catch (Exception e) {
             e.printStackTrace();
