@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class UserBase {
     protected CSVEditor csvEditor = new CSVEditor();
-    protected final boolean DEBUG = true;
+    protected final boolean DEBUG = false;
     protected final int MAX_SCORE = 100;
     protected final int MIN_SCORE = 0;
     protected Logger logger = new Logger(DEBUG);
