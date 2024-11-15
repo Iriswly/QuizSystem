@@ -5,6 +5,7 @@ import xjtlu.cpt111.assignment.quiz.model.Option;
 import xjtlu.cpt111.assignment.quiz.model.Question;
 
 import java.util.Scanner;
+import Appli.Window;
 
 public class TopicReader {
 
@@ -20,6 +21,7 @@ public class TopicReader {
 
     // 显示主题选择
     public void showTopic() {
+        Window window = new Window();
         // 确定主题的最大长度
         int maxLength = 0;
         for (String topic : topicArray) {
@@ -29,35 +31,40 @@ public class TopicReader {
         }
 
         // 上边框
-        System.out.print("------------");
+        String upperBorder = "      ------------";
         for (int i = 0; i < maxLength; i++) {
-            System.out.print("-");
+            upperBorder += "-";
         }
-        System.out.println();
+        upperBorder += "------";
+        window.printContent(upperBorder); // 输出上边框
+
         for (int i = 0; i < topicArray.length; i++) {
-            System.out.print("|  " + index[i] + "  |  " + topicArray[i]);
+            String line = "      |  " + index[i] + "  |  " + topicArray[i];
 
             // 输出填充空格使其对齐
             int spacesToFill = maxLength - topicArray[i].length();
             for (int j = 0; j < spacesToFill; j++) {
-                System.out.print(" "); // 填充空格
+                line += " "; // 填充空格
             }
-            System.out.print("  |");
-            System.out.println();
+            line += "        |"; // 添加结尾的边框
+            window.printContent(line);
         }
 
         // 下边框
-        System.out.print("------------");
+        String lowerBorder = "      ------------";
         for (int i = 0; i < maxLength; i++) {
-            System.out.print("-");
+            lowerBorder += "-";
         }
-        System.out.println();
+        lowerBorder += "------";
+        window.printContent(lowerBorder); // 一次性输出下边框
+        window.printContent("");
     }
 
     // 选择主题
     public void selectTopic() {
-        System.out.println("Please enter the topic you would like to choose:");
-        System.out.println("    Either type in an index (Integer) or type in a topic name (String):");
+        Window window = new Window();
+        window.printContent("Please enter the topic you would like to choose:");
+        window.printContent("    Either type in an index (Integer) or type in a topic name (String):");
         Scanner sc = new Scanner(System.in);
 
         while (topicToSelect == null) {
@@ -67,7 +74,7 @@ public class TopicReader {
                 if (inputIndex >= 1 && inputIndex <= index.length) {
                     topicToSelect = topicArray[inputIndex - 1]; // 索引从1开始，数组从0开始
                 } else {
-                    System.out.println("Please enter a valid index or topic name:");
+                    window.printContent("Please enter a valid index or topic name:");
                 }
             } else if (sc.hasNext()) {
                 String inputTopic = sc.next(); // 读取topic
@@ -80,30 +87,31 @@ public class TopicReader {
                     }
                 }
                 if (topicToSelect == null) {
-                    System.out.println("Please enter a valid index or topic name:");
+                    window.printContent("Please enter a valid index or topic name:");
                 }
             }
             // 清除无效输入
             sc.nextLine();
         }
 
-        System.out.println("Selected successfully!");
-        System.out.println("Your topic is: " + topicToSelect);
-        System.out.println();
+        window.printContent("Selected successfully!");
+        window.printContent("Your topic is: " + topicToSelect);
+        window.printContent("");
     }
 
     // 选择难度
     public void selectDifficulty() {
-        System.out.println("Please select a difficulty level:");
+        Window window = new Window();
+        window.printContent("Please select a difficulty level:");
         for (int i = 0; i < difficulties.length; i++) {
-            System.out.println((i + 1) + ". " + difficulties[i]);
+            window.printContent((i + 1) + ". " + difficulties[i]);
         }
 
         Scanner sc = new Scanner(System.in);
         int choice= -1;
         // 循环直到输入合法
         while (true) {
-            System.out.print("Enter difficulty index (1-4): ");
+            window.printContent("Enter difficulty index (1-4): ");
 
             // 检查用户输入是否为整数
             if (sc.hasNextInt()) {
@@ -113,19 +121,19 @@ public class TopicReader {
                 if (choice >= 1 && choice <= difficulties.length) {
                     break;  // 输入合法，跳出循环
                 } else {
-                    System.out.println("Invalid choice. Please enter a number between 1 and " + difficulties.length + ".");
+                    window.printContent("Invalid choice. Please enter a number between 1 and " + difficulties.length + ".");
                 }
             } else {
-                System.out.println("Invalid input. Please enter a valid number.");
+                window.printContent("Invalid input. Please enter a valid number.");
                 sc.nextLine();  // 清除缓冲区中的非数字输入
             }
         }
 
         // 设置选定的难度
         difficultyToSelect = difficulties[choice - 1];
-        System.out.println("Selected successfully!");
-        System.out.println("Your difficulty is: " + difficultyToSelect);
-        System.out.println();
+        window.printContent("Selected successfully!");
+        window.printContent("Your difficulty is: " + difficultyToSelect);
+        window.printContent("");
     }
 
     // 获取选择的难度

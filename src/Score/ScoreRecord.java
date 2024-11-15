@@ -3,6 +3,7 @@ package Score;
 import java.util.Scanner;
 import quiz.TopicReader;
 import quiz.QuestionProvider;
+import Appli.Window;
 
 public class ScoreRecord {
     // 存储所有的 session 记录
@@ -27,9 +28,10 @@ public class ScoreRecord {
     }
     // 显示所有记录
     public void displayAllSessions() {
-        System.out.println("All Sessions: ");
+        Window window = new Window();
+        window.printContent("All Sessions: ");
         for (int i = 0; i < sessionInfo.length; i++) {
-            System.out.println("Session " + (i + 1) + ": Topic : " + sessionInfo[i][0] +
+            window.printContent("Session " + (i + 1) + ": Topic : " + sessionInfo[i][0] +
                     ", Difficulty : " + sessionInfo[i][1] + ", Score : " + sessionInfo[i][2]);
         }
     }
@@ -61,6 +63,7 @@ public class ScoreRecord {
 
     // 显示题目并让用户作答
     public void displayQuestionsAndScore(String[][] finalQuestions,TopicReader topicReader) {
+        Window window = new Window();
         Scanner sc = new Scanner(System.in);
         int score = 0;
         String topic = topicReader.getTopicToSelect();
@@ -72,12 +75,12 @@ public class ScoreRecord {
 
         // 遍历每一道题
         for (int i = 0; i < finalQuestions.length; i++) {
-            System.out.println("Question " + (i + 1) + ": " + finalQuestions[i][3]); // 显示问题内容
+            window.printContent("Question " + (i + 1) + ": " + finalQuestions[i][3]); // 显示问题内容
 
             // 显示选项
             String[] questionNum = new String[]{"A", "B", "C", "D"};
             for (int j = 0; j < 4; j++) {
-                System.out.println(questionNum[j] + ": " + finalQuestions[i][4 + j * 2]);
+                window.printContent(questionNum[j] + ": " + finalQuestions[i][4 + j * 2]);
                 if ("TRUE".equals(finalQuestions[i][5 + j * 2])) {
                     questionDetails[i][5] = finalQuestions[i][4 + j * 2];  // 记录正确答案的选项字母
                 }
@@ -90,12 +93,12 @@ public class ScoreRecord {
 
             // 循环直到用户输入合法答案
             while (!validAnswer) {
-                System.out.print("Your answer (A, B, C, D): ");
+                window.printContent("Your answer (A, B, C, D): ");
                 userAnswer = sc.nextLine().toUpperCase();  // 读取用户输入并转为大写
 
                 // 判断用户输入是否有效
                 if (!isValidAnswer(userAnswer)) {
-                    System.out.println("Invalid input. Please enter A, B, C, or D.");
+                    window.printContent("Invalid input. Please enter A, B, C, or D.");
                 } else {
                     validAnswer = true;  // 输入合法，则跳出循环
                 }
@@ -112,36 +115,36 @@ public class ScoreRecord {
             boolean isCorrect = checkAnswer(finalQuestions[i], userAnswer);
 
             if (isCorrect) {
-                System.out.println("Correct!");
+                window.printContent("Correct!");
                 score = score + 100 / finalQuestions.length;
             } else {
-                System.out.println("Incorrect!");
+                window.printContent("Incorrect!");
             }
             // 记录题目详情
             questionDetails[i][0] = finalQuestions[i][3];  // 问题内容
             for (int j = 0; j < 4; j++) {
                 questionDetails[i][j + 1] = finalQuestions[i][4 + j * 2];  // 选项
             }
-            System.out.println(); // 分隔下一题
+            window.printContent(""); // 分隔下一题
         }
 
-        System.out.println("Your answers for this session: ");
+        window.printContent("Your answers for this session: ");
             for (int i = 0; i < questionDetails.length; i++) {
                 if (questionDetails[i][0] != null) {
-                    System.out.println("Question " + (i + 1) + ": " + questionDetails[i][0]);
-                    System.out.println("Options: ");
-                    System.out.println("A: " + questionDetails[i][1]);
-                    System.out.println("B: " + questionDetails[i][2]);
-                    System.out.println("C: " + questionDetails[i][3]);
-                    System.out.println("D: " + questionDetails[i][4]);
-                    System.out.println("Correct answer: " + questionDetails[i][5]);
-                    System.out.println("Your answer: " + questionDetails[i][6]);
-                    System.out.println();
+                    window.printContent("Question " + (i + 1) + ": " + questionDetails[i][0]);
+                    window.printContent("Options: ");
+                    window.printContent("A: " + questionDetails[i][1]);
+                    window.printContent("B: " + questionDetails[i][2]);
+                    window.printContent("C: " + questionDetails[i][3]);
+                    window.printContent("D: " + questionDetails[i][4]);
+                    window.printContent("Correct answer: " + questionDetails[i][5]);
+                    window.printContent("Your answer: " + questionDetails[i][6]);
+                    window.printContent("");
                 }
             }
-        System.out.println();
+        window.printContent("");
         // 显示最终得分
-        System.out.println("Your final score: " + score + "/100");
+        window.printContent("Your final score: " + score + "/100");
         // 假设在某次答题后获得了分数 score
         recordSession(topic, difficulty, score);  // 记录当前 session
 
