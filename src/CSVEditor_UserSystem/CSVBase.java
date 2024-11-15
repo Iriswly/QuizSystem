@@ -17,6 +17,7 @@ public class CSVBase {
     protected static final boolean DEBUG = true;
     protected static Logger logger = new Logger(DEBUG);
 
+
     private File file;
     private File temp_file;
 
