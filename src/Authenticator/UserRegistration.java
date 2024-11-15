@@ -14,6 +14,7 @@ public class UserRegistration extends UserBase {
 
     //主界面
     public void displayMenu() {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome! Are you a new user? (yes/no):");
         //System.out.println();
@@ -26,6 +27,7 @@ public class UserRegistration extends UserBase {
         } else {
             System.out.println("Invalid choice. Please try again.");
             displayMenu();
+
         }
     }
 
@@ -84,6 +86,7 @@ public class UserRegistration extends UserBase {
             displayMenu();
         }
     }
+
     // 登陆界面
     private void loginUser() {
         while (true) {
@@ -190,6 +193,7 @@ public class UserRegistration extends UserBase {
             return false;
         }
     }
+
     public static void main(String[] args) {
         try {
             UserRegistration register = new UserRegistration();
