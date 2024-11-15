@@ -4,8 +4,12 @@ import java.util.Scanner;
 import quiz.TopicReader;
 import quiz.QuestionProvider;
 import Appli.Window;
+import Appli.Menu;
 
 public class ScoreRecord {
+
+    private Menu menu = new Menu();
+
     // 存储所有的 session 记录
     private String[][] sessionInfo = new String[0][3];  // 初始时空数组，表示没有记录
     // 记录一轮答题的topic, difficulty, score
@@ -166,6 +170,7 @@ public class ScoreRecord {
                 return true;
             } else if (userChoice.equals("no")) {
                 validChoice = true;
+                menu.mainMenu();
                 return false;
             } else {
                 System.out.println("Invalid input. Please enter 'yes' or 'no'.");
