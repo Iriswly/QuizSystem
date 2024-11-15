@@ -1,0 +1,501 @@
+ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,Option4,Correct4
+0,geography,EASY,What is the capital of France. ,Rome,FALSE,Madrid,FALSE,Paris,TRUE,Berlin,FALSE
+1,geography,EASY,Which continent is known as the Dark Continent. ,Europe,FALSE,Australia,FALSE,Africa,TRUE,Asia,FALSE
+2,geography,EASY,What is the largest ocean on Earth. ,Indian Ocean,FALSE,Arctic Ocean,FALSE,Pacific Ocean,TRUE,Atlantic Ocean,FALSE
+3,geography,EASY,Which country has the most natural lakes. ,USA,FALSE,Canada,TRUE,India,FALSE,Russia,FALSE
+4,geography,EASY,What is the longest river in the world. ,Nile River,FALSE,Yangtze River,FALSE,Amazon River,TRUE,Mississippi River,FALSE
+5,geography,EASY,Which country is known as the Land of the Rising Sun. ,China,FALSE,Korea,FALSE,Japan,TRUE,Thailand,FALSE
+6,geography,EASY,What is the smallest country in the world. ,Nauru,FALSE,San Marino,FALSE,Vatican City,TRUE,Monaco,FALSE
+7,geography,EASY,Which desert is the largest in the world. ,Antarctic,FALSE,Sahara,FALSE,Arctic,TRUE,Gobi,FALSE
+8,geography,EASY,What is the capital of Australia. ,Brisbane,FALSE,Canberra,TRUE,Melbourne,FALSE,Sydney,FALSE
+9,geography,EASY,Which ocean is the Bermuda Triangle located in. ,Arctic Ocean,FALSE,Pacific Ocean,FALSE,Atlantic Ocean,TRUE,Indian Ocean,FALSE
+10,geography,EASY,What is the highest mountain in the world. ,Lhotse,FALSE,Mount Everest,TRUE,Kangchenjunga,FALSE,K2,FALSE
+11,geography,EASY,Which river flows through London. ,Thames,TRUE,Seine,FALSE,Rhine,FALSE,Danube,FALSE
+12,geography,EASY,What is the capital of Canada. ,Montreal,FALSE,Toronto,FALSE,Ottawa,TRUE,Vancouver,FALSE
+13,geography,EASY,Which country is famous for kangaroos. ,Australia,TRUE,India,FALSE,USA,FALSE,South Africa,FALSE
+14,geography,EASY,What is the largest country in the world. ,Canada,FALSE,Russia,TRUE,USA,FALSE,China,FALSE
+15,geography,EASY,Which continent has the largest number of countries. ,Europe,FALSE,South America,FALSE,Asia,FALSE,Africa,TRUE
+16,geography,EASY,What is the longest river in Europe. ,Danube,FALSE,Volga,TRUE,Rhine,FALSE,Seine,FALSE
+17,geography,EASY,Which mountain range separates Europe and Asia. ,Rocky Mountains,FALSE,Himalayas,FALSE,Ural Mountains,TRUE,Andes,FALSE
+18,geography,EASY,What is the capital of Italy. ,Naples,FALSE,Rome,TRUE,Venice,FALSE,Milan,FALSE
+19,geography,EASY,Which is the smallest continent by land area. ,South America,FALSE,Antarctica,FALSE,Australia,TRUE,Europe,FALSE
+20,geography,EASY,Which country has the most volcanoes. ,Indonesia,TRUE,Italy,FALSE,Japan,FALSE,USA,FALSE
+21,geography,EASY,What is the capital of Egypt. ,Giza,FALSE,Luxor,FALSE,Cairo,TRUE,Alexandria,FALSE
+22,geography,EASY,Which sea is the saltiest. ,Dead Sea,TRUE,Red Sea,FALSE,Black Sea,FALSE,Caspian Sea,FALSE
+23,geography,EASY,What is the largest desert in North America. ,Great Basin,TRUE,Mojave,FALSE,Sonoran,FALSE,Gobi,FALSE
+24,geography,EASY,Which continent is the Andes mountain range located in. ,South America,TRUE,North America,FALSE,Asia,FALSE,Africa,FALSE
+25,geography,EASY,What is the capital of Brazil. ,Sao Paulo,FALSE,Brasilia,TRUE,Rio de Janeiro,FALSE,Salvador,FALSE
+26,geography,EASY,Which country is known for its pyramids. ,Greece,FALSE,Mexico,FALSE,Egypt,TRUE,China,FALSE
+27,geography,EASY,What is the capital of Germany. ,Berlin,TRUE,Munich,FALSE,Hamburg,FALSE,Frankfurt,FALSE
+28,geography,EASY,Which ocean is the Great Barrier Reef located in. ,Indian Ocean,FALSE,Atlantic Ocean,FALSE,Pacific Ocean,TRUE,Arctic Ocean,FALSE
+29,geography,EASY,What is the largest island in the world. ,Greenland,TRUE,Borneo,FALSE,Australia,FALSE,New Guinea,FALSE
+30,geography,EASY,Which country is home to the kangaroo. ,Australia,TRUE,South Africa,FALSE,New Zealand,FALSE,USA,FALSE
+31,geography,EASY,What is the capital of Russia. ,Novosibirsk,FALSE,Kazan,FALSE,Moscow,TRUE,Saint Petersburg,FALSE
+32,geography,EASY,Which river is the longest in Asia. ,Indus,FALSE,Yangtze,TRUE,Mekong,FALSE,Ganges,FALSE
+33,geography,EASY,What is the capital of India. ,Mumbai,FALSE,Kolkata,FALSE,Chennai,FALSE,New Delhi,TRUE
+34,geography,EASY,Which country has the largest population. ,China,TRUE,India,FALSE,USA,FALSE,Brazil,FALSE
+35,geography,EASY,What is the capital of Spain. ,Barcelona,FALSE,Seville,FALSE,Valencia,FALSE,Madrid,TRUE
+36,geography,EASY,"Which mountain is known as the ""Roof of the World."" ",Himalayas,FALSE,Kangchenjunga,FALSE,K2,FALSE,Tibet,TRUE
+37,geography,EASY,Which river runs through Egypt. ,Mississippi,FALSE,Amazon,FALSE,Nile,TRUE,Danube,FALSE
+38,geography,EASY,What is the capital of South Africa. ,Bloemfontein,FALSE,Pretoria,TRUE,Durban,FALSE,Cape Town,FALSE
+39,geography,EASY,What is the world's largest coral reef system. ,Florida Keys,FALSE,Great Barrier Reef,TRUE,Andros Barrier Reef,FALSE,Red Sea Coral Reef,FALSE
+40,geography,EASY,Which country is known for the Eiffel Tower. ,Spain,FALSE,France,TRUE,Italy,FALSE,USA,FALSE
+41,geography,EASY,What is the main language spoken in Brazil. ,Spanish,FALSE,Portuguese,TRUE,French,FALSE,English,FALSE
+42,geography,EASY,Which continent is the Sahara Desert located in. ,Asia,FALSE,North America,FALSE,Australia,FALSE,Africa,TRUE
+43,geography,EASY,What is the capital of Japan. ,Nagoya,FALSE,Osaka,FALSE,Yokohama,FALSE,Tokyo,TRUE
+44,geography,EASY,Which river flows through Paris. ,Rhine,FALSE,Seine,TRUE,Thames,FALSE,Danube,FALSE
+45,geography,EASY,What is the capital of Thailand. ,Bangkok,TRUE,Phuket,FALSE,Chiang Mai,FALSE,Pattaya,FALSE
+46,geography,EASY,Which city is known as the Big Apple. ,Chicago,FALSE,Los Angeles,FALSE,New York City,TRUE,Houston,FALSE
+47,geography,EASY,What is the capital of Mexico. ,Mexico City,TRUE,Cancun,FALSE,Guadalajara,FALSE,Monterrey,FALSE
+48,geography,EASY,Which mountain range is Mount Everest part of. ,Alps,FALSE,Andes,FALSE,Himalayas,TRUE,Rocky Mountains,FALSE
+49,geography,EASY,Which country is famous for its tulips. ,France,FALSE,Belgium,FALSE,Germany,FALSE,Netherlands,TRUE
+50,geography,EASY,What is the capital of Argentina. ,Bogota,FALSE,Lima,FALSE,Buenos Aires,TRUE,Santiago,FALSE
+51,geography,EASY,Which is the largest continent. ,Asia,TRUE,Africa,FALSE,Europe,FALSE,North America,FALSE
+52,geography,EASY,What is the currency of Japan. ,Yuan,FALSE,Won,FALSE,Dollar,FALSE,Yen,TRUE
+53,geography,EASY,What is the capital city of Kenya. ,Nairobi,TRUE,Accra,FALSE,Lagos,FALSE,Cairo,FALSE
+54,geography,EASY,Which country is known for its fjords. ,Finland,FALSE,Sweden,FALSE,Denmark,FALSE,Norway,TRUE
+55,geography,EASY,What is the capital of Greece. ,Rhodes,FALSE,Athens,TRUE,Thessaloniki,FALSE,Crete,FALSE
+56,geography,EASY,Which ocean borders the west coast of the USA. ,Indian Ocean,FALSE,Pacific Ocean,TRUE,Atlantic Ocean,FALSE,Arctic Ocean,FALSE
+57,geography,EASY,What is the largest country in South America. ,Chile,FALSE,Brazil,FALSE,Argentina,TRUE,Peru,FALSE
+58,geography,EASY,What is the capital of Vietnam. ,Manila,FALSE,Hanoi,TRUE,Bangkok,FALSE,Ho Chi Minh City,FALSE
+59,geography,EASY,Which desert is located in Australia. ,Gobi,FALSE,Sahara,FALSE,Atacama,FALSE,Great Victoria,TRUE
+60,geography,EASY,What is the capital of Turkey. ,Izmir,FALSE,Istanbul,FALSE,Ankara,TRUE,Bursa,FALSE
+61,geography,EASY,"Which river is known as the ""River of Life"" in Egypt. ",Mississippi,FALSE,Nile,TRUE,Amazon,FALSE,Ganges,FALSE
+62,geography,EASY,What is the tallest building in the world. ,Shanghai Tower,FALSE,One World Trade Center,FALSE,Burj Khalifa,TRUE,Empire State Building,FALSE
+63,geography,EASY,What is the largest lake in Africa. ,Lake Tanganyika,FALSE,Lake Victoria,TRUE,Lake Malawi,FALSE,Lake Chad,FALSE
+64,geography,EASY,Which country is famous for its maple syrup. ,USA,FALSE,Canada,TRUE,Mexico,FALSE,France,FALSE
+65,geography,EASY,What is the capital of Sweden. ,Stockholm,TRUE,Gothenburg,FALSE,Uppsala,FALSE,Malm?,FALSE
+66,geography,EASY,What is the smallest ocean in the world. ,Atlantic Ocean,FALSE,Pacific Ocean,FALSE,Arctic Ocean,TRUE,Indian Ocean,FALSE
+67,geography,EASY,What is the capital of Norway. ,Oslo,TRUE,Bergen,FALSE,Stavanger,FALSE,Trondheim,FALSE
+68,geography,EASY,Which country is known for the Great Wall. ,China,TRUE,Japan,FALSE,India,FALSE,Korea,FALSE
+69,geography,EASY,What is the longest river in North America. ,Colorado River,FALSE,Mississippi River,FALSE,Yukon River,FALSE,Missouri River,TRUE
+70,geography,EASY,What is the capital of Portugal. ,Coimbra,FALSE,Porto,FALSE,Braga,FALSE,Lisbon,TRUE
+71,geography,EASY,Which continent has the Amazon rainforest. ,North America,FALSE,Asia,FALSE,South America,TRUE,Africa,FALSE
+72,geography,EASY,What is the capital of the Philippines. ,Davao,FALSE,Manila,TRUE,Cebu,FALSE,Quezon City,FALSE
+73,geography,EASY,Which country is famous for its pyramids and sphinx. ,Peru,FALSE,Egypt,TRUE,Greece,FALSE,Mexico,FALSE
+74,geography,EASY,What is the capital of Ireland. ,Belfast,FALSE,Dublin,TRUE,Cork,FALSE,Galway,FALSE
+75,geography,EASY,"Which city is known as the ""City of Love."" ",New York,FALSE,Rome,FALSE,Venice,FALSE,Paris,TRUE
+76,geography,EASY,What is the capital of Finland. ,Oulu,FALSE,Tampere,FALSE,Espoo,FALSE,Helsinki,TRUE
+77,geography,EASY,Which country is famous for its cheese. ,France,TRUE,Spain,FALSE,Italy,FALSE,Germany,FALSE
+78,geography,EASY,What is the capital of Indonesia. ,Jakarta,TRUE,Bali,FALSE,Bandung,FALSE,Singapore,FALSE
+79,geography,EASY,"Which mountain is known as the ""Matterhorn."" ",Cervin,TRUE,K2,FALSE,Mont Blanc,FALSE,Everest,FALSE
+80,geography,EASY,What is the capital of New Zealand. ,Hamilton,FALSE,Christchurch,FALSE,Wellington,TRUE,Auckland,FALSE
+81,geography,EASY,Which country is known for its chocolates. ,Switzerland,TRUE,France,FALSE,Germany,FALSE,Italy,FALSE
+82,geography,EASY,What is the capital of Rwanda. ,Kigali,TRUE,Butare,FALSE,Gisenyi,FALSE,Musanze,FALSE
+83,geography,EASY,Which desert is located in Africa. ,Great Basin,FALSE,Atacama,FALSE,Sahara,TRUE,Gobi,FALSE
+84,geography,EASY,What is the capital of Bangladesh. ,Dhaka,TRUE,Comilla,FALSE,Chittagong,FALSE,Khulna,FALSE
+85,geography,EASY,Which country is known for the Eiffel Tower. ,USA,FALSE,Spain,FALSE,Germany,FALSE,France,TRUE
+86,geography,EASY,What is the capital of Serbia. ,Zagreb,FALSE,Pristina,FALSE,Budapest,FALSE,Belgrade,TRUE
+87,geography,EASY,What is the main language spoken in Brazil. ,French,FALSE,Portuguese,TRUE,Italian,FALSE,Spanish,FALSE
+88,geography,EASY,Which country is famous for its tulips. ,France,FALSE,Germany,FALSE,Belgium,FALSE,Netherlands,TRUE
+89,geography,EASY,What is the capital of Malaysia. ,Penang,FALSE,Kuala Lumpur,TRUE,Sabah,FALSE,Malacca,FALSE
+90,geography,EASY,Which river is the longest in Africa. ,Amazon,FALSE,Congo,FALSE,Zambezi,FALSE,Nile,TRUE
+91,geography,EASY,What is the capital of Chile. ,Concepcion,FALSE,La Serena,FALSE,Valparaiso,FALSE,Santiago,TRUE
+92,geography,EASY,"Which continent is known as the ""Land Down Under."" ",North America,FALSE,Australia,TRUE,Asia,FALSE,Europe,FALSE
+93,geography,EASY,What is the capital of Afghanistan. ,Bamiyan,FALSE,Herat,FALSE,Kabul,TRUE,Mazar-i-Sharif,FALSE
+94,geography,EASY,Which country is home to the ancient city of Petra. ,Jordan,TRUE,Egypt,FALSE,Turkey,FALSE,Israel,FALSE
+95,geography,EASY,What is the capital of Uzbekistan. ,Samarqand,FALSE,Tashkent,TRUE,Bukhara,FALSE,Khiva,FALSE
+96,geography,EASY,What is the capital city of Iceland. ,Hafnarfjordur,FALSE,Akranes,FALSE,Reykjavik,TRUE,Kopavogur,FALSE
+97,geography,EASY,What is the capital of Armenia. ,Tbilisi,FALSE,Baku,FALSE,Yerevan,TRUE,Batumi,FALSE
+98,geography,EASY,Which river runs through Baghdad. ,Tigris,FALSE,Nile,FALSE,Euphrates,TRUE,Indus,FALSE
+99,geography,EASY,What is the capital of Belarus. ,Brest,FALSE,Vitebsk,FALSE,Grodno,FALSE,Minsk,TRUE
+100,geography,EASY,What is the capital of Mongolia. ,Darkhan,FALSE,Dornod,FALSE,Erdenet,FALSE,Ulaanbaatar,TRUE
+101,geography,EASY,Which country is known for its ancient ruins of Machu Picchu. ,Chile,FALSE,Argentina,FALSE,Brazil,FALSE,Peru,TRUE
+102,geography,EASY,What is the capital of Libya. ,Misrata,FALSE,Tripoli,TRUE,Al Bayda,FALSE,Benghazi,FALSE
+103,geography,EASY,Which continent is home to the Amazon River. ,Africa,FALSE,Europe,FALSE,South America,TRUE,North America,FALSE
+104,geography,EASY,What is the capital of South Korea. ,Seoul,TRUE,Jeju,FALSE,Busan,FALSE,Incheon,FALSE
+105,geography,EASY,"Which mountain range is known as the ""Himalayas of the West."" ",Alps,FALSE,Rocky Mountains,FALSE,Andes,TRUE,Ural Mountains,FALSE
+106,geography,EASY,What is the capital of Denmark. ,Aarhus,FALSE,Copenhagen,TRUE,Esbjerg,FALSE,Odense,FALSE
+107,geography,EASY,Which country is famous for its coffee. ,Brazil,FALSE,Colombia,FALSE,Vietnam,FALSE,Ethiopia,TRUE
+108,geography,EASY,What is the capital of Kazakhstan. ,Aktobe,FALSE,Almaty,FALSE,Astana,TRUE,Shymkent,FALSE
+109,geography,EASY,"Which city is known as the ""Windy City."" ",Chicago,TRUE,Los Angeles,FALSE,New York,FALSE,Houston,FALSE
+110,geography,EASY,What is the capital of Nepal. ,Lalitpur,FALSE,Biratnagar,FALSE,Kathmandu,TRUE,Pokhara,FALSE
+111,geography,EASY,What is the capital of Belarus. ,Vitebsk,FALSE,Brest,FALSE,Minsk,TRUE,Grodno,FALSE
+112,geography,EASY,Which ocean is the Atlantic Ocean located in. ,Western Hemisphere,TRUE,Southern Hemisphere,FALSE,Eastern Hemisphere,FALSE,Northern Hemisphere,FALSE
+113,geography,EASY,What is the capital of Sri Lanka. ,Kandy,FALSE,Sri Jayawardenepura Kotte,TRUE,Colombo,FALSE,Galle,FALSE
+114,geography,EASY,Which continent has the fewest countries. ,Europe,FALSE,Australia,FALSE,South America,FALSE,Antarctica,TRUE
+115,geography,EASY,What is the capital of Georgia (country). ,Zugdidi,FALSE,Batumi,FALSE,Tbilisi,TRUE,Kutaisi,FALSE
+116,geography,EASY,Which river flows through Egypt and Sudan. ,Congo,FALSE,Nile,TRUE,Mississippi,FALSE,Amazon,FALSE
+117,geography,EASY,What is the capital of Panama. ,Panama City,TRUE,David,FALSE,Colon,FALSE,Santiago,FALSE
+118,geography,EASY,Which mountain range is the longest in the world. ,Himalayas,FALSE,Alps,FALSE,Rocky Mountains,FALSE,Andes,TRUE
+119,geography,EASY,What is the capital of Cyprus. ,Nicosia,TRUE,Limassol,FALSE,Larnaca,FALSE,Famagusta,FALSE
+120,geography,EASY,Which country is known for its ancient ruins of Petra. ,Syria,FALSE,Jordan,TRUE,Iraq,FALSE,Saudi Arabia,FALSE
+121,geography,EASY,What is the capital of the United Arab Emirates. ,Abu Dhabi,TRUE,Sharjah,FALSE,Ajman,FALSE,Dubai,FALSE
+122,geography,EASY,Which country has the largest number of islands. ,Indonesia,FALSE,Sweden,TRUE,Finland,FALSE,Philippines,FALSE
+123,geography,EASY,What is the capital of Azerbaijan. ,Ganja,FALSE,Baku,TRUE,Mingachevir,FALSE,Lankaran,FALSE
+124,geography,EASY,Which desert is located in northern Africa. ,Gobi,FALSE,Atacama,FALSE,Great Basin,FALSE,Sahara,TRUE
+125,geography,EASY,What is the capital of Botswana. ,Molepolole,FALSE,Gaborone,TRUE,Maun,FALSE,Francistown,FALSE
+126,geography,EASY,Which country is home to the city of Marrakech. ,Algeria,FALSE,Tunisia,FALSE,Morocco,TRUE,Egypt,FALSE
+127,geography,EASY,What is the capital of Kuwait. ,Kuwait City,TRUE,Ahmadi,FALSE,Hawally,FALSE,Salmiya,FALSE
+128,geography,EASY,Which river flows through Rome. ,Arno,FALSE,Adige,FALSE,Tiber,TRUE,Po,FALSE
+129,geography,EASY,What is the capital of the Czech Republic. ,Prague,TRUE,Plzen,FALSE,Ostrava,FALSE,Brno,FALSE
+130,geography,EASY,Which country has the most UNESCO World Heritage Sites. ,India,FALSE,Italy,TRUE,Spain,FALSE,China,FALSE
+131,geography,EASY,What is the capital of Iceland. ,Hafnarfjordur,FALSE,Reykjavik,TRUE,Akranes,FALSE,Kopavogur,FALSE
+132,geography,EASY,What is the capital of Jamaica. ,Montego Bay,FALSE,Ocho Rios,FALSE,Kingston,TRUE,Negril,FALSE
+133,geography,EASY,"Which city is known as the ""City of Bridges."" ",Venice,FALSE,San Francisco,FALSE,Pittsburgh,TRUE,Amsterdam,FALSE
+134,geography,EASY,What is the capital of Estonia. ,Narva,FALSE,Tallinn,TRUE,Tartu,FALSE,Parnu,FALSE
+135,geography,EASY,What is the capital of Haiti. ,Port-au-Prince,TRUE,Cap-Haitien,FALSE,Les Cayes,FALSE,Jacmel,FALSE
+136,geography,EASY,Which continent is the country of Madagascar located. ,Asia,FALSE,Africa,TRUE,South America,FALSE,Australia,FALSE
+137,geography,EASY,What is the capital of Somalia. ,Garowe,FALSE,Mogadishu,TRUE,Boosaaso,FALSE,Berbera,FALSE
+138,geography,EASY,Which country is known for its bamboo forests. ,Thailand,FALSE,Japan,FALSE,China,TRUE,India,FALSE
+139,geography,EASY,What is the capital of Libya. ,Misrata,FALSE,Tripoli,TRUE,Al Bayda,FALSE,Benghazi,FALSE
+140,geography,EASY,"Which mountain is known as the ""Roof of Africa."" ",K2,FALSE,Atlas,FALSE,Everest,FALSE,Kilimanjaro,TRUE
+141,geography,EASY,What is the capital of the Maldives. ,Thulusdhoo,FALSE,Mal��,TRUE,Addu City,FALSE,Maafushi,FALSE
+142,geography,EASY,Which city is considered the cultural capital of Italy. ,Naples,FALSE,Rome,FALSE,Milan,FALSE,Florence,TRUE
+143,geography,EASY,What is the capital of Zambia. ,Ndola,FALSE,Livingstone,FALSE,Kitwe,FALSE,Lusaka,TRUE
+144,geography,EASY,Which country is known for its castles and tartan. ,Ireland,FALSE,England,FALSE,Scotland,TRUE,Wales,FALSE
+145,geography,EASY,What is the capital of Algeria. ,Algiers,TRUE,Annaba,FALSE,Constantine,FALSE,Oran,FALSE
+146,geography,EASY,What is the capital of Bulgaria. ,Plovdiv,FALSE,Ruse,FALSE,Burgas,FALSE,Sofia,TRUE
+147,geography,EASY,Which ocean is to the east of Africa. ,Arctic Ocean,FALSE,Atlantic Ocean,FALSE,Pacific Ocean,FALSE,Indian Ocean,TRUE
+148,geography,EASY,What is the capital of Mongolia. ,Darkhan,FALSE,Erdenet,FALSE,Ulaanbaatar,TRUE,Dornod,FALSE
+149,geography,EASY,Which river is the main waterway in Vietnam. ,Red River,FALSE,Mekong,TRUE,Amazon,FALSE,Ganges,FALSE
+150,geography,EASY,What is the capital of Syria. ,Homs,FALSE,Lattakia,FALSE,Damascus,TRUE,Aleppo,FALSE
+151,geography,EASY,Which country is known for the Great Barrier Reef. ,Thailand,FALSE,Brazil,FALSE,Australia,TRUE,USA,FALSE
+152,geography,EASY,What is the capital of Vietnam. ,Da Nang,FALSE,Hanoi,TRUE,Nha Trang,FALSE,Hochiminh City,FALSE
+153,geography,EASY,Which continent is Greenland part of. ,North America,TRUE,Africa,FALSE,Asia,FALSE,Europe,FALSE
+154,geography,EASY,What is the capital of Armenia. ,Vagharshapat,FALSE,Vanadzor,FALSE,Yerevan,TRUE,Gyumri,FALSE
+155,geography,EASY,Which river is the longest in Europe. ,Volga,TRUE,Rhine,FALSE,Seine,FALSE,Danube,FALSE
+156,geography,EASY,What is the capital of Bolivia. ,Cochabamba,FALSE,Sucre,FALSE,Santa Cruz,FALSE,La Paz,TRUE
+157,geography,EASY,Which country is known for its fjords. ,Norway,TRUE,Sweden,FALSE,Iceland,FALSE,Denmark,FALSE
+158,geography,EASY,What is the capital of Qatar. ,Doha,TRUE,Abu Dhabi,FALSE,Doha,FALSE,Riyadh,FALSE
+159,geography,EASY,Which mountain is the highest in Africa. ,Simien Mountains,FALSE,Mount Kenya,FALSE,Atlas Mountains,FALSE,Mount Kilimanjaro,TRUE
+160,geography,EASY,What is the capital of Egypt. ,Luxor,FALSE,Giza,FALSE,Cairo,TRUE,Alexandria,FALSE
+161,geography,EASY,Which country is home to the ancient city of Petra. ,Syria,FALSE,Jordan,TRUE,Saudi Arabia,FALSE,Iran,FALSE
+162,geography,EASY,What is the capital of Tanzania. ,Dodoma,TRUE,Arusha,FALSE,Mbeya,FALSE,Dar es Salaam,FALSE
+163,geography,EASY,What is the capital of Finland. ,Tampere,FALSE,Oulu,FALSE,Espoo,FALSE,Helsinki,TRUE
+164,geography,EASY,Which desert is the largest hot desert in the world. ,Sahara,TRUE,Atacama,FALSE,Arabian,FALSE,Gobi,FALSE
+165,geography,EASY,What is the capital of the Philippines. ,Davao,FALSE,Iloilo,FALSE,Manila,TRUE,Cebu,FALSE
+166,geography,EASY,Which country is known for the Taj Mahal. ,India,TRUE,China,FALSE,Thailand,FALSE,Japan,FALSE
+167,geography,EASY,What is the capital of Uruguay. ,Montevideo,TRUE,Salto,FALSE,Colonia del Sacramento,FALSE,Punta del Este,FALSE
+168,geography,EASY,Which is the largest island in the Mediterranean Sea. ,Crete,FALSE,Sicily,TRUE,Sardinia,FALSE,Cyprus,FALSE
+169,geography,EASY,What is the capital of Bahrain. ,Muharraq,FALSE,Sitra,FALSE,Manama,TRUE,Riffa,FALSE
+170,geography,EASY,Which country is known for its wine production. ,USA,FALSE,Argentina,FALSE,Australia,FALSE,France,TRUE
+171,geography,EASY,What is the capital of Malta. ,St. Julian's,FALSE,Sliema,FALSE,Birkirkara,FALSE,Valletta,TRUE
+172,geography,EASY,Which river runs through Baghdad. ,Euphrates,FALSE,Indus,FALSE,Tigris,TRUE,Amazon,FALSE
+173,geography,EASY,What is the capital of Mozambique. ,Tete,FALSE,Maputo,TRUE,Beira,FALSE,Nampula,FALSE
+174,geography,EASY,Which country has the most pyramids. ,Sudan,TRUE,Egypt,FALSE,Mexico,FALSE,Peru,FALSE
+175,geography,EASY,What is the capital of Zambia. ,Kitwe,FALSE,Ndola,FALSE,Livingstone,FALSE,Lusaka,TRUE
+176,geography,EASY,Which continent is the Sahara Desert located in. ,Asia,FALSE,Africa,TRUE,Australia,FALSE,North America,FALSE
+177,geography,EASY,What is the capital of Barbados. ,St. James,FALSE,Holetown,FALSE,Speightstown,FALSE,Bridgetown,TRUE
+178,geography,EASY,Which country is known for its tulips. ,Germany,FALSE,Netherlands,TRUE,France,FALSE,Belgium,FALSE
+179,geography,EASY,What is the capital of Nepal. ,Kathmandu,TRUE,Lalitpur,FALSE,Pokhara,FALSE,Biratnagar,FALSE
+180,geography,EASY,Which ocean is the second largest in the world. ,Atlantic Ocean,TRUE,Pacific Ocean,FALSE,Indian Ocean,FALSE,Arctic Ocean,FALSE
+181,geography,EASY,What is the capital of the Czech Republic. ,Brno,FALSE,Ostrava,FALSE,Plzen,FALSE,Prague,TRUE
+182,geography,EASY,"Which continent is known as ""the Dark Continent."" ",Africa,TRUE,Asia,FALSE,South America,FALSE,Australia,FALSE
+183,geography,EASY,What is the capital of Latvia. ,Riga,TRUE,Liepa,FALSE,Jelgava,FALSE,Daugavpils,FALSE
+184,geography,EASY,Which country is famous for its chocolate. ,Belgium,TRUE,France,FALSE,Germany,FALSE,Switzerland,FALSE
+185,geography,EASY,What is the capital of Vietnam. ,Da Nang,FALSE,Hanoi,TRUE,Nha Trang,FALSE,Ho Chi Minh City,FALSE
+186,geography,EASY,Which mountain range runs along the border between the USA and Canada. ,Alps,FALSE,Appalachians,FALSE,Andes,FALSE,Rocky Mountains,TRUE
+187,geography,EASY,What is the capital of Syria. ,Homs,FALSE,Aleppo,FALSE,Damascus,TRUE,Lattakia,FALSE
+188,geography,EASY,Which river flows through London. ,Thames,TRUE,Seine,FALSE,Rhine,FALSE,Danube,FALSE
+189,geography,EASY,What is the capital of South Sudan. ,Juba,TRUE,Wau,FALSE,Yei,FALSE,Malakal,FALSE
+190,geography,EASY,What is the capital of Somalia. ,Garowe,FALSE,Mogadishu,TRUE,Boosaaso,FALSE,Berbera,FALSE
+191,geography,EASY,Which is the smallest continent. ,Europe,FALSE,Asia,FALSE,Australia,TRUE,Africa,FALSE
+192,geography,EASY,What is the capital of Indonesia. ,Jakarta,TRUE,Bandung,FALSE,Singapore,FALSE,Bali,FALSE
+193,geography,EASY,"Which city is known as the ""City of Angels."" ",Mexico City,FALSE,Sao Paulo,FALSE,Los Angeles,TRUE,Tokyo,FALSE
+194,geography,EASY,What is the capital of Kuwait. ,Hawalli,FALSE,Kuwait City,TRUE,Ahmadi,FALSE,Salmiya,FALSE
+195,geography,EASY,Which country has the most natural lakes. ,India,FALSE,USA,FALSE,Canada,TRUE,Russia,FALSE
+196,geography,EASY,What is the capital of Ghana. ,Tamale,FALSE,Accra,TRUE,Sekondi-Takoradi,FALSE,Kumasi,FALSE
+197,geography,EASY,Which ocean is the largest in the world. ,Arctic Ocean,FALSE,Indian Ocean,FALSE,Pacific Ocean,TRUE,Atlantic Ocean,FALSE
+198,geography,EASY,What is the capital of Afghanistan. ,Bamiyan,FALSE,Herat,FALSE,Mazar-i-Sharif,FALSE,Kabul,TRUE
+199,geography,EASY,"Which mountain is known as the ""Matterhorn."" ",Everest,FALSE,K2,FALSE,Mont Blanc,FALSE,Cervin,TRUE
+200,geography,MEDIUM,What is the longest river in South America. ,Paran��,FALSE,Orinoco,FALSE,Amazon,TRUE,Madeira,FALSE
+201,geography,MEDIUM,"Which country is known as the ""Land of the Rising Sun."" ",China,FALSE,Korea,FALSE,Japan,TRUE,Thailand,FALSE
+202,geography,MEDIUM,What is the capital of Kazakhstan. ,Almaty,FALSE,Astana,TRUE,Shymkent,FALSE,Aktobe,FALSE
+203,geography,MEDIUM,Which continent is Mount Everest located in. ,Africa,FALSE,Europe,FALSE,Asia,TRUE,North America,FALSE
+204,geography,MEDIUM,What is the capital of Iceland. ,Kopavogur,FALSE,Akranes,FALSE,Hafnarfjordur,FALSE,Reykjavik,TRUE
+205,geography,MEDIUM,What is the capital city of Canada. ,Vancouver,FALSE,Ottawa,TRUE,Toronto,FALSE,Montreal,FALSE
+206,geography,MEDIUM,Which country is known for its ancient ruins of Machu Picchu. ,Peru,TRUE,Chile,FALSE,Argentina,FALSE,Brazil,FALSE
+207,geography,MEDIUM,What is the capital of Ecuador. ,Guayaquil,FALSE,Cuenca,FALSE,Quito,TRUE,Ambato,FALSE
+208,geography,MEDIUM,Which desert is the largest in the world. ,Arabian,FALSE,Sahara,FALSE,Gobi,FALSE,Antarctic Desert,TRUE
+209,geography,MEDIUM,What is the capital of Afghanistan. ,Bamiyan,FALSE,Herat,FALSE,Mazar-i-Sharif,FALSE,Kabul,TRUE
+210,geography,MEDIUM,What is the currency of Brazil. ,Peso,FALSE,Yuan,FALSE,Real,TRUE,Dollar,FALSE
+211,geography,MEDIUM,"Which city is known as the ""Big Apple."" ",Houston,FALSE,Chicago,FALSE,New York City,TRUE,Los Angeles,FALSE
+212,geography,MEDIUM,What is the capital of Kenya. ,Nairobi,TRUE,Lagos,FALSE,Cairo,FALSE,Accra,FALSE
+213,geography,MEDIUM,Which country is famous for its fjords. ,Norway,TRUE,Denmark,FALSE,Finland,FALSE,Sweden,FALSE
+214,geography,MEDIUM,What is the capital of Italy. ,Milan,FALSE,Rome,TRUE,Venice,FALSE,Florence,FALSE
+215,geography,MEDIUM,Which river flows through Egypt. ,Mississippi,FALSE,Euphrates,FALSE,Nile,TRUE,Amazon,FALSE
+216,geography,MEDIUM,What is the capital of Hungary. ,Szeged,FALSE,Debrecen,FALSE,Miskolc,FALSE,Budapest,TRUE
+217,geography,MEDIUM,Which country is the largest by land area. ,USA,FALSE,Russia,TRUE,China,FALSE,Canada,FALSE
+218,geography,MEDIUM,What is the capital of Chile. ,La Serena,FALSE,Concepcion,FALSE,Valparaiso,FALSE,Santiago,TRUE
+219,geography,MEDIUM,Which mountain range separates Europe and Asia. ,Himalayas,FALSE,Andes,FALSE,Rocky Mountains,FALSE,Ural Mountains,TRUE
+220,geography,MEDIUM,What is the capital of the Philippines. ,Quezon City,FALSE,Manila,TRUE,Davao,FALSE,Cebu,FALSE
+221,geography,MEDIUM,Which country is known for the Eiffel Tower. ,Italy,FALSE,France,TRUE,Spain,FALSE,Germany,FALSE
+222,geography,MEDIUM,What is the capital of Belgium. ,Bruges,FALSE,Antwerp,FALSE,Brussels,TRUE,Ghent,FALSE
+223,geography,MEDIUM,Which continent is home to the Amazon Rainforest. ,South America,TRUE,Asia,FALSE,North America,FALSE,Africa,FALSE
+224,geography,MEDIUM,What is the capital of Peru. ,Cusco,FALSE,Arequipa,FALSE,Lima,TRUE,Trujillo,FALSE
+225,geography,MEDIUM,Which country is known for its pyramids. ,India,FALSE,Egypt,TRUE,China,FALSE,Mexico,FALSE
+226,geography,MEDIUM,What is the capital of South Korea. ,Jeju,FALSE,Incheon,FALSE,Busan,FALSE,Seoul,TRUE
+227,geography,MEDIUM,Where is the Great Wall located. ,Japan,FALSE,Vietnam,FALSE,Korea,FALSE,China,TRUE
+228,geography,MEDIUM,What is the capital city of Turkey. ,Bursa,FALSE,Ankara,TRUE,Izmir,FALSE,Istanbul,FALSE
+229,geography,MEDIUM,What is the capital of Norway. ,Trondheim,FALSE,Oslo,TRUE,Stavanger,FALSE,Bergen,FALSE
+230,geography,MEDIUM,Which ocean is the largest in the world. ,Arctic Ocean,FALSE,Indian Ocean,FALSE,Pacific Ocean,TRUE,Atlantic Ocean,FALSE
+231,geography,MEDIUM,What is the capital of Greece. ,Thessaloniki,FALSE,Athens,TRUE,Crete,FALSE,Rhodes,FALSE
+232,geography,MEDIUM,Which country is home to the ancient city of Petra. ,Egypt,FALSE,Israel,FALSE,Jordan,TRUE,Turkey,FALSE
+233,geography,MEDIUM,What is the capital of Malaysia. ,Sabah,FALSE,Penang,FALSE,Kuala Lumpur,TRUE,Malacca,FALSE
+234,geography,MEDIUM,Which river is the longest in North America. ,Yukon River,FALSE,Missouri River,TRUE,Mississippi River,FALSE,Colorado River,FALSE
+235,geography,MEDIUM,What is the capital of Zimbabwe. ,Mutare,FALSE,Harare,TRUE,Gweru,FALSE,Bulawayo,FALSE
+236,geography,MEDIUM,Which country is known for its maple syrup. ,USA,FALSE,Mexico,FALSE,Canada,TRUE,France,FALSE
+237,geography,MEDIUM,What is the capital of Luxembourg. ,Esch-sur-Alzette,FALSE,Luxembourg City,TRUE,Differdange,FALSE,Diekirch,FALSE
+238,geography,MEDIUM,What is the currency of the United Kingdom. ,Pound Sterling,TRUE,Euro,FALSE,Yen,FALSE,Dollar,FALSE
+239,geography,MEDIUM,Which sea is the world's largest inland body of water. ,Dead Sea,FALSE,Caspian Sea,TRUE,Red Sea,FALSE,Aral Sea,FALSE
+240,geography,MEDIUM,What is the capital of Nigeria. ,Lagos,FALSE,Port Harcourt,FALSE,Abuja,TRUE,Kano,FALSE
+241,geography,MEDIUM,Which mountain is the highest peak in the world. ,Lhotse,FALSE,Mount Everest,TRUE,Kangchenjunga,FALSE,K2,FALSE
+242,geography,MEDIUM,What is the capital of Thailand. ,Chiang Mai,FALSE,Pattaya,FALSE,Phuket,FALSE,Bangkok,TRUE
+243,geography,MEDIUM,What is the capital of Finland. ,Tampere,FALSE,Espoo,FALSE,Helsinki,TRUE,Oulu,FALSE
+244,geography,MEDIUM,Which country is home to the ancient ruins of Stonehenge. ,Germany,FALSE,Italy,FALSE,France,FALSE,United Kingdom,TRUE
+245,geography,MEDIUM,What is the capital of Croatia. ,Zagreb,TRUE,Rijeka,FALSE,Dubrovnik,FALSE,Split,FALSE
+246,geography,MEDIUM,What is the largest island in the world. ,Greenland,TRUE,Sumatra,FALSE,New Guinea,FALSE,Borneo,FALSE
+247,geography,MEDIUM,What is the capital of Saudi Arabia. ,Jeddah,FALSE,Riyadh,TRUE,Dammam,FALSE,Mecca,FALSE
+248,geography,MEDIUM,Which country is home to the city of Dubrovnik. ,Croatia,TRUE,Bosnia and Herzegovina,FALSE,Serbia,FALSE,Montenegro,FALSE
+249,geography,MEDIUM,What is the capital of Belarus. ,Minsk,TRUE,Brest,FALSE,Vitebsk,FALSE,Grodno,FALSE
+250,geography,MEDIUM,What is the capital of Ethiopia. ,Addis Ababa,TRUE,Dire Dawa,FALSE,Mekele,FALSE,Gondar,FALSE
+251,geography,MEDIUM,Which country is known for its pyramids and pharaohs. ,Egypt,TRUE,India,FALSE,China,FALSE,Peru,FALSE
+252,geography,MEDIUM,What is the capital of Slovakia. ,Pre?ov,FALSE,Kosice,FALSE,Bratislava,TRUE,Nitra,FALSE
+253,geography,MEDIUM,Which desert is located in Northern Africa. ,Atacama,FALSE,Arabian,FALSE,Sahara,TRUE,Gobi,FALSE
+254,geography,MEDIUM,What is the capital of South Africa. ,Cape Town,FALSE,Pretoria,TRUE,Johannesburg,FALSE,Bloemfontein,FALSE
+255,geography,MEDIUM,Which country is famous for its chocolate. ,Germany,FALSE,Belgium,TRUE,France,FALSE,Switzerland,FALSE
+256,geography,MEDIUM,What is the capital of Nepal. ,Lalitpur,FALSE,Biratnagar,FALSE,Pokhara,FALSE,Kathmandu,TRUE
+257,geography,MEDIUM,Which country has the most volcanoes. ,USA,FALSE,Italy,FALSE,Indonesia,TRUE,Japan,FALSE
+258,geography,MEDIUM,What is the capital of Iran. ,Tabriz,FALSE,Shiraz,FALSE,Tehran,TRUE,Isfahan,FALSE
+259,geography,MEDIUM,Which country is known for its ancient ruins of Chichen Itza. ,Cuba,FALSE,Mexico,TRUE,Brazil,FALSE,Guatemala,FALSE
+260,geography,MEDIUM,What is the capital of Venezuela. ,Caracas,TRUE,Valencia,FALSE,Maracaibo,FALSE,Barquisimeto,FALSE
+261,geography,MEDIUM,Which ocean is located on the opposite side of the Atlantic Ocean. ,Atlantic Ocean,FALSE,Arctic Ocean,FALSE,Pacific Ocean,TRUE,Indian Ocean,FALSE
+262,geography,MEDIUM,What is the capital of Thailand. ,Phuket,FALSE,Chiang Mai,FALSE,Pattaya,FALSE,Bangkok,TRUE
+263,geography,MEDIUM,Which country has the most UNESCO World Heritage Sites. ,China,FALSE,Spain,FALSE,India,FALSE,Italy,TRUE
+264,geography,MEDIUM,What is the capital of Syria. ,Homs,FALSE,Lattakia,FALSE,Aleppo,FALSE,Damascus,TRUE
+265,geography,MEDIUM,Which river is the longest in Africa. ,Congo,FALSE,Zambezi,FALSE,Senegal,FALSE,Nile,TRUE
+266,geography,MEDIUM,What is the capital of Mongolia. ,Erdenet,FALSE,Darkhan,FALSE,Dornod,FALSE,Ulaanbaatar,TRUE
+267,geography,MEDIUM,"Which country is known as the ""Land of Fire and Ice."" ",Norway,FALSE,Greenland,FALSE,Finland,FALSE,Iceland,TRUE
+268,geography,MEDIUM,What is the capital city of the USA. ,New York City,FALSE,Chicago,FALSE,Los Angeles,FALSE,Washington D.C.,TRUE
+269,geography,MEDIUM,What is the tallest building in the world as of 2023. ,One World Trade Center,FALSE,Empire State Building,FALSE,Shanghai Tower,FALSE,Burj Khalifa,TRUE
+270,geography,MEDIUM,What is the capital of India. ,Bangalore,FALSE,New Delhi,TRUE,Kolkata,FALSE,Mumbai,FALSE
+271,geography,MEDIUM,Which country is home to the city of Marrakech. ,Morocco,TRUE,Tunisia,FALSE,Algeria,FALSE,Egypt,FALSE
+272,geography,MEDIUM,What is the capital of the United Arab Emirates. ,Ajman,FALSE,Abu Dhabi,TRUE,Dubai,FALSE,Sharjah,FALSE
+273,geography,MEDIUM,Which country is known for the Great Wall. ,Korea,FALSE,Thailand,FALSE,Japan,FALSE,China,TRUE
+274,geography,MEDIUM,What is the capital of Sweden. ,Stockholm,TRUE,Gothenburg,FALSE,Uppsala,FALSE,Malm?,FALSE
+275,geography,MEDIUM,"Which city is known as the ""City of Love."" ",Rome,FALSE,Venice,FALSE,Barcelona,FALSE,Paris,TRUE
+276,geography,MEDIUM,What is the capital of Norway. ,Stavanger,FALSE,Oslo,TRUE,Bergen,FALSE,Trondheim,FALSE
+277,geography,MEDIUM,What is the currency of Japan. ,Yuan,FALSE,Won,FALSE,Dollar,FALSE,Yen,TRUE
+278,geography,MEDIUM,What is the capital of Portugal. ,Porto,FALSE,Coimbra,FALSE,Lisbon,TRUE,Braga,FALSE
+279,geography,MEDIUM,"Which mountain range is known as the ""Backbone of North America."" ",Rocky Mountains,TRUE,Alps,FALSE,Appalachians,FALSE,Andes,FALSE
+280,geography,MEDIUM,What is the capital of the Netherlands. ,Rotterdam,FALSE,Amsterdam,TRUE,Utrecht,FALSE,The Hague,FALSE
+281,geography,MEDIUM,Which country is home to the Great Barrier Reef. ,Brazil,FALSE,USA,FALSE,Australia,TRUE,Thailand,FALSE
+282,geography,MEDIUM,What is the capital of the Czech Republic. ,Prague,TRUE,Ostrava,FALSE,Brno,FALSE,Plzen,FALSE
+283,geography,MEDIUM,Which continent is the Arctic located in. ,Asia,FALSE,Europe,FALSE,Australia,FALSE,North America,TRUE
+284,geography,MEDIUM,What is the capital of Bangladesh. ,Khulna,FALSE,Chittagong,FALSE,Dhaka,TRUE,Jessore,FALSE
+285,geography,MEDIUM,Which country is known for its wine production. ,France,TRUE,Italy,FALSE,Spain,FALSE,Argentina,FALSE
+286,geography,MEDIUM,What is the capital of New Zealand. ,Auckland,FALSE,Christchurch,FALSE,Hamilton,FALSE,Wellington,TRUE
+287,geography,MEDIUM,Which river flows through the Grand Canyon. ,Colorado River,TRUE,Missouri River,FALSE,Mississippi River,FALSE,Amazon River,FALSE
+288,geography,MEDIUM,What is the capital of Russia. ,Kazan,FALSE,St. Petersburg,FALSE,Moscow,TRUE,Novosibirsk,FALSE
+289,geography,MEDIUM,Which country is known for its tulips. ,Germany,FALSE,Netherlands,TRUE,Belgium,FALSE,France,FALSE
+290,geography,MEDIUM,What is the capital of Austria. ,Vienna,TRUE,Graz,FALSE,Salzburg,FALSE,Innsbruck,FALSE
+291,geography,MEDIUM,Which continent is known for its diverse wildlife. ,Australia,FALSE,Africa,TRUE,Asia,FALSE,Europe,FALSE
+292,geography,MEDIUM,What is the capital of Cambodia. ,Sihanoukville,FALSE,Battambang,FALSE,Phnom Penh,TRUE,Siem Reap,FALSE
+293,geography,MEDIUM,Which country is known for its ancient ruins of Angkor Wat. ,Thailand,FALSE,Vietnam,FALSE,Cambodia,TRUE,Laos,FALSE
+294,geography,MEDIUM,What is the capital of Libya. ,Benghazi,FALSE,Al Bayda,FALSE,Tripoli,TRUE,Misrata,FALSE
+295,geography,MEDIUM,Which city is famous for its canals. ,Bruges,FALSE,Amsterdam,FALSE,Stockholm,FALSE,Venice,TRUE
+296,geography,MEDIUM,What is the capital of the Bahamas. ,Exuma,FALSE,Nassau,TRUE,Freeport,FALSE,Marsh Harbour,FALSE
+297,geography,MEDIUM,What is the capital of Mongolia. ,Ulaanbaatar,TRUE,Darkhan,FALSE,Erdenet,FALSE,Dornod,FALSE
+298,geography,MEDIUM,Which ocean borders the east coast of the USA. ,Indian Ocean,FALSE,Arctic Ocean,FALSE,Pacific Ocean,FALSE,Atlantic Ocean,TRUE
+299,geography,MEDIUM,What is the capital of Cyprus. ,Limassol,FALSE,Famagusta,FALSE,Nicosia,TRUE,Larnaca,FALSE
+300,geography,MEDIUM,Which country is home to the city of Cairo. ,Jordan,FALSE,Iraq,FALSE,Lebanon,FALSE,Egypt,TRUE
+301,geography,MEDIUM,What is the highest mountain in the Andes. ,Mount Kilimanjaro,FALSE,Aconcagua,TRUE,Mount Elbrus,FALSE,Mount Fitz Roy,FALSE
+302,geography,MEDIUM,What is the capital of Ukraine. ,Kyiv,TRUE,Kharkiv,FALSE,Odessa,FALSE,Lviv,FALSE
+303,geography,MEDIUM,Which country is known for its coffee production. ,Vietnam,FALSE,Ethiopia,FALSE,Brazil,TRUE,Colombia,FALSE
+304,geography,MEDIUM,What is the capital of Georgia. ,Batumi,FALSE,Tbilisi,TRUE,Kutaisi,FALSE,Zugdidi,FALSE
+305,geography,MEDIUM,Which sea separates Saudi Arabia from Africa. ,Aegean Sea,FALSE,Red Sea,TRUE,Persian Gulf,FALSE,Arabian Sea,FALSE
+306,geography,MEDIUM,What is the capital of Argentina. ,Buenos Aires,TRUE,Cordoba,FALSE,Mendoza,FALSE,Rosario,FALSE
+307,geography,MEDIUM,Which country is known for the city of Venice. ,Italy,TRUE,Portugal,FALSE,Greece,FALSE,Spain,FALSE
+308,geography,MEDIUM,What is the capital of North Macedonia. ,Skopje,TRUE,Ohrid,FALSE,Kumanovo,FALSE,Bitola,FALSE
+309,geography,MEDIUM,Which island is the largest in the Caribbean. ,Hispaniola,FALSE,Puerto Rico,FALSE,Jamaica,FALSE,Cuba,TRUE
+310,geography,MEDIUM,What is the capital of Malta. ,Sliema,FALSE,Birkirkara,FALSE,St. Julian's,FALSE,Valletta,TRUE
+311,geography,MEDIUM,Which country is known for the city of Dubrovnik. ,Serbia,FALSE,Bosnia and Herzegovina,FALSE,Croatia,TRUE,Montenegro,FALSE
+312,geography,MEDIUM,What is the capital of Cuba. ,Santiago,FALSE,Trinidad,FALSE,Varadero,FALSE,Havana,TRUE
+313,geography,MEDIUM,Which country is home to the famous landmark Christ the Redeemer. ,Brazil,TRUE,Argentina,FALSE,Chile,FALSE,Peru,FALSE
+314,geography,MEDIUM,What is the capital of Iceland. ,Akranes,FALSE,Reykjavik,TRUE,Kopavogur,FALSE,Hafnarfjordur,FALSE
+315,geography,MEDIUM,Which country has the most islands. ,Sweden,TRUE,Finland,FALSE,Indonesia,FALSE,Norway,FALSE
+316,geography,MEDIUM,What is the capital of Tanzania. ,Arusha,FALSE,Dodoma,TRUE,Dar es Salaam,FALSE,Mbeya,FALSE
+317,geography,MEDIUM,Which continent is the Sahara Desert located in. ,Africa,TRUE,South America,FALSE,Asia,FALSE,Australia,FALSE
+318,geography,MEDIUM,What is the capital of Singapore. ,Sentosa,FALSE,Woodlands,FALSE,Singapore,TRUE,Jurong,FALSE
+319,geography,MEDIUM,Which country is known for its historic ruins of Machu Picchu. ,Chile,FALSE,Peru,TRUE,Brazil,FALSE,Argentina,FALSE
+320,geography,MEDIUM,What is the capital of the Philippines. ,Cebu,FALSE,Manila,TRUE,Iloilo,FALSE,Davao,FALSE
+321,geography,MEDIUM,"Which country is known as the ""Land of a Thousand Lakes."" ",Finland,TRUE,Sweden,FALSE,Canada,FALSE,Norway,FALSE
+322,geography,MEDIUM,What is the capital of the Maldives. ,Thulusdhoo,FALSE,Mal��,TRUE,Maafushi,FALSE,Addu City,FALSE
+323,geography,MEDIUM,Which country is famous for the ancient ruins of Petra. ,Iran,FALSE,Jordan,TRUE,Saudi Arabia,FALSE,Syria,FALSE
+324,geography,MEDIUM,What is the capital of Belarus. ,Minsk,TRUE,Vitebsk,FALSE,Grodno,FALSE,Brest,FALSE
+325,geography,MEDIUM,Which country has the highest population density. ,Bangladesh,FALSE,Monaco,TRUE,Singapore,FALSE,Hong Kong,FALSE
+326,geography,MEDIUM,What is the capital of Armenia. ,Yerevan,TRUE,Gyumri,FALSE,Vagharshapat,FALSE,Vanadzor,FALSE
+327,geography,MEDIUM,Which country is known for the fjords. ,Norway,TRUE,Sweden,FALSE,Denmark,FALSE,Finland,FALSE
+328,geography,MEDIUM,What is the capital of Fiji. ,Labasa,FALSE,Suva,TRUE,Lautoka,FALSE,Nadi,FALSE
+329,geography,MEDIUM,Which country is home to the Great Pyramid of Giza. ,Iraq,FALSE,Jordan,FALSE,Egypt,TRUE,Saudi Arabia,FALSE
+330,geography,MEDIUM,What is the capital of the Dominican Republic. ,Santiago,FALSE,Punta Cana,FALSE,La Romana,FALSE,Santo Domingo,TRUE
+331,geography,MEDIUM,Which country is known for the historic site of Angkor Wat. ,Laos,FALSE,Vietnam,FALSE,Cambodia,TRUE,Thailand,FALSE
+332,geography,MEDIUM,What is the capital of Libya. ,Al Bayda,FALSE,Tripoli,TRUE,Benghazi,FALSE,Misrata,FALSE
+333,geography,MEDIUM,Which continent is known for its deserts. ,Asia,FALSE,North America,FALSE,Africa,TRUE,Australia,FALSE
+334,geography,MEDIUM,What is the capital of Slovakia. ,Pre?ov,FALSE,Nitra,FALSE,Kosice,FALSE,Bratislava,TRUE
+335,geography,MEDIUM,Which river flows through Paris. ,Rhine,FALSE,Seine,TRUE,Danube,FALSE,Loire,FALSE
+336,geography,MEDIUM,What is the capital of Zambia. ,Ndola,FALSE,Livingstone,FALSE,Lusaka,TRUE,Kitwe,FALSE
+337,geography,MEDIUM,Which country is known for its ancient ruins of Chichen Itza. ,Guatemala,FALSE,Cuba,FALSE,Mexico,TRUE,Brazil,FALSE
+338,geography,MEDIUM,What is the capital of Brazil. ,Bras��lia,TRUE,Fortaleza,FALSE,Rio de Janeiro,FALSE,Salvador,FALSE
+339,geography,MEDIUM,Which river is the longest in Europe. ,Danube,FALSE,Seine,FALSE,Volga,TRUE,Rhine,FALSE
+340,geography,MEDIUM,What is the capital of Turkey. ,Bursa,FALSE,Izmir,FALSE,Ankara,TRUE,Istanbul,FALSE
+341,geography,MEDIUM,Which country is known for the city of Tokyo. ,Japan,TRUE,Thailand,FALSE,South Korea,FALSE,China,FALSE
+342,geography,MEDIUM,What is the capital of Syria. ,Homs,FALSE,Aleppo,FALSE,Lattakia,FALSE,Damascus,TRUE
+343,geography,MEDIUM,Which country is known for the city of Barcelona. ,Portugal,FALSE,Italy,FALSE,Greece,FALSE,Spain,TRUE
+344,geography,MEDIUM,What is the capital of Bhutan. ,Phuentsholing,FALSE,Punakha,FALSE,Thimphu,TRUE,Paro,FALSE
+345,geography,MEDIUM,Which country is famous for its tea production. ,China,TRUE,Japan,FALSE,Kenya,FALSE,India,FALSE
+346,geography,MEDIUM,What is the capital of Somalia. ,Berbera,FALSE,Boosaaso,FALSE,Mogadishu,TRUE,Garowe,FALSE
+347,geography,MEDIUM,"Which mountain is known as the ""Roof of the World."" ",Andes,FALSE,Rocky Mountains,FALSE,Pamirs,TRUE,Himalayas,FALSE
+348,geography,MEDIUM,What is the capital of Qatar. ,Doha,FALSE,Riyadh,FALSE,Abu Dhabi,FALSE,Doha,TRUE
+349,geography,MEDIUM,Which country has the largest desert in the world. ,Sahara,FALSE,Arabian,FALSE,Gobi,FALSE,Antarctica,TRUE
+350,geography,HARD,What is the capital of Mongolia? ,Dornod,FALSE,Erdenet,FALSE,Darkhan,FALSE,Ulaanbaatar,TRUE
+351,geography,HARD,Which country has the highest waterfall in the world? ,Venezuela,TRUE,Brazil,FALSE,Argentina,FALSE,Chile,FALSE
+352,geography,HARD,What is the capital of Madagascar? ,Toamasina,FALSE,Tamatave,FALSE,Antananarivo,FALSE,Antananarivo,TRUE
+353,geography,HARD,"Which country is known as the ""Emerald Isle""? ",New Zealand,FALSE,Ireland,TRUE,Scotland,FALSE,Wales,FALSE
+354,geography,HARD,What is the largest city in Africa by population? ,Kinshasa,FALSE,Lagos,TRUE,Nairobi,FALSE,Cairo,FALSE
+355,geography,HARD,What is the capital of Bhutan? ,Punakha,FALSE,Paro,FALSE,Phuentsholing,FALSE,Thimphu,TRUE
+356,geography,HARD,"Which country is divided into regions known as ""cantons""? ",Switzerland,TRUE,Italy,FALSE,Austria,FALSE,Germany,FALSE
+357,geography,HARD,What is the capital of Kazakhstan? ,Shymkent,FALSE,Aktobe,FALSE,Almaty,FALSE,Astana,TRUE
+358,geography,HARD,Which mountain range runs along the border between the USA and Canada? ,Rocky Mountains,TRUE,Appalachian Mountains,FALSE,Sierra Nevada,FALSE,Cascade Range,FALSE
+359,geography,HARD,What is the longest river in Asia? ,Yellow River,FALSE,Ganges River,FALSE,Indus River,FALSE,Yangtze River,TRUE
+360,geography,HARD,What is the capital of Azerbaijan? ,Ganja,FALSE,Lankaran,FALSE,Baku,TRUE,Sumqayit,FALSE
+361,geography,HARD,What is the world's largest coral reef system? ,Red Sea Coral Reef,FALSE,Great Barrier Reef,TRUE,Andaman Coral Reef,FALSE,New Caledonia Barrier Reef,FALSE
+362,geography,HARD,Which desert is the largest hot desert in the world? ,Gobi,FALSE,Sonoran,FALSE,Kalahari,FALSE,Sahara,TRUE
+363,geography,HARD,What is the capital of Cyprus? ,Limassol,FALSE,Famagusta,FALSE,Nicosia,TRUE,Larnaca,FALSE
+364,geography,HARD,Which country has the most official languages? ,Canada,FALSE,Zimbabwe,TRUE,South Africa,FALSE,India,FALSE
+365,geography,HARD,What is the capital of the Maldives? ,Maafushi,FALSE,Thulusdhoo,FALSE,Addu City,FALSE,Mal��,TRUE
+366,geography,HARD,Which country is known for the ancient city of Petra? ,Turkey,FALSE,Israel,FALSE,Jordan,TRUE,Saudi Arabia,FALSE
+367,geography,HARD,What is the capital of Libya? ,Misrata,FALSE,Al Bayda,FALSE,Tripoli,TRUE,Benghazi,FALSE
+368,geography,HARD,Which continent has the largest population? ,North America,FALSE,Africa,FALSE,Europe,FALSE,Asia,TRUE
+369,geography,HARD,What is the only country in the world that is also a continent? ,Australia,TRUE,New Zealand,FALSE,Greenland,FALSE,Antarctica,FALSE
+370,geography,HARD,Which river runs through Baghdad? ,Tigris,TRUE,Euphrates,FALSE,Jordan,FALSE,Nil,FALSE
+371,geography,HARD,What is the capital of Iceland? ,Hafnarfjordur,FALSE,Akranes,FALSE,Kopavogur,FALSE,Reykjavik,TRUE
+372,geography,HARD,"Which country is known as the ""Land of the Midnight Sun""? ",Denmark,FALSE,Norway,TRUE,Finland,FALSE,Sweden,FALSE
+373,geography,HARD,What is the capital of Croatia? ,Dubrovnik,FALSE,Split,FALSE,Zagreb,TRUE,Rijeka,FALSE
+374,geography,HARD,Which country is known for the ancient city of Machu Picchu? ,Peru,TRUE,Brazil,FALSE,Chile,FALSE,Argentina,FALSE
+375,geography,HARD,What is the capital of Qatar? ,Riyadh,FALSE,Doha,FALSE,Abu Dhabi,FALSE,Doha,TRUE
+376,geography,HARD,Which country is home to the famous landmark Christ the Redeemer? ,Argentina,FALSE,Peru,FALSE,Chile,FALSE,Brazil,TRUE
+377,geography,HARD,What is the capital of the Philippines? ,Manila,TRUE,Davao,FALSE,Iloilo,FALSE,Cebu,FALSE
+378,geography,HARD,"Which mountain is known as the ""Roof of the World""? ",Rocky Mountains,FALSE,Andes,FALSE,Himalayas,FALSE,Pamirs,TRUE
+379,geography,HARD,What is the capital of Turkey? ,Istanbul,FALSE,Izmir,FALSE,Ankara,TRUE,Bursa,FALSE
+380,geography,HARD,Which river is considered the longest river in the world? ,Yangtze,FALSE,Amazons,FALSE,Mississippi,FALSE,Nile,TRUE
+381,geography,HARD,What is the capital of the Republic of the Congo? ,Kinshasa,FALSE,Pointe-Noire,FALSE,Loubomo,FALSE,Brazzaville,TRUE
+382,geography,HARD,Which country is home to the ancient ruins of Stonehenge? ,Italy,FALSE,France,FALSE,Germany,FALSE,United Kingdom,TRUE
+383,geography,HARD,What is the capital of South Sudan? ,Wau,FALSE,Yambio,FALSE,Juba,TRUE,Malakal,FALSE
+384,geography,HARD,Which country has the most volcanoes? ,Indonesia,TRUE,Japan,FALSE,USA,FALSE,Italy,FALSE
+385,geography,HARD,What is the capital of Brunei? ,Seria,FALSE,Tutong,FALSE,Kuala Belait,FALSE,Bandar Seri Begawan,TRUE
+386,geography,HARD,Which ocean is the smallest in the world? ,Arctic Ocean,TRUE,Indian Ocean,FALSE,Pacific Ocean,FALSE,Atlantic Ocean,FALSE
+387,geography,HARD,What is the capital of El Salvador? ,San Salvador,TRUE,San Miguel,FALSE,Sonsonate,FALSE,Santa Ana,FALSE
+388,geography,HARD,Which country is known for the ancient city of Tikal? ,Honduras,FALSE,Belize,FALSE,Guatemala,TRUE,El Salvador,FALSE
+389,geography,HARD,What is the capital of Armenia? ,Vagharshapat,FALSE,Gyumri,FALSE,Yerevan,TRUE,Vanadzor,FALSE
+390,geography,HARD,Which river flows through Vienna? ,Seine,FALSE,Rhine,FALSE,Elbe,FALSE,Danube,TRUE
+391,geography,HARD,What is the capital of South Korea? ,Busan,FALSE,Incheon,FALSE,Seoul,TRUE,Jeju,FALSE
+392,geography,HARD,"Which city is known as the ""Big Apple""? ",Chicago,FALSE,Houston,FALSE,New York City,TRUE,Los Angeles,FALSE
+393,geography,HARD,What is the capital of Zambia? ,Lusaka,TRUE,Ndola,FALSE,Kitwe,FALSE,Livingstone,FALSE
+394,geography,HARD,Which country has the most UNESCO World Heritage Sites? ,Italy,TRUE,China,FALSE,India,FALSE,Spain,FALSE
+395,geography,HARD,What is the capital of Estonia? ,Narva,FALSE,Kohtla-J?rve,FALSE,Tallinn,TRUE,Tartu,FALSE
+396,geography,HARD,Which country is known for its fjords? ,Denmark,FALSE,Norway,TRUE,Finland,FALSE,Sweden,FALSE
+397,geography,HARD,What is the capital of Iceland? ,Akranes,FALSE,Hafnarfjordur,FALSE,Reykjavik,TRUE,Kopavogur,FALSE
+398,geography,HARD,Which river flows through London? ,Danube,FALSE,Thames,TRUE,Rhine,FALSE,Seine,FALSE
+399,geography,HARD,What is the capital of the Netherlands? ,Utrecht,FALSE,Rotterdam,FALSE,The Hague,FALSE,Amsterdam,TRUE
+400,geography,HARD,What is the largest country in the world by area? ,China,FALSE,Russia,TRUE,Canada,FALSE,USA,FALSE
+401,geography,HARD,What is the capital of Tajikistan? ,Isfara,FALSE,Dushanbe,TRUE,Khujand,FALSE,Khorugh,FALSE
+402,geography,HARD,What is the smallest country in the world? ,Nauru,FALSE,Monaco,FALSE,Vatican City,TRUE,Tuvalu,FALSE
+403,geography,HARD,What is the capital of Liechtenstein? ,Balzers,FALSE,Schaan,FALSE,Eschen,FALSE,Vaduz,TRUE
+404,geography,HARD,Which sea is the world's largest inland body of water? ,Caspian Sea,TRUE,Aral Sea,FALSE,Dead Sea,FALSE,Red Sea,FALSE
+405,geography,HARD,What is the capital of Monaco? ,Monte Carlo,FALSE,Nice,FALSE,Menton,FALSE,Monaco,TRUE
+406,geography,HARD,Which country is known for the ancient city of Pompeii? ,Greece,FALSE,Turkey,FALSE,Italy,TRUE,Egypt,FALSE
+407,geography,HARD,What is the capital of Guyana? ,Lethem,FALSE,New Amsterdam,FALSE,Georgetown,TRUE,Linden,FALSE
+408,geography,HARD,Which country is home to the city of Timbuktu? ,Senegal,FALSE,Burkina Faso,FALSE,Mali,TRUE,Niger,FALSE
+409,geography,HARD,What is the capital of Mongolia? ,Dornod,FALSE,Ulaanbaatar,TRUE,Erdenet,FALSE,Darkhan,FALSE
+410,geography,HARD,What is the capital of Samoa? ,Salelologa,FALSE,Lalomalava,FALSE,Asau,FALSE,Apia,TRUE
+411,geography,HARD,Which country is known for the historic site of Angkor Wat? ,Laos,FALSE,Thailand,FALSE,Cambodia,TRUE,Vietnam,FALSE
+412,geography,HARD,What is the capital of the Bahamas? ,Freeport,FALSE,Exuma,FALSE,Nassau,TRUE,Marsh Harbour,FALSE
+413,geography,HARD,Which country is known for the ancient city of Tikal? ,Guatemala,TRUE,Belize,FALSE,Honduras,FALSE,El Salvador,FALSE
+414,geography,HARD,What is the capital of Liberia? ,Zwedru,FALSE,Buchanan,FALSE,Monrovia,TRUE,Gbarnga,FALSE
+415,geography,HARD,Which river runs through Rome? ,Po,FALSE,Arno,FALSE,Tiber,TRUE,Adige,FALSE
+416,geography,HARD,What is the capital of Algeria? ,Constantine,FALSE,Annaba,FALSE,Oran,FALSE,Algiers,TRUE
+417,geography,HARD,What is the capital of the Czech Republic? ,Ostrava,FALSE,Prague,TRUE,Brno,FALSE,Plzen,FALSE
+418,geography,HARD,Which country is known for its canals? ,France,FALSE,Germany,FALSE,Belgium,FALSE,Netherlands,TRUE
+419,geography,HARD,What is the capital of Mongolia? ,Ulaanbaatar,TRUE,Dornod,FALSE,Darkhan,FALSE,Erdenet,FALSE
+420,geography,HARD,What is the capital of Uganda? ,Kampala,TRUE,Mbarara,FALSE,Entebbe,FALSE,Jinja,FALSE
+421,geography,HARD,Which country has the highest recorded temperature? ,Saudi Arabia,FALSE,Iran,FALSE,Kuwait,TRUE,Iraq,FALSE
+422,geography,HARD,What is the capital of North Macedonia? ,Skopje,TRUE,Bitola,FALSE,Kumanovo,FALSE,Ohrid,FALSE
+423,geography,HARD,What is the capital of Tunisia? ,Tunis,TRUE,Sfax,FALSE,Sousse,FALSE,Monastir,FALSE
+424,geography,HARD,Which country is known for the ancient city of Petra? ,Jordan,TRUE,Israel,FALSE,Turkey,FALSE,Saudi Arabia,FALSE
+425,geography,HARD,What is the capital of South Korea? ,Jeju,FALSE,Seoul,TRUE,Incheon,FALSE,Busan,FALSE
+426,geography,HARD,What is the capital of Haiti? ,Les Cayes,FALSE,J��r��mie,FALSE,Port-au-Prince,TRUE,Cape Haitian,FALSE
+427,geography,HARD,What is the capital of Nepal? ,Biratnagar,FALSE,Lalitpur,FALSE,Kathmandu,TRUE,Pokhara,FALSE
+428,geography,HARD,What is the capital of Mongolia? ,Ulaanbaatar,TRUE,Darkhan,FALSE,Dornod,FALSE,Erdenet,FALSE
+429,geography,HARD,What is the capital of Belize? ,Orange Walk,FALSE,Belmopan,TRUE,Corozal,FALSE,San Ignacio,FALSE
+430,geography,HARD,Which river runs through Cairo? ,Euphrates,FALSE,Nile,TRUE,Tigris,FALSE,Jordan,FALSE
+431,geography,HARD,What is the capital of Denmark? ,Copenhagen,TRUE,Esbjerg,FALSE,Odense,FALSE,Aarhus,FALSE
+432,geography,HARD,Which country is home to the city of Dubrovnik? ,Montenegro,FALSE,Croatia,TRUE,Serbia,FALSE,Bosnia and Herzegovina,FALSE
+433,geography,HARD,What is the capital of Bhutan? ,Paro,FALSE,Punakha,FALSE,Thimphu,TRUE,Phuentsholing,FALSE
+434,geography,HARD,What is the capital of Kazakhstan? ,Shymkent,FALSE,Almaty,FALSE,Aktobe,FALSE,Astana,TRUE
+435,geography,HARD,Which country has the most time zones? ,Russia,FALSE,USA,FALSE,Australia,FALSE,France,TRUE
+436,geography,HARD,What is the capital of Syria? ,Aleppo,FALSE,Damascus,TRUE,Homs,FALSE,Lattakia,FALSE
+437,geography,HARD,What is the capital of the Philippines? ,Iloilo,FALSE,Manila,TRUE,Cebu,FALSE,Davao,FALSE
+438,geography,HARD,"Which mountain is known as the ""Roof of the World""? ",Andes,FALSE,Rocky Mountains,FALSE,Pamirs,TRUE,Himalayas,FALSE
+439,geography,HARD,What is the largest desert in the world? ,Gobi,FALSE,Sahara,FALSE,Antarctica,TRUE,Arabian,FALSE
+440,geography,HARD,What is the capital of Fiji? ,Labasa,FALSE,Lautoka,FALSE,Nadi,FALSE,Suva,TRUE
+441,geography,HARD,What is the capital of Malta? ,St. Julian's,FALSE,Valletta,TRUE,Sliema,FALSE,Birkirkara,FALSE
+442,geography,HARD,What is the capital of Madagascar? ,Antananarivo,TRUE,Toamasina,FALSE,Antananarivo,FALSE,Tamatave,FALSE
+443,geography,HARD,What is the largest city in South America? ,S?o Paulo,TRUE,Buenos Aires,FALSE,Lima,FALSE,Rio de Janeiro,FALSE
+444,geography,HARD,What is the capital of Ghana? ,Tamale,FALSE,Accra,TRUE,Takoradi,FALSE,Kumasi,FALSE
+445,geography,HARD,What is the capital of Iceland? ,Kopavogur,FALSE,Hafnarfjordur,FALSE,Akranes,FALSE,Reykjavik,TRUE
+446,geography,HARD,What is the capital of Norway? ,Stavanger,FALSE,Oslo,TRUE,Trondheim,FALSE,Bergen,FALSE
+447,geography,HARD,What is the capital of the United Kingdom? ,Birmingham,FALSE,Edinburgh,FALSE,London,TRUE,Manchester,FALSE
+448,geography,HARD,What is the capital of Zambia? ,Kitwe,FALSE,Ndola,FALSE,Livingstone,FALSE,Lusaka,TRUE
+449,geography,HARD,What is the capital of Iraq? ,Erbil,FALSE,Basra,FALSE,Baghdad,TRUE,Sulaimaniya,FALSE
+450,geography,VERY_HARD,What is the capital of Burkina Faso? ,Bobo-Dioulasso,FALSE,Ouahigouya,FALSE,Ouagadougou,TRUE,Koudougou,FALSE
+451,geography,VERY_HARD,Which country is known for the city of Timbuktu? ,Senegal,FALSE,Mali,TRUE,Burkina Faso,FALSE,Niger,FALSE
+452,geography,VERY_HARD,What is the capital of the Republic of the Congo? ,Loubomo,FALSE,Kinshasa,FALSE,Pointe-Noire,FALSE,Brazzaville,TRUE
+453,geography,VERY_HARD,What is the highest capital city in the world? ,Quito,FALSE,Asunci��n,FALSE,La Paz,TRUE,Sucre,FALSE
+454,geography,VERY_HARD,What is the capital of Palau? ,Koror,FALSE,Airai,FALSE,Melekeok,FALSE,Ngerulmud,TRUE
+455,geography,VERY_HARD,Which country has the most lakes in the world? ,Russia,FALSE,Canada,TRUE,USA,FALSE,Australia,FALSE
+456,geography,VERY_HARD,What is the capital of Vatican City? ,Florence,FALSE,Milan,FALSE,Rome,FALSE,Vatican City,TRUE
+457,geography,VERY_HARD,Which continent is the least populated? ,Australia,FALSE,South America,FALSE,Africa,FALSE,Antarctica,TRUE
+458,geography,VERY_HARD,What is the capital of the Maldives? ,Maafushi,FALSE,Mal��,TRUE,Addu City,FALSE,Thulusdhoo,FALSE
+459,geography,VERY_HARD,What is the largest island in the world? ,New Guinea,FALSE,Greenland,TRUE,Borneo,FALSE, Madagascar,FALSE
+460,geography,VERY_HARD,What is the capital of Nicaragua? ,Granada,FALSE,Masaya,FALSE,Le��n,FALSE,Managua,TRUE
+461,geography,VERY_HARD,Which country is known for the city of Dubrovnik? ,Croatia,TRUE,Montenegro,FALSE,Serbia,FALSE,Bosnia and Herzegovina,FALSE
+462,geography,VERY_HARD,What is the capital of Tuvalu? ,Vaitupu,FALSE,Nukufetau,FALSE,Avatele,FALSE,Funafuti,TRUE
+463,geography,VERY_HARD,What is the capital of Seychelles? ,Anse Royale,FALSE,La Digue,FALSE,Praslin,FALSE,Victoria,TRUE
+464,geography,VERY_HARD,What is the capital of Uzbekistan? ,Andijan,FALSE,Bukhara,FALSE,Samarqand,FALSE,Tashkent,TRUE
+465,geography,VERY_HARD,What is the capital of Lesotho? ,Maputsoe,FALSE,Teyateyaneng,FALSE,Leribe,FALSE,Maseru,TRUE
+466,geography,VERY_HARD,Which country has the longest coastline? ,USA,FALSE,Canada,TRUE,Indonesia,FALSE,Russia,FALSE
+467,geography,VERY_HARD,What is the capital of Angola? ,Lobito,FALSE,Luanda,TRUE,Benguela,FALSE,Ndalatando,FALSE
+468,geography,VERY_HARD,What is the capital of Bhutan? ,Thimphu,TRUE,Paro,FALSE,Phuentsholing,FALSE,Punakha,FALSE
+469,geography,VERY_HARD,Which ocean is the largest? ,Pacific Ocean,TRUE,Arctic Ocean,FALSE,Atlantic Ocean,FALSE,Indian Ocean,FALSE
+470,geography,VERY_HARD,What is the capital of Malta? ,St. Julian's,FALSE,Sliema,FALSE,Valletta,TRUE,Birkirkara,FALSE
+471,geography,VERY_HARD,Which river separates the United States from Mexico? ,Missouri River,FALSE,Colorado River,FALSE,Rio Grande,TRUE,Arkansas River,FALSE
+472,geography,VERY_HARD,What is the capital of Yemen? ,Al Hudaydah,FALSE,Sana'a,TRUE,Taiz,FALSE,Aden,FALSE
+473,geography,VERY_HARD,What is the capital of South Sudan? ,Wau,FALSE,Juba,TRUE,Yambio,FALSE,Malakal,FALSE
+474,geography,VERY_HARD,What is the longest river in Africa? ,Senegal,FALSE,Nile,TRUE,Zambezi,FALSE,Congo,FALSE
+475,geography,VERY_HARD,What is the capital of Samoa? ,Salelologa,FALSE,Apia,TRUE,Lalomalava,FALSE,Asau,FALSE
+476,geography,VERY_HARD,Which country is home to the city of Marrakech? ,Morocco,TRUE,Egypt,FALSE,Tunisia,FALSE,Algeria,FALSE
+477,geography,VERY_HARD,What is the largest country by land area? ,Canada,FALSE,Russia,TRUE,USA,FALSE,China,FALSE
+478,geography,VERY_HARD,What is the capital of the Solomon Islands? ,Munda,FALSE,Honiara,TRUE,Buka,FALSE,Gizo,FALSE
+479,geography,VERY_HARD,What is the capital of Fiji? ,Labasa,FALSE,Lautoka,FALSE,Nadi,FALSE,Suva,TRUE
+480,geography,VERY_HARD,What is the capital of Armenia? ,Vagharshapat,FALSE,Vanadzor,FALSE,Yerevan,TRUE,Gyumri,FALSE
+481,geography,VERY_HARD,What is the smallest country in the world? ,Tuvalu,FALSE,Monaco,FALSE,Vatican City,TRUE,Nauru,FALSE
+482,geography,VERY_HARD,What is the capital of Samoa? ,Lalomalava,FALSE,Salelologa,FALSE,Apia,TRUE,Asau,FALSE
+483,geography,VERY_HARD,What is the capital of Eswatini? ,Mbabane,TRUE,Siteki,FALSE,Lobamba,FALSE,Manzini,FALSE
+484,geography,VERY_HARD,What is the capital of Guinea? ,Kankan,FALSE,Conakry,TRUE,Lab��,FALSE, Nz��r��kor��,FALSE
+485,geography,VERY_HARD,What is the capital of Kazakhstan? ,Astana,TRUE,Aktobe,FALSE,Almaty,FALSE,Shymkent,FALSE
+486,geography,VERY_HARD,What is the capital of Tajikistan? ,Khujand,FALSE,Khorugh,FALSE,Dushanbe,TRUE,Isfara,FALSE
+487,geography,VERY_HARD,Which island is the largest in the Caribbean? ,Jamaica,FALSE,Puerto Rico,FALSE,Cuba,TRUE,Hispaniola,FALSE
+488,geography,VERY_HARD,What is the capital of the Central African Republic? ,Bangassou,FALSE,Bangui,TRUE,Bimbo,FALSE,Bangui,FALSE
+489,geography,VERY_HARD,What is the capital of Greenland? ,Ilulissat,FALSE, Qaanaaq,FALSE,Nuuk,TRUE, Sisimiut,FALSE
+490,geography,VERY_HARD,What is the longest river in South America? ,Orinoco,FALSE,Tocantins,FALSE,Paran��,FALSE,Amazon,TRUE
+491,geography,VERY_HARD,What is the capital of Fiji? ,Labasa,FALSE,Nadi,FALSE,Suva,TRUE,Lautoka,FALSE
+492,geography,VERY_HARD,What is the capital of Zimbabwe? ,Harare,TRUE,Mutare,FALSE,Gweru,FALSE,Bulawayo,FALSE
+493,geography,VERY_HARD,Which country has the most volcanoes? ,USA,FALSE,Italy,FALSE,Japan,FALSE,Indonesia,TRUE
+494,geography,VERY_HARD,What is the capital of Saint Lucia? ,Soufri��re,FALSE,Castries,TRUE,Gros Islet,FALSE,Vieux Fort,FALSE
+495,geography,VERY_HARD,What is the capital of Namibia? ,Windhoek,TRUE,L��deritz,FALSE,Opuwo,FALSE,Swakopmund,FALSE
+496,geography,VERY_HARD,What is the capital of the Maldives? ,Thulusdhoo,FALSE,Maafushi,FALSE,Mal��,TRUE,Addu City,FALSE
+497,geography,VERY_HARD,What is the capital of Samoa? ,Apia,TRUE,Lalomalava,FALSE,Salelologa,FALSE,Asau,FALSE
+498,geography,VERY_HARD,What is the capital of the Czech Republic? ,Brno,FALSE,Plzen,FALSE,Ostrava,FALSE,Prague,TRUE
+499,geography,VERY_HARD,What is the capital of Bhutan? ,Phuentsholing,FALSE,Thimphu,TRUE,Punakha,FALSE,Paro,FALSE

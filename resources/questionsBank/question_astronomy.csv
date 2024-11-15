@@ -1,0 +1,501 @@
+ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,Option4,Correct4
+0,astronomy,EASY,Which planet is the closest to the Sun as you know?,Mars,FALSE,Jupiter,FALSE,Mercury,TRUE,Venus,FALSE
+1,astronomy,EASY,What is the largest known type of star?,White Dwarf,FALSE,Red Giant,FALSE,Yellow Dwarf,FALSE,Blue Supergiant,TRUE
+2,astronomy,EASY,What is the largest planet in our solar system?,Saturn,FALSE,Jupiter,TRUE,Mars,FALSE,Earth,FALSE
+3,astronomy,EASY,Which planet is known as the Red Planet?,Mars,TRUE,Venus,FALSE,Jupiter,FALSE,Earth,FALSE
+4,astronomy,EASY,What is the name of Earth's natural satellite?,Moon,TRUE,Sun,FALSE,Mars,FALSE,Venus,FALSE
+5,astronomy,EASY,Which planet is famous for its rings?,Neptune,FALSE,Uranus,FALSE,Jupiter,FALSE,Saturn,TRUE
+6,astronomy,EASY,What do astronomers use to look at the stars?,Periscope,FALSE,Microscope,FALSE,Stethoscope,FALSE,Telescope,TRUE
+7,astronomy,EASY,What star is at the center of our solar system?,Sun,TRUE,Alpha Centauri,FALSE,Sirius,FALSE,Polaris,FALSE
+8,astronomy,EASY,How many Earths could fit inside the Sun?,About 1000,FALSE,About 10,FALSE,About 100,FALSE,About 1 million,TRUE
+9,astronomy,EASY,Which planet is known for having a Great Red Spot?,Mars,FALSE,Jupiter,TRUE,Venus,FALSE,Neptune,FALSE
+10,astronomy,EASY,Which planet is known as Earth's twin?,Venus,TRUE,Jupiter,FALSE,Mars,FALSE,Mercury,FALSE
+11,astronomy,EASY,Which is the smallest planet in the solar system?,Earth,FALSE,Mercury,TRUE,Mars,FALSE,Venus,FALSE
+12,astronomy,EASY,What do we call a collection of stars. gas. and dust bound together by gravity?,Galaxy,TRUE,Cluster,FALSE,Comet,FALSE,Planet,FALSE
+13,astronomy,EASY,What type of galaxy is the Milky Way?,Spiral,TRUE,Elliptical,FALSE,Irregular,FALSE,Lenticular,FALSE
+14,astronomy,EASY,Which planet has the most moons?,Earth,FALSE,Saturn,FALSE,Jupiter,TRUE,Mars,FALSE
+15,astronomy,EASY,What is the main gas found in the Sun?,Nitrogen,FALSE,Hydrogen,TRUE,Oxygen,FALSE,Carbon Dioxide,FALSE
+16,astronomy,EASY,What is a shooting star?,An asteroid,FALSE,A meteor,TRUE,A comet,FALSE,A satellite,FALSE
+17,astronomy,EASY,Which planet is known for having beautiful rings?,Saturn,TRUE,Mars,FALSE,Earth,FALSE,Venus,FALSE
+18,astronomy,EASY,The process by which stars generate energy is called what?,Fusion,TRUE,Fission,FALSE,Combustion,FALSE,Burning,FALSE
+19,astronomy,EASY,"Which planet is nicknamed the ""Evening Star""?",Mercury,FALSE,Jupiter,FALSE,Venus,TRUE,Mars,FALSE
+20,astronomy,EASY,Which planet is closest in size to Earth?,Venus,FALSE,Neptune,FALSE,Mars,TRUE,Mercury,FALSE
+21,astronomy,EASY,What do we call a star's explosion?,Nova,FALSE,Quasar,FALSE,Pulsar,FALSE,Supernova,TRUE
+22,astronomy,EASY,What is the name of the galaxy we live in?,Whirlpool,FALSE,Andromeda,FALSE,Sombrero,FALSE,Milky Way,TRUE
+23,astronomy,EASY,What is the second planet from the Sun?,Mars,FALSE,Mercury,FALSE,Venus,TRUE,Earth,FALSE
+24,astronomy,EASY,Which planet is known for its extreme winds?,Neptune,TRUE,Mars,FALSE,Uranus,FALSE,Jupiter,FALSE
+25,astronomy,EASY,What is the term for a rocky object orbiting the Sun?,Asteroid,TRUE,Comet,FALSE,Meteor,FALSE,Planet,FALSE
+26,astronomy,EASY,Which planet is named after the Roman god of war?,Jupiter,FALSE,Saturn,FALSE,Mars,TRUE,Venus,FALSE
+27,astronomy,EASY,The Sun primarily consists of which two elements?,Hydrogen and Helium,TRUE,Oxygen and Carbon,FALSE,Carbon and Helium,FALSE,Oxygen and Hydrogen,FALSE
+28,astronomy,EASY,What do we call a galaxy that has no definite shape?,Irregular,TRUE,Round,FALSE,Spiral,FALSE,Elliptical,FALSE
+29,astronomy,EASY,Which planet is tilted on its side.  almost rolling around the Sun?,Saturn,FALSE,Uranus,TRUE,Mars,FALSE,Neptune,FALSE
+30,astronomy,EASY,What is the name of the first artificial satellite sent into space?,Sputnik,TRUE,Voyager,FALSE,Galaxy,FALSE,Apollo,FALSE
+31,astronomy,EASY,"Which planet is known as the ""Morning Star""?",Saturn,FALSE,Venus,TRUE,Mars,FALSE,Jupiter,FALSE
+32,astronomy,EASY,Which planet is the hottest in our solar system?,Mars,FALSE,Jupiter,FALSE,Venus,TRUE,Earth,FALSE
+33,astronomy,EASY,What is the term used for the boundary around a black hole?,Event Horizon,TRUE,Singularity,FALSE,Space Edge,FALSE,Black Line,FALSE
+34,astronomy,EASY,What is the primary component of Saturn��s rings?,Dust,FALSE,Ice and Rock,TRUE,Gas,FALSE,Metal,FALSE
+35,astronomy,EASY,What is the coldest planet in our solar system?,Uranus,FALSE,Neptune,TRUE,Jupiter,FALSE,Mars,FALSE
+36,astronomy,EASY,Which celestial body defines a year by its orbit?,Sun,FALSE,Earth,TRUE,Moon,FALSE,Mars,FALSE
+37,astronomy,EASY,What is the name of the closest star to Earth?,Sirius,FALSE,Betelgeuse,FALSE,Proxima Centauri,TRUE,Alpha Centauri,FALSE
+38,astronomy,EASY,"Which planet is nicknamed the ""Ringed Planet""?",Mars,FALSE,Saturn,TRUE,Venus,FALSE,Neptune,FALSE
+39,astronomy,EASY,The phases of the Moon result from what?,Sun's rotation,FALSE,Earth's shadow,FALSE,Moon's orbit,TRUE,Sun's shadow,FALSE
+40,astronomy,EASY,Which planet has a day longer than its year?,Jupiter,FALSE,Earth,FALSE,Venus,TRUE,Mars,FALSE
+41,astronomy,EASY,Which planet is known for its giant storm called the Great Dark Spot?,Jupiter,FALSE,Saturn,FALSE,Neptune,TRUE,Uranus,FALSE
+42,astronomy,EASY,What is the primary cause of tides on Earth?,Winds,FALSE,Earth's rotation,FALSE,Sun's gravity,FALSE,Moon's gravity,TRUE
+43,astronomy,EASY,"Which planet is often called the ""Blue Planet""?",Earth,TRUE,Uranus,FALSE,Neptune,FALSE,Mars,FALSE
+44,astronomy,EASY,What is the smallest type of star in the universe?,Neutron Star,TRUE,Blue Supergiant,FALSE,White Dwarf,FALSE,Red Giant,FALSE
+45,astronomy,EASY,What do we call the path of a celestial body around a star?,Ecliptic,FALSE,Axis,FALSE,Rotation,FALSE,Orbit,TRUE
+46,astronomy,EASY,What is the closest galaxy to the Milky Way?,Pinwheel,FALSE,Whirlpool,FALSE,Andromeda,TRUE,Sombrero,FALSE
+47,astronomy,EASY,Which gas provides the blue color of Neptune?,Hydrogen,FALSE,Methane,TRUE,Oxygen,FALSE,Carbon Dioxide,FALSE
+48,astronomy,EASY,What is the name of NASA's most famous space telescope?,Hubble,TRUE,Chandra,FALSE,Spitzer,FALSE,Kepler,FALSE
+49,astronomy,EASY,How long does it take for the Earth to orbit the Sun?,30 days,FALSE,365 days,TRUE,7 days,FALSE,24 hours,FALSE
+50,astronomy,EASY,What is the brightest planet in the night sky?,Venus,TRUE,Jupiter,FALSE,Saturn,FALSE,Mars,FALSE
+51,astronomy,EASY,Which planet is known for having the largest volcano in the solar system?,Neptune,FALSE,Venus,FALSE,Jupiter,FALSE,Mars,TRUE
+52,astronomy,EASY,Which planet takes the longest to orbit the Sun?,Uranus,FALSE,Jupiter,FALSE,Saturn,FALSE,Neptune,TRUE
+53,astronomy,EASY,What is the smallest planet in our solar system?,Earth,FALSE,Mars,FALSE,Mercury,TRUE,Venus,FALSE
+54,astronomy,EASY,What kind of celestial object is the Sun?,Planet,FALSE,Dwarf Planet,FALSE,Star,TRUE,Moon,FALSE
+55,astronomy,EASY,What is the main constituent of the atmosphere of Venus?,Oxygen,FALSE,Carbon Dioxide,TRUE,Hydrogen,FALSE,Nitrogen,FALSE
+56,astronomy,EASY,"Which planet is known as the ""Gas Giant""?",Mars,FALSE,Earth,FALSE,Venus,FALSE,Jupiter,TRUE
+57,astronomy,EASY,Which planet is closest to Earth?,Saturn,FALSE,Venus,TRUE,Mars,FALSE,Jupiter,FALSE
+58,astronomy,EASY,What is the term for when the Moon passes directly between the Earth and the Sun?,Lunar Eclipse,FALSE,Equinox,FALSE,Syzygy,FALSE,Solar Eclipse,TRUE
+59,astronomy,EASY,What is the shape of the Milky Way galaxy?,Irregular,FALSE,Spiral,TRUE,Elliptical,FALSE,Circular,FALSE
+60,astronomy,EASY,Which planet is known for its deep blue color?,Saturn,FALSE,Uranus,FALSE,Neptune,TRUE,Jupiter,FALSE
+61,astronomy,EASY,What is the closest planet to the Sun?,Mercury,TRUE,Mars,FALSE,Earth,FALSE,Venus,FALSE
+62,astronomy,EASY,What is the largest type of galaxy?,Elliptical,TRUE,Dwarf,FALSE,Irregular,FALSE,Spiral,FALSE
+63,astronomy,EASY,Which planet is known for its icy rings?,Uranus,FALSE,Jupiter,FALSE,Saturn,TRUE,Neptune,FALSE
+64,astronomy,EASY,What is the main difference between a comet and an asteroid?,Orbit,FALSE,Size,FALSE,Composition,TRUE,Speed,FALSE
+65,astronomy,EASY,Which planet has the shortest day?,Jupiter,TRUE,Saturn,FALSE,Earth,FALSE,Mars,FALSE
+66,astronomy,EASY,Which planet is known for being tilted on its side?,Uranus,TRUE,Mars,FALSE,Neptune,FALSE,Earth,FALSE
+67,astronomy,EASY,What are the small rocky bodies primarily located between Mars and Jupiter?,Planets,FALSE,Comets,FALSE,Meteors,FALSE,Asteroids,TRUE
+68,astronomy,EASY,"Which planet is known as the ""Windy Planet""?",Neptune,TRUE,Saturn,FALSE,Uranus,FALSE,Jupiter,FALSE
+69,astronomy,EASY,What layer of the Sun do we see from Earth?,Photosphere,TRUE,Core,FALSE,Corona,FALSE,Chromosphere,FALSE
+70,astronomy,EASY,Which of these is a dwarf planet?,Pluto,TRUE,Mars,FALSE,Uranus,FALSE,Neptune,FALSE
+71,astronomy,EASY,What is the term for a planet's path around the Sun?,Ecliptic,FALSE,Orbit,TRUE,Axis,FALSE,Rotation,FALSE
+72,astronomy,EASY,What is the term for the apparent backward movement of a planet as seen from Earth?,Orbital,FALSE,Heliocentric,FALSE,Prograde,FALSE,Retrograde,TRUE
+73,astronomy,EASY,What planet is famous for its Great Red Spot?,Venus,FALSE,Saturn,FALSE,Mars,FALSE,Jupiter,TRUE
+74,astronomy,EASY,What is the most abundant element in the universe?,Helium,FALSE,Carbon,FALSE,Hydrogen,TRUE,Oxygen,FALSE
+75,astronomy,EASY,"What planet is known as the ""Evening Star""?",Jupiter,FALSE,Saturn,FALSE,Mars,FALSE,Venus,TRUE
+76,astronomy,EASY,What is the name of the second largest planet in our solar system?,Uranus,FALSE,Saturn,TRUE,Neptune,FALSE,Jupiter,FALSE
+77,astronomy,EASY,What planet in our solar system is known for its thin rings?,Jupiter,FALSE,Neptune,FALSE,Uranus,TRUE,Mars,FALSE
+78,astronomy,EASY,What is the principle that states planets orbit in elliptical paths?,Galileo's Principle,FALSE,Kepler's Laws,TRUE,Newton's Laws,FALSE,Einstein's Theory,FALSE
+79,astronomy,EASY,Which planet is second from the Sun?,Mercury,FALSE,Earth,FALSE,Mars,FALSE,Venus,TRUE
+80,astronomy,EASY,What is the distance light travels in one year?,Astronomical Unit,FALSE,Parsec,FALSE,Light Year,TRUE,Photon,FALSE
+81,astronomy,EASY,What is a large cloud of dust and gas in space called?,Cluster,FALSE,Nebula,TRUE,Constellation,FALSE,Galaxy,FALSE
+82,astronomy,EASY,What are the remains of a star that has collapsed under gravity?,White Dwarf,FALSE,Black Hole,TRUE,Red Giant,FALSE,Brown Dwarf,FALSE
+83,astronomy,EASY,What is the term for when the Earth's shadow falls on the Moon?,Lunar Eclipse,TRUE,Apogee,FALSE,New Moon,FALSE,Solar Eclipse,FALSE
+84,astronomy,EASY,What causes the Moon to shine?,Stars' light,FALSE,Earth's light,FALSE,Own light,FALSE,Reflected sunlight,TRUE
+85,astronomy,EASY,What is the term for a planet or moon spinning on its axis?,Axial Tilt,FALSE,Orbit,FALSE,Rotation,TRUE,Revolution,FALSE
+86,astronomy,EASY,What are the icy objects that develop tails when near the Sun?,Asteroids,FALSE,Comets,TRUE,Meteors,FALSE,Planets,FALSE
+87,astronomy,EASY,Who was the first person to walk on the Moon?,Neil Armstrong,TRUE,Michael Collins,FALSE,Buzz Aldrin,FALSE,Yuri Gagarin,FALSE
+88,astronomy,EASY,"Which planet is known as the ""Giant Planet""?",Neptune,FALSE,Uranus,FALSE,Saturn,FALSE,Jupiter,TRUE
+89,astronomy,EASY,What is the name of the galaxy closest to our Milky Way?,Pinwheel,FALSE,Triangulum,FALSE,Whirlpool,FALSE,Andromeda,TRUE
+99,astronomy,EASY,What is the name of the first human-made object to reach outer space?,V-2 Rocket,FALSE,Apollo 11,FALSE,Explorer 1,FALSE,Sputnik 1,TRUE
+100,astronomy,EASY,What is the Earth's only natural satellite?,Venus,FALSE,Mars,FALSE,Moon,TRUE,Phobos,FALSE
+101,astronomy,EASY,"Which planet is known as the ""Red Planet""?",Jupiter,FALSE,Venus,FALSE,Mars,TRUE,Earth,FALSE
+102,astronomy,EASY,Which planet is the fourth from the Sun?,Mars,TRUE,Venus,FALSE,Jupiter,FALSE,Earth,FALSE
+103,astronomy,EASY,What is the term for a group of stars forming a recognizable pattern?,Constellation,TRUE,Nebula,FALSE,Cluster,FALSE,Galaxy,FALSE
+104,astronomy,EASY,What is the most common type of star found in the universe?,Red Giant,FALSE,White Dwarf,FALSE,Blue Giant,FALSE,Red Dwarf,TRUE
+105,astronomy,EASY,Which planet has a surface temperature hot enough to melt lead?,Venus,TRUE,Mars,FALSE,Earth,FALSE,Neptune,FALSE
+106,astronomy,EASY,What is the term for the apparent shift in position of a nearby star against the background of distant stars?,Parallax,TRUE,Diffraction,FALSE,Doppler Effect,FALSE,Refraction,FALSE
+107,astronomy,EASY,"Which planet is known as the ""Gas Giant""?",Earth,FALSE,Venus,FALSE,Jupiter,TRUE,Mars,FALSE
+108,astronomy,EASY,What is the term for the point in its orbit where a planet is closest to the Sun?,Aphelion,FALSE,Perihelion,TRUE,Solstice,FALSE,Equinox,FALSE
+109,astronomy,EASY,What is the shape of the Earth's orbit around the Sun?,Elliptical,TRUE,Rectangular,FALSE,Spiral,FALSE,Circular,FALSE
+110,astronomy,EASY,Which planet's day is longer than its year?,Venus,TRUE,Earth,FALSE,Mars,FALSE,Mercury,FALSE
+111,astronomy,EASY,What is the name of the first U.S. satellite to orbit the Earth?,Vanguard 1,FALSE,Sputnik,FALSE,Apollo 11,FALSE,Explorer 1,TRUE
+112,astronomy,EASY,What is a light-year a measure of?,Time,FALSE,Distance,TRUE,Mass,FALSE,Speed,FALSE
+113,astronomy,EASY,Which planet is known for its large storm called the Great Dark Spot?,Earth,FALSE,Neptune,TRUE,Jupiter,FALSE,Mars,FALSE
+114,astronomy,EASY,What is the most well-known constellation in the northern sky?,Leo,FALSE,Cassiopeia,FALSE,Orion,FALSE,Big Dipper,TRUE
+115,astronomy,EASY,Which planet has the tallest mountain in the solar system?,Earth,FALSE,Mars,TRUE,Venus,FALSE,Neptune,FALSE
+116,astronomy,EASY,What is the name of the largest asteroid in the asteroid belt?,Vesta,FALSE,Ceres,TRUE,Pallas,FALSE,Hygiea,FALSE
+117,astronomy,EASY,What is the name of the space mission that landed the first humans on the Moon?,Apollo 11,TRUE,Challenger,FALSE,Columbia,FALSE,Voyager,FALSE
+118,astronomy,EASY,What is the name of the force that keeps planets in orbit around the Sun?,Gravity,TRUE,Friction,FALSE,Electricity,FALSE,Magnetism,FALSE
+119,astronomy,EASY,"Which planet is known as the ""Earth's Twin"" due to its similar size and composition?",Mars,FALSE,Jupiter,FALSE,Saturn,FALSE,Venus,TRUE
+120,astronomy,EASY,Which planet has a year that lasts only 88 Earth days?,Earth,FALSE,Mercury,TRUE,Mars,FALSE,Venus,FALSE
+121,astronomy,EASY,What is the second largest planet in our solar system?,Uranus,FALSE,Saturn,TRUE,Jupiter,FALSE,Neptune,FALSE
+122,astronomy,EASY,What is the hottest planet in our solar system?,Mars,FALSE,Earth,FALSE,Mercury,FALSE,Venus,TRUE
+123,astronomy,EASY,Which planet has a moon named Titan?,Mars,FALSE,Jupiter,FALSE,Saturn,TRUE,Uranus,FALSE
+124,astronomy,EASY,Which planet is known for its polar ice caps?,Mars,TRUE,Neptune,FALSE,Jupiter,FALSE,Venus,FALSE
+125,astronomy,EASY,What is the name of the most volcanically active body in the solar system?,Europa,FALSE,Io,TRUE,Mars,FALSE,Venus,FALSE
+126,astronomy,EASY,Which planet is home to the Great Red Spot?,Saturn,FALSE,Neptune,FALSE,Jupiter,TRUE,Mars,FALSE
+127,astronomy,EASY,What is the largest moon of Saturn?,Ganymede,FALSE,Callisto,FALSE,Titan,TRUE,Europa,FALSE
+128,astronomy,EASY,Which planet has the moon Ganymede?,Jupiter,TRUE,Neptune,FALSE,Uranus,FALSE,Saturn,FALSE
+129,astronomy,EASY,What is the largest object in our solar system?,Earth,FALSE,Jupiter,FALSE,Saturn,FALSE,The Sun,TRUE
+130,astronomy,EASY,"Which planet is known as the ""Evening Star""?",Neptune,FALSE,Mars,FALSE,Venus,TRUE,Jupiter,FALSE
+131,astronomy,EASY,What is the second smallest planet in our solar system?,Venus,FALSE,Neptune,FALSE,Uranus,FALSE,Mars,TRUE
+132,astronomy,EASY,Which planet orbits the Sun in less than 10 hours?,Jupiter,TRUE,Saturn,FALSE,Uranus,FALSE,Neptune,FALSE
+133,astronomy,EASY,Which is the only planet that rotates on its side?,Venus,FALSE,Jupiter,FALSE,Uranus,TRUE,Neptune,FALSE
+134,astronomy,EASY,What is the name of the phenomenon where the Moon completely covers the Sun?,Annular Solar Eclipse,FALSE,Lunar Eclipse,FALSE,Total Solar Eclipse,TRUE,Partial Solar Eclipse,FALSE
+135,astronomy,EASY,Which planet takes the shortest time to orbit the Sun?,Venus,FALSE,Earth,FALSE,Mars,FALSE,Mercury,TRUE
+136,astronomy,EASY,What type of celestial body is the Milky Way?,Star Cluster,FALSE,Nebula,FALSE,Galaxy,TRUE,Constellation,FALSE
+137,astronomy,EASY,Which planet is known for its tilt that causes extreme seasons?,Uranus,TRUE,Earth,FALSE,Neptune,FALSE,Mars,FALSE
+138,astronomy,EASY,What planet is known for its rings?,Uranus,FALSE,Neptune,FALSE,Jupiter,FALSE,Saturn,TRUE
+139,astronomy,EASY,What is the term for the movement of Earth around the Sun?,Revolution,TRUE,Orbit,FALSE,Rotation,FALSE,Spin,FALSE
+140,astronomy,EASY,What is the term for the spin of a planet around its axis?,Revolution,FALSE,Precession,FALSE,Rotation,TRUE,Orbit,FALSE
+141,astronomy,EASY,What do we call the path a planet takes around the Sun?,Trajectory,FALSE,Axis,FALSE,Line,FALSE,Orbit,TRUE
+142,astronomy,EASY,Which planet is known for its extreme winds and dark blue color?,Uranus,FALSE,Mars,FALSE,Jupiter,FALSE,Neptune,TRUE
+143,astronomy,EASY,What is the term for the time it takes for the Earth to orbit the Sun?,Decade,FALSE,Day,FALSE,Year,TRUE,Month,FALSE
+144,astronomy,EASY,What is the name of the galaxy that contains our solar system?,Andromeda,FALSE,Whirlpool,FALSE,Sombrero,FALSE,Milky Way,TRUE
+149,astronomy,EASY,What is the name of the largest moon of Neptune?,Io,FALSE,Callisto,FALSE,Europa,FALSE,Triton,TRUE
+150,astronomy,EASY,Which planet is known for having a day longer than its year?,Mercury,FALSE,Jupiter,FALSE,Mars,FALSE,Venus,TRUE
+151,astronomy,EASY,What planet is known for having the most extensive system of rings?,Neptune,FALSE,Uranus,FALSE,Saturn,TRUE,Jupiter,FALSE
+152,astronomy,EASY,What is the name of the first American woman to travel into space?,Eileen Collins,FALSE,Sally Ride,TRUE,Valentina Tereshkova,FALSE,Mae Jemison,FALSE
+153,astronomy,EASY,Which planet in our solar system is known for its reddish appearance?,Mars,TRUE,Earth,FALSE,Venus,FALSE,Jupiter,FALSE
+154,astronomy,EASY,What do we call the area beyond Neptune populated with small icy bodies?,Asteroid Belt,FALSE,Oort Cloud,FALSE,Kuiper Belt,TRUE,Orion Arm,FALSE
+155,astronomy,EASY,Which is the only planet in our solar system not named after a deity?,Venus,FALSE,Earth,TRUE,Mars,FALSE,Uranus,FALSE
+156,astronomy,EASY,"Which planet is known as the ""Blue Planet""?",Earth,TRUE,Neptune,FALSE,Jupiter,FALSE,Mars,FALSE
+157,astronomy,EASY,Who was the first human to journey into outer space?,Buzz Aldrin,FALSE,Alan Shepard,FALSE,Yuri Gagarin,TRUE,Neil Armstrong,FALSE
+158,astronomy,EASY,What is the brightest star in the night sky?,Rigel,FALSE,Sirius,TRUE,Betelgeuse,FALSE,Polaris,FALSE
+159,astronomy,EASY,Which planet has the highest mountain in the solar system.  Olympus Mons?,Earth,FALSE,Neptune,FALSE,Venus,FALSE,Mars,TRUE
+160,astronomy,EASY,Which planet is closest to the Sun?,Earth,FALSE,Mars,FALSE,Venus,FALSE,Mercury,TRUE
+161,astronomy,EASY,What is the term for a particle of light?,Photon,TRUE,Neutron,FALSE,Proton,FALSE,Electron,FALSE
+162,astronomy,EASY,Which planet is known for its giant storm called the Great Red Spot?,Neptune,FALSE,Jupiter,TRUE,Mars,FALSE,Saturn,FALSE
+163,astronomy,EASY,What is the smallest planet in the solar system?,Mercury,TRUE,Earth,FALSE,Mars,FALSE,Venus,FALSE
+164,astronomy,EASY,What force keeps the planets in orbit around the Sun?,Friction,FALSE,Gravity,TRUE,Inertia,FALSE,Magnetism,FALSE
+165,astronomy,EASY,Which planet is known for its beautiful blue color and strong winds?,Jupiter,FALSE,Neptune,TRUE,Uranus,FALSE,Saturn,FALSE
+166,astronomy,EASY,What is the primary reason for the Earth's seasons?,Tilt of the Earth's axis,TRUE,Sun's activity,FALSE,Earth's rotation,FALSE,Distance from the Sun,FALSE
+167,astronomy,EASY,What is the largest type of star in the universe?,Red Giant,FALSE,Neutron Star,FALSE,Blue Supergiant,TRUE,White Dwarf,FALSE
+168,astronomy,EASY,Which planet has the shortest day.  taking about 10 hours to rotate?,Saturn,FALSE,Neptune,FALSE,Uranus,FALSE,Jupiter,TRUE
+169,astronomy,EASY,What is the term for when the Moon is fully illuminated as seen from Earth?,Full Moon,TRUE,Crescent Moon,FALSE,New Moon,FALSE,Half Moon,FALSE
+170,astronomy,EASY,What is the name of the largest dwarf planet?,Eris,FALSE,Pluto,TRUE,Haumea,FALSE,Ceres,FALSE
+171,astronomy,EASY,What is the name of the telescope that has provided stunning images of deep space since 1990?,Kepler Space Telescope,FALSE,Hubble Space Telescope,TRUE,Chandra X-ray Observatory,FALSE,James Webb Space Telescope,FALSE
+172,astronomy,EASY,What is the term for the path of the Sun in the sky as seen from Earth?,Nadir,FALSE,Zenith,FALSE,Horizon,FALSE,Ecliptic,TRUE
+173,astronomy,EASY,What is the name of the second largest moon in the solar system?,Titan,TRUE,Europa,FALSE,Callisto,FALSE,Ganymede,FALSE
+174,astronomy,EASY,Which planet is known for having ice giants?,Neptune,TRUE,Venus,FALSE,Jupiter,FALSE,Mars,FALSE
+175,astronomy,EASY,"Which planet is called the ""Ringed Planet""?",Neptune,FALSE,Jupiter,FALSE,Saturn,TRUE,Uranus,FALSE
+176,astronomy,EASY,What is the primary component of the Earth's atmosphere?,Carbon Dioxide,FALSE,Oxygen,FALSE,Hydrogen,FALSE,Nitrogen,TRUE
+177,astronomy,EASY,What is the closest star system to the Solar System?,Proxima Centauri,FALSE,Betelgeuse,FALSE,Sirius,FALSE,Alpha Centauri,TRUE
+178,astronomy,EASY,What is the term for the Earth's natural satellite?,Moon,TRUE,Comet,FALSE,Meteor,FALSE,Asteroid,FALSE
+179,astronomy,EASY,What is the term for the alignment of three celestial bodies?,Solstice,FALSE,Eclipse,FALSE,Equinox,FALSE,Syzygy,TRUE
+180,astronomy,EASY,What is the name of the first successful Mars rover?,Opportunity,FALSE,Sojourner,TRUE,Curiosity,FALSE,Spirit,FALSE
+181,astronomy,EASY,What is the brightest planet as seen from Earth?,Saturn,FALSE,Mars,FALSE,Venus,TRUE,Jupiter,FALSE
+182,astronomy,EASY,Which planet in our solar system is known for its beautiful blue color?,Saturn,FALSE,Jupiter,FALSE,Neptune,TRUE,Uranus,FALSE
+183,astronomy,EASY,What is the term for the explosion of a star at the end of its life cycle?,Quasar,FALSE,Pulsar,FALSE,Supernova,TRUE,Nova,FALSE
+184,astronomy,EASY,"Which planet is known as the ""Watery Planet""?",Venus,FALSE,Earth,TRUE,Neptune,FALSE,Mars,FALSE
+185,astronomy,EASY,Which planet is the hottest in the solar system?,Mars,FALSE,Venus,TRUE,Mercury,FALSE,Jupiter,FALSE
+186,astronomy,EASY,What do we call the study of the universe and its contents?,Biology,FALSE,Astrology,FALSE,Geology,FALSE,Astronomy,TRUE
+187,astronomy,EASY,Which star is known as the North Star?,Sirius,FALSE,Polaris,TRUE,Betelgeuse,FALSE,Deneb,FALSE
+188,astronomy,EASY,What is the term for the point in the Moon's orbit when it is farthest from Earth?,Apsis,FALSE,Perigee,FALSE,Perihelion,FALSE,Apogee,TRUE
+189,astronomy,EASY,Which planet has the most moons?,Saturn,FALSE,Jupiter,TRUE,Neptune,FALSE,Mars,FALSE
+190,astronomy,EASY,What is the term for the spinning motion of a planet on its axis?,Orbit,FALSE,Rotation,TRUE,Revolution,FALSE,Precession,FALSE
+191,astronomy,EASY,Which planet has a moon named Phobos?,Jupiter,FALSE,Saturn,FALSE,Mars,TRUE,Earth,FALSE
+192,astronomy,EASY,What is the term for the bending of light as it passes through a prism?,Dispersion,FALSE,Reflection,FALSE,Difraction,FALSE,Refraction,TRUE
+193,astronomy,EASY,What planet is known for its Great Red Spot?,Mars,FALSE,Jupiter,TRUE,Neptune,FALSE,Venus,FALSE
+194,astronomy,EASY,Which planet is known for its thick clouds of sulfuric acid?,Venus,TRUE,Earth,FALSE,Jupiter,FALSE,Mars,FALSE
+199,astronomy,EASY,What is the name of Earth's galaxy?,Milky Way,TRUE,Andromeda,FALSE,Triangulum,FALSE,Whirlpool,FALSE
+200,astronomy,MEDIUM,What is the name of the first artificial Earth satellite?,Explorer 1,FALSE,Sputnik 1,TRUE,Vanguard 1,FALSE,Luna 2,FALSE
+201,astronomy,MEDIUM,What is the most abundant gas in the Sun?,Carbon,FALSE,Hydrogen,TRUE,Oxygen,FALSE,Helium,FALSE
+202,astronomy,MEDIUM,Which planet rotates in the opposite direction to most of the others?,Mars,FALSE,Mercury,FALSE,Jupiter,FALSE,Venus,TRUE
+203,astronomy,MEDIUM,What is the name of the boundary around a black hole beyond which no light or other radiation can escape?,Singularity,FALSE,Photon Sphere,FALSE,Schwarzschild Radius,FALSE,Event Horizon,TRUE
+204,astronomy,MEDIUM,Who was the first human in space?,John Glenn,FALSE,Neil Armstrong,FALSE,Yuri Gagarin,TRUE,Alan Shepard,FALSE
+205,astronomy,MEDIUM,What is the largest type of star in terms of volume?,Red Dwarf,FALSE,Supergiant,TRUE,White Dwarf,FALSE,Neutron Star,FALSE
+206,astronomy,MEDIUM,What is the most geologically active body in the solar system?,Europa,FALSE,Io,TRUE,Earth,FALSE,Venus,FALSE
+207,astronomy,MEDIUM,What is the term for the apparent shift in position of a nearby star against the background of distant stars?,Blueshift,FALSE,Doppler Shift,FALSE,Redshift,FALSE,Parallax,TRUE
+208,astronomy,MEDIUM,Which planet has a day that lasts longer than its year?,Venus,TRUE,Saturn,FALSE,Jupiter,FALSE,Mercury,FALSE
+209,astronomy,MEDIUM,What is the closest known star system to the Solar System?,Barnard's Star,FALSE,Alpha Centauri,TRUE,Sirius,FALSE,Proxima Centauri,FALSE
+210,astronomy,MEDIUM,Which gas is primarily responsible for the greenhouse effect on Venus?,Methane,FALSE,Ozone,FALSE,Water Vapor,FALSE,Carbon Dioxide,TRUE
+211,astronomy,MEDIUM,What is the name of the largest canyon system on Mars?,Olympus Mons,FALSE,Grand Canyon,FALSE,Valles Marineris,TRUE,Hellas Planitia,FALSE
+212,astronomy,MEDIUM,What is the term for a star that suddenly increases in brightness and then fades?,Pulsar,FALSE,Nova,TRUE,Supernova,FALSE,Quasar,FALSE
+213,astronomy,MEDIUM,Which planet has the most extensive ring system?,Neptune,FALSE,Uranus,FALSE,Jupiter,FALSE,Saturn,TRUE
+214,astronomy,MEDIUM,What is the name of the first spacecraft to fly by Pluto?,Galileo,FALSE,New Horizons,TRUE,Voyager 1,FALSE,Pioneer 10,FALSE
+215,astronomy,MEDIUM,What is the term for the distance that light travels in one year?,Photon,FALSE,Light-year,TRUE,Parsec,FALSE,Astronomical Unit,FALSE
+216,astronomy,MEDIUM,Which moon is known for having a subsurface ocean beneath its icy crust?,Titan,FALSE,Io,FALSE,Europa,TRUE,Enceladus,FALSE
+217,astronomy,MEDIUM,What is the approximate age of the universe?,10 billion years,FALSE,20 billion years,FALSE,4.5 billion years,FALSE,13.8 billion years,TRUE
+218,astronomy,MEDIUM,Which planet's axis is tilted by about 98 degrees.  causing it to rotate on its side?,Jupiter,FALSE,Uranus,TRUE,Neptune,FALSE,Saturn,FALSE
+219,astronomy,MEDIUM,What is the name of the second largest moon in the solar system?,Ganymede,FALSE,Europa,FALSE,Callisto,FALSE,Titan,TRUE
+220,astronomy,MEDIUM,What is the term for the outer layer of the Sun's atmosphere that is visible during a total solar eclipse?,Corona,TRUE,Photosphere,FALSE,Core,FALSE,Chromosphere,FALSE
+221,astronomy,MEDIUM,Which space mission was the first to land humans on the Moon?,Apollo 10,FALSE,Apollo 13,FALSE,Apollo 8,FALSE,Apollo 11,TRUE
+222,astronomy,MEDIUM,What is the main component of the Martian atmosphere?,Methane,FALSE,Carbon Dioxide,TRUE,Nitrogen,FALSE,Oxygen,FALSE
+223,astronomy,MEDIUM,What is the name of the galaxy that is on a collision course with the Milky Way?,Andromeda,TRUE,Sombrero,FALSE,Whirlpool,FALSE,Triangulum,FALSE
+224,astronomy,MEDIUM,Which planet is known for its gigantic storm called the Great Dark Spot?,Neptune,TRUE,Uranus,FALSE,Jupiter,FALSE,Saturn,FALSE
+225,astronomy,MEDIUM,What is the term for the bright object that appears when a meteoroid enters Earth's atmosphere?,Meteorite,FALSE,Asteroid,FALSE,Meteor,TRUE,Comet,FALSE
+226,astronomy,MEDIUM,What is the name of the second closest dwarf planet to the Sun?,Haumea,FALSE,Pluto,TRUE,Eris,FALSE,Ceres,FALSE
+227,astronomy,MEDIUM,Which spacecraft was the first to land on Mars and send back data?,Opportunity,FALSE,Curiosity,FALSE,Viking 1,TRUE,Pathfinder,FALSE
+228,astronomy,MEDIUM,What is the largest planet in our solar system?,Saturn,FALSE,Uranus,FALSE,Jupiter,TRUE,Neptune,FALSE
+229,astronomy,MEDIUM,What is the term for the apparent change in frequency or wavelength of a wave in relation to an observer?,Resonance,FALSE,Parallax,FALSE,Redshift,FALSE,Doppler Effect,TRUE
+230,astronomy,MEDIUM,Which planet has been visited by the most spacecraft?,Jupiter,FALSE,Mars,TRUE,Venus,FALSE,Mercury,FALSE
+231,astronomy,MEDIUM,What is the name of the most distant man-made object from Earth?,New Horizons,FALSE,Pioneer 10,FALSE,Voyager 2,FALSE,Voyager 1,TRUE
+232,astronomy,MEDIUM,Who proposed the heliocentric model of the solar system?,Kepler,FALSE,Ptolemy,FALSE,Galileo,FALSE,Copernicus,TRUE
+233,astronomy,MEDIUM,What is the name of the first reusable spacecraft?,Apollo,FALSE,Space Shuttle,TRUE,Mir,FALSE,Skylab,FALSE
+234,astronomy,MEDIUM,What element is the main fuel source for stars?,Carbon,FALSE,Oxygen,FALSE,Helium,FALSE,Hydrogen,TRUE
+235,astronomy,MEDIUM,Which of Jupiter's moons is most volcanically active?,Callisto,FALSE,Io,TRUE,Ganymede,FALSE,Europa,FALSE
+236,astronomy,MEDIUM,In what form does the universe primarily expand?,Blueshift,FALSE,Nova,FALSE,Redshift,TRUE,Supernova,FALSE
+237,astronomy,MEDIUM,What is the name of the effect that causes the sky to appear blue?,Refraction,FALSE,Rayleigh Scattering,TRUE,Doppler Effect,FALSE,Diffraction,FALSE
+238,astronomy,MEDIUM,Which planet is known for having the largest volcano in the solar system?,Jupiter,FALSE,Venus,FALSE,Neptune,FALSE,Mars,TRUE
+239,astronomy,MEDIUM,What is the name of Jupiter's largest moon?,Europa,FALSE,Io,FALSE,Callisto,FALSE,Ganymede,TRUE
+240,astronomy,MEDIUM,What is the term for a star system with two stars orbiting around their common center of mass?,Star Cluster,FALSE,Quasar,FALSE,Binary Star,TRUE,Constellation,FALSE
+241,astronomy,MEDIUM,Which planet has a mass closest to Earth's?,Venus,TRUE,Mercury,FALSE,Neptune,FALSE,Mars,FALSE
+242,astronomy,MEDIUM,What is the most abundant element in the universe?,Carbon,FALSE,Helium,FALSE,Oxygen,FALSE,Hydrogen,TRUE
+243,astronomy,MEDIUM,Which planet's surface is covered by clouds of sulfuric acid?,Mars,FALSE,Earth,FALSE,Venus,TRUE,Jupiter,FALSE
+244,astronomy,MEDIUM,What is the term for the brightness of a star as seen from Earth?,Absolute Magnitude,FALSE,Luminosity,FALSE,Apparent Magnitude,TRUE,Intensity,FALSE
+245,astronomy,MEDIUM,What is the name of the process by which stars generate energy?,Convection,FALSE,Nuclear Fusion,TRUE,Nuclear Fission,FALSE,Radioactive Decay,FALSE
+246,astronomy,MEDIUM,Which planet has the fastest winds in the solar system?,Saturn,FALSE,Uranus,FALSE,Jupiter,FALSE,Neptune,TRUE
+247,astronomy,MEDIUM,What is the name of the closest black hole to Earth?,The Great Annihilator,FALSE,Cygnus X-1,TRUE,V616 Monocerotis,FALSE,Sagittarius A*,FALSE
+248,astronomy,MEDIUM,What is the primary component of Saturn's rings?,Ice,TRUE,Metal,FALSE,Rock,FALSE,Dust,FALSE
+249,astronomy,MEDIUM,What is the term for the boundary in a black hole beyond which nothing can escape?,Singularity,FALSE,Event Horizon,TRUE,Dark Matter,FALSE,Photon Sphere,FALSE
+250,astronomy,MEDIUM,What is the term for the remnants of a massive star after it explodes?,Red Giant,FALSE,Brown Dwarf,FALSE,Neutron Star,TRUE,White Dwarf,FALSE
+251,astronomy,MEDIUM,Which planet is known for having a dense atmosphere and high surface pressure?,Venus,TRUE,Neptune,FALSE,Jupiter,FALSE,Mars,FALSE
+252,astronomy,MEDIUM,What is the name of the brightest comet of the 20th century?,Hyakutake,FALSE,Halley's Comet,FALSE,McNaught,FALSE,Hale-Bopp,TRUE
+253,astronomy,MEDIUM,What is the term for the path that a celestial body follows as it orbits another body?,Orbit,TRUE,Trajectory,FALSE,Ellipse,FALSE,Axis,FALSE
+254,astronomy,MEDIUM,"Which planet is known as the ""Morning Star"" and ""Evening Star""?",Jupiter,FALSE,Saturn,FALSE,Mars,FALSE,Venus,TRUE
+255,astronomy,MEDIUM,What is the term for a group of stars held together by gravity?,Constellation,FALSE,Nebula,FALSE,Star Cluster,TRUE,Galaxy,FALSE
+256,astronomy,MEDIUM,What is the term for an exploding star that dramatically increases in brightness?,Pulsar,FALSE,Quasar,FALSE,Nova,FALSE,Supernova,TRUE
+257,astronomy,MEDIUM,What is the main cause of a solar eclipse?,Earth's shadow on the Moon,FALSE,Moon passing between Earth and Sun,TRUE,Sun's shadow on the Earth,FALSE,Earth passing between Moon and Sun,FALSE
+258,astronomy,MEDIUM,Which planet has the most prominent ring system?,Jupiter,FALSE,Saturn,TRUE,Neptune,FALSE,Uranus,FALSE
+259,astronomy,MEDIUM,What is the name of the first robotic spacecraft to land on an asteroid?,Hayabusa,FALSE,Rosetta,FALSE,NEAR Shoemaker,TRUE,OSIRIS-REx,FALSE
+260,astronomy,MEDIUM,What is the term for the point in a planet's orbit closest to the Sun?,Aphelion,FALSE,Apogee,FALSE,Perihelion,TRUE,Perigee,FALSE
+261,astronomy,MEDIUM,What is the theory that describes the origin and expansion of the universe?,Inflation Theory,FALSE,Oscillating Universe,FALSE,Steady State Theory,FALSE,Big Bang Theory,TRUE
+262,astronomy,MEDIUM,Which spacecraft was the first to flyby Jupiter?,Voyager 1,FALSE,New Horizons,FALSE,Gallileo,FALSE,Pioneer 10,TRUE
+263,astronomy,MEDIUM,Which planet has the largest number of moons?,Jupiter,TRUE,Neptune,FALSE,Saturn,FALSE,Uranus,FALSE
+264,astronomy,MEDIUM,What is the term for the apparent change in frequency of a wave in relation to an observer?,Parallax,FALSE,Resonance,FALSE,Redshift,FALSE,Doppler Effect,TRUE
+265,astronomy,MEDIUM,What is the term for the measure of a star's brightness as seen from Earth?,Luminosity,FALSE,Apparent Magnitude,TRUE,Absolute Magnitude,FALSE,Intensity,FALSE
+266,astronomy,MEDIUM,What is the name of the process by which stars generate energy?,Nuclear Fusion,TRUE,Convection,FALSE,Radioactive Decay,FALSE,Nuclear Fission,FALSE
+267,astronomy,MEDIUM,Which planet has the fastest winds in the solar system?,Uranus,FALSE,Jupiter,FALSE,Neptune,TRUE,Saturn,FALSE
+268,astronomy,MEDIUM,What is the name of the closest star to Earth?,Proxima Centauri,TRUE,Alpha Centauri A,FALSE,Betelgeuse,FALSE,Sirius,FALSE
+269,astronomy,MEDIUM,Who was the first person to propose that the Earth orbits the Sun?,Galileo,FALSE,Kepler,FALSE,Aristotle,FALSE,Copernicus,TRUE
+270,astronomy,MEDIUM,"Which astronomical object is known as a ""dirty snowball""?",Planetesimal,FALSE,Asteroid,FALSE,Comet,TRUE,Meteor,FALSE
+271,astronomy,MEDIUM,What is the name of the effect that causes the sky to appear blue?,Refraction,FALSE,Doppler Effect,FALSE,Diffraction,FALSE,Rayleigh Scattering,TRUE
+272,astronomy,MEDIUM,What is the name of the largest moon of Neptune?,Callisto,FALSE,Io,FALSE,Triton,TRUE,Europa,FALSE
+273,astronomy,MEDIUM,What is the term for a small body from outer space that becomes brightly visible when it enters the Earth's atmosphere?,Comet,FALSE,Meteor,TRUE,Asteroid,FALSE,Meteorite,FALSE
+274,astronomy,MEDIUM,What is the main gas found in the atmosphere of Mars?,Oxygen,FALSE,Carbon Dioxide,TRUE,Methane,FALSE,Nitrogen,FALSE
+275,astronomy,MEDIUM,What is the name of the first artificial satellite sent into space?,Luna 2,FALSE,Explorer 1,FALSE,Vanguard 1,FALSE,Sputnik 1,TRUE
+276,astronomy,MEDIUM,What is the term for the boundary beyond which nothing can escape from a black hole?,Photon Sphere,FALSE,Singularity,FALSE,Schwarzschild Radius,FALSE,Event Horizon,TRUE
+277,astronomy,MEDIUM,What is the primary component of the Sun's atmosphere?,Oxygen,FALSE,Helium,FALSE,Nitrogen,FALSE,Hydrogen,TRUE
+278,astronomy,MEDIUM,Which planet spins on its axis the fastest?,Jupiter,TRUE,Neptune,FALSE,Saturn,FALSE,Uranus,FALSE
+279,astronomy,MEDIUM,What is the term for a star system with two stars orbiting around their common center of mass?,Binary Star,TRUE,Quasar,FALSE,Constellation,FALSE,Star Cluster,FALSE
+280,astronomy,MEDIUM,Which scientific instrument is used to measure the intensity of light?,Spectrometer,FALSE,Photometer,TRUE,Barometer,FALSE,Telescope,FALSE
+281,astronomy,MEDIUM,What is the name of the closest galaxy to the Milky Way?,Magellanic Cloud,FALSE,Whirlpool,FALSE,Andromeda,TRUE,Triangulum,FALSE
+282,astronomy,MEDIUM,How many Earth years does it take for Saturn to orbit the Sun?,84,FALSE,165,FALSE,29.5,TRUE,12,FALSE
+283,astronomy,MEDIUM,What phenomenon allows us to see the corona of the Sun?,Lunar Eclipse,FALSE,Annular Eclipse,FALSE,New Moon,FALSE,Total Solar Eclipse,TRUE
+284,astronomy,MEDIUM,"Which planet is known as the ""Blue Planet""?",Mars,FALSE,Uranus,FALSE,Neptune,FALSE,Earth,TRUE
+285,astronomy,MEDIUM,What is the term for a measure of a star's intrinsic brightness?,Absolute Magnitude,TRUE,Apparent Magnitude,FALSE,Brightness,FALSE,Luminosity,FALSE
+286,astronomy,MEDIUM,Which planet has the most moons?,Uranus,FALSE,Jupiter,TRUE,Saturn,FALSE,Neptune,FALSE
+287,astronomy,MEDIUM,What is the name of the effect that causes a change in frequency due to the motion of the source or observer?,Diffraction,FALSE,Parallax,FALSE,Refraction,FALSE,Doppler Effect,TRUE
+288,astronomy,MEDIUM,What is the term for the halo of gas surrounding a comet's nucleus?,Nucleus,FALSE,Jet,FALSE,Tail,FALSE,Coma,TRUE
+289,astronomy,MEDIUM,Which planet is known for its Great Dark Spot?,Uranus,FALSE,Earth,FALSE,Jupiter,FALSE,Neptune,TRUE
+290,astronomy,MEDIUM,Who was the first human to walk on the Moon?,Michael Collins,FALSE,Yuri Gagarin,FALSE,Buzz Aldrin,FALSE,Neil Armstrong,TRUE
+291,astronomy,MEDIUM,What is the term for when a planet is closest to the Sun in its orbit?,Perihelion,TRUE,Nadir,FALSE,Aphelion,FALSE,Zenith,FALSE
+292,astronomy,MEDIUM,Which planet is known for having the longest day?,Venus,TRUE,Mercury,FALSE,Mars,FALSE,Earth,FALSE
+293,astronomy,MEDIUM,What is the name of the closest star to Earth?,Proxima Centauri,TRUE,Alpha Centauri A,FALSE,Sirius,FALSE,Betelgeuse,FALSE
+294,astronomy,MEDIUM,Which element makes up most of the universe?,Hydrogen,TRUE,Helium,FALSE,Carbon,FALSE,Oxygen,FALSE
+295,astronomy,MEDIUM,What is the name of the galaxy that contains our Solar System?,Whirlpool,FALSE,Milky Way,TRUE,Triangulum,FALSE,Andromeda,FALSE
+299,astronomy,MEDIUM,What is the term for the apparent path of the Sun across the sky as seen from Earth?,Zenith,FALSE,Horizon,FALSE,Ecliptic,TRUE,Meridian,FALSE
+300,astronomy,MEDIUM,What is the name of the smallest planet in our solar system?,Pluto,FALSE,Mars,FALSE,Mercury,TRUE,Venus,FALSE
+301,astronomy,MEDIUM,Which planet has a storm called the Great Dark Spot?,Uranus,FALSE,Saturn,FALSE,Jupiter,FALSE,Neptune,TRUE
+302,astronomy,MEDIUM,What is the primary component of Saturn's atmosphere?,Oxygen,FALSE,Helium,FALSE,Hydrogen,TRUE,Methane,FALSE
+303,astronomy,MEDIUM,Which planet is known for having a tilted rotational axis causing extreme seasonal variations?,Neptune,FALSE,Saturn,FALSE,Mars,FALSE,Uranus,TRUE
+304,astronomy,MEDIUM,Which planet has the lowest density and could float on water?,Neptune,FALSE,Uranus,FALSE,Saturn,TRUE,Jupiter,FALSE
+305,astronomy,MEDIUM,What is the second most abundant element in the universe?,Hydrogen,FALSE,Helium,TRUE,Carbon,FALSE,Oxygen,FALSE
+306,astronomy,MEDIUM,What is the name of the first mission to successfully land a rover on Mars?,Curiosity,FALSE,Spirit,FALSE,Viking 1,FALSE,Pathfinder,TRUE
+307,astronomy,MEDIUM,What is the term used for the brightness of a star from a standard distance of 10 parsecs?,Absolute Magnitude,TRUE,Flux,FALSE,Luminosity,FALSE,Apparent Magnitude,FALSE
+308,astronomy,MEDIUM,"Which planet is known as the ""Evening Star""?",Mercury,FALSE,Mars,FALSE,Jupiter,FALSE,Venus,TRUE
+309,astronomy,MEDIUM,What is the name of the largest moon of Saturn?,Callisto,FALSE,Ganymede,FALSE,Titan,TRUE,Europa,FALSE
+310,astronomy,MEDIUM,What is the name of the mission that provided detailed maps of Venus's surface?,Mariner 10,FALSE,Magellan,TRUE,Venera,FALSE,Galileo,FALSE
+311,astronomy,MEDIUM,What is the term for the apparent backward motion of planets as observed from Earth?,Precession,FALSE,Prograde Motion,FALSE,Parallax,FALSE,Retrograde Motion,TRUE
+312,astronomy,MEDIUM,What is the name of the region beyond the orbit of Neptune that contains many icy bodies?,Scattered Disc,FALSE,Oort Cloud,FALSE,Kuiper Belt,TRUE,Asteroid Belt,FALSE
+313,astronomy,MEDIUM,What is the name of the first spacecraft to land on a moon of Jupiter?,Galileo,TRUE,Pioneer 10,FALSE,Voyager 1,FALSE,New Horizons,FALSE
+314,astronomy,MEDIUM,What is the effect that causes the apparent change in frequency of a wave relative to an observer?,Parallax,FALSE,Diffraction,FALSE,Redshift,FALSE,Doppler Effect,TRUE
+315,astronomy,MEDIUM,What is the name of Mars' largest volcano?,Mauna Kea,FALSE,Mount Everest,FALSE,Olympus Mons,TRUE,Valles Marineris,FALSE
+316,astronomy,MEDIUM,Which planet is known for having a substantial atmosphere composed mostly of carbon dioxide?,Uranus,FALSE,Neptune,FALSE,Venus,TRUE,Mars,FALSE
+317,astronomy,MEDIUM,What is the term for a star's brightness as seen from Earth?,Brightness,FALSE,Absolute Magnitude,FALSE,Apparent Magnitude,TRUE,Luminosity,FALSE
+318,astronomy,MEDIUM,What is the term for the distance between the Earth and the Sun?,Photon,FALSE,Parsec,FALSE,Light-year,FALSE,Astronomical Unit,TRUE
+319,astronomy,MEDIUM,Which planet is known for having a magnetic field tilted 60 degrees from its rotation axis?,Uranus,TRUE,Jupiter,FALSE,Saturn,FALSE,Neptune,FALSE
+320,astronomy,MEDIUM,What is the name of the term for the measure of resistance to changes in its rotational motion?,Torque,FALSE,Rotational Mass,FALSE,Moment of Inertia,TRUE,Angular Momentum,FALSE
+321,astronomy,MEDIUM,What is the name of the mission that first brought back samples from a comet?,Hayabusa,FALSE,Rosetta,FALSE,Stardust,TRUE,OSIRIS-REx,FALSE
+322,astronomy,MEDIUM,What is the term for the layer of the Sun's atmosphere that is visible during an eclipse?,Photosphere,FALSE,Core,FALSE,Chromosphere,FALSE,Corona,TRUE
+323,astronomy,MEDIUM,Which moon of Neptune is known for having geysers of nitrogen gas?,Io,FALSE,Triton,TRUE,Callisto,FALSE,Europa,FALSE
+324,astronomy,MEDIUM,What is the term for a planet's closest approach to the Sun?,Perihelion,TRUE,Nadir,FALSE,Zenith,FALSE,Aphelion,FALSE
+325,astronomy,MEDIUM,What is the name of the first spacecraft to land on an asteroid?,OSIRIS-REx,FALSE,NEAR Shoemaker,TRUE,Hayabusa,FALSE,Galileo,FALSE
+326,astronomy,MEDIUM,What is the name of the dwarf planet located in the asteroid belt?,Eris,FALSE,Pluto,FALSE,Haumea,FALSE,Ceres,TRUE
+327,astronomy,MEDIUM,What is the term for the point in the Moon's orbit where it is closest to Earth?,Perihelion,FALSE,Aphelion,FALSE,Perigee,TRUE,Apogee,FALSE
+328,astronomy,MEDIUM,What is the term for the apparent shift in position of a nearby star against the background of distant stars when observed from Earth?,Parallax,TRUE,Redshift,FALSE,Doppler Effect,FALSE,Blueshift,FALSE
+329,astronomy,MEDIUM,"Which planet is known as the ""Red Planet""?",Venus,FALSE,Jupiter,FALSE,Neptune,FALSE,Mars,TRUE
+330,astronomy,MEDIUM,What is the name of the first spacecraft to fly by Pluto?,Pioneer 11,FALSE,New Horizons,TRUE,Voyager 2,FALSE,Galileo,FALSE
+331,astronomy,MEDIUM,What is the term for the plane of Earth's orbit around the Sun?,Zenith,FALSE,Ecliptic,TRUE,Equator,FALSE,Meridian,FALSE
+332,astronomy,MEDIUM,Which planet has a hexagonal storm at its north pole?,Neptune,FALSE,Jupiter,FALSE,Uranus,FALSE,Saturn,TRUE
+333,astronomy,MEDIUM,What is the name of the largest moon of Jupiter?,Callisto,FALSE,Europa,FALSE,Ganymede,TRUE,Io,FALSE
+334,astronomy,MEDIUM,What is the term for the region of space dominated by Earth's magnetic field?,Ionosphere,FALSE,Exosphere,FALSE,Magnetosphere,TRUE,Thermosphere,FALSE
+335,astronomy,MEDIUM,What is the name of the first spacecraft to successfully land on Titan.  Saturn's largest moon?,Galileo,FALSE,Huygens,TRUE,Voyager 1,FALSE,Cassini,FALSE
+336,astronomy,MEDIUM,What is the term for the bright streak of light produced when a meteoroid burns up in Earth's atmosphere?,Meteorite,FALSE,Comet,FALSE,Meteor,TRUE,Asteroid,FALSE
+337,astronomy,MEDIUM,What is the term for the measure of the total amount of light emitted by a star?,Apparent Magnitude,FALSE,Luminosity,TRUE,Flux,FALSE,Absolute Magnitude,FALSE
+338,astronomy,MEDIUM,What is the name of the effect that explains why the sky is blue?,Doppler Effect,FALSE,Diffraction,FALSE,Refraction,FALSE,Rayleigh Scattering,TRUE
+339,astronomy,MEDIUM,What is the primary element that makes up the Sun?,Carbon,FALSE,Oxygen,FALSE,Hydrogen,TRUE,Helium,FALSE
+340,astronomy,MEDIUM,What is the term for the apparent change in the frequency of a wave as the source and observer move relative to each other?,Redshift,FALSE,Doppler Effect,TRUE,Parallax,FALSE,Refraction,FALSE
+341,astronomy,MEDIUM,Which planet is known for having the shortest day.  rotating once approximately every 10 hours?,Mars,FALSE,Saturn,FALSE,Mercury,FALSE,Jupiter,TRUE
+342,astronomy,MEDIUM,What is the name of the first spacecraft to fly by and study Uranus and Neptune?,Voyager 2,TRUE,Voyager 1,FALSE,Pioneer 10,FALSE,New Horizons,FALSE
+343,astronomy,MEDIUM,What is the term for the highest point in the sky reached by a celestial body?,Meridian,FALSE,Zenith,TRUE,Nadir,FALSE,Horizon,FALSE
+344,astronomy,MEDIUM,What is the theory that describes the expansion of the universe from a hot.  dense initial condition?,Big Bang Theory,TRUE,Oscillating Universe Theory,FALSE,Inflation Theory,FALSE,Steady State Theory,FALSE
+345,astronomy,MEDIUM,What is the name of the layer of the Sun where energy is primarily transported by radiation?,Chromosphere,FALSE,Convection Zone,FALSE,Photosphere,FALSE,Radiative Zone,TRUE
+346,astronomy,MEDIUM,What is the term for the apparent backward movement of a planet against the stars as seen from Earth?,Prograde Motion,FALSE,Precession,FALSE,Parallax,FALSE,Retrograde Motion,TRUE
+347,astronomy,MEDIUM,What is the term for the distance light travels in one year?,Light-year,TRUE,Parsec,FALSE,Astronomical Unit,FALSE,Luminosity,FALSE
+348,astronomy,MEDIUM,Which planet has the most extensive ring system?,Jupiter,FALSE,Neptune,FALSE,Uranus,FALSE,Saturn,TRUE
+349,astronomy,MEDIUM,What is the term for the point in a planet's orbit where it is farthest from the Sun?,Aphelion,TRUE,Perihelion,FALSE,Perigee,FALSE,Apogee,FALSE
+350,astronomy,HARD,What is the term for the largest known structure in the universe.  consisting of a massive group of galaxies?,Laniakea Supercluster,FALSE,Hercules-Corona Borealis Great Wall,TRUE,Sloan Great Wall,FALSE,Coma Cluster,FALSE
+351,astronomy,HARD,What is the name of the hypothetical form of matter that does not emit.  absorb.  or reflect light.  making it undetectable by electromagnetic radiation?,Dark Matter,TRUE,Antimatter,FALSE,Exotic Matter,FALSE,Neutronium,FALSE
+352,astronomy,HARD,What is the name of the cosmic event that occurs when two neutron stars collide?,Supernova,FALSE,Kilonova,TRUE,Quasar,FALSE,Hypernova,FALSE
+353,astronomy,HARD,Which space observatory provided the first high-resolution images of the supermassive black hole in the center of a galaxy?,Event Horizon Telescope,TRUE,Spitzer Space Telescope,FALSE,Hubble Space Telescope,FALSE,Chandra X-ray Observatory,FALSE
+354,astronomy,HARD,What is the term for the hypothetical boundary surrounding a black hole beyond which no information can escape?,Photon Sphere,FALSE,Ergosphere,FALSE,Singularity,FALSE,Event Horizon,TRUE
+355,astronomy,HARD,What is the name of the process by which stars heavier than iron are formed in the universe?,Nuclear Fusion,FALSE,CNO Cycle,FALSE,Proton-Proton Chain,FALSE,Neutron Capture,TRUE
+356,astronomy,HARD,What is the name of the first interstellar object detected passing through our solar system?,Tabby's Star,FALSE,Ross 128,FALSE,`Oumuamua,TRUE,KIC 8462852,FALSE
+357,astronomy,HARD,What is the term for the hypothetical tunnel-like structure that could create shortcuts for long journeys across the universe?,White Hole,FALSE,Black Hole,FALSE,Wormhole,TRUE,Quantum Tunnel,FALSE
+358,astronomy,HARD,Which spacecraft was the first to obtain direct information about the solar wind?,Voyager 1,FALSE,Mariner 2,FALSE,Pioneer 5,FALSE,Luna 1,TRUE
+359,astronomy,HARD,What is the term for the initial singularity from which the universe began expanding according to the Big Bang theory?,Inflation Point,FALSE,Quantum Singularity,FALSE,Cosmic Singularity,TRUE,Planck Epoch,FALSE
+360,astronomy,HARD,What is the name of the theoretical particles that are thought to be components of dark matter?,Gravitons,FALSE,Tachyons,FALSE,WIMPs,TRUE,Neutrinos,FALSE
+361,astronomy,HARD,What is the term for the cosmic structure that contains the Milky Way and approximately 100 other nearby galaxies?,Local Group,TRUE,Coma Supercluster,FALSE,Hercules Supercluster,FALSE,Virgo Supercluster,FALSE
+362,astronomy,HARD,What is the name of the region around a black hole where objects cannot maintain a stable orbit?,Schwarzschild Radius,FALSE,Event Horizon,FALSE,Innermost Stable Circular Orbit (ISCO),TRUE,Photon Sphere,FALSE
+363,astronomy,HARD,Which telescope was specifically designed to observe gamma-ray bursts?,Hubble Space Telescope,FALSE,Swift Gamma-Ray Burst Mission,FALSE,Chandra X-ray Observatory,FALSE,Fermi Gamma-ray Space Telescope,TRUE
+364,astronomy,HARD,What is the name of the phenomenon where light is bent around massive objects like galaxies or black holes?,Gravitational Lensing,TRUE,Diffraction,FALSE,Refraction,FALSE,Doppler Effect,FALSE
+365,astronomy,HARD,What is the term for the boundary beyond which events cannot affect an outside observer in cosmology?,Particle Horizon,FALSE,Schwarzschild Radius,FALSE,Event Horizon,FALSE,Cosmic Horizon,TRUE
+366,astronomy,HARD,What is the name of the largest known quasar group.  a structure that challenges the cosmological principle?,Sloan Great Wall,FALSE,Laniakea Supercluster,FALSE,Coma Cluster,FALSE,Huge-LQG,TRUE
+367,astronomy,HARD,What is the name of the effect that causes time to pass more slowly in stronger gravitational fields?,Gravitational Time Dilation,TRUE,Time Contraction,FALSE,Redshift,FALSE,Special Relativity,FALSE
+368,astronomy,HARD,What is the term for the smallest unit of light and all other forms of electromagnetic radiation?,Neutrino,FALSE,Quark,FALSE,Electron,FALSE,Photon,TRUE
+369,astronomy,HARD,What is the name of the black hole located at the center of the Milky Way?,M87*,FALSE,Sagittarius A*,TRUE,V616 Monocerotis,FALSE,Cygnus X-1,FALSE
+370,astronomy,HARD,Which particle accelerator has been instrumental in searching for evidence of dark matter?,RHIC,FALSE,Tevatron,FALSE,Large Hadron Collider,TRUE,SuperKEKB,FALSE
+371,astronomy,HARD,What is the term for a supernova explosion that occurs in a binary system when a white dwarf accumulates enough matter?,Type II Supernova,FALSE,Hypernova,FALSE,Type Ia Supernova,TRUE,Kilonova,FALSE
+372,astronomy,HARD,What is the term for a theoretical type of neutron star with an extremely strong magnetic field?,Blazar,FALSE,Pulsar,FALSE,Quasar,FALSE,Magnetar,TRUE
+373,astronomy,HARD,What is the name of the first space mission to attempt to change the orbit of an asteroid?,DART,TRUE,Psyche,FALSE,OSIRIS-REx,FALSE,Hayabusa,TRUE
+374,astronomy,HARD,What is the term for the rapidly spinning core remnant of a star after a supernova explosion?,Brown Dwarf,FALSE,White Dwarf,FALSE,Neutron Star,TRUE,Red Giant,FALSE
+375,astronomy,HARD,What is the name of the largest and most luminous stars classified by their luminosity?,Supergiant,FALSE,Hypergiant,TRUE,Giant,FALSE,Red Giant,FALSE
+376,astronomy,HARD,What is the term for the distance at which a star's parallax angle is precisely one arcsecond?,Astronomical Unit,FALSE,Parsec,TRUE,Radius,FALSE,Light-year,FALSE
+377,astronomy,HARD,What is the name of the effect that explains how the wavelength of light stretches in an expanding universe?,Blueshift,FALSE,Doppler Effect,FALSE,Refraction,FALSE,Redshift,TRUE
+378,astronomy,HARD,What is the term for the predicted end state of a white dwarf.  after it has cooled sufficiently?,Neutron Star,FALSE,Red Dwarf,FALSE,Black Dwarf,TRUE,Brown Dwarf,FALSE
+379,astronomy,HARD,What is the name of the process by which the universe's large-scale structure formed from small fluctuations?,Structure Formation,TRUE,Galaxy Formation,FALSE,Quantum Fluctuation,FALSE,Cosmic Inflation,FALSE
+380,astronomy,HARD,What is the term for a theoretical construct that combines general relativity and quantum mechanics?,Theory of Everything,TRUE,Quantum Gravity,FALSE,String Theory,FALSE,Standard Model,FALSE
+381,astronomy,HARD,What is the name of the phenomenon where the apparent brightness of a star decreases due to interference from a planet passing in front?,Parallax,FALSE,Eclipse,FALSE,Transit,TRUE,Occultation,FALSE
+382,astronomy,HARD,What is the term for the potential end state of the universe.  where it continues to expand forever?,Big Rip,FALSE,Big Crunch,FALSE,Heat Death,TRUE,Steady State,FALSE
+383,astronomy,HARD,What is the name of the process by which atomic nuclei combine to form heavier elements in stars?,Stellar Fusion,FALSE,Nucleosynthesis,TRUE,Accretion,FALSE,Convection,FALSE
+384,astronomy,HARD,What is the term for the hypothetical dark matter particle with a mass similar to a proton?,Graviton,FALSE,Tachyon,FALSE,WIMP,TRUE,Neutrino,FALSE
+385,astronomy,HARD,What is the name of the force thought to be responsible for the accelerated expansion of the universe?,Dark Energy,TRUE,Dark Matter,FALSE,Gravitational Force,FALSE,Electromagnetic Force,FALSE
+386,astronomy,HARD,What is the name of the effect that bends time and space around massive celestial bodies?,Quantum Field Theory,FALSE,Special Relativity,FALSE,General Relativity,TRUE,String Theory,FALSE
+387,astronomy,HARD,What is the name of the principle stating that the laws of physics are the same everywhere in the universe?,Cosmological Principle,TRUE,Anthropic Principle,FALSE,Heisenberg Principle,FALSE,Equivalence Principle,FALSE
+388,astronomy,HARD,What is the name of the theory that suggests the universe has no beginning or end and is always expanding?,Steady State Theory,TRUE,Inflation Theory,FALSE,Oscillating Universe,FALSE,Big Bang Theory,FALSE
+389,astronomy,HARD,What is the term for the smallest possible scale of the universe.  according to quantum theory?,Atomic Scale,FALSE,Planck Length,TRUE,Cosmic Scale,FALSE,Quantum Scale,FALSE
+390,astronomy,HARD,What is the name of the theory that describes the formation of the first atoms in the universe?,Hot Dark Matter,FALSE,Big Bang Nucleosynthesis,TRUE,Recombination,FALSE,Cold Dark Matter,FALSE
+391,astronomy,HARD,What is the term for a dense collection of gas and dust in space where stars are born?,Nebula,TRUE,Comet,FALSE,Black Hole,FALSE,White Dwarf,FALSE
+392,astronomy,HARD,What is the name of the instrument used to separate light into its component colors?,Microscope,FALSE,Telescope,FALSE,Photometer,FALSE,Spectrometer,TRUE
+393,astronomy,HARD,What is the term for the expansion rate of the universe.  initially discovered by Edwin Hubble?,Hubble Constant,TRUE,Cosmological Constant,FALSE,Acceleration Constant,FALSE,Expansion Rate,FALSE
+394,astronomy,HARD,What is the name of the technique used to detect exoplanets by observing the wobble in a star's movement?,Microlensing,FALSE,Direct Imaging,FALSE,Transit Photometry,FALSE,Radial Velocity,TRUE
+395,astronomy,HARD,What is the term for the invisible matter that makes up about 27% of the universe's mass-energy content?,Dark Matter,TRUE,Regular Matter,FALSE,Antimatter,FALSE,Exotic Matter,FALSE
+396,astronomy,HARD,What is the name of the effect that describes the elongation of light waves due to a massive object's gravity?,Doppler Effect,FALSE,Cosmological Redshift,FALSE,Gravitational Redshift,TRUE,Time Dilation,FALSE
+397,astronomy,HARD,What is the term for the boundary in spacetime beyond which events cannot affect an outside observer?,Cosmic Horizon,FALSE,Schwarzschild Radius,FALSE,Event Horizon,TRUE,Particle Horizon,FALSE
+398,astronomy,HARD,What is the name of the second known interstellar object to pass through our solar system?,`Oumuamua,FALSE,Tabby's Star,FALSE,KIC 8462852,FALSE,2I/Borisov,TRUE
+399,astronomy,HARD,What is the term for a galaxy with an active nucleus that emits large amounts of energy?,Quasar,FALSE,Pulsar,FALSE,Blazar,FALSE,Active Galactic Nucleus,TRUE
+400,astronomy,HARD,What is the name of the massive structure that represents a vast collection of galaxies and dark matter extending over 500 million light-years?,Coma Cluster,FALSE,Sloan Great Wall,TRUE,Hercules-Corona Borealis Great Wall,FALSE,Laniakea Supercluster,FALSE
+401,astronomy,HARD,What is the term for the point in a black hole where gravitational forces become infinitely strong?,Photon Sphere,FALSE,Ergosphere,FALSE,Event Horizon,FALSE,Singularity,TRUE
+402,astronomy,HARD,What is the name of the first artificial satellite launched into space?,Luna 1,FALSE,Sputnik 1,TRUE,Vanguard 1,FALSE,Explorer 1,FALSE
+403,astronomy,HARD,What is the term for the smallest and densest type of white dwarf theoretically possible?,Iron Core,FALSE,Electron-degenerate Matter,TRUE,Neutron Star,FALSE,Carbon Core,FALSE
+404,astronomy,HARD,What is the name of the phenomenon where two black holes orbit each other and eventually merge?,Black Hole Collision,FALSE,Binary Black Hole Merger,TRUE,Neutron Star Merger,FALSE,Gravitational Wave Event,FALSE
+405,astronomy,HARD,What is the name of the first gamma-ray burst detected in 1967 that revealed this new class of cosmic explosions?,GRB 190114C,FALSE,GRB 990123,FALSE,GRB 130427A,FALSE,GRB 670811,TRUE
+406,astronomy,HARD,What is the name of the model describing the universe's expansion and its origin from a singularity?,Big Bang Model,TRUE,Inflationary Model,FALSE,Steady State Model,FALSE,Oscillating Universe Model,FALSE
+407,astronomy,HARD,What is the name of the supermassive black hole at the center of the Andromeda galaxy?,V616 Monocerotis,FALSE,Messier 31*,TRUE,Sagittarius A*,FALSE,Cygnus X-1,FALSE
+408,astronomy,HARD,What is the term for a galaxy that is bright in radio wavelengths due to its active nucleus?,Quasar,FALSE,Spiral Galaxy,FALSE,Elliptical Galaxy,FALSE,Radio Galaxy,TRUE
+409,astronomy,HARD,What is the name of the hypothetical scenario in which the universe could end in a colossal expansion?,Steady State,FALSE,Big Crunch,FALSE,Heat Death,FALSE,Big Rip,TRUE
+410,astronomy,HARD,What is the name of the effect where the frequency of light increases due to motion toward the observer?,Gravitational Lensing,FALSE,Doppler Effect,FALSE,Redshift,FALSE,Blueshift,TRUE
+411,astronomy,HARD,What is the name of the most massive supercluster known in the observable universe?,Coma Supercluster,FALSE,Laniakea Supercluster,TRUE,Sloan Great Wall,FALSE,Hercules-Corona Borealis Great Wall,FALSE
+412,astronomy,HARD,What is the name of the spacecraft that provided the first clear images of the surface of Titan?,Cassini-Huygens,TRUE,Galileo,FALSE,Voyager 1,FALSE,Pioneer 11,FALSE
+413,astronomy,HARD,What is the term for a star that varies in brightness due to pulsations in its outer layers?,Pulsar,FALSE,Quasar,FALSE,Cepheid Variable,TRUE,Nova,FALSE
+414,astronomy,HARD,What is the name of the first confirmed pulsar discovered by Jocelyn Bell Burnell in 1967?,PSR J0108-1431,FALSE,PSR J1748-2446ad,FALSE,PSR J0437-4715,FALSE,PSR B1919+21,TRUE
+415,astronomy,HARD,What is the term for a black hole that is spinning rapidly due to conservation of angular momentum?,Kerr Black Hole,TRUE,Reissner-Nordstr?m Black Hole,FALSE,Einstein-Rosen Bridge,FALSE,Schwarzschild Black Hole,FALSE
+416,astronomy,HARD,What is the name of the telescope designed specifically to study X-rays from high-energy astrophysical phenomena?,Spitzer Space Telescope,FALSE,Fermi Gamma-ray Space Telescope,FALSE,Hubble Space Telescope,FALSE,Chandra X-ray Observatory,TRUE
+417,astronomy,HARD,What is the term for the hot.  dense state of the universe immediately after the Big Bang?,Planck Epoch,TRUE,Neutrino Decoupling,FALSE,Inflationary Era,FALSE,Recombination Era,FALSE
+418,astronomy,HARD,What is the name of the galaxy believed to harbor the most powerful quasar ever observed?,BL Lacertae,FALSE,3C 273,TRUE,Markarian 421,FALSE,3C 48,FALSE
+419,astronomy,HARD,What is the term for the theoretical condition where all matter is compressed to a point of infinite density?,Neutron Star,FALSE,Event Horizon,FALSE,Singularity,TRUE,Photon Sphere,FALSE
+420,astronomy,HARD,What is the name of the phenomenon where light is absorbed and re-emitted at a different frequency by particles?,Rayleigh Scattering,FALSE,Raman Scattering,FALSE,Doppler Effect,FALSE,Compton Scattering,TRUE
+421,astronomy,HARD,What is the name of the galaxy that is on a collision course with the Milky Way?,Whirlpool,FALSE,Sombrero,FALSE,Triangulum,FALSE,Andromeda,TRUE
+422,astronomy,HARD,What is the term for the faint glow of light emitted by dust in the interplanetary medium?,Zodiacal Light,TRUE,Cosmic Microwave Background,FALSE,Starlight,FALSE,Airglow,FALSE
+423,astronomy,HARD,What is the name of the effect that causes the path of light to bend around massive objects?,Gravitational Lensing,TRUE,Diffraction,FALSE,Dispersion,FALSE,Refraction,FALSE
+424,astronomy,HARD,What is the term for a theoretical particle proposed as a candidate for dark matter?,Neutrino,FALSE,Graviton,FALSE,Photon,FALSE,Axion,TRUE
+425,astronomy,HARD,What is the name of the first exoplanet discovered around a sun-like star?,HD 209458 b,FALSE,51 Pegasi b,TRUE,Kepler-22b,FALSE,Gliese 581 g,FALSE
+426,astronomy,HARD,What is the name of the model that describes the universe's accelerated expansion due to dark energy?,Big Bang Model,FALSE,Steady State Model,FALSE,Inflationary Model,FALSE,Lambda-CDM Model,TRUE
+427,astronomy,HARD,What is the term for the quantum mechanical property of particles that makes them act like both particles and waves?,Superposition,FALSE,Wave-Particle Duality,TRUE,Quantum Entanglement,FALSE,Uncertainty Principle,FALSE
+428,astronomy,HARD,What is the name of the boundary surrounding the Milky Way where the galaxy's influence ends?,Galactic Halo,FALSE,Galactic Boundary,TRUE,Galactic Bulge,FALSE,Galactic Disk,FALSE
+429,astronomy,HARD,What is the term for the vast bubble-like regions of space with fewer galaxies than average?,Dark Matter Halos,FALSE,Intergalactic Medium,FALSE,Cosmic Voids,TRUE,Giant Molecular Clouds,FALSE
+430,astronomy,HARD,What is the name of the effect where light emitted by stars moving away from Earth shifts to longer wavelengths?,Gravitational Redshift,FALSE,Blueshift,FALSE,Doppler Effect,FALSE,Redshift,TRUE
+431,astronomy,HARD,What is the term for the smallest possible division of spacetime in quantum theory?,Atomic Scale,FALSE,Quantum Scale,FALSE,Planck Scale,TRUE,Subatomic Scale,FALSE
+432,astronomy,HARD,What is the name of the process by which a massive star collapses and explodes at the end of its life cycle?,Nova,FALSE,Supernova,TRUE,Kilonova,FALSE,Hypernova,FALSE
+433,astronomy,HARD,What is the name of the telescope that succeeded the Hubble Space Telescope for infrared observations?,James Webb Space Telescope,TRUE,Spitzer Space Telescope,FALSE,Chandra X-ray Observatory,FALSE,Herschel Space Observatory,FALSE
+434,astronomy,HARD,What is the term for the theoretical ending of the universe where all matter collapses into a singularity?,Big Rip,FALSE,Steady State,FALSE,Heat Death,FALSE,Big Crunch,TRUE
+435,astronomy,HARD,What is the name of the primordial radiation left over from the Big Bang?,Cosmic Infrared Background,FALSE,Neutrino Background,FALSE,Gravitational Waves,FALSE,Cosmic Microwave Background,TRUE
+436,astronomy,HARD,What is the term for a galaxy that emits intense radiation across the electromagnetic spectrum due to a central black hole?,Pulsar,FALSE,Blazar,FALSE,Quasar,TRUE,Radio Galaxy,FALSE
+437,astronomy,HARD,What is the name of the supercluster to which the Virgo and several other clusters belong?,Hercules-Corona Borealis Great Wall,FALSE,Coma Supercluster,FALSE,Sloan Great Wall,FALSE,Laniakea Supercluster,TRUE
+438,astronomy,HARD,What is the term for the radius within which a black hole's escape velocity equals the speed of light?,Event Horizon,FALSE,Photon Sphere,FALSE,Schwarzschild Radius,TRUE,Ergosphere,FALSE
+439,astronomy,HARD,What is the name of the cosmic structure that challenges the homogeneity assumption of the universe?,Hercules-Corona Borealis Great Wall,FALSE,Sloan Great Wall,FALSE,Great Attractor,TRUE,Laniakea Supercluster,FALSE
+440,astronomy,HARD,What is the term for a star-like object that is too small to sustain nuclear fusion?,Red Dwarf,FALSE,Brown Dwarf,TRUE,Neutron Star,FALSE,White Dwarf,FALSE
+441,astronomy,HARD,What is the name of the theoretical framework that attempts to unify general relativity and quantum mechanics?,Loop Quantum Gravity,FALSE,Quantum Gravity,TRUE,Theory of Everything,FALSE,String Theory,FALSE
+442,astronomy,HARD,What is the term for the hypothetical particles thought to be the building blocks of quarks and leptons?,Neutrinos,FALSE,Gravitons,FALSE,WIMPs,FALSE,Preons,TRUE
+443,astronomy,HARD,What is the name of the mechanism that powers the Sun and other stars.  involving nuclear fusion of hydrogen into helium?,Triple-alpha Process,FALSE,Nucleosynthesis,FALSE,CNO Cycle,FALSE,Proton-Proton Chain,TRUE
+444,astronomy,HARD,What is the name of the process by which planets form from the dust and gas surrounding a young star?,Condensation,FALSE,Accretion,TRUE,Capture,FALSE,Aggregation,FALSE
+445,astronomy,HARD,What is the term for a highly luminous and compact region that surrounds a supermassive black hole at the center of a galaxy?,Active Galactic Nucleus,TRUE,Quasar,FALSE,Pulsar,FALSE,Blazar,FALSE
+446,astronomy,HARD,What is the name of the mathematical model that describes the electromagnetic.  weak.  and strong nuclear forces?,Theory of Everything,FALSE,Standard Model,TRUE,String Theory,FALSE,Quantum Field Theory,FALSE
+447,astronomy,HARD,What is the term for the stable configuration of matter that is neither a solid.  liquid.  nor gas.  often found in stars?,Plasma,TRUE,Quark-Gluon Plasma,FALSE,Fermionic Condensate,FALSE,Bose-Einstein Condensate,FALSE
+448,astronomy,HARD,What is the name of the effect where time is observed to move slower in a stronger gravitational field?,Time Contraction,FALSE,Doppler Effect,FALSE,Gravitational Time Dilation,TRUE,Special Relativity,FALSE
+449,astronomy,HARD,What is the term for a rotating neutron star that emits beams of radiation observable from Earth?,Blazar,FALSE,Quasar,FALSE,Magnetar,FALSE,Pulsar,TRUE
+450,astronomy,VERY_HARD,What is the term for the hypothetical remnant of a black hole after it has completely evaporated via Hawking radiation?,Black Hole Remnant,TRUE,Neutron Star,FALSE,White Hole,FALSE,Quantum Singularity,FALSE
+451,astronomy,VERY_HARD,What is the name of the theory that suggests our universe is just one of many in a larger multiverse?,Quantum Loop Gravity,FALSE,Brane Cosmology,FALSE,Multiverse Theory,TRUE,String Theory,FALSE
+452,astronomy,VERY_HARD,What is the name of the theoretical particles that mediate the force of gravity in quantum field theory?,Neutrinos,FALSE,Gravitons,TRUE,Photons,FALSE,Gluons,FALSE
+453,astronomy,VERY_HARD,What is the term for a star that collapses directly into a black hole with little to no explosion?,Silent Collapse,FALSE,Direct Collapse,TRUE,Failed Supernova,FALSE,Neutron Star Transition,FALSE
+454,astronomy,VERY_HARD,What is the name of the proposed boundary beyond which the compressive forces inside a black hole overcome quantum effects?,Event Horizon,FALSE,Planck Star,FALSE,Quantum Firewall,FALSE,Pressure Horizon,TRUE
+455,astronomy,VERY_HARD,What is the term for a black hole that possesses both mass and electric charge but no angular momentum?,Kerr-Newman Black Hole,FALSE,Schwarzschild Black Hole,FALSE,Kerr Black Hole,FALSE,Reissner-Nordstr?m Black Hole,TRUE
+456,astronomy,VERY_HARD,What is the name of the hypothetical scenario where the universe could contract after its current expansion phase?,Cyclic Model,FALSE,Heat Death,FALSE,Big Rip,FALSE,Big Crunch,TRUE
+457,astronomy,VERY_HARD,What is the term for the theoretical process of extracting energy from a rotating black hole?,Quantum Tunneling,FALSE,Ergosphere Extraction,FALSE,Hawking Radiation,FALSE,Penrose Process,TRUE
+458,astronomy,VERY_HARD,What is the term describing the region of spacetime that could theoretically connect two separate universes?,Quantum Tunnel,FALSE,Wormhole Entrances,FALSE,Schwarzschild Wormhole,FALSE,Einstein-Rosen Bridge,TRUE
+459,astronomy,VERY_HARD,What is the name of the hypothetical fast-moving star system that could result from the merger of two galaxies?,Galactic Wanderer,FALSE,Hypervelocity Star,TRUE,Supernova Remnant,FALSE,Runaway Star,FALSE
+460,astronomy,VERY_HARD,What is the term for the paradox that arises from the loss of information in a black hole?,Quantum Erasure,FALSE,Event Horizon Problem,FALSE,Black Hole Information Paradox,TRUE,Hawking Paradox,FALSE
+461,astronomy,VERY_HARD,What is the name of the theoretical state of matter formed at extremely high temperatures and densities.  such as in neutron stars?,Quark-Gluon Plasma,TRUE,Neutronium,FALSE,Fermi Gas,FALSE,Bose-Einstein Condensate,FALSE
+462,astronomy,VERY_HARD,What is the term for the hypothetical reversal of the universe's expansion.  leading to a collapse?,Big Crunch,TRUE,Collapse Singularity,FALSE,Gravitational Reversal,FALSE,Entropy Collapse,FALSE
+463,astronomy,VERY_HARD,What is the name of the theory that predicts the existence of a certain number of spatial dimensions in addition to the familiar three?,Brane Cosmology,FALSE,String Theory,TRUE,Quantum Loop Gravity,FALSE,M-theory,FALSE
+464,astronomy,VERY_HARD,What is the term for a black hole that has both charge and angular momentum?,Reissner-Nordstr?m Black Hole,FALSE,Kerr Black Hole,FALSE,Schwarzschild Black Hole,FALSE,Kerr-Newman Black Hole,TRUE
+465,astronomy,VERY_HARD,What is the term for the hypothetical dense core of a star packed with strange quarks?,Neutron Star,FALSE,Exotic Star,FALSE,Strange Star,TRUE,Quark Star,FALSE
+466,astronomy,VERY_HARD,What is the name of the phenomenon where neutrinos change their type as they travel through space?,Neutrino Fluctuation,FALSE,Quantum Tunneling,FALSE,Neutrino Oscillation,TRUE,Neutrino Transformation,FALSE
+467,astronomy,VERY_HARD,What is the term for the smallest unit of space according to a theory of quantum gravity?,String Length,FALSE,Subatomic Unit,FALSE,Quantum Unit,FALSE,Planck Volume,TRUE
+468,astronomy,VERY_HARD,What is the term for the hypothetical consistent cyclic model of the universe involving repeated collapses and expansions?,Quantum Cycle,FALSE,Eternal Return,FALSE,Cyclic Universe,TRUE,Oscillating Universe,FALSE
+469,astronomy,VERY_HARD,What is the term for the theoretical boundary around a black hole where quantum effects dominate?,Event Horizon,FALSE,Quantum Horizon,TRUE,Planck Boundary,FALSE,Gravitational Boundary,FALSE
+470,astronomy,VERY_HARD,What is the name of the speculative scenario where advanced civilizations manipulate black holes for energy?,Cosmic Engineering,FALSE,Black Hole Farming,TRUE,Gravitational Harvesting,FALSE,Astrophysical Manipulation,FALSE
+471,astronomy,VERY_HARD,What is the term for the hypothetical form of matter that would explain the accelerated expansion of the universe?,Ultralight Bosons,FALSE,Dark Matter,FALSE,Quintessence,FALSE,Phantom Energy,TRUE
+472,astronomy,VERY_HARD,What is the term for a theoretical cosmic boundary beyond which no information can escape?,Event Horizon,FALSE,Quantum Boundary,FALSE,Information Horizon,TRUE,Cosmic Censorship,FALSE
+473,astronomy,VERY_HARD,What is the term for the paradox around the existence of anomalies in the cosmic microwave background?,Cosmic Variance Paradox,FALSE,Quantum Anomaly,FALSE,Background Fluctuation,FALSE,CMB Anomaly Paradox,TRUE
+474,astronomy,VERY_HARD,What is the name of the concept where the universe is like a hologram projected from lower-dimensional information?,Quantum Holography,FALSE,String Cosmology,FALSE,Dimensional Projection,FALSE,Holographic Principle,TRUE
+475,astronomy,VERY_HARD,What is the name of the process where a black hole emits radiation due to quantum effects near its event horizon?,Quantum Evaporation,FALSE,Thermal Decay,FALSE,Hawking Radiation,TRUE,Penrose Process,FALSE
+476,astronomy,VERY_HARD,What is the name of the mathematical framework that seeks to reconcile quantum mechanics and general relativity?,M-theory,FALSE,Quantum Gravity,TRUE,String Theory,FALSE,Loop Quantum Gravity,FALSE
+477,astronomy,VERY_HARD,What is the term for the theoretical existence of an entire universe within a black hole?,Quantum Universe,FALSE,Holographic Universe,FALSE,Black Hole Cosmology,TRUE,Internal Universe Theory,FALSE
+478,astronomy,VERY_HARD,What is the term for the region around a rotating black hole where objects cannot remain in place?,Ergosphere,TRUE,Accretion Disk,FALSE,Photon Sphere,FALSE,Event Horizon,FALSE
+479,astronomy,VERY_HARD,What is the name of the cosmic conundrum regarding what happens to matter inside a black hole?,Quantum Enigma,FALSE,Gravitational Unknown,FALSE,Information Paradox,TRUE,Black Hole Mystery,FALSE
+480,astronomy,VERY_HARD,What is the term for a theoretical universe with physical laws different from our own?,Parallel Dimension,FALSE,Multiverse,FALSE,Quantum Realm,FALSE,Alternate Universe,TRUE
+481,astronomy,VERY_HARD,What is the name of the theory suggesting that the early universe underwent rapid exponential expansion?,Steady State Theory,FALSE,Big Bang Theory,FALSE,Oscillating Universe Theory,FALSE,Inflation Theory,TRUE
+482,astronomy,VERY_HARD,What is the name given to the boundary layer of a black hole where infalling matter forms a disk?,Ergosphere,FALSE,Photon Sphere,FALSE,Accretion Disk,TRUE,Event Horizon,FALSE
+483,astronomy,VERY_HARD,What is the term for the theoretical framework that unifies all fundamental forces of nature?,String Theory,FALSE,Quantum Field Theory,FALSE,M-Theory,FALSE,Theory of Everything,TRUE
+484,astronomy,VERY_HARD,What is the term for the particle physics concept explaining how particles acquire mass?,Electroweak Symmetry Breaking,FALSE,Mass-Energy Equivalence,FALSE,Higgs Mechanism,TRUE,Quantum Field Theory,FALSE
+485,astronomy,VERY_HARD,What is the name of the hypothetical explosive event that could occur if a false vacuum collapses?,Big Rip,FALSE,Quantum Collapse,FALSE,False Vacuum Transition,FALSE,Vacuum Decay,TRUE
+486,astronomy,VERY_HARD,What is the term for the continuous smoothness of space that is predicted to break down at the Planck scale?,Quantum Fabric,FALSE,Planck Length,FALSE,Space-Time Continuum,TRUE,Quantum Foam,FALSE
+487,astronomy,VERY_HARD,What is the name of the hypothetical scenario where all matter is converted to black holes at a high density?,Black Hole Era,TRUE,Gravitational Collapse,FALSE,Dark Era,FALSE,Quantum Singularity,FALSE
+488,astronomy,VERY_HARD,What is the term for a hypothetical form of dark matter composed of primordial black holes?,Axions,FALSE,Exotic Matter,FALSE,WIMPs,FALSE,PBHs (Primordial Black Holes),TRUE
+489,astronomy,VERY_HARD,What is the concept that postulates the existence of a higher-dimensional space in which our universe exists as a 'brane'?,Quantum Brane,FALSE,String Landscape,FALSE,Brane Cosmology,TRUE,Holographic Principle,FALSE
+490,astronomy,VERY_HARD,What is the name of the mathematical model that attempts to describe the quantum properties of gravity?,Loop Quantum Gravity,TRUE,String Theory,FALSE,M-Theory,FALSE,Holographic Gravity,FALSE
+491,astronomy,VERY_HARD,What is the name of the conjecture that suggests every physical process is reversible?,Arrow of Time,FALSE,Eternal Recurrence,FALSE,Time Reversal Symmetry,TRUE,Reversible Universe Hypothesis,FALSE
+492,astronomy,VERY_HARD,What is the term for the process by which black holes might radiate energy and lose mass?,Black Hole Fission,FALSE,Entropy Emission,FALSE,Quantum Tunneling,FALSE,Hawking Radiation,TRUE
+493,astronomy,VERY_HARD,What is the name of the theory that proposes black holes could be gateways to other universes?,Parallel Universe Hypothesis,FALSE,Wormhole Theory,TRUE,Quantum Bridge Theory,FALSE,Multiverse Theory,FALSE
+494,astronomy,VERY_HARD,What is the term for the phenomenon where the speed of light is affected by the gravitational field of a massive object?,Light Bending,FALSE,Gravitational Lensing,FALSE,Gravitational Time Dilation,TRUE,Photon Deceleration,FALSE
+495,astronomy,VERY_HARD,What is the hypothesis that suggests information is stored at the boundary of a black hole?,Holographic Principle,TRUE,Event Horizon Hypothesis,FALSE,Quantum Encapsulation,FALSE,Information Retention,FALSE
+496,astronomy,VERY_HARD,What is the term for the concept in cosmology where the universe is considered as a dynamical system?,Dynamic Universe Theory,TRUE,Steady State Theory,FALSE,Quantum Dynamics,FALSE,Inflationary Cosmology,FALSE
+497,astronomy,VERY_HARD,What is the name of the cosmic model that combines quantum field theory with general relativity?,M-Theory,FALSE,Quantum Field Gravity,TRUE,String Field Theory,FALSE,Quantum General Relativity,FALSE
+498,astronomy,VERY_HARD,What is the term for the theoretical particles that are smaller constituents of quarks and leptons?,Quantum Bits,FALSE,Preons,TRUE,Gravitons,FALSE,Neutrinos,FALSE
+499,astronomy,VERY_HARD,What is the name of the concept that describes the universe as having no center and no edge.  expanding uniformly?,Homogeneous Universe,TRUE,Equilibrium Universe,FALSE,Isotropic Cosmology,FALSE,Uniform Expansion,FALSE
+500,astronomy,EASY,Which planet is known as the Red Planet?,Mars,TRUE,Jupiter,FALSE,Saturn,FALSE,Venus,FALSE
+501,astronomy,EASY,What is the largest planet in our solar system?,Mars,FALSE,Neptune,FALSE,Jupiter,TRUE,Earth,FALSE
+502,astronomy,EASY,Which celestial body orbits the Earth?,Mars,FALSE,The Moon,TRUE,The Sun,FALSE,Jupiter,FALSE
+503,astronomy,EASY,What is the name of our galaxy?,Andromeda,FALSE,Whirlpool,FALSE,Sombrero,FALSE,Milky Way,TRUE
+504,astronomy,EASY,Which planet is closest to the Sun?,Mars,FALSE,Earth,FALSE,Venus,FALSE,Mercury,TRUE
+505,astronomy,EASY,What is the term for a shooting star?,Meteor,TRUE,Asteroid,FALSE,Satellite,FALSE,Comet,FALSE
+506,astronomy,EASY,Which planet has a day longer than its year?,Jupiter,FALSE,Venus,TRUE,Mars,FALSE,Saturn,FALSE
+507,astronomy,EASY,What do we call the path that planets follow around the Sun?,Rotation,FALSE,Orbit,TRUE,Revolution,FALSE,Trajectory,FALSE
+508,astronomy,EASY,Which planet is known for its Great Red Spot?,Uranus,FALSE,Neptune,FALSE,Saturn,FALSE,Jupiter,TRUE
+509,astronomy,EASY,What is the name of the first artificial satellite launched into space?,Vanguard 1,FALSE,Sputnik 1,TRUE,Apollo 11,FALSE,Explorer 1,FALSE
+510,astronomy,EASY,Which planet has the most moons?,Mars,FALSE,Venus,FALSE,Earth,FALSE,Saturn,TRUE
+511,astronomy,EASY,What is the hottest planet in our solar system?,Venus,TRUE,Jupiter,FALSE,Mars,FALSE,Saturn,FALSE
+512,astronomy,EASY,What force keeps planets in orbit around the Sun?,Gravity,TRUE,Inertia,FALSE,Nuclear force,FALSE,Electromagnetism,FALSE
+513,astronomy,EASY,What is the term for the visible surface of the Sun?,Photosphere,TRUE,Corona,FALSE,Core,FALSE,Chromosphere,FALSE
+514,astronomy,EASY,Which planet is known for having a tilted axis?,Saturn,FALSE,Uranus,TRUE,Mars,FALSE,Earth,FALSE
+515,astronomy,EASY,What is the name of the second-largest planet in our solar system?,Jupiter,FALSE,Neptune,FALSE,Uranus,FALSE,Saturn,TRUE
+516,astronomy,EASY,Which celestial body is classified as a dwarf planet?,Saturn,FALSE,Jupiter,FALSE,Pluto,TRUE,Neptune,FALSE
+517,astronomy,MEDIUM,What is the primary component of the Sun's atmosphere?,Hydrogen,TRUE,Helium,FALSE,Carbon,FALSE,Oxygen,FALSE
+518,astronomy,MEDIUM,Which planet has the longest day in the solar system?,Venus,TRUE,Mars,FALSE,Saturn,FALSE,Neptune,FALSE
+519,astronomy,MEDIUM,What is the name of the telescope that has provided some of the most detailed images of distant galaxies?,Kepler Space Telescope,FALSE,James Webb Space Telescope,FALSE,Gemini Observatory,FALSE,Hubble Space Telescope,TRUE
