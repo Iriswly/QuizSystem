@@ -15,6 +15,25 @@ public class Register{
     public Register(UserInfo user) throws Exception {
         this.user = user;
     }
+    private String getUserName(Scanner scanner, Window window) {
+        String nickname;
+        while (true) {
+            window.printContent("Enter your nickname:");
+            nickname = scanner.nextLine().trim();
+
+            if (nickname.equalsIgnoreCase("x")) {
+                window.printContent("Exiting the program...");
+                System.exit(0);
+            }
+
+            if (user.searchUserLineIndex(nickname) != -1) {
+                window.printContent("Nickname already exists. Please choose a different nickname.");
+            } else {
+                break;
+            }
+        }
+        return nickname;
+    }
 
     //注册或登陆界面
     public void displayMenu() {
@@ -22,7 +41,7 @@ public class Register{
         Scanner scanner = new Scanner(System.in);
 
         window.printContent("Welcome! \nAre you a new user? (Yes/No) " +
-                "\nEnter 'x' or 'exit' to exit the program if you want.");
+                "\nEnter 'x' to exit the program if you want.");
         String choice = scanner.nextLine().trim().toLowerCase();
 
         // 检查是否输入 x 或 exit
@@ -39,19 +58,6 @@ public class Register{
             window.printContent("Invalid choice. Please try again.");
             displayMenu();
         }
-        /*if (choice.equals("yes")) {
-            registerNewUser(scanner);
-        } else if (choice.equals("no")) {
-            loginUser(scanner);
-        } else if (choice.equals("delete")) {
-            deleteUser(scanner);
-        } else if (choice.equals("x") || choice.equals("exit")) {
-            window.printContent("Exiting the program...");
-            System.exit(0);
-        }else {
-            window.printContent("Invalid choice. Please try again.");
-            displayMenu();
-        }*/
     }
 
     // 注册新用户界面
