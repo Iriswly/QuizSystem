@@ -115,8 +115,14 @@ public class ScoreRecord {
 
             // 循环直到用户输入合法答案
             while (!validAnswer) {
-                window.printContent("Your answer (A, B, C, D): ");
+                window.printContent("Your answer (A, B, C, D or 'x' to exit): ");
                 userAnswer = sc.nextLine().toUpperCase();  // 读取用户输入并转为大写
+                //支持用户立刻返回
+                if (userAnswer.equals("X")) {
+                    window.printContent("Exiting quiz and returning to main menu...");
+                    menu.mainMenu(); // 调用 Menu 的主菜单
+                    return; // 结束当前方法，返回主菜单
+                }
 
                 // 判断用户输入是否有效
                 if (!isValidAnswer(userAnswer)) {
