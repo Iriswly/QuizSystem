@@ -12,6 +12,8 @@ public class ScoreRecord {
     private String scorename= "";
     private UserInfo user;
     private int Round=0;
+    private boolean quitInstantly = false;
+    private Scanner sc;
 
     // 存储所有的 session 记录
     private String[][] sessionInfo = new String[0][3];  // 初始时空数组，表示没有记录
@@ -19,6 +21,7 @@ public class ScoreRecord {
     public ScoreRecord(UserInfo newUser) throws Exception {
         user = newUser;
         menu = new Menu(user);
+        sc = new Scanner(System.in);
     }
 
     public String[] getAllScores() {
@@ -85,7 +88,6 @@ public class ScoreRecord {
     // 显示题目并让用户作答
     public void displayQuestionsAndScore(String[][] finalQuestions,TopicReader topicReader) {
         Window window = new Window();
-        Scanner sc = new Scanner(System.in);
         int score = 0;
         Round++;
         String topic = topicReader.getTopicToSelect();
@@ -120,7 +122,8 @@ public class ScoreRecord {
                 //支持用户立刻返回
                 if (userAnswer.equals("X")) {
                     window.printContent("Exiting quiz and returning to main menu...");
-                    menu.mainMenu(); // 调用 Menu 的主菜单
+                    quitInstantly = true;
+
                     return; // 结束当前方法，返回主菜单
                 }
 
@@ -131,7 +134,7 @@ public class ScoreRecord {
                     validAnswer = true;  // 输入合法，则跳出循环
                 }
             }
-// 将题目、选项、用户答案、正确答案记录到 questionDetails 数组
+            // 将题目、选项、用户答案、正确答案记录到 questionDetails 数组
 
             questionDetails[i][0] = finalQuestions[i][3];  // 问题
             questionDetails[i][1] = finalQuestions[i][4];  // 选项A
@@ -185,6 +188,7 @@ public class ScoreRecord {
             scorename = "Round: " + Round;
             user.updateScore(Integer.parseInt(AllScore[Round-1]), scorename);
             System.out.println(AllScore[Round-1]);
+            System.out.println("Score recorded.");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -192,7 +196,9 @@ public class ScoreRecord {
 
     // 处理用户是否继续做题的选择
     public boolean askContinue() {
-        Scanner sc = new Scanner(System.in);
+        if (quitInstantly) {
+            return false;
+        }
         String userChoice = "";
         boolean validChoice = false;
 
@@ -205,7 +211,6 @@ public class ScoreRecord {
                 return true;
             } else if (userChoice.equals("no")) {
                 validChoice = true;
-                menu.mainMenu();
                 return false;
             } else {
                 System.out.println("Invalid input. Please enter 'yes' or 'no'.");

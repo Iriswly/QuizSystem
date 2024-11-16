@@ -212,19 +212,20 @@ public class CSVEditor extends CSVReader{
         return null;
     }
 
-//    protected boolean saveAndUpdate(){
-//        if (currentLines == null) {
-//            if (DEBUG) logger.log("currentLines is null");
-//            return false;
-//        }
-//        if (overcast()) {
-//            if (DEBUG) logger.log("overcast Done");
-//        } else {
-//            if (DEBUG) logger.log("overcast failed");
-//            return false;
-//        }
-//        readAll();
-//    }
+    protected boolean saveAndUpdate(){
+        if (currentLines == null) {
+            if (DEBUG) logger.log("currentLines is null");
+            return false;
+        }
+        if (overcast()) {
+            if (DEBUG) logger.log("overcast Done");
+        } else {
+            if (DEBUG) logger.log("overcast failed");
+            return false;
+        }
+        readAll();
+        return true;
+    }
 
     // 辅助函数
     private boolean isValidString(String str){

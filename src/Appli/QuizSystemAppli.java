@@ -18,7 +18,7 @@ public class QuizSystemAppli {
         menu.unloggedMenu();
         try {
             Register register = new Register(user);
-            menu.mainMenu();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -27,6 +27,8 @@ public class QuizSystemAppli {
         while (true) {
             menu.mainMenu(); // 每次循环都展示主菜单
             String option = menu.getSelectedOption(); // 获取用户选择的选项
+
+            System.out.println("Debug: Selected Option = " + option);
 
             switch (option) {
                 case "Quiz": {
@@ -42,8 +44,7 @@ public class QuizSystemAppli {
                     break;
                 }
                 case "Logout": {
-                    menu.unloggedMenu();
-                    break;
+                    System.exit(0);
                 }
                 default: {
                     System.out.println("Invalid option selected. Please try again.");
@@ -51,7 +52,6 @@ public class QuizSystemAppli {
                 }
             }
 
-            menu.clearSelectedOption(); // 清空选项
         }
     }
 }

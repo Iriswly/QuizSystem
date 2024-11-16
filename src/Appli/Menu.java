@@ -20,6 +20,10 @@ public class Menu {
         user = newUser;
     }
 
+    public Menu() {
+
+    }
+
     public void unloggedMenu() {
         window.top();
         try {
@@ -155,8 +159,8 @@ public class Menu {
             scoreRecord.displayQuestionsAndScore(quizQuestions, topicReader);
 
         } while (scoreRecord.askContinue());
-
         window.bottom();
+
     }
 
     public void insertQuestionMenu() {

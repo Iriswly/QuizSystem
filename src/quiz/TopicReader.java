@@ -1,13 +1,16 @@
 package quiz;
 
+import User.UserInfo;
 import xjtlu.cpt111.assignment.quiz.model.Difficulty;
 import xjtlu.cpt111.assignment.quiz.model.Option;
 import xjtlu.cpt111.assignment.quiz.model.Question;
+import Appli.Menu;
 
 import java.util.Scanner;
 import Appli.Window;
 
 public class TopicReader {
+    private Menu menu = new Menu();
 
     private String topicToSelect;   // 用户选择的主题
     private final String[] difficulties = {"EASY", "MEDIUM", "HARD", "VERY_HARD"}; // 难度级别
@@ -63,7 +66,7 @@ public class TopicReader {
     // 选择主题
     public void selectTopic() {
         Window window = new Window();
-        window.printContent("Please enter the topic you would like to choose:");
+        window.printContent("Please enter the topic you would like to choose: (or 'x' to exit)");
         window.printContent("    Either type in an index (Integer) or type in a topic name (String):");
         Scanner sc = new Scanner(System.in);
 
@@ -102,7 +105,7 @@ public class TopicReader {
     // 选择难度
     public void selectDifficulty() {
         Window window = new Window();
-        window.printContent("Please select a difficulty level:");
+        window.printContent("Please select a difficulty level: (or 'x' to exit)");
         for (int i = 0; i < difficulties.length; i++) {
             window.printContent((i + 1) + ". " + difficulties[i]);
         }
