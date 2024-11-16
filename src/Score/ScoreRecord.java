@@ -7,18 +7,19 @@ import Appli.Window;
 import Appli.Menu;
 import User.UserInfo;
 
-public class ScoreRecord extends UserInfo{
-
-    private Menu menu = new Menu();
-    private String scorename="";
+public class ScoreRecord {
+    private Menu menu;
+    private String scorename= "";
+    private UserInfo user;
     private int Round=0;
+
     // 存储所有的 session 记录
     private String[][] sessionInfo = new String[0][3];  // 初始时空数组，表示没有记录
 
-    public ScoreRecord() throws Exception {
-        super();
+    public ScoreRecord(UserInfo newUser) throws Exception {
+        user = newUser;
+        menu = new Menu(user);
     }
-
 
     public String[] getAllScores() {
         String[] scores = new String[sessionInfo.length];
@@ -27,6 +28,7 @@ public class ScoreRecord extends UserInfo{
         }
         return scores;
     }
+
     // 记录一轮答题的topic, difficulty, score
     public void recordSession(String topic, String difficulty, int score) {
         // 扩展 sessionInfo 数组
@@ -175,13 +177,13 @@ public class ScoreRecord extends UserInfo{
             UserInfo userInfo = new UserInfo();
             String[] AllScore = getAllScores();
             scorename = "Round: " + Round;
-            updateScore(Integer.parseInt(AllScore[Round-1]), scorename);
+            user.updateScore(Integer.parseInt(AllScore[Round-1]), scorename);
             System.out.println(AllScore[Round-1]);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
+
     // 处理用户是否继续做题的选择
     public boolean askContinue() {
         Scanner sc = new Scanner(System.in);
@@ -206,20 +208,19 @@ public class ScoreRecord extends UserInfo{
         return false; // 默认返回false，如果进入了while会退出循环返回值
     }
 
-
-
-
-
     public static void main(String[] args) {
         // 创建三个类的实例
         QuestionProvider questionProvider = new QuestionProvider();
         ScoreRecord scoreRecord = null;
         try {
-            scoreRecord = new ScoreRecord();
+            // fix: remind to substitute user in the main logic
+            UserInfo user = new UserInfo();
+            user.Login("Rose", "Dxllovejava");
+            scoreRecord = new ScoreRecord(user);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        int round=0;//计算做题次数
+        int round = 0;//计算做题次数
         do {
             TopicReader topicReader = new TopicReader();
             topicReader.showTopic();
@@ -250,7 +251,6 @@ public class ScoreRecord extends UserInfo{
 
             // 创建 ScoreRecord 实例并开始答题
             scoreRecord.displayQuestionsAndScore(quizQuestions, topicReader);
-
 
         } while (scoreRecord.askContinue());
 

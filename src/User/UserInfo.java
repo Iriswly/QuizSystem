@@ -133,7 +133,7 @@ public class UserInfo extends UserBase {
     }
 
     // update current accounts' score
-    protected boolean updateScore(int score, String scoreName){
+    public boolean updateScore(int score, String scoreName){
         // check if login
         if (!isLogin()) {
             logger.log("[updateScore] Not logged in");
@@ -179,25 +179,25 @@ public class UserInfo extends UserBase {
     }
 
     // update nickname
-    protected boolean updateNickname(String newNickname){
+    public boolean updateNickname(String newNickname){
         return editAccountProfile(1, newNickname);
     }
 
     // update real name
-    protected boolean updateRealName(String newRealName){
+    public boolean updateRealName(String newRealName){
         return editAccountProfile(2, newRealName);
     }
 
-    protected boolean updatePassword(String newPassword){
+    public boolean updatePassword(String newPassword){
         return editAccountProfile(3, newPassword);
     }
 
     // update the max score of the user
-    protected boolean updateMaxScore(String newMax){
+    public boolean updateMaxScore(String newMax){
         return editAccountProfile(4, newMax);
     }
 
-    protected boolean loginSetter(ArrayList<String> profile) {
+    public boolean loginSetter(ArrayList<String> profile) {
         try {
             nickname = profile.get(0);
             realName = profile.get(1);
@@ -223,7 +223,7 @@ public class UserInfo extends UserBase {
         logger.log("[tempAccountSetter] Temp Password: " + temp_password);
     }
 
-    protected ArrayList<String> getCurrentProfile(){
+    public ArrayList<String> getCurrentProfile(){
         if (!isLogin()) {
             logger.log("[getCurrentProfile] Not logged in");
             return null;

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/QuizSystem/lib/xjtlu.cpt111.assignment.quiz.lib-0.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/QuizSystem/lib/xjtlu.cpt111.assignment.quiz.lib-0.0.1-javadoc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

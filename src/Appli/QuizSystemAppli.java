@@ -5,17 +5,19 @@ import Question.InsertQuestion;
 import quiz.TopicReader;
 import quiz.QuestionProvider;
 import Score.ScoreRecord;
+import User.UserInfo;
 
 public class QuizSystemAppli {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Window window = new Window(120, 20, "  Quiz System");
-        Menu menu = new Menu();
+        UserInfo user = new UserInfo();
+        Menu menu = new Menu(user);
 
         // 注册登录部分
         menu.unloggedMenu();
         try {
-            Register  register = new Register();
+            Register register = new Register(user);
             menu.mainMenu();
         } catch (Exception e) {
             e.printStackTrace();

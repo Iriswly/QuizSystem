@@ -2,6 +2,7 @@ package Appli;
 
 import Authenticator.Register;
 import Score.ScoreRecord;
+import User.UserInfo;
 import quiz.QuestionProvider;
 import quiz.TopicReader;
 import xjtlu.cpt111.assignment.quiz.model.Difficulty;
@@ -13,13 +14,16 @@ import java.util.Scanner;
 public class Menu {
     String selectedOption = "";
     Window window = new Window();
+    private UserInfo user;
 
-    public Menu() {}
+    public Menu(UserInfo newUser) {
+        user = newUser;
+    }
 
     public void unloggedMenu() {
         window.top();
         try {
-            Register register = new Register();
+            Register register = new Register(user);
             register.displayMenu();
         } catch (Exception e) {
             e.printStackTrace();
@@ -112,7 +116,7 @@ public class Menu {
         QuestionProvider questionProvider = new QuestionProvider();
         ScoreRecord scoreRecord = null;
         try {
-            scoreRecord = new ScoreRecord();
+            scoreRecord = new ScoreRecord(user);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

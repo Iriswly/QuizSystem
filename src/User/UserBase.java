@@ -69,14 +69,14 @@ public class UserBase {
         return testScore3;
     }
 
-    protected int searchUserLineIndex(String nickname){
+    public int searchUserLineIndex(String nickname){
         ArrayList<Integer> temp_result = csvEditor.matchCol_exactly_unit_first(nickname, 0);
         if (!temp_result.isEmpty()) {
             return temp_result.get(0);
         } else return -1;
     }
 
-    protected ArrayList<String> getProfile(int lineIndex){
+    public ArrayList<String> getProfile(int lineIndex){
         logger.log("[getProfile(int lineIndex)] Getting Profile on Line: " + lineIndex);
         if (lineIndex < 0 || lineIndex >= csvEditor.getLineCount()) {
             return null;
@@ -101,23 +101,11 @@ public class UserBase {
     }
 
 
-    protected boolean addAccount_DB(ArrayList<String> newProfile){
+    public boolean addAccount_DB(ArrayList<String> newProfile){
         logger.log("[addAccount_DB(ArrayList<String> newProfile)] Adding Account: " + newProfile);
         return (csvEditor.operationsDB(1, newProfile, -1)) ;
     }
     // In UserBase class
-    protected boolean loginSetter(ArrayList<String> profile) {
-        // Implement the logic to set the login state
-        // For example, set a flag or update a session
-        return true; // Return true if login state is set successfully
-    }
-
-    protected boolean isLogin() {
-        // Implement the logic to check if the user is logged in
-        // For example, check a flag or session state
-        return true; // Return true if the user is logged in
-    }
-
     protected boolean editAccountProfile_DB(ArrayList<String> newProfile){
         int lineIndex = searchUserLineIndex(newProfile.get(0));
         return csvEditor.operationsDB(2, newProfile, lineIndex);
