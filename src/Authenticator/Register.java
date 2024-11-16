@@ -130,13 +130,14 @@ public class Register{
         newProfile.add(nickname);
         newProfile.add(realName);
         newProfile.add(password);
-       /* newProfile.add("-1");
-        newProfile.add("_");
+
         newProfile.add("-1");
         newProfile.add("_");
         newProfile.add("-1");
         newProfile.add("_");
-        newProfile.add("-1");*/
+        newProfile.add("-1");
+        newProfile.add("_");
+        newProfile.add("-1");
 
 
         if (user.addAccount_DB(newProfile)) {
@@ -171,6 +172,27 @@ public class Register{
             }
         }
         return Math.min(score, 25) * 4; //每一项的最大得分为25，总分为100分
+    }
+
+    // 注销用户界面
+    private void deleteUser(Scanner scanner) {
+        Window window = new Window();
+        window.printContent("Enter your nickname:");
+        String nickname = scanner.nextLine();
+
+        window.printContent("Enter your password:");
+        String password = scanner.nextLine();
+
+        if (user.Login(nickname, password)) {
+            if (user.deleteAccount(nickname)) {
+                window.printContent("Account deleted successfully.");
+            } else {
+                window.printContent("Account deletion failed.");
+            }
+        } else {
+            window.printContent("Invalid credentials. Account deletion failed.");
+        }
+        displayMenu();
     }
 
     public static void main(String[] args) throws Exception {

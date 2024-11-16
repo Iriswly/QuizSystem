@@ -61,13 +61,13 @@ public class UserInfo extends UserBase {
         newProfile.add(password);
 
         newProfile.add("-1");
+        newProfile.add("_");
+        newProfile.add("-1");
+        newProfile.add("_");
+        newProfile.add("-1");
+        newProfile.add("_");
+        newProfile.add("-1");
 
-        newProfile.add("_");
-        newProfile.add("-1");
-        newProfile.add("_");
-        newProfile.add("-1");
-        newProfile.add("_");
-        newProfile.add("-1");
         if (addAccount_DB(newProfile)) {
             logger.log("[Register] Register DONE!");
             return true;
@@ -87,6 +87,18 @@ public class UserInfo extends UserBase {
         testScore1 = testScore2 = testScore3 = max = -1;
         testName1 = testName2 = testName3 = null;
         return !isLogin();
+    }
+
+    //删除账户
+    public boolean deleteAccount(String nickname) {
+        int index = searchUserLineIndex(nickname);
+        if (index == -1) {
+            logger.log("Account not found");
+            return false;
+        }
+        // 实现从数据库中删除用户资料的逻辑
+        // 如果帐户删除成功，则返回 true
+        return deleteAccount_DB(nickname);
     }
 
     public List<String> getRankedAccountsByMaxScore() {
