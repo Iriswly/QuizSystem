@@ -5,59 +5,53 @@ import Question.InsertQuestion;
 import quiz.TopicReader;
 import quiz.QuestionProvider;
 import Score.ScoreRecord;
+import User.UserInfo;
 
 public class QuizSystemAppli {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Window window = new Window(120, 20, "  Quiz System");
-        QuestionProvider questionProvider = new QuestionProvider();
-        ScoreRecord scoreRecord = new ScoreRecord();
+        UserInfo user = new UserInfo();
+        Menu menu = new Menu(user);
 
         // 注册登录部分
-        window.top();
+        menu.unloggedMenu();
         try {
-            Register register = new Register();
-            register.displayMenu();
+            Register register = new Register(user);
+            menu.mainMenu();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        // 做题部分
-        do {
-            window.top();
+        // 主循环
+        while (true) {
+            menu.mainMenu(); // 每次循环都展示主菜单
+            String option = menu.getSelectedOption(); // 获取用户选择的选项
 
-            TopicReader topicReader = new TopicReader();
-            topicReader.showTopic();
-            topicReader.selectTopic();
-            topicReader.selectDifficulty();
+            switch (option) {
+                case "Quiz": {
+                    menu.QuizMenu();
+                    break;
+                }
+                case "Insert Question": {
+                    menu.insertQuestionMenu();
+                    break;
+                }
+                case "Ranking": {
+                    menu.rankingMenu();
+                    break;
+                }
+                case "Logout": {
+                    menu.unloggedMenu();
+                    break;
+                }
+                default: {
+                    System.out.println("Invalid option selected. Please try again.");
+                    break;
+                }
+            }
 
-            // 获取选择主题的题目
-            String selectedTopic = topicReader.getTopicToSelect();
-            window.printContent("Selected Topic: " + selectedTopic);
-            String[][] selectedQuestions = questionProvider.getSelectedQuestions(selectedTopic);
-            window.printContent("Number of selected questions: " + (selectedQuestions != null ? selectedQuestions.length : 0));
-
-            // 按题目难度分类该主题题目
-            String[][] easyQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "EASY");
-            window.printContent("Number of easy questions: " + (easyQuestions != null ? easyQuestions.length : 0));
-            String[][] mediumQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "MEDIUM");
-            window.printContent("Number of medium questions: " + (mediumQuestions != null ? mediumQuestions.length : 0));
-            String[][] hardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "HARD");
-            window.printContent("Number of hard questions: " + (hardQuestions != null ? hardQuestions.length : 0));
-            String[][] veryhardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "VERY_HARD");
-            window.printContent("Number of veryhard questions: " + (veryhardQuestions != null ? veryhardQuestions.length : 0));
-
-            // 根据用户选择的难度等级随机选择题目
-            String selectedDifficulty = topicReader.getDifficultyToSelect();
-            String[][] quizQuestions = TopicReader.QuizQuestion(selectedQuestions, 10, selectedDifficulty);
-            window.printContent("Number of quiz questions: " + (quizQuestions != null ? quizQuestions.length : 0));
-
-            window.printContent("");
-            // 创建 ScoreRecord 实例并开始答题
-            scoreRecord.displayQuestionsAndScore(quizQuestions, topicReader);
-
-        } while (scoreRecord.askContinue());
-
-        window.bottom();
+            menu.clearSelectedOption(); // 清空选项
+        }
     }
 }

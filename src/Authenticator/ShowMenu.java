@@ -1,14 +1,18 @@
 package Authenticator;
 
 import User.UserBase;
+import User.UserInfo;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ShowMenu extends UserBase {
+public class ShowMenu{
     private final Scanner scanner;
+    private final boolean DEBUG = true;
+    private UserInfo user;
 
-    public ShowMenu() throws Exception {
-        super();
+    public ShowMenu(UserInfo newUser) throws Exception {
+        user = newUser;
         scanner = new Scanner(System.in);
     }
 
@@ -51,7 +55,7 @@ public class ShowMenu extends UserBase {
             nickname = scanner.nextLine().trim();
             if (nickname.isEmpty()) {
                 System.out.println("Nickname cannot be empty. Please enter a nickname.");
-            } else if (searchUserLineIndex(nickname) != -1) {
+            } else if (user.searchUserLineIndex(nickname) != -1) {
                 System.out.println("Nickname already exists. Please choose a different nickname.");
             } else {
                 break;
@@ -91,7 +95,7 @@ public class ShowMenu extends UserBase {
 
     // 用户注册方法
     public boolean register(String nickname, String realName, String password) {
-        if (searchUserLineIndex(nickname) != -1) {
+        if (user.searchUserLineIndex(nickname) != -1) {
             if (DEBUG) System.out.println("Nickname already exists");
             return false;
         }
@@ -107,7 +111,7 @@ public class ShowMenu extends UserBase {
         newProfile.add(password);
 
         // 将新用户添加到数据库
-        if (addAccount_DB(newProfile)) {
+        if (user.addAccount_DB(newProfile)) {
             if (DEBUG) System.out.println("User registered successfully");
             return true;
         } else {
@@ -135,12 +139,12 @@ public class ShowMenu extends UserBase {
 
     // 账号验证方法
     public boolean login(String nickname, String password) {
-        int searchResult = searchUserLineIndex(nickname);
+        int searchResult = user.searchUserLineIndex(nickname);
         if (searchResult == -1) {
             if (DEBUG) System.out.println("Account not found");
             return false;
         }
-        ArrayList<String> profile = getProfile(searchResult);
+        ArrayList<String> profile = user.getProfile(searchResult);
         if (profile == null) {
             if (DEBUG) System.out.println("Profile not found");
             return false;
@@ -148,7 +152,7 @@ public class ShowMenu extends UserBase {
 
         if (DEBUG) System.out.println("Profile: " + profile);
         if (password.equals(profile.get(2))) {
-            return loginSetter(profile) && isLogin();
+            return user.loginSetter(profile) && (user.isLogin());
         } else {
             return false;
         }
@@ -179,7 +183,8 @@ public class ShowMenu extends UserBase {
 
     public static void main(String[] args) {
         try {
-            UserRegistration register = new UserRegistration();
+            UserInfo user = new UserInfo();
+            Register register = new Register(user);
             register.displayMenu();
         } catch (Exception e) {
             e.printStackTrace();

@@ -4,10 +4,31 @@ import java.util.Scanner;
 import quiz.TopicReader;
 import quiz.QuestionProvider;
 import Appli.Window;
+import Appli.Menu;
+import User.UserInfo;
 
 public class ScoreRecord {
+    private Menu menu;
+    private String scorename= "";
+    private UserInfo user;
+    private int Round=0;
+
     // 存储所有的 session 记录
     private String[][] sessionInfo = new String[0][3];  // 初始时空数组，表示没有记录
+
+    public ScoreRecord(UserInfo newUser) throws Exception {
+        user = newUser;
+        menu = new Menu(user);
+    }
+
+    public String[] getAllScores() {
+        String[] scores = new String[sessionInfo.length];
+        for (int i = 0; i < sessionInfo.length; i++) {
+            scores[i] = sessionInfo[i][2]; // 2 列存储了 score 信息
+        }
+        return scores;
+    }
+
     // 记录一轮答题的topic, difficulty, score
     public void recordSession(String topic, String difficulty, int score) {
         // 扩展 sessionInfo 数组
@@ -66,6 +87,7 @@ public class ScoreRecord {
         Window window = new Window();
         Scanner sc = new Scanner(System.in);
         int score = 0;
+        Round++;
         String topic = topicReader.getTopicToSelect();
         String difficulty = topicReader.getDifficultyToSelect();
 
@@ -150,7 +172,18 @@ public class ScoreRecord {
 
         // 显示所有 session 记录
         displayAllSessions();
+        //将成绩录入csv
+        try {
+            UserInfo userInfo = new UserInfo();
+            String[] AllScore = getAllScores();
+            scorename = "Round: " + Round;
+            user.updateScore(Integer.parseInt(AllScore[Round-1]), scorename);
+            System.out.println(AllScore[Round-1]);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
+    }
+
     // 处理用户是否继续做题的选择
     public boolean askContinue() {
         Scanner sc = new Scanner(System.in);
@@ -166,6 +199,7 @@ public class ScoreRecord {
                 return true;
             } else if (userChoice.equals("no")) {
                 validChoice = true;
+                menu.mainMenu();
                 return false;
             } else {
                 System.out.println("Invalid input. Please enter 'yes' or 'no'.");
@@ -174,21 +208,25 @@ public class ScoreRecord {
         return false; // 默认返回false，如果进入了while会退出循环返回值
     }
 
-
-
-
-
     public static void main(String[] args) {
         // 创建三个类的实例
         QuestionProvider questionProvider = new QuestionProvider();
-        ScoreRecord scoreRecord = new ScoreRecord();
-
+        ScoreRecord scoreRecord = null;
+        try {
+            // fix: remind to substitute user in the main logic
+            UserInfo user = new UserInfo();
+            user.Login("Rose", "Dxllovejava");
+            scoreRecord = new ScoreRecord(user);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        int round = 0;//计算做题次数
         do {
             TopicReader topicReader = new TopicReader();
             topicReader.showTopic();
             topicReader.selectTopic();
             topicReader.selectDifficulty();
-
+            round++;
             // 获取选择主题的题目
             String selectedTopic = topicReader.getTopicToSelect();
             System.out.println("Selected Topic: " + selectedTopic);

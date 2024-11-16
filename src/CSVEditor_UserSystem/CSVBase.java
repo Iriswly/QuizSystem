@@ -14,7 +14,7 @@ public class CSVBase {
     protected final int MAX_COL_NUM = 10; // remember to -1 when using it
 
     // DEBUG 模式默认打开用来输出日志
-    protected static final boolean DEBUG = true;
+    protected static final boolean DEBUG = false;
     protected static Logger logger = new Logger(DEBUG);
 
 
