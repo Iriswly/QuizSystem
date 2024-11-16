@@ -6,6 +6,8 @@ import java.util.Scanner;
 import Appli.Window;
 import Appli.Menu;
 
+
+
 public class Register{
     private boolean DEBUG = true;
     private UserInfo user;
@@ -13,12 +15,21 @@ public class Register{
     public Register(UserInfo user) throws Exception {
         this.user = user;
     }
+
     //注册或登陆界面
     public void displayMenu() {
         Window window = new Window();
         Scanner scanner = new Scanner(System.in);
-        window.printContent("Welcome! Are you a new user? (Yes/No)");
+
+        window.printContent("Welcome! \nAre you a new user? (Yes/No) " +
+                "\nEnter 'x' or 'exit' to exit the program if you want.");
         String choice = scanner.nextLine().trim().toLowerCase();
+
+        // 检查是否输入 x 或 exit
+        if (choice.equals("x") || choice.equals("exit")) {
+            window.printContent("Exiting the program...");
+            System.exit(0); // 退出程序
+        }
 
         if (choice.equals("yes")) {
             registerNewUser(scanner);
@@ -28,6 +39,19 @@ public class Register{
             window.printContent("Invalid choice. Please try again.");
             displayMenu();
         }
+        /*if (choice.equals("yes")) {
+            registerNewUser(scanner);
+        } else if (choice.equals("no")) {
+            loginUser(scanner);
+        } else if (choice.equals("delete")) {
+            deleteUser(scanner);
+        } else if (choice.equals("x") || choice.equals("exit")) {
+            window.printContent("Exiting the program...");
+            System.exit(0);
+        }else {
+            window.printContent("Invalid choice. Please try again.");
+            displayMenu();
+        }*/
     }
 
     // 注册新用户界面
@@ -38,9 +62,16 @@ public class Register{
         while (true) {
             window.printContent("Enter your nickname:");
             nickname = scanner.nextLine();
+
+            // 检查是否输入 x
+            if (nickname.equalsIgnoreCase("x")) {
+                window.printContent("Exiting the program...");
+                System.exit(0); // 退出程序
+            }
+
             if (user.searchUserLineIndex(nickname) != -1) {
                 window.printContent("Nickname already exists. Please choose a different nickname.");
-            } else {
+            }else {
                 break;
             }
         }
@@ -49,11 +80,23 @@ public class Register{
         window.printContent("Enter your real name:");
         String realName = scanner.nextLine();
 
+// 检查是否输入 x
+        if (nickname.equalsIgnoreCase("x")) {
+            window.printContent("Exiting the program...");
+            System.exit(0); // 退出程序
+        }
         //密码
         String password;
         while (true) {
             window.printContent("Create a password (8-16 characters):");
             password = scanner.nextLine();
+
+            // 检查是否输入 x
+            if (nickname.equalsIgnoreCase("x")) {
+                window.printContent("Exiting the program...");
+                System.exit(0); // 退出程序
+            }
+
             int passwordScore = calculatePasswordScore(password);
             if (passwordScore < 50) {
                 window.printContent("Password security level is low. Please set a stronger password.");
@@ -84,10 +127,23 @@ public class Register{
         window.printContent("Enter your nickname:");
         String nickname = scanner.nextLine();
 
+        // 检查是否输入 x
+        if (nickname.equalsIgnoreCase("x")) {
+            window.printContent("Exiting the program...");
+            System.exit(0); // 退出程序
+        }
+
+
         // 允许用户重复输入密码，直到成功登录或选择退出
         while (true) {
             window.printContent("Enter your password:");
             String password = scanner.nextLine();
+
+            // 检查是否输入 x
+            if (nickname.equalsIgnoreCase("x")) {
+                window.printContent("Exiting the program...");
+                System.exit(0); // 退出程序
+            }
 
             if (user.Login(nickname, password)) {
                 window.printContent("Login successful!");
