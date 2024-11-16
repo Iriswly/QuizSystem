@@ -1,18 +1,17 @@
 package Appli;
 
 import Authenticator.Register;
-import Question.InsertQuestion;
-import quiz.TopicReader;
-import quiz.QuestionProvider;
-import Score.ScoreRecord;
 import User.UserInfo;
 
 public class QuizSystemAppli {
 
     public static void main(String[] args) throws Exception {
-        Window window = new Window(120, 20, "  Quiz System");
         UserInfo user = new UserInfo();
+        Window window = new Window();
         Menu menu = new Menu(user);
+
+        // 初始化
+        menu.initializeMenu();
 
         // 注册登录部分
         menu.unloggedMenu();
@@ -32,7 +31,7 @@ public class QuizSystemAppli {
 
             switch (option) {
                 case "Quiz": {
-                    menu.QuizMenu();
+                    menu.quizMenu();
                     break;
                 }
                 case "Insert Question": {
@@ -44,14 +43,18 @@ public class QuizSystemAppli {
                     break;
                 }
                 case "Logout": {
-                    System.exit(0);
+                    menu.logOutMenu();
+                    break;
+                }
+                case "Account Management": {
+                    menu.accountManagementMenu();
+                    break;
                 }
                 default: {
-                    System.out.println("Invalid option selected. Please try again.");
+                    window.printContent("Invalid option selected. Please try again.");
                     break;
                 }
             }
-
         }
     }
 }

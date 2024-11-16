@@ -71,6 +71,7 @@ public class TopicReader {
         Scanner sc = new Scanner(System.in);
 
         while (topicToSelect == null) {
+
             if (sc.hasNextInt()) {
                 int inputIndex = sc.nextInt();
                 // 检查输入的索引是否有效

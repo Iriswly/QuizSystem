@@ -499,4 +499,4 @@ ID,Topic,Difficulty,Question,Option1,Correct1,Option2,Correct2,Option3,Correct3,
 517,astronomy,MEDIUM,What is the primary component of the Sun's atmosphere?,Hydrogen,TRUE,Helium,FALSE,Carbon,FALSE,Oxygen,FALSE
 518,astronomy,MEDIUM,Which planet has the longest day in the solar system?,Venus,TRUE,Mars,FALSE,Saturn,FALSE,Neptune,FALSE
 519,astronomy,MEDIUM,What is the name of the telescope that has provided some of the most detailed images of distant galaxies?,Kepler Space Telescope,FALSE,James Webb Space Telescope,FALSE,Gemini Observatory,FALSE,Hubble Space Telescope,TRUE
-0,astronomy,MEDIUM,a,a,false,f,false,f,true,f,false
+

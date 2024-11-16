@@ -8,6 +8,7 @@ import quiz.TopicReader;
 import xjtlu.cpt111.assignment.quiz.model.Difficulty;
 import xjtlu.cpt111.assignment.quiz.model.Option;
 import xjtlu.cpt111.assignment.quiz.model.Question;
+import Score.ScoreProvider;
 
 import java.util.Scanner;
 
@@ -40,8 +41,8 @@ public class Menu {
     public void mainMenu() {
         // 展示
         window.top();
-        String[] interactiveOptions = {"Quiz", "Insert Question", "Ranking", "Logout"};
-        int[] index = {1, 2, 3, 4};
+        String[] interactiveOptions = {"Quiz", "Insert Question", "Ranking", "Account Management", "Logout"};
+        int[] index = {1, 2, 3, 4, 5};
 
         // 确定主题的最大长度
         int maxLength = 0;
@@ -59,6 +60,19 @@ public class Menu {
             String line = "      |  " + index[i] + "  |  " + interactiveOptions[i];
             int spacesToFill = maxLength - interactiveOptions[i].length();
             line += " ".repeat(spacesToFill) + "        |"; // 填充空格并添加结尾的边框
+
+            // 在特定条件下插入狗头的中间部分
+            if (i == 0) { // 在打印第二个选项后插入狗头的第一行
+                line += "                    " +"       __/ \\   \\/    / \\__       ";
+            } else if (i == 1) { // 在打印第三个选项后插入狗头的第二行
+                line += "                    " + "   __/@    )   ||    (    @\\__   ";
+            } else if (i == 2) { // 在打印第四个选项后插入狗头的第三行
+                line += "                    " + " O         \\  _||_  /         O  ";
+            } else if (i == 3) {
+                line += "                    " + "  \\_____)   \\/ ||  \\/   (_____/  ";
+            } else if (i == 4) {
+                line += "                    " + "    U  \\_____\\ /\\ /_____/   U  ";
+            }
             window.printContent(line);
         }
 
@@ -115,7 +129,7 @@ public class Menu {
         return selectedOption; // 返回当前选项
     }
 
-    public void QuizMenu() {
+    public void quizMenu() {
         // 做题部分
         QuestionProvider questionProvider = new QuestionProvider();
         ScoreRecord scoreRecord = null;
@@ -146,8 +160,8 @@ public class Menu {
             window.printContent("Number of medium questions: " + (mediumQuestions != null ? mediumQuestions.length : 0));
             String[][] hardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "HARD");
             window.printContent("Number of hard questions: " + (hardQuestions != null ? hardQuestions.length : 0));
-            String[][] veryhardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "VERY_HARD");
-            window.printContent("Number of veryhard questions: " + (veryhardQuestions != null ? veryhardQuestions.length : 0));
+            String[][] veryHardQuestions = topicReader.QuestionsByDifficulty(selectedQuestions, "VERY_HARD");
+            window.printContent("Number of veryHard questions: " + (veryHardQuestions != null ? veryHardQuestions.length : 0));
 
             // 根据用户选择的难度等级随机选择题目
             String selectedDifficulty = topicReader.getDifficultyToSelect();
@@ -167,33 +181,72 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         QuestionProvider questionProvider = new QuestionProvider();
 
+        String topic;
+        String questionText;
+        Option[] options = new Option[4];    // 固定为四个选项
+
         // 获取主题
-        window.printContent("Enter the topic of the question:");
-        String topic = scanner.nextLine().trim();
+        do {
+            window.printContent("Enter the topic of the question: (or 'x' to exit)");
+            topic = scanner.nextLine().trim();
+            if (topic.equalsIgnoreCase("X")) {
+                window.printContent("Exiting quiz and returning to main menu...");
+                return; // 结束当前方法，返回主菜单
+            }
+            // 避免 IllegalArgumentException
+            if (topic.isEmpty()) {
+                window.printContent("Topic cannot be empty. Please try again.");
+                }
+        } while (topic.isEmpty());
+
 
         // 获取题干
-        window.printContent("Enter the question:");
-        String questionText = scanner.nextLine().trim();
+        do {
+            window.printContent("Enter the question: (or 'x' to exit)");
+            questionText = scanner.nextLine().trim();
+            if (questionText.equalsIgnoreCase("X")) {
+                window.printContent("Exiting quiz and returning to main menu...");
+                return; // 结束当前方法，返回主菜单
+            }
+            if (questionText.isEmpty()) {
+                window.printContent("Question cannot be empty. Please try again.");
+            }
+        } while (questionText.isEmpty());
 
-        // 初始化选项数组
-        Option[] options = new Option[4]; // 固定4个选项
 
         // 获取每个选项及其正确性
         for (int i = 0; i < options.length; i++) {
-            window.printContent("Enter option " + (i + 1) + ":");
-            String optionText = scanner.nextLine().trim();
+            String optionText;
+
+            do {
+                window.printContent("Enter option " + (i + 1) + ": (or 'x' to exit)");
+                optionText = scanner.nextLine().trim();
+                if (optionText.equalsIgnoreCase("X")) {
+                    window.printContent("Exiting quiz and returning to main menu...");
+                    return; // 结束当前方法，返回主菜单
+                }
+                if (optionText.isEmpty()) {
+                    window.printContent("Option " + (i + 1) + " cannot be empty. Please try again.");
+                }
+            } while (optionText.isEmpty());
 
             // 提问该选项是否为正确答案
-            window.printContent("Is this option " + (i + 1) + " correct? (true/false):");
-            String correctnessInput = scanner.nextLine().trim();
+            String correctnessInput;
 
-            boolean isCorrect;
-            try {
-                isCorrect = Boolean.parseBoolean(correctnessInput);
-            } catch (Exception e) {
-                window.printContent("Invalid input for correctness. Defaulting to false.");
-                isCorrect = false;
-            }
+            do {
+                window.printContent("Is this option " + (i + 1) + " correct? (true/false): (or 'x' to exit)");
+                correctnessInput = scanner.nextLine().trim();
+
+                if (correctnessInput.equalsIgnoreCase("X")) {
+                    window.printContent("Exiting quiz and returning to main menu...");
+                    return; // 结束当前方法，返回主菜单
+                }
+                if (!correctnessInput.equalsIgnoreCase("true") && !correctnessInput.equalsIgnoreCase("false")) {
+                    window.printContent("Invalid input for correctness. Please enter true or false.");
+                }
+            } while (!correctnessInput.equalsIgnoreCase("true") && !correctnessInput.equalsIgnoreCase("false"));
+
+            boolean isCorrect = Boolean.parseBoolean(correctnessInput);
 
             // 创建选项并存入数组
             options[i] = new Option(optionText, isCorrect);
@@ -208,11 +261,211 @@ public class Menu {
         window.printContent("Your question has been inserted successfully!");
     }
 
-    public void clearSelectedOption() {
-        selectedOption = ""; // 清空选择状态
+    public void rankingMenu() {
+        window.top();
+        ScoreProvider scoreProvider = new ScoreProvider();
+        String[][] userScores = scoreProvider.getAllUserScores();
+        for (int i = 0; i < userScores.length; i++) {
+            String row = "";
+            for (int j = 0; j < userScores[i].length; j++) {
+                if (j == 0 || j == 2) {
+                    continue;     // 跳过 realName 和 password
+                }
+                // 固定 nickname 长度为15
+                if (j == 1) {
+                    row += String.format("%-15s", userScores[i][j]);
+                    row += ":       ";
+                } else {        // 其他列宽固定为12
+                    row += String.format("%-12s", userScores[i][j]);
+                }
+
+            }
+            window.printContent(row);
+        }
+        // 空行
+        window.printContent("");
+        window.printContent("Enter 'x' to return to the main menu:");
+        Scanner sc = new Scanner(System.in);
+        String input;
+        do {
+            input = sc.nextLine();
+        } while (!input.equalsIgnoreCase("x"));
+
+        window.bottom();
     }
 
-    public void rankingMenu() {
-        // 排名菜单逻辑
+    public void logOutMenu () {
+        window.top();
+        window.printContent("Are you sure to exit the quiz system? (or 'x' to return to the main menu)");
+        window.printContent("Press 'z' to confirm your quit");
+        // 空3行
+        for (int i = 0; i < 3; i++) {
+            window.printContent("");
+        }
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        do {
+            if (input.equalsIgnoreCase("x")) {
+                return;
+            } else if (input.equalsIgnoreCase("z")) {
+                window.bottom();
+                System.exit(0);
+            }
+        } while (true);
+
     }
+
+    public void initializeMenu() {
+        window.top();
+        window.printContent("Welcome to the Quiz System!");
+        window.printContent("        NOWLOADING...");
+        window.printContent("");
+        window.printContent("");
+        window.printContent("PRESS ANY BUTTON");
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        window.bottom();
+    }
+
+    public void accountManagementMenu() {
+        // show
+        window.top();
+        String[] interactiveOptions = {"Change Nickname", "Change Password", "Privacy Setting","Cancel Account"};
+        int[] index = {1, 2, 3, 4};
+
+        // 确定主题的最大长度
+        int maxLength = 0;
+        for (String choice : interactiveOptions) {
+            if (choice.length() > maxLength) {
+                maxLength = choice.length();
+            }
+        }
+
+        // 上边框
+        String upperBorder = "      ------------";
+        for (int i = 0; i < maxLength; i++) {
+            upperBorder += "-";
+        }
+        upperBorder += "------";
+        window.printContent(upperBorder); // 输出上边框
+
+        for (int i = 0; i < interactiveOptions.length; i++) {
+            String line = "      |  " + index[i] + "  |  " + interactiveOptions[i];
+
+            // 输出填充空格使其对齐
+            int spacesToFill = maxLength - interactiveOptions[i].length();
+            for (int j = 0; j < spacesToFill; j++) {
+                line += " "; // 填充空格
+            }
+            line += "        |"; // 添加结尾的边框
+            window.printContent(line);
+        }
+
+        // 下边框
+        String lowerBorder = "      ------------";
+        for (int i = 0; i < maxLength; i++) {
+            lowerBorder += "-";
+        }
+        lowerBorder += "------";
+        window.printContent(lowerBorder); // 一次性输出下边框
+
+
+        // select
+        window.printContent("Please enter how you want to deal with your account: (or 'x' to return to Main Menu)");
+        window.printContent("    Either type in an index (Integer) or type in a function name (String):");
+        Scanner sc = new Scanner(System.in);
+        String choiceToSelect = sc.nextLine();
+        boolean quitInstantly = false;
+
+        if (choiceToSelect.equalsIgnoreCase("X")) {
+            window.printContent("Exiting quiz and returning to main menu...");
+            quitInstantly = true;
+            window.bottom();
+            return; // 结束当前方法，返回主菜单
+        }
+
+        if (!quitInstantly) {
+            if (sc.hasNextInt()) {
+                int inputIndex = sc.nextInt();
+                // 检查输入的索引是否有效
+                if (inputIndex >= 1 && inputIndex <= index.length) {
+                    choiceToSelect = interactiveOptions[inputIndex - 1]; // 索引从1开始，数组从0开始
+                } else {
+                    window.printContent("Please enter a valid index or a function name:");
+                }
+            } else if (sc.hasNext()) {
+                String inputTopic = sc.next(); // 读取topic
+                // 检查choice是否有效
+                for (int i = 0; i < interactiveOptions.length; i++) {
+                    String s = interactiveOptions[i];
+                    if (s.equalsIgnoreCase(inputTopic)) {
+                        choiceToSelect = inputTopic;
+                        break;
+                    }
+                }
+                if (choiceToSelect == null) {
+                    window.printContent("Please enter a valid index or a function name:");
+                }
+            }
+            // 清除无效输入
+            sc.nextLine();
+
+            window.printContent("Selected successfully!");
+            window.printContent("You have selected: " + choiceToSelect);
+            window.printContent("");
+
+            switch (choiceToSelect) {
+                case "Change Nickname": {
+                    changeNicknameMenu();
+                    break;
+                }
+                case "Change Password": {
+                    changePasswordMenu();
+                    break;
+                }
+                case "Privacy Setting": {
+                    privacySettingMenu();
+                    break;
+                }
+                case "Cancel Account": {
+                    cancelAccountMenu();
+                    break;
+                }
+                default: {
+                    window.printContent("Invalid option selected. Please try again.");
+                    break;
+                }
+            }
+        }
+
+    }
+
+    public void changeNicknameMenu() {
+        // 确认密码即可
+    }
+
+    public void changePasswordMenu() {
+        // 确认密码，真名
+        // 输入新密码（两次）
+    }
+
+    public void privacySettingMenu() {
+        // 确认密码
+        // 是否在排行榜上显示个人昵称
+    }
+
+    public void cancelAccountMenu() {
+        // 确认密码，真名
+        // 注销账号
+    }
+
+
+    public void dog () {
+        System.out.println("       __/ \\   \\/    / \\__       ");
+        System.out.println("   __/@    )   ||    (    @\\__   ");
+        System.out.println(" O         \\  _||_  /         O  ");
+        System.out.println("  \\_____)   \\/ ||  \\/   (_____/  ");
+        System.out.println("    U  \\_____\\ /\\ /_____/   U  ");
+    }
+
 }

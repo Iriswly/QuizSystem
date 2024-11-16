@@ -10,12 +10,13 @@ public class Window {
         this.width = width;
         this.height = height;
         this.title = title;
+
     }
 
     // 默认构造函数
     public Window() {
         this.width = 120;
-        this.height = 20;
+        this.height = 10;
         this.title = "  Quiz System";
     }
 
@@ -84,6 +85,11 @@ public class Window {
             printEmptyLine();
         }
         printHorizontalLines();
+
+        // 空三行
+        for (int i = 0; i < 3; i++) {
+            System.out.println();
+        }
     }
 
     // 清空窗口

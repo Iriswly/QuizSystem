@@ -40,8 +40,10 @@ public class Register{
         Window window = new Window();
         Scanner scanner = new Scanner(System.in);
 
-        window.printContent("Welcome! \nAre you a new user? (Yes/No) " +
-                "\nEnter 'x' to exit the program if you want.");
+        window.printContent("Welcome! ");
+        window.printContent("Are you a new user? (Yes/No) ");
+        window.printContent("Enter 'x' to exit the program if you want.");
+
         String choice = scanner.nextLine().trim().toLowerCase();
 
         // 检查是否输入 x 或 exit
