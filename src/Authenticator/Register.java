@@ -130,13 +130,13 @@ public class Register{
         newProfile.add(nickname);
         newProfile.add(realName);
         newProfile.add(password);
-        newProfile.add("-1");
+       /* newProfile.add("-1");
         newProfile.add("_");
         newProfile.add("-1");
         newProfile.add("_");
         newProfile.add("-1");
         newProfile.add("_");
-        newProfile.add("-1");
+        newProfile.add("-1");*/
 
 
         if (user.addAccount_DB(newProfile)) {
@@ -160,13 +160,13 @@ public class Register{
                 score += 5;
                 hasLower = true;
             } else if (Character.isUpperCase(c) && !hasUpper) {
-                score += 10;
+                score += 8;
                 hasUpper = true;
             } else if (Character.isDigit(c) && !hasDigit) {
                 score += 5;
                 hasDigit = true;
             } else if (!Character.isLetterOrDigit(c) && !hasSpecial) {
-                score += 10;
+                score += 8;
                 hasSpecial = true;
             }
         }
