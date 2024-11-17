@@ -145,7 +145,15 @@ public class Menu {
             TopicReader topicReader = new TopicReader();
             topicReader.showTopic();
             topicReader.selectTopic();
+            // 如果按X，返回主菜单
+            if (topicReader.getQuitInstantlyForTopic()) {
+                return;
+            }
             topicReader.selectDifficulty();
+            // 如果按X，返回主菜单
+            if (topicReader.getQuitInstantlyForDifficulty()) {
+                return;
+            }
 
             // 获取选择主题的题目
             String selectedTopic = topicReader.getTopicToSelect();
@@ -306,6 +314,7 @@ public class Menu {
         String input = sc.nextLine();
         do {
             if (input.equalsIgnoreCase("x")) {
+                window.bottom();
                 return;
             } else if (input.equalsIgnoreCase("z")) {
                 window.bottom();
@@ -332,6 +341,7 @@ public class Menu {
         window.top();
         String[] interactiveOptions = {"Change Nickname", "Change Password", "Privacy Setting","Cancel Account"};
         int[] index = {1, 2, 3, 4};
+        String choiceToSelect = null;
 
         // 确定主题的最大长度
         int maxLength = 0;
@@ -374,67 +384,69 @@ public class Menu {
         window.printContent("Please enter how you want to deal with your account: (or 'x' to return to Main Menu)");
         window.printContent("    Either type in an index (Integer) or type in a function name (String):");
         Scanner sc = new Scanner(System.in);
-        String choiceToSelect = sc.nextLine();
-        boolean quitInstantly = false;
 
-        if (choiceToSelect.equalsIgnoreCase("X")) {
-            window.printContent("Exiting quiz and returning to main menu...");
-            quitInstantly = true;
-            window.bottom();
-            return; // 结束当前方法，返回主菜单
-        }
+        while (true) {
+            String input = sc.nextLine();
 
-        if (!quitInstantly) {
-            if (sc.hasNextInt()) {
-                int inputIndex = sc.nextInt();
+            if (input.equalsIgnoreCase("X")) {
+                window.printContent("Exiting account management and returning to main menu...");
+                window.bottom();
+                return;
+            }
+
+            // 检查输入是否为数字
+            boolean isIndex = true;
+
+            for (char c : input.toCharArray()) {
+                if (!Character.isDigit(c)) {
+                    isIndex = false;
+                    break;
+                }
+            }
+
+            if (isIndex) {
+                int inputIndex = Integer.parseInt(input);
                 // 检查输入的索引是否有效
                 if (inputIndex >= 1 && inputIndex <= index.length) {
-                    choiceToSelect = interactiveOptions[inputIndex - 1]; // 索引从1开始，数组从0开始
-                } else {
-                    window.printContent("Please enter a valid index or a function name:");
+                    choiceToSelect = interactiveOptions[inputIndex - 1];
                 }
-            } else if (sc.hasNext()) {
-                String inputTopic = sc.next(); // 读取topic
-                // 检查choice是否有效
-                for (int i = 0; i < interactiveOptions.length; i++) {
-                    String s = interactiveOptions[i];
-                    if (s.equalsIgnoreCase(inputTopic)) {
-                        choiceToSelect = inputTopic;
+            } else {
+                // 检查输入是否为有效的函数名称
+                for (String option : interactiveOptions) {
+                    if (option.equalsIgnoreCase(input)) {
+                        choiceToSelect = option;
                         break;
                     }
                 }
-                if (choiceToSelect == null) {
-                    window.printContent("Please enter a valid index or a function name:");
-                }
             }
-            // 清除无效输入
-            sc.nextLine();
 
-            window.printContent("Selected successfully!");
-            window.printContent("You have selected: " + choiceToSelect);
-            window.printContent("");
+            // 检查是否选择了有效的选项
+            if (choiceToSelect != null) {
+                window.printContent("Selected successfully!");
+                window.printContent("You have selected: " + choiceToSelect);
+                window.printContent("");
 
-            switch (choiceToSelect) {
-                case "Change Nickname": {
-                    changeNicknameMenu();
-                    break;
+                switch (choiceToSelect) {
+                    case "Change Nickname":
+                        changeNicknameMenu();
+                        break;
+                    case "Change Password":
+                        changePasswordMenu();
+                        break;
+                    case "Privacy Setting":
+                        privacySettingMenu();
+                        break;
+                    case "Cancel Account":
+                        cancelAccountMenu();
+                        break;
+                    default:
+                        window.printContent("Invalid option selected. Please try again.");
+                        break;
                 }
-                case "Change Password": {
-                    changePasswordMenu();
-                    break;
-                }
-                case "Privacy Setting": {
-                    privacySettingMenu();
-                    break;
-                }
-                case "Cancel Account": {
-                    cancelAccountMenu();
-                    break;
-                }
-                default: {
-                    window.printContent("Invalid option selected. Please try again.");
-                    break;
-                }
+                break; // 跳出循环
+            } else {
+                window.printContent("Please enter a valid index or a function name:");
+
             }
         }
 

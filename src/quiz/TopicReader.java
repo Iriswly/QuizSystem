@@ -17,6 +17,8 @@ public class TopicReader {
     private String difficultyToSelect;   // 用户选择的难度
     private final String[] topicArray = {"mathematics", "psychology", "astronomy", "geography"};
     private final int[] index = {1, 2, 3, 4};
+    boolean quitInstantlyTopic = false;
+    boolean quitInstantlyDifficulty = false;
 
     public TopicReader() {
         // 初始化构造函数
@@ -71,31 +73,48 @@ public class TopicReader {
         Scanner sc = new Scanner(System.in);
 
         while (topicToSelect == null) {
+            String input = sc.nextLine();
 
-            if (sc.hasNextInt()) {
-                int inputIndex = sc.nextInt();
+            if (input.equalsIgnoreCase("X")) {
+                quitInstantlyTopic = true;
+                window.bottom();
+                return;
+            }
+
+            // 检查输入是否是有效的整数索引
+            int inputIndex = -1;
+            boolean isIndex = true;
+
+            for (char c : input.toCharArray()) {
+                if (!Character.isDigit(c)) {
+                    isIndex = false;
+                    break;
+                }
+            }
+
+            if (isIndex) {
+                inputIndex = Integer.parseInt(input);
                 // 检查输入的索引是否有效
                 if (inputIndex >= 1 && inputIndex <= index.length) {
                     topicToSelect = topicArray[inputIndex - 1]; // 索引从1开始，数组从0开始
                 } else {
                     window.printContent("Please enter a valid index or topic name:");
                 }
-            } else if (sc.hasNext()) {
-                String inputTopic = sc.next(); // 读取topic
+            } else {
                 // 检查topic是否有效
-                for (int i = 0; i < topicArray.length; i++) {
-                    String s = topicArray[i];
-                    if (s.equalsIgnoreCase(inputTopic)) {
-                        topicToSelect = inputTopic;
+                boolean foundTopic = false;
+                for (String topic : topicArray) {
+                    if (topic.equalsIgnoreCase(input)) {
+                        topicToSelect = input;
+                        foundTopic = true;
                         break;
                     }
                 }
-                if (topicToSelect == null) {
+                if (!foundTopic) {
                     window.printContent("Please enter a valid index or topic name:");
                 }
             }
-            // 清除无效输入
-            sc.nextLine();
+
         }
 
         window.printContent("Selected successfully!");
@@ -103,41 +122,61 @@ public class TopicReader {
         window.printContent("");
     }
 
+    public boolean getQuitInstantlyForTopic() {
+        return quitInstantlyTopic;
+    }
+
     // 选择难度
     public void selectDifficulty() {
         Window window = new Window();
-        window.printContent("Please select a difficulty level: (or 'x' to exit)");
+        window.printContent("Please select a difficulty level:");
         for (int i = 0; i < difficulties.length; i++) {
             window.printContent((i + 1) + ". " + difficulties[i]);
         }
 
         Scanner sc = new Scanner(System.in);
-        int choice= -1;
-        // 循环直到输入合法
-        while (true) {
-            window.printContent("Enter difficulty index (1-4): ");
+        int choice = -1;
 
-            // 检查用户输入是否为整数
-            if (sc.hasNextInt()) {
-                choice = sc.nextInt();
+        while (difficultyToSelect == null) {
+            window.printContent("Enter difficulty index (1-4): (or 'x' to return to Main Menu)");
+
+            String input = sc.nextLine();
+
+            if (input.equalsIgnoreCase("X")) {
+                quitInstantlyDifficulty = true;
+                window.bottom();
+                return;
+            }
+
+            boolean isIndex = true;
+            for (char c : input.toCharArray()) {
+                if (!Character.isDigit(c)) {
+                    isIndex = false;
+                    break;
+                }
+            }
+
+            if (isIndex) {
+                choice = Integer.parseInt(input); // 如果是数字，转为整数
 
                 // 检查输入的数字是否在有效范围内
                 if (choice >= 1 && choice <= difficulties.length) {
-                    break;  // 输入合法，跳出循环
+                    difficultyToSelect = difficulties[choice - 1]; // 设置选定的难度
+                    window.printContent("Selected successfully!");
+                    window.printContent("Your difficulty is: " + difficultyToSelect);
+                    window.printContent("");
+
                 } else {
                     window.printContent("Invalid choice. Please enter a number between 1 and " + difficulties.length + ".");
                 }
             } else {
                 window.printContent("Invalid input. Please enter a valid number.");
-                sc.nextLine();  // 清除缓冲区中的非数字输入
             }
         }
+    }
 
-        // 设置选定的难度
-        difficultyToSelect = difficulties[choice - 1];
-        window.printContent("Selected successfully!");
-        window.printContent("Your difficulty is: " + difficultyToSelect);
-        window.printContent("");
+    public boolean getQuitInstantlyForDifficulty() {
+        return quitInstantlyDifficulty;
     }
 
     // 获取选择的难度
