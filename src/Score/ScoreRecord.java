@@ -1,11 +1,14 @@
 package Score;
 
 import java.util.Scanner;
+
+import ScoreDB.ScoreEditor;
 import quiz.TopicReader;
 import quiz.QuestionProvider;
 import Appli.Window;
 import Appli.Menu;
 import User.UserInfo;
+
 
 public class ScoreRecord {
     private Menu menu;
@@ -23,13 +26,60 @@ public class ScoreRecord {
         menu = new Menu(user);
         sc = new Scanner(System.in);
     }
-
-    public String[] getAllScores() {
+       //可单独从session中获取难度，话题和分数的数据
+       public String[] getAllScores() {
         String[] scores = new String[sessionInfo.length];
         for (int i = 0; i < sessionInfo.length; i++) {
             scores[i] = sessionInfo[i][2]; // 2 列存储了 score 信息
         }
         return scores;
+    }
+    // 获取所有的 topic 信息
+       public String[] getAllTopics() {
+        String[] topics = new String[sessionInfo.length];
+        for (int i = 0; i < sessionInfo.length; i++) {
+            topics[i] = sessionInfo[i][0]; // 0 列存储了 topic 信息
+        }
+        return topics;
+    }
+
+    // 获取所有的 difficulty 信息
+    public int[] getAllDifficulties() {
+        // 检查 sessionInfo 是否为空
+        if (sessionInfo == null || sessionInfo.length == 0) {
+            return new int[0]; // 返回空数组
+        }
+
+        // 创建整数数组
+        int[] difficultyIntegers = new int[sessionInfo.length];
+
+        // 遍历 sessionInfo，提取难度并转换为整数
+        for (int i = 0; i < sessionInfo.length; i++) {
+            String difficulty = sessionInfo[i][1]; //1列储存难度信息
+            if (difficulty == null) {
+                difficultyIntegers[i] = 0; // 处理空值情况
+                continue;
+            }
+
+            switch (difficulty.toLowerCase()) { // 转换为小写处理大小写不敏感
+                case "easy":
+                    difficultyIntegers[i] = 1;
+                    break;
+                case "medium":
+                    difficultyIntegers[i] = 2;
+                    break;
+                case "hard":
+                    difficultyIntegers[i] = 3;
+                    break;
+                case "very_hard": // 确认输入格式是否带空格
+                    difficultyIntegers[i] = 4;
+                    break;
+                default:
+                    difficultyIntegers[i] = 0; // 未知难度
+            }
+        }
+
+        return difficultyIntegers;
     }
 
     // 记录一轮答题的topic, difficulty, score
@@ -123,7 +173,6 @@ public class ScoreRecord {
                 if (userAnswer.equals("X")) {
                     window.printContent("Exiting quiz and returning to main menu...");
                     quitInstantly = true;
-
                     return; // 结束当前方法，返回主菜单
                 }
 
@@ -181,6 +230,22 @@ public class ScoreRecord {
 
         // 显示所有 session 记录
         displayAllSessions();
+
+        //将名字，话题，难度，分数计入Scoredb
+
+        try {
+            String nickname= user.getNickname();
+            ScoreEditor scoreEditor=new ScoreEditor();
+            String[] AllScores = getAllScores();
+            String[] AllTopics = getAllTopics();
+            int[] AllDifficulties = getAllDifficulties();
+
+            scoreEditor.insertRow(nickname,AllTopics[Round-1],AllDifficulties[Round-1],Integer.parseInt(AllScores[Round-1]));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
         //将成绩录入csv
         try {
             UserInfo userInfo = new UserInfo();
