@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\resources\score\scores.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\resources\users.csv">
           <value>
             <Attribute>
