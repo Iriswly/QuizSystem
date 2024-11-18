@@ -3,14 +3,14 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\QuizSystem\users.csv">
+        <entry key="\resources\last.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\resources\last.csv">
+        <entry key="\resources\score\scores.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
