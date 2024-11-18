@@ -69,6 +69,10 @@ public class UserBase {
         return testScore3;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
     public int searchUserLineIndex(String nickname){
         ArrayList<Integer> temp_result = csvEditor.matchCol_exactly_unit_first(nickname, 0);
         if (!temp_result.isEmpty()) {

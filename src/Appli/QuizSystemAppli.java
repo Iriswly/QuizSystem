@@ -22,6 +22,7 @@ public class QuizSystemAppli {
             e.printStackTrace();
         }
 
+
         // 主循环
         while (true) {
             menu.mainMenu(); // 每次循环都展示主菜单
