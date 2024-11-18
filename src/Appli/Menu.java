@@ -1,7 +1,9 @@
 package Appli;
 
 import Authenticator.Register;
+import Score.Ranking;
 import Score.ScoreRecord;
+import ScoreDB.ScoreReader;
 import User.UserInfo;
 import quiz.QuestionProvider;
 import quiz.TopicReader;
@@ -173,7 +175,7 @@ public class Menu {
 
             // 根据用户选择的难度等级随机选择题目
             String selectedDifficulty = topicReader.getDifficultyToSelect();
-            String[][] quizQuestions = TopicReader.QuizQuestion(selectedQuestions, 10, selectedDifficulty);
+            String[][] quizQuestions = TopicReader.QuizQuestion(selectedQuestions, 20, selectedDifficulty);
             window.printContent("Number of quiz questions: " + (quizQuestions != null ? quizQuestions.length : 0));
 
             window.printContent("");
@@ -271,33 +273,20 @@ public class Menu {
 
     public void rankingMenu() {
         window.top();
-        ScoreProvider scoreProvider = new ScoreProvider();
-        String[][] userScores = scoreProvider.getAllUserScores();
-        for (int i = 0; i < userScores.length; i++) {
-            String row = "";
-            for (int j = 0; j < userScores[i].length; j++) {
-                if (j == 0 || j == 2) {
-                    continue;     // 跳过 realName 和 password
-                }
-                // 固定 nickname 长度为15
-                if (j == 1) {
-                    row += String.format("%-15s", userScores[i][j]);
-                    row += ":       ";
-                } else {        // 其他列宽固定为12
-                    row += String.format("%-12s", userScores[i][j]);
-                }
+        try {
+            // 创建 ScoreReader 实例，读取数据
+            ScoreReader scoreReader = new ScoreReader();
 
-            }
-            window.printContent(row);
+            // 创建 Ranking 实例
+            Ranking ranking = new Ranking(scoreReader);
+
+            // 调用 displayRanking 方法显
+            // 示排名
+            ranking.displayRanking();
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        // 空行
-        window.printContent("");
-        window.printContent("Enter 'x' to return to the main menu:");
-        Scanner sc = new Scanner(System.in);
-        String input;
-        do {
-            input = sc.nextLine();
-        } while (!input.equalsIgnoreCase("x"));
 
         window.bottom();
     }

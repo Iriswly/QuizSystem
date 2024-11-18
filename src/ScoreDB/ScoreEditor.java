@@ -104,6 +104,44 @@ public class ScoreEditor extends ScoreReader {
         return true;
     }
 
+    public boolean deleteByNickname(String nickname) {
+        readAll();
+        // 参数合法性检测
+        if (!isValidInput(nickname)) {
+            logger.log("Invalid input: nickname contains illegal characters.");
+            return false;
+        }
+
+        boolean deleted = false;
+        for (int i = 0; i < currentLines.size(); i++) {
+            String[] fields = currentLines.get(i).split(",");
+            if (fields[1].trim().equals(nickname)) {
+                currentLines.remove(i);
+                i--; // 调整索引，以便继续检查下一个元素
+                deleted = true;
+            }
+        }
+
+        if (!deleted) {
+            logger.log("No rows found for nickname: " + nickname);
+            return false;
+        }
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(SCORE_FILEPATH))) {
+            for (String line : currentLines) {
+                bw.write(line);
+                bw.newLine();
+            }
+            logger.log("Deleted rows with nickname: " + nickname);
+        } catch (IOException e) {
+            if (DEBUG) e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+
     private boolean isValidInput(String input) {
         if (input == null || input.isEmpty()) return false;
         return !input.contains(",") && !input.contains("\n");
