@@ -16,7 +16,7 @@ public class ScoreReader extends ScoreDBBase {
 
     // put all the data to the currentLines
     protected boolean readAll() {
-        if (currentLines != null) currentLines = new ArrayList<>();
+        currentLines = new ArrayList<>();
         if (isScoresCSVExists()) {
             try (BufferedReader br = new BufferedReader(new FileReader(SCORE_FILEPATH))) {
                 String line;
