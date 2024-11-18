@@ -467,8 +467,30 @@ public class Menu {
     }
 
     public void cancelAccountMenu() {
+
         // 确认密码，真名
         // 注销账号
+        Window window = new Window();
+        window.printContent("Enter your nickname: (or enter 'x' to exit)");
+        Scanner scanner = new Scanner(System.in);
+        String nickname = scanner.nextLine().trim();
+
+        window.printContent("Enter your password: (or enter 'x' to exit)");
+        String password = scanner.nextLine().trim();
+
+        if (user.Login(nickname, password)) {
+            if (user.deleteAccount(nickname)) {
+                window.printContent("Account deleted successfully.");
+            } else {
+                window.printContent("Account deletion failed.");
+            }
+        } else {
+            window.printContent("Invalid credentials. Account deletion failed.");
+        }
+        window.bottom();
+
+
+
     }
 
 
