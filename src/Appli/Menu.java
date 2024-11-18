@@ -610,8 +610,8 @@ public class Menu {
         if (user.Login(realName, password)) {
             if (user.deleteAccount(realName)) {
                 window.printContent("Account deleted successfully.");
+                scoreEditor.deleteByNickname(user.getNickname());
                 user.deleteAccount(user.getNickname());
-                // TODO
             } else {
                 window.printContent("Account deletion failed.");
             }
