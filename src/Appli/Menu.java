@@ -11,6 +11,7 @@ import xjtlu.cpt111.assignment.quiz.model.Difficulty;
 import xjtlu.cpt111.assignment.quiz.model.Option;
 import xjtlu.cpt111.assignment.quiz.model.Question;
 import Score.ScoreProvider;
+import ScoreDB.ScoreEditor;
 
 import java.util.Scanner;
 
@@ -18,9 +19,15 @@ public class Menu {
     String selectedOption = "";
     Window window = new Window();
     private UserInfo user;
+    private ScoreEditor scoreEditor;
 
     public Menu(UserInfo newUser) {
         user = newUser;
+        try {
+            scoreEditor = new ScoreEditor();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public Menu() {
@@ -592,6 +599,7 @@ public class Menu {
         if (user.Login(realName, password)) {
             if (user.deleteAccount(realName)) {
                 window.printContent("Account deleted successfully.");
+                scoreEditor.deleteByNickname(user.getNickname());
                 user.deleteAccount(user.getNickname());
             } else {
                 window.printContent("Account deletion failed.");
