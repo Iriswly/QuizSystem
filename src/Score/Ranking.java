@@ -90,11 +90,12 @@ public class Ranking {
         List<String> rankchart = scoreReader.getPublicScores(topic, difficulty, false);
 
         // 显示排行榜
-        window.printContent("\n       --- Ranking for Topic: " + topic + ", Difficulty: " + difficulties[difficulty - 1] + " ---");
+        window.printContent("");
+        window.printContent("       --- Ranking for Topic: " + topic + ", Difficulty: " + difficulties[difficulty - 1] + " ---");
 
         if (rankchart == null || rankchart.isEmpty()) {
             window.printContent("No scores available for the selected topic and difficulty.");
-            return;
+
         } else {
 
             // 空1行
@@ -129,6 +130,13 @@ public class Ranking {
                 row_content += String.format("%-18s", name);
                 row_content += String.format("%-17s", score);
                 window.printContent(row_content);
+            }
+            window.printContent("");
+            window.printContent("");
+            window.printContent("Enter 'x' to return to Main Menu");
+            while (true) {
+                String input = sc.nextLine();
+                if (input.equalsIgnoreCase("x")) {break;}
             }
         }
     }
