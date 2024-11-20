@@ -322,7 +322,7 @@ public class ScoreRecord {
 
             // 根据用户选择的难度等级随机选择题目
             String selectedDifficulty = topicReader.getDifficultyToSelect();
-            String[][] quizQuestions = TopicReader.QuizQuestion(selectedQuestions, 10, selectedDifficulty);
+            String[][] quizQuestions = TopicReader.QuizQuestion(selectedQuestions, 20, selectedDifficulty);
             System.out.println("Number of quiz questions: " + (quizQuestions != null ? quizQuestions.length : 0));
 
             // 创建 ScoreRecord 实例并开始答题
