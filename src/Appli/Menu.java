@@ -9,7 +9,6 @@ import xjtlu.cpt111.assignment.quiz.model.Difficulty;
 import xjtlu.cpt111.assignment.quiz.model.Option;
 import xjtlu.cpt111.assignment.quiz.model.Question;
 import Score.ScoreProvider;
-import ScoreDB.ScoreEditor;
 
 import java.util.Scanner;
 
@@ -17,15 +16,9 @@ public class Menu {
     String selectedOption = "";
     Window window = new Window();
     private UserInfo user;
-    private ScoreEditor scoreEditor;
 
     public Menu(UserInfo newUser) {
         user = newUser;
-        try {
-            scoreEditor = new ScoreEditor();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public Menu() {
@@ -346,8 +339,8 @@ public class Menu {
     public void accountManagementMenu() {
         // show
         window.top();
-        String[] interactiveOptions = {"Change Nickname", "Change Password", "Cancel Account"};
-        int[] index = {1, 2, 3};
+        String[] interactiveOptions = {"Change Nickname", "Change Password", "Privacy Setting","Cancel Account"};
+        int[] index = {1, 2, 3, 4};
         String choiceToSelect = null;
 
         // 确定主题的最大长度
@@ -435,19 +428,16 @@ public class Menu {
 
                 switch (choiceToSelect) {
                     case "Change Nickname":
-                        window.bottom();
                         changeNicknameMenu();
-                        accountManagementMenu();
                         break;
                     case "Change Password":
-                        window.bottom();
                         changePasswordMenu();
-                        accountManagementMenu();
+                        break;
+                    case "Privacy Setting":
+                        privacySettingMenu();
                         break;
                     case "Cancel Account":
-                        window.bottom();
                         cancelAccountMenu();
-                        unloggedMenu();
                         break;
                     default:
                         window.printContent("Invalid option selected. Please try again.");
@@ -463,163 +453,61 @@ public class Menu {
     }
 
     public void changeNicknameMenu() {
-        try {
-            UserInfo userInfo = new UserInfo();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        String currentUser = user.getNickname();
-        String currentPassword = user.getPassword();
-        boolean quitInstantly = false;
-
-        window.top();
-        Scanner sc = new Scanner(System.in);
-        window.printContent("Please enter your original password: (or 'x' to return to Account Management)");
-
-        while (true) {
-            String inputPassword = sc.nextLine();
-
-            if (inputPassword.equalsIgnoreCase("X")) {
-                window.bottom();
-                return;
-            }
-
-            if (inputPassword.equals(currentPassword)) {
-                window.printContent("Password confirmation passed.");
-                break; // 密码正确，退出当前循环
-            } else {
-                window.printContent("Wrong password. Please try again.");
-            }
-        }
-
-        // 提示用户输入新昵称
-        while (true) {
-            window.printContent("Please enter your new nickname: (or 'x' to return to Account Management)");
-            String newNickname1 = sc.nextLine();
-
-            if (newNickname1.equalsIgnoreCase("X")) {
-                window.bottom();
-                return;
-            }
-
-            window.printContent("Please re-enter your new nickname: (or 'x' to return to Account Management)");
-            String newNickname2 = sc.nextLine();
-
-            if (newNickname2.equalsIgnoreCase("X")) {
-                window.bottom();
-                return;
-            }
-
-            if (newNickname1.equals(newNickname2)) {
-                user.updateNickname(newNickname1);       // 更新昵称
-                window.printContent("Nickname updated successfully!");
-                window.printContent("PRESS ANY BUTTON to return to Account Management.");
-                sc.nextLine();
-                window.bottom();
-                return;
-
-            } else {
-                window.printContent("Nicknames do not match, please try again.");
-            }
-        }
+        // 确认密码即可
     }
 
-
     public void changePasswordMenu() {
-        try {
-            UserInfo userInfo = new UserInfo();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // 确认密码，真名
+        // 输入新密码（两次）
+    }
 
-        String currentUser = user.getNickname();
-        String currentPassword = user.getPassword();
-        boolean quitInstantly = false;
-
-        window.top();
-        Scanner sc = new Scanner(System.in);
-        window.printContent("Please enter your original password: (or 'x' to return to Account Management)");
-
-        while (true) {
-            String inputPassword = sc.nextLine();
-
-            if (inputPassword.equalsIgnoreCase("X")) {
-                window.bottom();
-                return;
-            }
-
-            if (inputPassword.equals(currentPassword)) {
-                window.printContent("Password confirmation passed.");
-                break; // 密码正确，退出当前循环
-            } else {
-                window.printContent("Wrong password. Please try again.");
-            }
-        }
-
-        // 提示用户输入新昵称
-        while (true) {
-            window.printContent("Please enter your new password: (or 'x' to return to Account Management)");
-            String newPassword1 = sc.nextLine();
-
-            if (newPassword1.equalsIgnoreCase("X")) {
-                window.bottom();
-                return;
-            }
-
-            window.printContent("Please re-enter your new password: (or 'x' to return to Account Management)");
-            String newPassword2 = sc.nextLine();
-
-            if (newPassword2.equalsIgnoreCase("X")) {
-                window.bottom();
-                return;
-            }
-
-            if (newPassword1.equals(newPassword2)) {
-                user.updatePassword(newPassword1);       // 更新密码
-                window.printContent("Password updated successfully!");
-                window.printContent("PRESS ANY BUTTON to return to Account Management.");
-                sc.nextLine();
-                window.bottom();
-                return;
-
-            } else {
-                window.printContent("Passwords do not match, please try again.");
-            }
-        }
+    public void privacySettingMenu() {
+        // 确认密码
+        // 是否在排行榜上显示个人昵称
     }
 
     public void cancelAccountMenu() {
-        Window window = new Window();
-        Scanner scanner = new Scanner(System.in);
-
-        window.printContent("Enter your real name: (or enter 'x' to exit)");
-        String realName = scanner.nextLine().trim();
-        if (realName.equalsIgnoreCase("x")) {
-            window.printContent("Exiting account deletion...");
-            return;
-        }
-
-        window.printContent("Enter your password: (or enter 'x' to exit)");
-        String password = scanner.nextLine().trim();
-        if (password.equalsIgnoreCase("x")) {
-            window.printContent("Exiting account deletion...");
-            return;
-        }
+        // 确认密码，真名
         // 注销账号
-        if (user.Login(realName, password)) {
-            if (user.deleteAccount(realName)) {
-                window.printContent("Account deleted successfully.");
-                scoreEditor.deleteByNickname(user.getNickname());
-                user.deleteAccount(user.getNickname());
-            } else {
-                window.printContent("Account deletion failed.");
+        Scanner scanner = new Scanner(System.in);
+        String realName;
+        String password;
+
+        while (true) {
+            window.printContent("Enter your real name: (or enter 'x' to exit)");
+            realName = scanner.nextLine().trim();
+            if (realName.equalsIgnoreCase("x")) {
+                window.printContent("Exiting account deletion...");
+                return;
             }
-        } else {
-            window.printContent("Invalid credentials. Account deletion failed.");
+
+            window.printContent("Enter your password: (or enter 'x' to exit)");
+            password = scanner.nextLine().trim();
+            if (password.equalsIgnoreCase("x")) {
+                window.printContent("Exiting account deletion...");
+                return;
+            }
+
+            if (user.validateCredentials(realName, password)) {
+                if (user.deleteAccount(user.getNickname())) {
+                    window.printContent("Account deletion successful!");
+                } else {
+                    window.printContent("Account deletion failed. Please try again.");
+                }
+                break;
+            } else {
+                window.printContent("Real name and password do not match. Please try again.");
+            }
         }
-        window.bottom();
     }
+
+
+
+
+
+
+
+
 
 
     public void dog () {

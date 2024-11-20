@@ -101,6 +101,18 @@ public class UserInfo extends UserBase {
         return deleteAccount_DB(nickname);
     }
 
+    public String getRealName() {
+        return realName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public boolean validateCredentials(String realName, String password) {
+        return this.realName.equals(realName) && this.password.equals(password);
+    }
+
     public List<String> getRankedAccountsByMaxScore() {
         List<AccountScore> accountsWithScores = new ArrayList<>();
 
