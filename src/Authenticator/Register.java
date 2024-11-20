@@ -58,30 +58,39 @@ public class Register{
 
 
 
-    //注册或登陆界面
+    //welcome界面
     public void displayMenu() {
         Window window = new Window();
         Scanner scanner = new Scanner(System.in);
 
         window.printContent("Welcome! ");
-        window.printContent("Are you a new user? (Yes/No) ");
-        window.printContent("Enter 'x' to exit the program if you want.");
+        window.printContent("--------------------------------------------------------------" +
+                "-------------------------------------------------------");
+        window.printContent("Please choose an option:");
+        window.printContent("1. Register a new user");
+        window.printContent("2. Log in to an existing user");
+        window.printContent("3. Exit the program");
+        window.printContent("--------------------------------------------------------------" +
+                "-------------------------------------------------------");
+        window.printContent("Enter your choice: (1/2/3)");
 
         String choice = scanner.nextLine().trim().toLowerCase();
 
-        // 检查是否输入 x
-        if (choice.equals("x")) {
-            window.printContent("Exiting the program...");
-            System.exit(0); // 退出程序
-        }
-
-        if (choice.equals("yes")) {
-            registerNewUser(scanner);
-        } else if (choice.equals("no")) {
-            loginUser(scanner);
-        } else {
-            window.printContent("Invalid choice. Please try again.");
-            displayMenu();
+        switch (choice) {
+            case "1":
+                registerNewUser(scanner);
+                break;
+            case "2":
+                loginUser(scanner);
+                break;
+            case "3":
+                window.printContent("Exiting the program...");
+                System.exit(0);
+                break;
+            default:
+                window.printContent("Invalid choice. Please try again.");
+                displayMenu();
+                break;
         }
     }
 
@@ -101,8 +110,9 @@ public class Register{
 
             // 检查是否输入 x
             if (nickname.equalsIgnoreCase("x")) {
-                window.printContent("Exiting the program...");
-                System.exit(0); // 退出程序
+                window.printContent("Returning to welcome screen...");
+                displayMenu();
+                return;
             }
 
             //检查非法字符
@@ -111,7 +121,12 @@ public class Register{
                 continue;
             }
 
-
+            // 检查是否为空
+            if (nickname.isEmpty()) {
+                window.printContent("Nickname cannot be empty. Please try again.");
+                continue;
+            }
+            // 检查是否已存在
             if (user.searchUserLineIndex(nickname) != -1) {
                 window.printContent("Nickname already exists. Please choose a different nickname. (or enter 'x' to exit)");
             }else {
@@ -127,8 +142,15 @@ public class Register{
 
             // 检查是否输入 x
             if (realName.equalsIgnoreCase("x")) {
-                window.printContent("Exiting the program...");
-                System.exit(0); // 退出程序
+                window.printContent("Returning to welcome screen...");
+                displayMenu();
+                return;
+            }
+
+            // 检查是否为空
+            if (realName.isEmpty()) {
+                window.printContent("Real name cannot be empty. Please try again.");
+                continue;
             }
 
             //检查非法字符
@@ -147,10 +169,22 @@ public class Register{
             window.printContent("Create a password (8-16 characters):(or enter 'x' to exit)");
             password = scanner.nextLine().trim();
 
+            //密码在8-16位之间
+            if (password.length() < 8 || password.length() > 16) {
+                window.printContent("Password must be between 8 and 16 characters. Please try again.");
+                continue;
+            }
+
             // 检查是否输入 x
             if (nickname.equalsIgnoreCase("x")) {
                 window.printContent("Exiting the program...");
                 System.exit(0); // 退出程序
+            }
+
+            // 检查是否为空
+            if (password.isEmpty()) {
+                window.printContent("Password cannot be empty. Please try again.");
+                continue;
             }
 
             //检查非法字符
@@ -201,10 +235,17 @@ public class Register{
 
         // 检查是否输入 x
         if (nickname.equalsIgnoreCase("x")) {
-            window.printContent("Exiting the program...");
-            System.exit(0); // 退出程序
+            window.printContent("Returning to welcome screen...");
+            displayMenu();
+            return;
         }
 
+         // 检查是否为空
+        if (nickname.isEmpty()) {
+            window.printContent("Nickname cannot be empty. Please try again.");
+            loginUser(scanner);
+            return;
+        }
 
         // 允许用户重复输入密码，直到成功登录或选择退出
         while (true) {
@@ -215,6 +256,12 @@ public class Register{
             if (nickname.equalsIgnoreCase("x")) {
                 window.printContent("Exiting the program...");
                 System.exit(0); // 退出程序
+            }
+
+            // 检查是否为空
+            if (password.isEmpty()) {
+                window.printContent("Password cannot be empty. Please try again.");
+                continue;
             }
 
 
@@ -235,6 +282,11 @@ public class Register{
             }
         }
     }
+
+
+
+
+
 
     public boolean Register(String nickname,
                             String realName,
@@ -302,33 +354,6 @@ public class Register{
         return Math.min(score, 25) * 4; //每一项的最大得分为25，总分为100分
     }
 
-
-
-
-
-
-
-
-    // 注销用户界面
-    private void deleteUser(Scanner scanner) {
-        Window window = new Window();
-        window.printContent("Enter your nickname: (or enter 'x' to exit)");
-        String nickname = scanner.nextLine().trim();
-
-        window.printContent("Enter your password: (or enter 'x' to exit)");
-        String password = scanner.nextLine().trim();
-
-        if (user.Login(nickname, password)) {
-            if (user.deleteAccount(nickname)) {
-                window.printContent("Account deleted successfully.");
-            } else {
-                window.printContent("Account deletion failed.");
-            }
-        } else {
-            window.printContent("Invalid credentials. Account deletion failed.");
-        }
-        displayMenu();
-    }
 
     public static void main(String[] args) throws Exception {
         UserInfo user = new UserInfo();
