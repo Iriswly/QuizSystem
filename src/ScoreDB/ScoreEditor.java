@@ -13,7 +13,7 @@ public class ScoreEditor extends ScoreReader {
     }
 
     public boolean readAll() {
-        currentLines = new ArrayList<>();
+        if (currentLines == null) currentLines = new ArrayList<>();
         if (isScoresCSVExists()) {
             try (BufferedReader br = new BufferedReader(new FileReader(SCORE_FILEPATH))) {
                 String line;
@@ -105,7 +105,7 @@ public class ScoreEditor extends ScoreReader {
     }
 
     public boolean deleteByNickname(String nickname) {
-        readAll(); // 确保文件内容已正确读取
+        readAll();
         // 参数合法性检测
         if (!isValidInput(nickname)) {
             logger.log("Invalid input: nickname contains illegal characters.");
@@ -115,7 +115,7 @@ public class ScoreEditor extends ScoreReader {
         boolean deleted = false;
         for (int i = 0; i < currentLines.size(); i++) {
             String[] fields = currentLines.get(i).split(",");
-            if (fields.length > 1 && fields[1].trim().equals(nickname)) {
+            if (fields[1].trim().equals(nickname)) {
                 currentLines.remove(i);
                 i--; // 调整索引，以便继续检查下一个元素
                 deleted = true;
@@ -127,13 +127,8 @@ public class ScoreEditor extends ScoreReader {
             return false;
         }
 
-        // 确保文件内容的写入
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(SCORE_FILEPATH))) {
             for (String line : currentLines) {
-                // 先检查每一行是否为空
-                if (line.trim().isEmpty()) {
-                    continue;
-                }
                 bw.write(line);
                 bw.newLine();
             }
@@ -145,6 +140,7 @@ public class ScoreEditor extends ScoreReader {
 
         return true;
     }
+
 
     private boolean isValidInput(String input) {
         if (input == null || input.isEmpty()) return false;

@@ -40,8 +40,7 @@ public class ScoreReader extends ScoreDBBase {
             String nickname,
             String topicFilter,
             Integer difficultyFilter,
-            boolean ascending,
-            int limit) {
+            boolean ascending) {
         List<String> results = new ArrayList<>();
 
         for (String line : currentLines) {
@@ -68,15 +67,15 @@ public class ScoreReader extends ScoreDBBase {
             return ascending ? Integer.compare(scoreA, scoreB) : Integer.compare(scoreB, scoreA);
         });
 
-        return results.subList(0, Math.min(limit, results.size()));
+//        return results.subList(0, Math.min(limit, results.size()));
+        return results;
     }
 
     // sorting and return according to the topic and difficulty, you can specify the limit, ascending rule
     public List<String> getPublicScores(
             String topic,
             Integer difficulty,
-            boolean ascending,
-            int limit) {
+            boolean ascending) {
         List<String> results = new ArrayList<>();
 
         for (String line : currentLines) {
@@ -102,7 +101,8 @@ public class ScoreReader extends ScoreDBBase {
             return ascending ? Integer.compare(scoreA, scoreB) : Integer.compare(scoreB, scoreA);
         });
 
-        return results.subList(0, Math.min(limit, results.size()));
+//        return results.subList(0, Math.min(limit, results.size()));
+        return results;
     }
 
 public static void main(String[] args) {
@@ -112,8 +112,8 @@ public static void main(String[] args) {
 
         // 模拟数据加载
         reader.currentLines = Arrays.asList(
-                "1, Alice, Math, 1, 90",
-                "2, Bob, Math, 2, 85",
+                "1, Alice, Math, 1,89",
+                "2, Bob, Math, 2,90",
                 "3, Alice, Science, 1, 95",
                 "4, Charlie, Math, 1, 80",
                 "5, Alice, Math, 1, 88",
@@ -125,42 +125,42 @@ public static void main(String[] args) {
 
         // 示例 1：个人成绩查询 - 查找 Alice 的所有 Math 科目成绩，按分数从高到低排列，最多返回 3 条
         System.out.println("示例 1: Alice 的 Math 成绩（按分数从高到低）");
-        List<String> personalScores1 = reader.getPersonalScores("Alice", "Math", null, false, 3);
+        List<String> personalScores1 = reader.getPersonalScores("Alice", "Math", null, false);
         personalScores1.forEach(System.out::println);
 
         // 示例 2：个人成绩查询 - 查找 Bob 的所有成绩，按分数从低到高排列，最多返回 5 条
         System.out.println("\n示例 2: Bob 的所有成绩（按分数从低到高）");
-        List<String> personalScores2 = reader.getPersonalScores("Bob", null, null, true, 5);
+        List<String> personalScores2 = reader.getPersonalScores("Bob", null, null, true);
         personalScores2.forEach(System.out::println);
 
         // 示例 3：个人成绩查询 - 查找 Alice 在 Science 科目、难度 2 下的成绩，按分数从高到低，最多返回 2 条
         System.out.println("\n示例 3: Alice 在 Science（难度 2）的成绩");
-        List<String> personalScores3 = reader.getPersonalScores("Alice", "Science", 2, false, 2);
+        List<String> personalScores3 = reader.getPersonalScores("Alice", "Science", 2, false);
         personalScores3.forEach(System.out::println);
 
         // 示例 4：公共成绩查询 - 查找 Math 科目的所有成绩，按分数从高到低，最多返回 4 条
         System.out.println("\n示例 4: Math 科目的公共成绩（按分数从高到低）");
-        List<String> publicScores1 = reader.getPublicScores("Math", null, false, 4);
+        List<String> publicScores1 = reader.getPublicScores("Math", null, false);
         publicScores1.forEach(System.out::println);
 
         // 示例 5：公共成绩查询 - 查找 Science 科目、难度为 1 的成绩，按分数从低到高，最多返回 3 条
         System.out.println("\n示例 5: Science（难度 1）的公共成绩（按分数从低到高）");
-        List<String> publicScores2 = reader.getPublicScores("Science", 1, true, 3);
+        List<String> publicScores2 = reader.getPublicScores("Science", 1, true);
         publicScores2.forEach(System.out::println);
 
         // 示例 6：个人成绩查询 - 查找 Charlie 的成绩，按分数从低到高，最多返回所有记录
         System.out.println("\n示例 6: Charlie 的所有成绩（按分数从低到高）");
-        List<String> personalScores4 = reader.getPersonalScores("Charlie", null, null, true, Integer.MAX_VALUE);
+        List<String> personalScores4 = reader.getPersonalScores("Charlie", null, null, true);
         personalScores4.forEach(System.out::println);
 
         // 示例 7：公共成绩查询 - 查找 Math 科目、难度为 1 的成绩，按分数从低到高，最多返回 2 条
         System.out.println("\n示例 7: Math（难度 1）的公共成绩（按分数从低到高）");
-        List<String> publicScores3 = reader.getPublicScores("Math", 1, true, 2);
+        List<String> publicScores3 = reader.getPublicScores("Math", 1, true);
         publicScores3.forEach(System.out::println);
 
         // 示例 8：个人成绩查询 - 查找 David 的成绩，无筛选条件，按分数从高到低，最多返回 1 条
         System.out.println("\n示例 8: David 的成绩（按分数从高到低）");
-        List<String> personalScores5 = reader.getPersonalScores("David", null, null, false, 1);
+        List<String> personalScores5 = reader.getPersonalScores("David", null, null, false);
         personalScores5.forEach(System.out::println);
 
     } catch (Exception e) {
