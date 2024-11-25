@@ -6,9 +6,7 @@ import java.util.Scanner;
 import Appli.Window;
 import Appli.Menu;
 
-
-
-public class Register{
+public class Register {
     private boolean DEBUG = true;
     private UserInfo user;
 
@@ -16,11 +14,10 @@ public class Register{
         this.user = user;
     }
 
-    // 通用非法字符检查方法
+    // General method to check for illegal characters
     private boolean containsIllegalCharacters(String input) {
         return input.contains("\n") || input.contains(",") || input.contains("\t") || input.contains("\r") || input.contains("\\");
     }
-
 
     private String getUserName(Scanner scanner, Window window) {
         String nickname;
@@ -32,19 +29,19 @@ public class Register{
                 window.printContent("Exiting the program...");
                 System.exit(0);
             }
-            // 检查是否为空
+            // Check if empty
             if (nickname.isEmpty()) {
                 window.printContent("Nickname cannot be empty. Please try again.");
                 continue;
             }
 
-            // 检查是否包含非法字符
+            // Check for illegal characters
             if (containsIllegalCharacters(nickname)) {
                 window.printContent("Nickname contains illegal characters. Please try again.");
                 continue;
             }
 
-            // 检查是否已存在
+            // Check if already exists
             if (user.searchUserLineIndex(nickname) != -1) {
                 window.printContent("Nickname already exists. Please choose a different nickname.");
             } else {
@@ -54,11 +51,7 @@ public class Register{
         return nickname;
     }
 
-
-
-
-
-    //welcome界面
+    // Welcome screen
     public void displayMenu() {
         Window window = new Window();
         Scanner scanner = new Scanner(System.in);
@@ -94,105 +87,98 @@ public class Register{
         }
     }
 
-
-
-
-
-
-    // 注册新用户界面
+    // Register new user screen
     private void registerNewUser(Scanner scanner) {
         Window window = new Window();
-        //昵称
+        // Nickname
         String nickname;
         while (true) {
             window.printContent("Enter your nickname:(or enter 'x' to exit)");
             nickname = scanner.nextLine().trim();
 
-            // 检查是否输入 x
+            // Check if 'x' is entered
             if (nickname.equalsIgnoreCase("x")) {
                 window.printContent("Returning to welcome screen...");
                 displayMenu();
                 return;
             }
 
-            //检查非法字符
+            // Check for illegal characters
             if (containsIllegalCharacters(nickname)) {
                 window.printContent("Nickname contains illegal characters. Please try again.");
                 continue;
             }
 
-            // 检查是否为空
+            // Check if empty
             if (nickname.isEmpty()) {
                 window.printContent("Nickname cannot be empty. Please try again.");
                 continue;
             }
-            // 检查是否已存在
+            // Check if already exists
             if (user.searchUserLineIndex(nickname) != -1) {
                 window.printContent("Nickname already exists. Please choose a different nickname. (or enter 'x' to exit)");
-            }else {
+            } else {
                 break;
             }
         }
 
-        //真名
+        // Real name
         String realName;
         while (true) {
             window.printContent("Enter your real name: (or enter 'x' to exit)");
             realName = scanner.nextLine().trim();
 
-            // 检查是否输入 x
+            // Check if 'x' is entered
             if (realName.equalsIgnoreCase("x")) {
                 window.printContent("Returning to welcome screen...");
                 displayMenu();
                 return;
             }
 
-            // 检查是否为空
+            // Check if empty
             if (realName.isEmpty()) {
                 window.printContent("Real name cannot be empty. Please try again.");
                 continue;
             }
 
-            //检查非法字符
+            // Check for illegal characters
             if (containsIllegalCharacters(realName)) {
                 window.printContent("Real name contains illegal characters. Please try again.");
                 continue;
-            }else {
+            } else {
                 break;
             }
         }
 
-
-        //密码
+        // Password
         String password;
         while (true) {
             window.printContent("Create a password (8-16 characters):(or enter 'x' to exit)");
             password = scanner.nextLine().trim();
 
-            //密码在8-16位之间
+            // Password must be between 8 and 16 characters
             if (password.length() < 8 || password.length() > 16) {
                 window.printContent("Password must be between 8 and 16 characters. Please try again.");
                 continue;
             }
 
-            // 检查是否输入 x
+            // Check if 'x' is entered
             if (nickname.equalsIgnoreCase("x")) {
                 window.printContent("Exiting the program...");
-                System.exit(0); // 退出程序
+                System.exit(0); // Exit the program
             }
 
-            // 检查是否为空
+            // Check if empty
             if (password.isEmpty()) {
                 window.printContent("Password cannot be empty. Please try again.");
                 continue;
             }
 
-            //检查非法字符
+            // Check for illegal characters
             if (containsIllegalCharacters(password)) {
                 window.printContent("Password contains illegal characters. Please try again.");
                 continue;
             }
-
 
             int passwordScore = calculatePasswordScore(password);
 
@@ -207,8 +193,6 @@ public class Register{
             }
         }
 
-
-
         if (Register(nickname, realName, password)) {
             window.printContent("Registration successful! Please log in. (or enter 'x' to exit)");
             loginUser(scanner);
@@ -218,94 +202,79 @@ public class Register{
         }
     }
 
-
-
-
-
-
-
-
-    // 登陆界面
+    // Login screen
     private void loginUser(Scanner scanner) {
         Window window = new Window();
 
-        // 先输入昵称
+        // Enter nickname first
         window.printContent("Enter your nickname: (or enter 'x' to exit)");
         String nickname = scanner.nextLine().trim();
 
-        // 检查是否输入 x
+        // Check if 'x' is entered
         if (nickname.equalsIgnoreCase("x")) {
             window.printContent("Returning to welcome screen...");
             displayMenu();
             return;
         }
 
-         // 检查是否为空
+        // Check if empty
         if (nickname.isEmpty()) {
             window.printContent("Nickname cannot be empty. Please try again.");
             loginUser(scanner);
             return;
         }
 
-        // 允许用户重复输入密码，直到成功登录或选择退出
+        // Allow user to re-enter password until successful login or choose to exit
         while (true) {
             window.printContent("Enter your password: (or enter 'x' to exit)");
             String password = scanner.nextLine().trim();
 
-            // 检查是否输入 x
+            // Check if 'x' is entered
             if (nickname.equalsIgnoreCase("x")) {
                 window.printContent("Exiting the program...");
-                System.exit(0); // 退出程序
+                System.exit(0); // Exit the program
             }
 
-            // 检查是否为空
+            // Check if empty
             if (password.isEmpty()) {
                 window.printContent("Password cannot be empty. Please try again.");
                 continue;
             }
 
-
             if (user.Login(nickname, password)) {
                 window.printContent("Login successful!");
-                // 登录状态为 true
+                // Login status is true
                 window.bottom();
-                break; // 成功登录，退出循环
+                break; // Successful login, exit loop
             } else {
                 window.printContent("Login failed. Please try again. (or enter 'x' to exit)");
                 window.printContent("Do you want to try password again? (Yes/No) (or enter 'x' to exit)");
                 String choice = scanner.nextLine().trim().toLowerCase();
                 if (choice.equals("no")) {
                     window.printContent("Returning to main menu...");
-                    displayMenu(); // 返回主菜单
-                    break; // 退出循环
+                    displayMenu(); // Return to main menu
+                    break; // Exit loop
                 }
             }
         }
     }
 
-
-
-
-
-
-    public boolean Register(String nickname,
-                            String realName,
-                            String password) {
+    public boolean Register(String nickname, String realName, String password) {
         Window window = new Window();
 
-        //是否有同昵称
+        // Check if nickname already exists
         if (user.searchUserLineIndex(nickname) != -1) {
             if (DEBUG) window.printContent("Nickname already exists");
             return false;
         }
 
-        // 密码长度要求8-16位
+        // Password length requirement 8-16 characters
         if (password.length() < 8 || password.length() > 16) {
             if (DEBUG) window.printContent("Password must be between 8 and 16 characters");
             return false;
         }
 
-       //创建新用户资料
+        // Create new user profile
         ArrayList<String> newProfile = new ArrayList<>();
         newProfile.add(nickname);
         newProfile.add(realName);
@@ -319,7 +288,6 @@ public class Register{
         newProfile.add("_");
         newProfile.add("-1");
 
-
         if (user.addAccount_DB(newProfile)) {
             if (DEBUG) window.printContent("User registered successfully");
             return true;
@@ -329,13 +297,13 @@ public class Register{
         }
     }
 
-    // 计算密码强度
+    // Calculate password strength
     private int calculatePasswordScore(String password) {
         int score = 0;
-        boolean hasLower = false,//是否有小写字母
-                hasUpper = false,//是否有大写字母
-                hasDigit = false, //是否有数字
-                hasSpecial = false;//是否有特殊字符
+        boolean hasLower = false, // Has lowercase letters
+                hasUpper = false, // Has uppercase letters
+                hasDigit = false, // Has digits
+                hasSpecial = false; // Has special characters
         for (char c : password.toCharArray()) {
             if (Character.isLowerCase(c) && !hasLower) {
                 score += 5;
@@ -351,9 +319,8 @@ public class Register{
                 hasSpecial = true;
             }
         }
-        return Math.min(score, 25) * 4; //每一项的最大得分为25，总分为100分
+        return Math.min(score, 25) * 4; // Each item has a maximum score of 25, total score is 100
     }
-
 
     public static void main(String[] args) throws Exception {
         UserInfo user = new UserInfo();
