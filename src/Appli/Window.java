@@ -10,16 +10,16 @@ public class Window {
         this.width = width;
         this.height = height;
         this.title = title;
-
     }
 
-    // 默认构造函数
+    // Default constructor
     public Window() {
         this.width = 120;
         this.height = 10;
         this.title = "  Quiz System";
     }
 
+    // Print the top part of the window
     public void top() {
         printHorizontalLines();
         printTitle();
@@ -33,6 +33,7 @@ public class Window {
         System.out.println();
     }
 
+    // Print horizontal lines for the window
     private void printHorizontalLines() {
         for (int i = 0; i < width; i++) {
             System.out.print("-");
@@ -40,6 +41,7 @@ public class Window {
         System.out.println();
     }
 
+    // Print the title of the window
     private void printTitle() {
         System.out.print("|");
         System.out.print(title);
@@ -51,8 +53,8 @@ public class Window {
         System.out.println();
     }
 
+    // Print content in the window
     public void printContent(String content) {
-
         if (currentLine < (height - 4)) {
             System.out.print("| " + content);
             for (int i = 0; i < (width - 4 - content.length() + 1); i++) {
@@ -68,6 +70,7 @@ public class Window {
         }
     }
 
+    // Print an empty line in the window
     private void printEmptyLine() {
         System.out.print("|");
         for (int j = 0; j < (width - 2); j++) {
@@ -78,25 +81,21 @@ public class Window {
         currentLine++;
     }
 
-
+    // Print the bottom part of the window
     public void bottom() {
-
         while (currentLine < height - 4) {
             printEmptyLine();
         }
         printHorizontalLines();
 
-        // 空三行
+        // Print three empty lines
         for (int i = 0; i < 3; i++) {
             System.out.println();
         }
     }
 
-    // 清空窗口
+    // Clear the window
     public void clear() {
-        currentLine = 0; // 重置当前行计数
-
+        currentLine = 0; // Reset the current line count
     }
-
-
 }
