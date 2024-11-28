@@ -235,24 +235,28 @@ public class UserInfo extends UserBase {
         logger.log("[tempAccountSetter] Temp Password: " + temp_password);
     }
 
-    public ArrayList<String> getCurrentProfile(){
+    public ArrayList<String> getCurrentProfile() {
         if (!isLogin()) {
             logger.log("[getCurrentProfile] Not logged in");
             return null;
         }
+
+        //
+        int highestScore = Math.max(testScore1, Math.max(testScore2, testScore3));
+
+        // 返回一个包含用户信息的列表
         return new ArrayList<>() {{
-            add(nickname);
-            add(realName);
-            add(password);
-            add(String.valueOf(max));
-            add(testName1);
-            add(String.valueOf(testScore1));
-            add(testName2);
-            add(String.valueOf(testScore2));
-            add(testName3);
-            add(String.valueOf(testScore3));
+            add("Nickname: " + nickname);
+            add("Real Name: " + realName + "                                        " + "       __/ \\   \\/    / \\__       ");
+            add("Password: " + password + "                            " + "   __/@    )   ||    (    @\\__   ");
+            add("Max Score: " + highestScore + "                                       " + " O         \\  _||_  /         O  ");
+            add(testName1 + ": " + testScore1 + "                                        " + "  \\_____)   \\/ ||  \\/   (_____/  ");
+            add(testName2 + ": " + testScore2 + "                                        " + "    U  \\_____\\ /\\ /_____/   U  ");
+            add(testName3 + ": " + testScore3);
         }};
     }
+
+
 
     //  ============ INTERFACES DONE ==================
 

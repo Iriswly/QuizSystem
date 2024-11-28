@@ -12,6 +12,7 @@ import xjtlu.cpt111.assignment.quiz.model.Option;
 import xjtlu.cpt111.assignment.quiz.model.Question;
 import Score.ScoreProvider;
 import ScoreDB.ScoreEditor;
+import java.util.ArrayList;
 
 import java.util.Scanner;
 
@@ -335,8 +336,8 @@ public class Menu {
     public void accountManagementMenu() {
         // show
         window.top();
-        String[] interactiveOptions = {"Change Nickname", "Change Password", "Cancel Account"};
-        int[] index = {1, 2, 3};
+        String[] interactiveOptions = {"Change Nickname", "Change Password", "Cancel Account", "Individual History"};
+        int[] index = {1, 2, 3, 4};
         String choiceToSelect = null;
 
         // 确定主题的最大长度
@@ -435,8 +436,15 @@ public class Menu {
                         break;
                     case "Cancel Account":
                         window.bottom();
-                        cancelAccountMenu();
-                        unloggedMenu();
+                        if(cancelAccountMenu()) {
+                            unloggedMenu();
+                        }
+                        accountManagementMenu();
+                        break;
+                    case "Individual History":
+                        window.bottom();
+                        individualHistoryMenu();
+                        accountManagementMenu();
                         break;
                     default:
                         window.printContent("Invalid option selected. Please try again.");
@@ -578,7 +586,7 @@ public class Menu {
         }
     }
 
-    public void cancelAccountMenu() {
+    public boolean cancelAccountMenu() {
         Window window = new Window();
         Scanner scanner = new Scanner(System.in);
 
@@ -586,14 +594,14 @@ public class Menu {
         String realName = scanner.nextLine().trim();
         if (realName.equalsIgnoreCase("x")) {
             window.printContent("Exiting account deletion...");
-            return;
+            return false;
         }
 
         window.printContent("Enter your password: (or enter 'x' to exit)");
         String password = scanner.nextLine().trim();
         if (password.equalsIgnoreCase("x")) {
             window.printContent("Exiting account deletion...");
-            return;
+            return false;
         }
         // 注销账号
         if (user.Login(realName, password)) {
@@ -601,6 +609,7 @@ public class Menu {
                 window.printContent("Account deleted successfully.");
                 scoreEditor.deleteByNickname(user.getNickname());
                 user.deleteAccount(user.getNickname());
+                return true;
             } else {
                 window.printContent("Account deletion failed.");
             }
@@ -608,8 +617,31 @@ public class Menu {
             window.printContent("Invalid credentials. Account deletion failed.");
         }
         window.bottom();
+        return true;
     }
 
+    public void individualHistoryMenu() {
+        window.top();
+        window.printContent("User Profile");
+        ArrayList<String> profile = user.getCurrentProfile();
+        if (profile != null) {
+            for (String info : profile) {
+                window.printContent(info);
+            }
+        } else {
+            window.printContent("No profile available.");
+        }
+        Scanner sc = new Scanner(System.in);
+        window.printContent("");
+        window.printContent("");
+        window.printContent("Enter 'x' to return");
+        do {
+            if (sc.nextLine().equalsIgnoreCase("x")) {
+                window.bottom();
+                return;
+            }
+        } while (true);
+    }
 
     public void dog () {
         System.out.println("       __/ \\   \\/    / \\__       ");
