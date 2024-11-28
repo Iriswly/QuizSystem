@@ -1,33 +1,28 @@
 package quiz;
 
-import User.UserInfo;
-import xjtlu.cpt111.assignment.quiz.model.Difficulty;
-import xjtlu.cpt111.assignment.quiz.model.Option;
-import xjtlu.cpt111.assignment.quiz.model.Question;
 import Appli.Menu;
-
 import java.util.Scanner;
 import Appli.Window;
 
 public class TopicReader {
     private Menu menu = new Menu();
 
-    private String topicToSelect;   // 用户选择的主题
-    private final String[] difficulties = {"EASY", "MEDIUM", "HARD", "VERY_HARD"}; // 难度级别
-    private String difficultyToSelect;   // 用户选择的难度
+    private String topicToSelect;   // User-selected topic
+    private final String[] difficulties = {"EASY", "MEDIUM", "HARD", "VERY_HARD"}; // Difficulty levels
+    private String difficultyToSelect;   // User-selected difficulty
     private final String[] topicArray = {"mathematics", "psychology", "astronomy", "geography"};
     private final int[] index = {1, 2, 3, 4};
-    boolean quitInstantlyTopic = false;
-    boolean quitInstantlyDifficulty = false;
+    boolean quitInstantlyTopic = false; // Flag to quit topic selection
+    boolean quitInstantlyDifficulty = false; // Flag to quit difficulty selection
 
     public TopicReader() {
-        // 初始化构造函数
+        // Initialization constructor
     }
 
-    // 显示主题选择
+    // Display topic selection
     public void showTopic() {
         Window window = new Window();
-        // 确定主题的最大长度
+        // Determine the maximum length of the topics
         int maxLength = 0;
         for (String topic : topicArray) {
             if (topic.length() > maxLength) {
@@ -35,37 +30,37 @@ public class TopicReader {
             }
         }
 
-        // 上边框
+        // Upper border
         String upperBorder = "      ------------";
         for (int i = 0; i < maxLength; i++) {
             upperBorder += "-";
         }
         upperBorder += "------";
-        window.printContent(upperBorder); // 输出上边框
+        window.printContent(upperBorder); // Output upper border
 
         for (int i = 0; i < topicArray.length; i++) {
             String line = "      |  " + index[i] + "  |  " + topicArray[i];
 
-            // 输出填充空格使其对齐
+            // Output padding spaces for alignment
             int spacesToFill = maxLength - topicArray[i].length();
             for (int j = 0; j < spacesToFill; j++) {
-                line += " "; // 填充空格
+                line += " "; // Fill spaces
             }
-            line += "        |"; // 添加结尾的边框
+            line += "        |"; // Add ending border
             window.printContent(line);
         }
 
-        // 下边框
+        // Lower border
         String lowerBorder = "      ------------";
         for (int i = 0; i < maxLength; i++) {
             lowerBorder += "-";
         }
         lowerBorder += "------";
-        window.printContent(lowerBorder); // 一次性输出下边框
+        window.printContent(lowerBorder); // Output lower border
         window.printContent("");
     }
 
-    // 选择主题
+    // Select a topic
     public void selectTopic() {
         Window window = new Window();
         window.printContent("Please enter the topic you would like to choose: (or 'x' to exit)");
@@ -81,7 +76,7 @@ public class TopicReader {
                 return;
             }
 
-            // 检查输入是否是有效的整数索引
+            // Check if input is a valid integer index
             int inputIndex = -1;
             boolean isIndex = true;
 
@@ -94,14 +89,14 @@ public class TopicReader {
 
             if (isIndex) {
                 inputIndex = Integer.parseInt(input);
-                // 检查输入的索引是否有效
+                // Check if input index is valid
                 if (inputIndex >= 1 && inputIndex <= index.length) {
-                    topicToSelect = topicArray[inputIndex - 1]; // 索引从1开始，数组从0开始
+                    topicToSelect = topicArray[inputIndex - 1]; // Index starts from 1, array starts from 0
                 } else {
                     window.printContent("Please enter a valid index or topic name:");
                 }
             } else {
-                // 检查topic是否有效
+                // Check if the input topic is valid
                 boolean foundTopic = false;
                 for (String topic : topicArray) {
                     if (topic.equalsIgnoreCase(input)) {
@@ -114,7 +109,6 @@ public class TopicReader {
                     window.printContent("Please enter a valid index or topic name:");
                 }
             }
-
         }
 
         window.printContent("Selected successfully!");
@@ -126,7 +120,7 @@ public class TopicReader {
         return quitInstantlyTopic;
     }
 
-    // 选择难度
+    // Select difficulty
     public void selectDifficulty() {
         Window window = new Window();
         window.printContent("Please select a difficulty level:");
@@ -157,15 +151,14 @@ public class TopicReader {
             }
 
             if (isIndex) {
-                choice = Integer.parseInt(input); // 如果是数字，转为整数
+                choice = Integer.parseInt(input); // Convert to integer if it is a number
 
-                // 检查输入的数字是否在有效范围内
+                // Check if the input number is within the valid range
                 if (choice >= 1 && choice <= difficulties.length) {
-                    difficultyToSelect = difficulties[choice - 1]; // 设置选定的难度
+                    difficultyToSelect = difficulties[choice - 1]; // Set selected difficulty
                     window.printContent("Selected successfully!");
                     window.printContent("Your difficulty is: " + difficultyToSelect);
                     window.printContent("");
-
                 } else {
                     window.printContent("Invalid choice. Please enter a number between 1 and " + difficulties.length + ".");
                 }
@@ -179,36 +172,36 @@ public class TopicReader {
         return quitInstantlyDifficulty;
     }
 
-    // 获取选择的难度
+    // Get the selected difficulty
     public String getDifficultyToSelect() {
         return difficultyToSelect;
     }
 
-    // 获取选择的主题
+    // Get the selected topic
     public String getTopicToSelect() {
         return this.topicToSelect;
     }
 
-    // 根据选择的主题筛选难度题目
+    // Filter questions by difficulty based on the selected topic
     public static String[][] QuestionsByDifficulty(String[][] questions, String Difficulty) {
-        // 确保问题数组非空
+        // Ensure the questions array is not empty
         if (questions == null || questions.length == 0) {
-            return new String[0][0]; // 返回空数组
+            return new String[0][0]; // Return an empty array
         }
 
         int count = 0;
-        // 遍历一遍问题数组，计算符合条件的题目数量
+        // Traverse the questions array to count questions that match the criteria
         for (int i = 0; i < questions.length; i++) {
             if (questions[i][2].equals(Difficulty)) {
                 count++;
             }
         }
 
-        // 创建符合条件的题目数组
+        // Create an array for questions that match the criteria
         String[][] Questionsbydifficulty = new String[count][];
         int index = 0;
 
-        // 再次遍历题目，填充符合条件的题目
+        // Traverse the questions again to fill the matching questions
         for (int i = 0; i < questions.length; i++) {
             if (questions[i][2].equals(Difficulty)) {
                 Questionsbydifficulty[index++] = questions[i];
@@ -217,29 +210,30 @@ public class TopicReader {
 
         return Questionsbydifficulty;
     }
-    // 从某个难度的题库中随机选择题目
+
+    // Randomly select questions from a specific difficulty pool
     private static String[][] selectRandomlyFromCategory(String[][] questions, int numQuestions, String[][] selectedQuestions, int startIndex) {
         for (int i = 0; i < numQuestions; i++) {
-            if (questions.length == 0) break;  // 防止题目数不足
+            if (questions.length == 0) break;  // Prevent selecting from an insufficient pool of questions
 
-            // 使用 Math.random() 来生成随机数
+            // Use Math.random() to generate a random number
             int randomIndex = (int) (Math.random() * questions.length);
 
-            // 确保选择的题目没有重复
+            // Ensure the selected question is not a duplicate
             while (questions[randomIndex] == null) {
                 randomIndex = (int) (Math.random() * questions.length);
             }
 
             selectedQuestions[startIndex + i] = questions[randomIndex];
-            questions[randomIndex] = null; // 标记该题目已选择，防止重复
+            questions[randomIndex] = null; // Mark this question as selected to prevent duplication
         }
 
         return selectedQuestions;
     }
 
-    // 根据用户选择的难度，按比例随机选择题目
+    // Randomly select questions based on user-selected difficulty
     public static String[][] QuizQuestion(String[][] questions, int numQuestions, String difficulty) {
-        // 根据难度决定比例
+        // Determine proportions based on difficulty
         double easyPercentage = 0, mediumPercentage = 0, hardPercentage = 0, veryHardPercentage = 0;
 
         switch (difficulty) {
@@ -265,53 +259,53 @@ public class TopicReader {
                 break;
         }
 
-        // 计算每个难度需要选择的题目数量
+        // Calculate the number of questions needed for each difficulty
         int easyCount = (int) (numQuestions * easyPercentage);
         int mediumCount = (int) (numQuestions * mediumPercentage);
         int hardCount = (int) (numQuestions * hardPercentage);
         int veryHardCount = (int) (numQuestions * veryHardPercentage);
 
-        // 筛选每个难度的题目
+        // Filter questions by difficulty
         String[][] easyQuestions = QuestionsByDifficulty(questions, "EASY");
         String[][] mediumQuestions = QuestionsByDifficulty(questions, "MEDIUM");
         String[][] hardQuestions = QuestionsByDifficulty(questions, "HARD");
         String[][] veryHardQuestions = QuestionsByDifficulty(questions, "VERY_HARD");
 
-        // 按比例从每个难度中选择题目
+        // Select questions proportionally from each difficulty
         String[][] quizquestions = new String[numQuestions][12];
         int index = 0;
-        quizquestions  = selectRandomlyFromCategory(easyQuestions, easyCount, quizquestions, index);
+        quizquestions = selectRandomlyFromCategory(easyQuestions, easyCount, quizquestions, index);
         index += easyCount;
-        quizquestions  = selectRandomlyFromCategory(mediumQuestions, mediumCount, quizquestions, index);
+        quizquestions = selectRandomlyFromCategory(mediumQuestions, mediumCount, quizquestions, index);
         index += mediumCount;
-        quizquestions  = selectRandomlyFromCategory(hardQuestions, hardCount, quizquestions, index);
+        quizquestions = selectRandomlyFromCategory(hardQuestions, hardCount, quizquestions, index);
         index += hardCount;
-        quizquestions  = selectRandomlyFromCategory(veryHardQuestions, veryHardCount, quizquestions, index);
+        quizquestions = selectRandomlyFromCategory(veryHardQuestions, veryHardCount, quizquestions, index);
 
-        return quizquestions ;
+        return quizquestions;
     }
 
     public static void main(String[] args) {
-        // 创建 QuestionProvider 实例
+        // Create an instance of QuestionProvider
         QuestionProvider questionProvider = new QuestionProvider();
 
-        // 显示主题选择
+        // Display topic selection
         TopicReader topicReader = new TopicReader();
         topicReader.showTopic();
         topicReader.selectTopic();
         topicReader.selectDifficulty();
 
-        // 根据选择的主题获取问题
+        // Get questions based on the selected topic
         String selectedTopic = topicReader.getTopicToSelect();
         String[][] selectedQuestions = questionProvider.getSelectedQuestions(selectedTopic);
 
         System.out.println("Number of selected questions: " + (selectedQuestions != null ? selectedQuestions.length : 0));
 
         if (selectedQuestions != null && selectedQuestions.length > 0) {
-            // 显示所有问题及其选项
+            // Display all questions and their options
             for (int row = 0; row < selectedQuestions.length; row++) {
-                if (selectedQuestions[row] != null) { // 检查非空行
-                    System.out.println("Question " + (row + 1) + ": " + selectedQuestions[row][3]); // 显示问题内容
+                if (selectedQuestions[row] != null) { // Check for non-null rows
+                    System.out.println("Question " + (row + 1) + ": " + selectedQuestions[row][3]); // Display question content
                     for (int col = 0; col < selectedQuestions[row].length; col++) {
                         System.out.println("selectedQuestions[" + row + "][" + col + "]: " + selectedQuestions[row][col]);
                     }

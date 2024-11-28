@@ -10,10 +10,10 @@ public class QuizSystemAppli {
         Window window = new Window();
         Menu menu = new Menu(user);
 
-        // 初始化
+        // Initialization
         menu.initializeMenu();
 
-        // 注册登录部分
+        // Registration and login section
         menu.unloggedMenu();
         try {
             Register register = new Register(user);
@@ -22,13 +22,10 @@ public class QuizSystemAppli {
             e.printStackTrace();
         }
 
-
-        // 主循环
+        // Main loop
         while (true) {
-            menu.mainMenu(); // 每次循环都展示主菜单
-            String option = menu.getSelectedOption(); // 获取用户选择的选项
-
-            System.out.println("Debug: Selected Option = " + option);
+            menu.mainMenu(); // Display the main menu on each iteration
+            String option = menu.getSelectedOption(); // Get the user's selected option
 
             switch (option) {
                 case "Quiz": {
