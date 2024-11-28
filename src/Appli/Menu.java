@@ -10,7 +10,6 @@ import quiz.TopicReader;
 import xjtlu.cpt111.assignment.quiz.model.Difficulty;
 import xjtlu.cpt111.assignment.quiz.model.Option;
 import xjtlu.cpt111.assignment.quiz.model.Question;
-import Score.ScoreProvider;
 import ScoreDB.ScoreEditor;
 import java.util.ArrayList;
 
