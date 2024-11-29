@@ -248,11 +248,14 @@ public class Register {
                 break; // Successful login, exit loop
             } else {
                 window.printContent("Login failed. Please try again. (or enter 'x' to exit)");
-                window.printContent("Do you want to try password again? (Yes/No) (or enter 'x' to exit)");
+                window.printContent("Do you want to try password again? (Yes/No) ");
                 String choice = scanner.nextLine().trim().toLowerCase();
+
+
                 if (choice.equals("no")) {
                     window.printContent("Returning to main menu...");
                     displayMenu(); // Return to main menu
+
                     break; // Exit loop
                 }
             }
