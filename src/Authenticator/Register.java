@@ -156,16 +156,17 @@ public class Register {
             window.printContent("Create a password (8-16 characters):(or enter 'x' to exit)");
             password = scanner.nextLine().trim();
 
+            // Check if 'x' is entered
+            if (password.equalsIgnoreCase("x")) {
+                window.printContent("Returning to welcome screen...");
+                displayMenu();
+                return;
+            }
+
             // Password must be between 8 and 16 characters
             if (password.length() < 8 || password.length() > 16) {
                 window.printContent("Password must be between 8 and 16 characters. Please try again.");
                 continue;
-            }
-
-            // Check if 'x' is entered
-            if (password.equalsIgnoreCase("x")) {
-                window.printContent("Exiting the program...");
-                System.exit(0); // Exit the program
             }
 
             // Check if empty
