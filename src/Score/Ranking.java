@@ -19,11 +19,10 @@ public class Ranking {
     public void displayRanking() {
         Scanner sc = new Scanner(System.in);
 
-        // 定义话题和难度选项
         String[] topics = {"mathematics", "psychology", "astronomy", "geography"};
         String[] difficulties = {"easy", "medium", "hard", "very_hard"};
 
-        // 用户选择话题
+        //User selects the topic they want to search
         String topic = null;
         while (topic == null) {
             window.printContent("Select a topic:");
@@ -34,7 +33,7 @@ public class Ranking {
 
             if (sc.hasNextInt()) {
                 int topicIndex = sc.nextInt();
-                sc.nextLine(); // 清空换行符
+                sc.nextLine();
                 if (topicIndex >= 1 && topicIndex <= topics.length) {
                     topic = topics[topicIndex - 1];
                 } else {
@@ -54,7 +53,7 @@ public class Ranking {
             }
         }
 
-        // 用户选择难度
+        //User selects a difficulty
         int difficulty = 0;
         while (difficulty == 0) {
             window.printContent("Select a difficulty:");
@@ -65,7 +64,7 @@ public class Ranking {
 
             if (sc.hasNextInt()) {
                 int difficultyIndex = sc.nextInt();
-                sc.nextLine(); // 清空换行符
+                sc.nextLine();
                 if (difficultyIndex >= 1 && difficultyIndex <= difficulties.length) {
                     difficulty = difficultyIndex;
                 } else {
@@ -86,10 +85,10 @@ public class Ranking {
         }
 
 
-        // 调用 getPublicScore 获取排行榜数据
+        //Call getPublicScore to retrieve the leaderboard data
         List<String> rankchart = scoreReader.getPublicScores(topic, difficulty, false);
 
-        // 显示排行榜
+        //Display the ranking
         window.printContent("");
         window.printContent("       --- Ranking for Topic: " + topic + ", Difficulty: " + difficulties[difficulty - 1] + " ---");
 
@@ -97,11 +96,7 @@ public class Ranking {
             window.printContent("No scores available for the selected topic and difficulty.");
 
         } else {
-
-            // 空1行
             window.printContent("");
-
-
             String row_head = "          ";
             row_head += String.format("%-20s", "Rank");
             row_head += String.format("%-18s", "User");
@@ -112,18 +107,18 @@ public class Ranking {
             int lastScore = Integer.parseInt(rankchart.get(0).split(",")[4].trim());
 
             for (String line : rankchart) {
-                // 将line按逗号分割成数组
+                //Split the line by commas into an array
                 String[] fields = line.split(",");
 
-                // 获取第2、3、5个元素
-                String name = fields[1].trim(); // 第3个元素（索引为2）
-                String score = fields[4].trim(); // 第5个元素（索引为4）
+                //Get the 2nd, 3rd, and 5th elements
+                String name = fields[1].trim(); //3rd element (index 2)
+                String score = fields[4].trim(); //5th element (index 4)
                 int _score = Integer.parseInt(score);
                 rankIndex = (lastScore == _score) ? rankIndex : rankIndex + 1;
                 lastScore = _score;
 
 
-                // 输出元素
+                //Output the elements
                 String row_content = "          ";
 
                 row_content += String.format("%-20s", rankIndex);
@@ -143,14 +138,13 @@ public class Ranking {
 
     public static void main(String[] args) {
         try {
-            // 创建 ScoreReader 实例，读取数据
+            //Create an instance of ScoreReader to read data
             ScoreReader scoreReader = new ScoreReader();
 
-            // 创建 Ranking 实例
+            //Create an instance of Ranking
             Ranking ranking = new Ranking(scoreReader);
 
-            // 调用 displayRanking 方法显
-            // 示排名
+            //Call the displayRanking method to display the ranking
             ranking.displayRanking();
 
         } catch (Exception e) {
