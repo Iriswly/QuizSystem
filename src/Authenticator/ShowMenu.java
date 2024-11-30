@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class ShowMenu{
     private final Scanner scanner;
-    private final boolean DEBUG = true;
+    private final boolean DEBUG = false;
     private UserInfo user;
 
     public ShowMenu(UserInfo newUser) throws Exception {

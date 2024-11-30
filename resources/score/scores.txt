@@ -8,4 +8,8 @@
 15, Rose, mathematics, 1, 60
 17, Rose, mathematics, 1, 25
 19, 1, mathematics, 3, 65
-21, test, mathematics, 4, 30
+21, test, mathematics, 3, 15
+23, test, astronomy, 3, 452
+5, test, mathematics, 4, 20
+27, test, mathematics, 4, 15
+29, test, astronomy, 1, 30

@@ -9,12 +9,12 @@ import java.io.File;
 public class ScoreDBBase {
     protected final String RESOURCES_PATH = "resources";
     protected final String SCORE_FOLDER = RESOURCES_PATH + "/score";
-    protected final String SCORE_FILEPATH = SCORE_FOLDER + "/scores.csv";
-    protected final String TEMP_SCORE_FILEPATH = SCORE_FOLDER + "/temp_scores.csv";
-    protected final String LAST_SCORE_FILEPATH = SCORE_FOLDER + "/last_scores.csv";
+    protected final String SCORE_FILEPATH = SCORE_FOLDER + "/scores.txt";
+    protected final String TEMP_SCORE_FILEPATH = SCORE_FOLDER + "/temp_scores.txt";
+    protected final String LAST_SCORE_FILEPATH = SCORE_FOLDER + "/last_scores.txt";
 
-    // DEBUG 模式默认打开用来输出日志
-    protected static final boolean DEBUG = true;
+    // DEBUG 模式设置成true可以打开用来输出日志
+    protected static final boolean DEBUG = false;
     protected static Logger logger = new Logger(DEBUG);
 
     private File scoreFile;
