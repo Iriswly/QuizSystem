@@ -3,85 +3,85 @@ package User;
 public class examples {
     public static void main(String[] args) {
         try {
-            // 创建 UserInfo 实例
+            // Create an instance of UserInfo
             UserInfo userInfo = new UserInfo();
 
-            // 测试 1：注册新用户
+            // Test 1: Register a new user
             String nickname = "tanjiro";
             String realName = "Kamado Tanjiro";
             String password = "sunbreathing";
-            System.out.println("测试 1：注册新用户");
+            System.out.println("Test 1: Register a new user");
             boolean registerResult = userInfo.Register(nickname, realName, password);
-            System.out.println("注册结果: " + (registerResult ? "成功" : "失败"));
+            System.out.println("Registration result: " + (registerResult ? "Success" : "Failure"));
 
-            // 测试 2：尝试用已存在的昵称注册
-            System.out.println("\n测试 2：用已存在的昵称注册");
+            // Test 2: Try to register with an existing nickname
+            System.out.println("\nTest 2: Try to register with an existing nickname");
             boolean registerDuplicateResult = userInfo.Register(nickname, realName, password);
-            System.out.println("注册结果: " + (registerDuplicateResult ? "成功" : "失败"));
+            System.out.println("Registration result: " + (registerDuplicateResult ? "Success" : "Failure"));
 
-            // 测试 3：登录已注册用户
-            System.out.println("\n测试 3：登录已注册用户");
+            // Test 3: Login with the registered user
+            System.out.println("\nTest 3: Login with the registered user");
             boolean loginResult = userInfo.Login(nickname, password);
-            System.out.println("登录结果: " + (loginResult ? "成功" : "失败"));
+            System.out.println("Login result: " + (loginResult ? "Success" : "Failure"));
 
-            // 测试 4：使用错误的密码登录
-            System.out.println("\n测试 4：使用错误的密码登录");
+            // Test 4: Login with the wrong password
+            System.out.println("\nTest 4: Login with the wrong password");
             boolean loginWrongPassword = userInfo.Login(nickname, "wrongpassword");
-            System.out.println("登录结果: " + (loginWrongPassword ? "成功" : "失败"));
+            System.out.println("Login result: " + (loginWrongPassword ? "Success" : "Failure"));
 
-            // 测试 5：检查是否已登录
-            System.out.println("\n测试 5：检查是否已登录");
+            // Test 5: Check if the user is logged in
+            System.out.println("\nTest 5: Check if the user is logged in");
             boolean isLoggedIn = userInfo.isLogin();
-            System.out.println("是否已登录: " + (isLoggedIn ? "是" : "否"));
+            System.out.println("Is logged in: " + (isLoggedIn ? "Yes" : "No"));
 
-            // 测试 6：注销用户
-            System.out.println("\n测试 6：注销用户");
+            // Test 6: Logout the user
+            System.out.println("\nTest 6: Logout the user");
             boolean logoutResult = userInfo.Logout();
-            System.out.println("注销结果: " + (logoutResult ? "成功" : "失败"));
+            System.out.println("Logout result: " + (logoutResult ? "Success" : "Failure"));
 
-            // 测试 7：注销后检查是否已登录
-            System.out.println("\n测试 7：注销后检查是否已登录");
+            // Test 7: Check if the user is logged out after logout
+            System.out.println("\nTest 7: Check if the user is logged out after logout");
             boolean isLoggedOut = !userInfo.isLogin();
-            System.out.println("是否已注销: " + (isLoggedOut ? "是" : "否"));
+            System.out.println("Is logged out: " + (isLoggedOut ? "Yes" : "No"));
 
-            // 测试 8：注销后再次尝试登录
-            System.out.println("\n测试 8：注销后再次尝试登录");
+            // Test 8: Try to login again after logout
+            System.out.println("\nTest 8: Try to login again after logout");
             boolean reLoginResult = userInfo.Login(nickname, password);
-            System.out.println("再次登录结果: " + (reLoginResult ? "成功" : "失败"));
+            System.out.println("Re-login result: " + (reLoginResult ? "Success" : "Failure"));
 
-            // 测试 9：更新昵称
-            System.out.println("\n测试 9：更新昵称");
+            // Test 9: Update nickname
+            System.out.println("\nTest 9: Update nickname");
             boolean updateNicknameResult = userInfo.updateNickname("tanjiro_kamado");
-            System.out.println("更新昵称结果: " + (updateNicknameResult ? "成功" : "失败"));
+            System.out.println("Update nickname result: " + (updateNicknameResult ? "Success" : "Failure"));
 
-            // 测试 10：更新真实姓名
-            System.out.println("\n测试 10：更新真实姓名");
+            // Test 10: Update real name
+            System.out.println("\nTest 10: Update real name");
             boolean updateRealNameResult = userInfo.updateRealName("Kamado T.");
-            System.out.println("更新真实姓名结果: " + (updateRealNameResult ? "成功" : "失败"));
+            System.out.println("Update real name result: " + (updateRealNameResult ? "Success" : "Failure"));
 
-            // 测试 11：更新密码
-            System.out.println("\n测试 11：更新密码");
+            // Test 11: Update password
+            System.out.println("\nTest 11: Update password");
             boolean updatePasswordResult = userInfo.updatePassword("newSunBreathing");
-            System.out.println("更新密码结果: " + (updatePasswordResult ? "成功" : "失败"));
+            System.out.println("Update password result: " + (updatePasswordResult ? "Success" : "Failure"));
 
-            // 测试 12：更新最大得分
-            System.out.println("\n测试 12：更新最大得分");
+            // Test 12: Update maximum score
+            System.out.println("\nTest 12: Update maximum score");
             boolean updateMaxScoreResult = userInfo.updateMaxScore("100");
-            System.out.println("更新最大得分结果: " + (updateMaxScoreResult ? "成功" : "失败"));
+            System.out.println("Update maximum score result: " + (updateMaxScoreResult ? "Success" : "Failure"));
 
-            // 测试 13：更新分数记录
-            System.out.println("\n测试 13：更新分数记录");
+            // Test 13: Update score records
+            System.out.println("\nTest 13: Update score records");
             boolean updateScoreResult1 = userInfo.updateScore(90, "DemonSlayer");
             boolean updateScoreResult2 = userInfo.updateScore(85, "WaterBreathing");
             boolean updateScoreResult3 = userInfo.updateScore(95, "HinokamiKagura");
-            System.out.println("更新分数记录结果 1: " + (updateScoreResult1 ? "成功" : "失败"));
-            System.out.println("更新分数记录结果 2: " + (updateScoreResult2 ? "成功" : "失败"));
-            System.out.println("更新分数记录结果 3: " + (updateScoreResult3 ? "成功" : "失败"));
+            System.out.println("Update score result 1: " + (updateScoreResult1 ? "Success" : "Failure"));
+            System.out.println("Update score result 2: " + (updateScoreResult2 ? "Success" : "Failure"));
+            System.out.println("Update score result 3: " + (updateScoreResult3 ? "Success" : "Failure"));
 
-            // 测试 14：删除当前用户
-            System.out.println("\n测试 14：删除当前用户");
+            // Test 14: Delete the current user
+            System.out.println("\nTest 14: Delete the current user");
             boolean deleteUserResult = userInfo.deleteCurrentAccount();
-            System.out.println("删除用户结果: " + (deleteUserResult ? "成功" : "失败"));
+            System.out.println("Delete user result: " + (deleteUserResult ? "Success" : "Failure"));
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -90,54 +90,32 @@ public class examples {
 
     public static void main1(String[] args) {
         try {
-            // 创建一个 UserInfo 实例
+            // Create an instance of UserInfo
             UserInfo userInfo = new UserInfo();
 
-            // 测试 1：注册并登录用户 tanjiro
-            System.out.println("测试 1：用户 tanjiro 注册并登录");
+            // Test 1: Register and login user tanjiro
+            System.out.println("Test 1: Register and login user tanjiro");
             boolean registerResult1 = userInfo.Register("tanjiro", "Kamado Tanjiro", "sunbreathing");
-            System.out.println("注册结果: " + (registerResult1 ? "成功" : "失败"));
+            System.out.println("Registration result: " + (registerResult1 ? "Success" : "Failure"));
             boolean loginResult1 = userInfo.Login("tanjiro", "sunbreathing");
-            System.out.println("登录结果: " + (loginResult1 ? "成功" : "失败"));
+            System.out.println("Login result: " + (loginResult1 ? "Success" : "Failure"));
 
-//            // 测试 2：用户 tanjiro 更新分数
-//            System.out.println("\n测试 2：用户 tanjiro 更新分数");
-//            boolean updateScore1 = userInfo.updateScore(95, "SunBreathing");
-//            System.out.println("更新分数结果: " + (updateScore1 ? "成功" : "失败"));
-
-            // 测试 3：用户 tanjiro 注销
-            System.out.println("\n测试 3：用户 tanjiro 注销");
+            // Test 3: Logout user tanjiro
+            System.out.println("\nTest 3: Logout user tanjiro");
             boolean logoutResult1 = userInfo.Logout();
-            System.out.println("注销结果: " + (logoutResult1 ? "成功" : "失败"));
+            System.out.println("Logout result: " + (logoutResult1 ? "Success" : "Failure"));
 
-            // 测试 4：注册并登录用户 nezuko
-            System.out.println("\n测试 4：用户 nezuko 注册并登录");
+            // Test 4: Register and login user nezuko
+            System.out.println("\nTest 4: Register and login user nezuko");
             boolean registerResult2 = userInfo.Register("nezuko", "Kamado Nezuko", "demon");
-            System.out.println("注册结果: " + (registerResult2 ? "成功" : "失败"));
+            System.out.println("Registration result: " + (registerResult2 ? "Success" : "Failure"));
             boolean loginResult2 = userInfo.Login("nezuko", "demon");
-            System.out.println("登录结果: " + (loginResult2 ? "成功" : "失败"));
+            System.out.println("Login result: " + (loginResult2 ? "Success" : "Failure"));
 
-//            // 测试 5：用户 nezuko 更新分数
-//            System.out.println("\n测试 5：用户 nezuko 更新分数");
-//            boolean updateScore2 = userInfo.updateScore(88, "BloodDemonArt");
-//            System.out.println("更新分数结果: " + (updateScore2 ? "成功" : "失败"));
-//
-            // 测试 6：用户 nezuko 注销
-            System.out.println("\n测试 6：用户 nezuko 注销");
+            // Test 6: Logout user nezuko
+            System.out.println("\nTest 6: Logout user nezuko");
             boolean logoutResult2 = userInfo.Logout();
-            System.out.println("注销结果: " + (logoutResult2 ? "成功" : "失败"));
-//
-//            // 测试 7：重新注册并登录用户 tanjiro，然后删除账号
-//            System.out.println("\n测试 7：用户 tanjiro 重新注册并登录，然后删除自己");
-//            userInfo.Register("tanjiro", "Kamado Tanjiro", "sunbreathing");
-//            userInfo.Login("tanjiro", "sunbreathing");
-//            boolean deleteResult1 = userInfo.deleteCurrentAccount();
-//            System.out.println("删除用户结果: " + (deleteResult1 ? "成功" : "失败"));
-//
-//            // 测试 8：尝试登录已删除的用户 tanjiro
-//            System.out.println("\n测试 8：尝试登录已删除的用户 tanjiro");
-//            boolean loginResult3 = userInfo.Login("tanjiro", "sunbreathing");
-//            System.out.println("登录结果: " + (loginResult3 ? "成功" : "失败"));
+            System.out.println("Logout result: " + (logoutResult2 ? "Success" : "Failure"));
 
         } catch (Exception e) {
             e.printStackTrace();

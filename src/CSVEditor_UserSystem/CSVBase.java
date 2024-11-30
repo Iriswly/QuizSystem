@@ -3,8 +3,8 @@ package CSVEditor_UserSystem;
 import java.io.File;
 
 /*
- * CSVBase 的作用：
- * 提供文件路径，文件是否存在等基本功能
+ * CSVBase:
+ * Provide file path, file existence check etc.
  */
 public class CSVBase {
     protected final String RESOURCES_PATH = "resources";
@@ -13,7 +13,7 @@ public class CSVBase {
     protected final String LAST_FILEPATH = RESOURCES_PATH + "/last.csv";
     protected final int MAX_COL_NUM = 10; // remember to -1 when using it
 
-    // DEBUG 模式默认打开用来输出日志
+    // define DEBUG true to print the log to console if you want
     protected static final boolean DEBUG = false;
     protected static Logger logger = new Logger(DEBUG);
 
@@ -23,11 +23,14 @@ public class CSVBase {
 
 
     /* constructor
-     * 检查users.csv 是否存在，如果不存在就创建，创建失败就报错 Exception
+     * check whether the users.csv has been existing.
+     * if the csv has not been existing, create one.
+     * @return boolean: whether the creating csv operation has been successful.
+     * @throws: Exception if the creating failed
      */
-    public CSVBase() throws Exception{
+    public CSVBase() throws Exception {
         this.file = new File(FILEPATH);
-        if (!isUserCSVExists()){
+        if (!isUserCSVExists()) {
             if (!usersCSVCreator()) {
                 if (DEBUG) logger.log("create users.csv");
                 throw new Exception("file not found and create users.csv failed");
@@ -42,12 +45,12 @@ public class CSVBase {
     }
 
     /*
-     * 判断users.csv文件是否存在
-     * @return boolean
+     * tell whether the user.csv has been existed
+     * @return boolean: whether the user.csv has been existed
      */
     public boolean isUserCSVExists() {
         file = new File(FILEPATH);
-        if (file.exists()){
+        if (file.exists()) {
             if (DEBUG) logger.log("users.csv has been exists");
             return true;
         }
@@ -55,12 +58,12 @@ public class CSVBase {
     }
 
     /*
-     * 判断temp_users.csv文件是否存在
+     * tell whether the temp_users.csv has been existed
      * @return boolean
      */
     public boolean isTempUserCSVExists() {
-        temp_file  = new File(TEMP_FILEPATH);
-        if (temp_file.exists()){
+        temp_file = new File(TEMP_FILEPATH);
+        if (temp_file.exists()) {
             if (DEBUG) logger.log("temp_users.csv has been exists");
             return true;
         }
@@ -68,7 +71,7 @@ public class CSVBase {
     }
 
     /*
-     * 判断last.csv文件是否存在
+     * tell whether the last.csv has been existed
      * @return boolean
      */
     public boolean isLastCSVExists() {
@@ -81,7 +84,8 @@ public class CSVBase {
     }
 
     /*
-    创建resources路径，多用于resources不存在时的修补
+     * create the resource path,
+     * called when the resource is found not exist
      */
     private boolean pathCreator() {
         File path = new File(RESOURCES_PATH);
@@ -100,10 +104,12 @@ public class CSVBase {
     }
 
     /*
-    根据传入的路径创建csv文件
-    即 既可以创建temp_users.csv 也可以创建users.csv
-    先检查resources路径存在与否，如果不存在创建一个，再创建文件
-    创建失败就报错或者返回false
+     * @param relevantPath: the path to create the csv file
+     * @return boolean: whether the creating csv operation has been successful.
+     *
+     *  create the csv file according to the path String in the parameter
+     * called to create the temp_user.csv and users.csv in the context
+     * it will check whether the resources path exist, if not, create the path, then the csv file
      */
     private boolean CSVCreator(String relevantPath) {
         if (!pathCreator()) {
@@ -128,7 +134,8 @@ public class CSVBase {
     }
 
     /*
-    创建users.csv文件
+     * @return boolean: whether the creating csv operation has been successful.x
+     * create the users.csv file
      */
     protected boolean usersCSVCreator() {
         if (!isUserCSVExists()) return CSVCreator(FILEPATH);
@@ -136,7 +143,8 @@ public class CSVBase {
     }
 
     /*
-    创建temp_users.csv文件
+     * @return boolean: whether the creating csv operation has been successful.
+     * create the temp_users.csv file
      */
     protected boolean tempUsersCSVCreator() {
         if (!isTempUserCSVExists()) return CSVCreator(TEMP_FILEPATH);
@@ -144,7 +152,8 @@ public class CSVBase {
     }
 
     /*
-     * 创建last.csv文件
+     * @return boolean: whether the creating csv operation has been successful.
+     * create the last.csv file
      */
     protected boolean lastCSVCreator() {
         if (!isLastCSVExists()) return CSVCreator(LAST_FILEPATH);
@@ -152,7 +161,7 @@ public class CSVBase {
     }
 
     /*
-     * 只是测试
+     * test function for the upper apis
      */
     public static void main(String[] args) {
         // TODO: MAY BE A GENERAL LOGGER WILL BE IMPLEMENTED

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/*
+/**
  * ScoreReader class
  * This class provides methods for reading and managing score data from the scores.csv file
  */
@@ -18,8 +18,7 @@ public class ScoreReader extends ScoreDBBase {
         readAll();
     }
 
-    /*
-     * 读取所有数据
+    /**
      * Reads all data from the scores.csv file into the currentLines list
      * @return Returns true if the read is successful, otherwise returns false
      */
@@ -44,7 +43,6 @@ public class ScoreReader extends ScoreDBBase {
     }
 
     /**
-     * 获取个人成绩信息
      * Gets an individual's score information based on conditions such as nickname, topic, and difficulty
      * @param nickname The nickname of the player
      * @param topicFilter The topic filter, null for no filter
@@ -88,7 +86,6 @@ public class ScoreReader extends ScoreDBBase {
     }
 
     /**
-     * 获取公共成绩信息
      * Gets public score information based on conditions such as topic and difficulty
      * @param topic The topic filter, null for no filter
      * @param difficulty The difficulty filter, null for no filter
@@ -130,16 +127,15 @@ public class ScoreReader extends ScoreDBBase {
     }
 
 /**
- * 获取所有成绩信息
  * Gets all score information
  * @return Returns a list of all score information
  */
 public static void main(String[] args) {
     try {
-        // 初始化 ScoreReader
+        // Initialize the ScoreReader
         ScoreReader reader = new ScoreReader();
 
-        // 模拟数据加载
+        // Simulate loading data
         reader.currentLines = Arrays.asList(
                 "1, Alice, Math, 1,89",
                 "2, Bob, Math, 2,90",
@@ -152,43 +148,43 @@ public static void main(String[] args) {
                 "9, Charlie, Science, 1, 78"
         );
 
-        // 示例 1：个人成绩查询 - 查找 Alice 的所有 Math 科目成绩，按分数从高到低排列，最多返回 3 条
-        System.out.println("示例 1: Alice 的 Math 成绩（按分数从高到低）");
+        // Example 1: Personal score query - Find all Math scores for Alice, sorted by descending score, with a maximum of 3 records
+        System.out.println("Example 1: Alice's Math scores (sorted by descending score)");
         List<String> personalScores1 = reader.getPersonalScores("Alice", "Math", null, false);
         personalScores1.forEach(System.out::println);
 
-        // 示例 2：个人成绩查询 - 查找 Bob 的所有成绩，按分数从低到高排列，最多返回 5 条
-        System.out.println("\n示例 2: Bob 的所有成绩（按分数从低到高）");
+        // Example 2: Personal score query - Find all scores for Bob, sorted by ascending score, with a maximum of 5 records
+        System.out.println("\nExample 2: All scores for Bob (sorted by ascending score)");
         List<String> personalScores2 = reader.getPersonalScores("Bob", null, null, true);
         personalScores2.forEach(System.out::println);
 
-        // 示例 3：个人成绩查询 - 查找 Alice 在 Science 科目、难度 2 下的成绩，按分数从高到低，最多返回 2 条
-        System.out.println("\n示例 3: Alice 在 Science（难度 2）的成绩");
+        // Example 3: Personal score query - Find Alice's scores in Science, level 2, sorted by descending score, with a maximum of 2 records
+        System.out.println("\nExample 3: Alice's Science scores (level 2)");
         List<String> personalScores3 = reader.getPersonalScores("Alice", "Science", 2, false);
         personalScores3.forEach(System.out::println);
 
-        // 示例 4：公共成绩查询 - 查找 Math 科目的所有成绩，按分数从高到低，最多返回 4 条
-        System.out.println("\n示例 4: Math 科目的公共成绩（按分数从高到低）");
+        // Example 4: Public score query - Find all Math scores, sorted by descending score, with a maximum of 4 records
+        System.out.println("\nExample 4: Public Math scores (sorted by descending score)");
         List<String> publicScores1 = reader.getPublicScores("Math", null, false);
         publicScores1.forEach(System.out::println);
 
-        // 示例 5：公共成绩查询 - 查找 Science 科目、难度为 1 的成绩，按分数从低到高，最多返回 3 条
-        System.out.println("\n示例 5: Science（难度 1）的公共成绩（按分数从低到高）");
+        // Example 5: Public score query - Find all Science scores at level 1, sorted by ascending score, with a maximum of 3 records
+        System.out.println("\nExample 5: Public Science scores (level 1, sorted by ascending score)");
         List<String> publicScores2 = reader.getPublicScores("Science", 1, true);
         publicScores2.forEach(System.out::println);
 
-        // 示例 6：个人成绩查询 - 查找 Charlie 的成绩，按分数从低到高，最多返回所有记录
-        System.out.println("\n示例 6: Charlie 的所有成绩（按分数从低到高）");
+        // Example 6: Personal score query - Find all scores for Charlie, sorted by ascending score, with a maximum of all records
+        System.out.println("\nExample 6: All scores for Charlie (sorted by ascending score)");
         List<String> personalScores4 = reader.getPersonalScores("Charlie", null, null, true);
         personalScores4.forEach(System.out::println);
 
-        // 示例 7：公共成绩查询 - 查找 Math 科目、难度为 1 的成绩，按分数从低到高，最多返回 2 条
-        System.out.println("\n示例 7: Math（难度 1）的公共成绩（按分数从低到高）");
+        // Example 7: Public score query - Find all Math scores at level 1, sorted by ascending score, with a maximum of 2 records
+        System.out.println("\nExample 7: Public Math scores (level 1, sorted by ascending score)");
         List<String> publicScores3 = reader.getPublicScores("Math", 1, true);
         publicScores3.forEach(System.out::println);
 
-        // 示例 8：个人成绩查询 - 查找 David 的成绩，无筛选条件，按分数从高到低，最多返回 1 条
-        System.out.println("\n示例 8: David 的成绩（按分数从高到低）");
+        // Example 8: Personal score query - Find David's scores, with no filtering, sorted by descending score, with a maximum of 1 record
+        System.out.println("\nExample 8: David's score (sorted by descending score)");
         List<String> personalScores5 = reader.getPersonalScores("David", null, null, false);
         personalScores5.forEach(System.out::println);
 

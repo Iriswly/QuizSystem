@@ -3,6 +3,11 @@ package User;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * UserInfo class
+ * extends the UseBase class to provide the api for user
+ * for example, login, logout, register, delete account, get ranked accounts, etc.
+ */
 public class UserInfo extends UserBase {
 
     public UserInfo() throws Exception {
@@ -77,11 +82,21 @@ public class UserInfo extends UserBase {
         }
     }
 
+    /*
+     * check if the current account is logged in
+     * according to whether the user' attribute is null
+     * @return whether the user is logged in
+     */
     public boolean isLogin() {
         // 根据属性是否为null 判断是否已经登录
         return nickname != null && realName != null && password != null;
     }
 
+    /*
+     * logout the current account
+     * logout through setting the attribute of use the NULL
+     * @return whether the logout operation is successful
+     */
     public boolean logout() {
         nickname = realName = password = null;
         testScore1 = testScore2 = testScore3 = max = -1;
@@ -89,18 +104,26 @@ public class UserInfo extends UserBase {
         return !isLogin();
     }
 
-    //删除账户
+    /*
+     * delete the current account
+     * @return whether the operation is successful
+     */
     public boolean deleteAccount(String nickname) {
         int index = searchUserLineIndex(nickname);
         if (index == -1) {
             logger.log("Account not found");
             return false;
         }
-        // 实现从数据库中删除用户资料的逻辑
-        // 如果帐户删除成功，则返回 true
+        // completement thee logic that delete the use from the db there
+        // if the user is deleted successfully, return true
         return deleteAccount_DB(nickname);
     }
 
+    /*
+     * query the ranked accounts by max score
+     *
+     * @return a list of ranked accounts
+     */
     public List<String> getRankedAccountsByMaxScore() {
         List<AccountScore> accountsWithScores = new ArrayList<>();
 
@@ -125,7 +148,7 @@ public class UserInfo extends UserBase {
             }
         }
 
-        // bubble sorting
+        // bubble sorting there
         for (int i = 0; i < accountsWithScores.size() - 1; i++) {
             for (int j = 0; j < accountsWithScores.size() - 1 - i; j++) {
                 if (accountsWithScores.get(j).maxScore < accountsWithScores.get(j + 1).maxScore) {
@@ -144,8 +167,12 @@ public class UserInfo extends UserBase {
         return rankedAccounts;
     }
 
-    // update current accounts' score
-    public boolean updateScore(int score, String scoreName){
+    /*
+     * update the max score of the current account
+     *
+     * @return: whether the operation is successful
+     */
+    public boolean updateScore(int score, String scoreName) {
         // check if login
         if (!isLogin()) {
             logger.log("[updateScore] Not logged in");
@@ -190,25 +217,41 @@ public class UserInfo extends UserBase {
         return true;
     }
 
-    // update nickname
-    public boolean updateNickname(String newNickname){
+    /*
+     * update nickname
+     */
+    public boolean updateNickname(String newNickname) {
         return editAccountProfile(1, newNickname);
     }
 
-    // update real name
-    public boolean updateRealName(String newRealName){
+    /*
+     * update real name
+     */
+    public boolean updateRealName(String newRealName) {
         return editAccountProfile(2, newRealName);
     }
 
-    public boolean updatePassword(String newPassword){
+    /*
+     * update password
+     */
+    public boolean updatePassword(String newPassword) {
         return editAccountProfile(3, newPassword);
     }
 
-    // update the max score of the user
-    public boolean updateMaxScore(String newMax){
+    /*
+     * update the max score of the user
+     */
+    public boolean updateMaxScore(String newMax) {
         return editAccountProfile(4, newMax);
     }
 
+    /*
+     * helping method to put the profile into the attribute of current user
+     * then the attributes should be not null
+     * and then the user is called "login"
+     *
+     * called when login
+     */
     public boolean loginSetter(ArrayList<String> profile) {
         try {
             nickname = profile.get(0);
@@ -228,13 +271,11 @@ public class UserInfo extends UserBase {
         return isLogin();
     }
 
-    protected void tempAccountSetter(ArrayList<String> profile) {
-        temp_nickname = profile.get(0);
-        temp_password = profile.get(2);
-        logger.log("[tempAccountSetter] Temp Account: " + temp_nickname);
-        logger.log("[tempAccountSetter] Temp Password: " + temp_password);
-    }
-
+    /*
+     * get the profile of the current user
+     *
+     * @return: the profile of the current user
+     */
     public ArrayList<String> getCurrentProfile() {
         if (!isLogin()) {
             logger.log("[getCurrentProfile] Not logged in");
@@ -244,7 +285,10 @@ public class UserInfo extends UserBase {
         //
         int highestScore = Math.max(testScore1, Math.max(testScore2, testScore3));
 
-        // 返回一个包含用户信息的列表
+        // return an ArrayList that contains the user info
+        // the right freaking pattern is actually a dog head, please just ignore it  _orz
+        // I really don't know why my workmate did this :(
+        // -- Xinrong Li :(
         return new ArrayList<>() {{
             add("Nickname: " + nickname);
             add("Real Name: " + realName + "                                        " + "       __/ \\   \\/    / \\__       ");
@@ -257,10 +301,11 @@ public class UserInfo extends UserBase {
     }
 
 
-
     //  ============ INTERFACES DONE ==================
 
-    // class that record the nickname and max score (maybe we can try hashmap?)
+    /*
+     * helping class to record the nickname and max score
+     */
     private static class AccountScore {
         private final String nickname;
         private final int maxScore;
@@ -271,8 +316,15 @@ public class UserInfo extends UserBase {
         }
     }
 
-    // change the nickname 1, real name 2, pd 3 and maxScore 4
-    protected boolean editAccountProfile(int mode, String newValue){
+    /*
+       change the nickname if the mode is 1
+       change the real name if the mode is 2
+       change the password if the mode is 3
+       change the max score if the mode is 4
+
+       @return : whether the operation is successful
+     */
+    protected boolean editAccountProfile(int mode, String newValue) {
         if (!isLogin()) {
             logger.log("[editAccountProfile] Not logged in");
             return false;
@@ -298,7 +350,7 @@ public class UserInfo extends UserBase {
                 String temp = nickname;
                 nickname = newValue;
                 ArrayList<String> newProfile = getCurrentProfile();
-                if (!editAccountProfile_DB(newProfile, temp)){
+                if (!editAccountProfile_DB(newProfile, temp)) {
                     logger.log("[editAccountProfile] Update nickname failed");
                     return false;
                 }
@@ -311,7 +363,7 @@ public class UserInfo extends UserBase {
                     return false;
                 }
                 realName = newValue;
-                if (!editAccountProfile_DB(getCurrentProfile())){
+                if (!editAccountProfile_DB(getCurrentProfile())) {
                     logger.log("[editAccountProfile] Update real name failed");
                     return false;
                 }
@@ -325,7 +377,7 @@ public class UserInfo extends UserBase {
                     return false;
                 }
                 password = newValue;
-                if (!editAccountProfile_DB(getCurrentProfile())){
+                if (!editAccountProfile_DB(getCurrentProfile())) {
                     logger.log("[editAccountProfile] Update password failed");
                     return false;
                 }
@@ -345,7 +397,7 @@ public class UserInfo extends UserBase {
                     logger.log("[editAccountProfile] No! New max score is smaller than current max score");
                     return false;
                 }
-                if (!editAccountProfile_DB(getCurrentProfile())){
+                if (!editAccountProfile_DB(getCurrentProfile())) {
                     logger.log("[editAccountProfile] Update nickname failed");
                     return false;
                 }
@@ -357,8 +409,10 @@ public class UserInfo extends UserBase {
         }
     }
 
-    // TODO: test
-    protected boolean showAllAccounts(){
+    /*
+     * show all the accounts (used in debug)
+     */
+    protected boolean showAllAccounts() {
         logger.log("[editAccountProfile] Showing all accounts");
         ArrayList<String> allAccounts = new ArrayList<>();
         for (int i = 1; i <= csvEditor.getLineCount(); i++) {
@@ -373,14 +427,15 @@ public class UserInfo extends UserBase {
         return true;
     }
 
-    // remove account according to the nickname
+    /*
+     * remove account according to the nickname
+     */
     protected boolean deleteCurrentAccount() {
         if (isLogin()) {
             boolean deleteResult = deleteAccount_DB(nickname);
             logout();
             return deleteResult;
-        }
-        else {
+        } else {
             logger.log("[deleteCurrentAccount] Permission denied");
             return false;
         }

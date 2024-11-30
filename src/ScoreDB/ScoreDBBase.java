@@ -2,9 +2,9 @@ package ScoreDB;
 
 import java.io.File;
 
-/*
- * ScoreBase 的作用：
- * 提供文件路径，文件是否存在等基本功能。
+/**
+ * ScoreBase:
+ * provide the csv resource path...
  */
 public class ScoreDBBase {
     protected final String RESOURCES_PATH = "resources";
@@ -13,15 +13,14 @@ public class ScoreDBBase {
     protected final String TEMP_SCORE_FILEPATH = SCORE_FOLDER + "/temp_scores.txt";
     protected final String LAST_SCORE_FILEPATH = SCORE_FOLDER + "/last_scores.txt";
 
-    // DEBUG 模式设置成true可以打开用来输出日志
     protected static final boolean DEBUG = false;
     protected static Logger logger = new Logger(DEBUG);
 
     private File scoreFile;
     private File tempScoreFile;
 
-    /* constructor
-     * 检查scores.txt 是否存在，如果不存在就创建，创建失败就报错 Exception
+    /**
+     * constructor
      * check whether the scores.txt exists, if not, create it,
      * and if creating failed, throw an Exception
      */
@@ -43,8 +42,7 @@ public class ScoreDBBase {
         }
     }
 
-    /*
-     * 判断scores.txt文件是否存在
+    /**
      * tell whether the scores.txt has been existing.
      * @return boolean
      */
@@ -57,8 +55,7 @@ public class ScoreDBBase {
         return false;
     }
 
-    /*
-     * 判断temp_scores.txt文件是否存在
+    /**
      * tell whether the temp_scores.txt has been existing.
      * @return boolean
      */
@@ -71,8 +68,7 @@ public class ScoreDBBase {
         return false;
     }
 
-    /*
-     * 判断last_scores.txt文件是否存在
+    /**
      * tell whether the last_scores.txt has been existing.
      * @return boolean
      */
@@ -85,7 +81,7 @@ public class ScoreDBBase {
         return false;
     }
 
-    /*
+    /**
      * 创建路径 resources/score, if failed, return false
      * creating path resource/score, if failed, return false
      * @return boolean: whether the creating operation has been successful.
@@ -106,11 +102,7 @@ public class ScoreDBBase {
         return true;
     }
 
-    /*
-     * 根据传入的路径创建txt文件
-     * 支持scores.txt、temp_scores.txt 和 last_scores.txt
-     * 先检查路径是否存在，如果不存在创建，再创建文件
-     *
+    /**
      * creating the txt file according the argument path
      * check whether the path to the score txt has been exist
      * if not, create it, then create the scores.txt file
@@ -139,7 +131,7 @@ public class ScoreDBBase {
         }
     }
 
-    /*
+    /**
      * 创建scores.txt文件
      * check whether the scores.csv has been existing.
      * @return boolean: whether the creating csv operation has been successful.
@@ -149,7 +141,7 @@ public class ScoreDBBase {
         return true;
     }
 
-    /*
+    /**
      * 创建 temp_scores.txt 文件
      * creating the temp_scores.csv file
      * @return boolean: whether the creating csv operation has been successful.
@@ -159,8 +151,7 @@ public class ScoreDBBase {
         return true;
     }
 
-    /*
-     * 创建last_scores.txt文件
+    /**
      * creating the last_scores.txt file
      * @return boolean: whether the creating csv operation has been successful.
      */
@@ -169,7 +160,7 @@ public class ScoreDBBase {
         return true;
     }
 
-    /*
+    /**
      * 测试方法
      * testing methods above
      */

@@ -4,13 +4,19 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CSVEditor extends CSVReader{
-    public CSVEditor() throws Exception{
+public class CSVEditor extends CSVReader {
+    public CSVEditor() throws Exception {
         super();
         readAll();
     }
 
-    // 将读入currentLines的数据写入temp_users.csv
+    /*
+    This method writes the contents of currentLines to a temporary CSV file (TEMP_FILEPATH).
+     If the CSV file doesn't exist, it is created.
+      Each line from currentLines is written to the file, and a newline is added after each line.
+    * @return boolean - true if the operation is successful, false otherwise.
+    * @throws: IOException if there are issues while writing to the file.
+     */
     private boolean dumpAllToTemp() {
         if (!isTempUserCSVExists()) tempUsersCSVCreator();
         if (currentLines == null) {
@@ -20,7 +26,7 @@ public class CSVEditor extends CSVReader{
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(TEMP_FILEPATH))) {
             for (String line : currentLines) {
                 bw.write(line);
-                bw.newLine(); // 确保每行都换行
+                bw.newLine(); // make sure no new line here
             }
             logger.log("dump all lines to temp csv Done");
         } catch (IOException e) {
@@ -30,9 +36,15 @@ public class CSVEditor extends CSVReader{
         return true;
     }
 
-
-    // 修改特定的行， 注意输入的line得是已经格式化好的
-    protected boolean editLine(int lineIndex, String newLine) throws IndexOutOfBoundsException{
+    /**
+     * Edits a specific line in the list of lines (`currentLines`), replacing it with the given new line.
+     *
+     * @param lineIndex The index of the line to be edited.
+     * @param newLine   The new line content that will replace the old line.
+     * @return `true` if the line was successfully edited, `false` if there was an error or if the lineIndex is invalid.
+     * @throws IndexOutOfBoundsException if the provided lineIndex is out of bounds.
+     */
+    protected boolean editLine(int lineIndex, String newLine) throws IndexOutOfBoundsException {
         if (currentLines == null) throw new IndexOutOfBoundsException("invalid currentLines");
         try {
             currentLines.set(lineIndex, newLine);
@@ -44,8 +56,14 @@ public class CSVEditor extends CSVReader{
         return true;
     }
 
-    // 添加一行, 注意输入的line得是已经格式化好的
-    protected boolean addNewLine(String newLine) throws Exception{
+    /**
+     * Adds a new line to the `currentLines` list. The input `newLine` should be pre-formatted.
+     *
+     * @param newLine The line to be added.
+     * @return `true` if the new line was successfully added, `false` otherwise.
+     * @throws Exception if `currentLines` is null.
+     */
+    protected boolean addNewLine(String newLine) throws Exception {
         if (currentLines == null) throw new Exception("invalid currentLines");
         logger.log("========= TEMP DEBUG =========");
         logger.log(currentLines.toString());
@@ -59,16 +77,32 @@ public class CSVEditor extends CSVReader{
         return true;
     }
 
-    // 删除一行
-    protected boolean deleteLine(int lineIndex) throws Exception{
+    /**
+     * Deletes a specific line at the given index in `currentLines`.
+     *
+     * @param lineIndex The index of the line to be deleted.
+     * @return `true` if the line was successfully deleted, `false` if the index is out of bounds or `currentLines` is null.
+     * @throws Exception if `currentLines` is null.
+     */
+    protected boolean deleteLine(int lineIndex) throws Exception {
         if (currentLines == null) throw new Exception("invalid currentLines");
         if (lineIndex < 0 || lineIndex > currentLines.size() - 1) return false;
         currentLines.remove(lineIndex);
         return true;
     }
 
-    // 提交修改到数数据库的外界用的api （虽然user类中又对它包装了一次）
-    public boolean operationsDB(int mode, ArrayList<String> newLine, int lineIndex){
+    /**
+     * Executes operations on the database (add, edit, or delete) based on the specified mode.
+     *
+     * @param mode The operation mode:
+     *             1 for adding a new line,
+     *             2 for editing an existing line,
+     *             3 for deleting a line.
+     * @param newLine The new line content (required for add/edit operations).
+     * @param lineIndex The index of the line to edit or delete (required for edit and delete operations).
+     * @return `true` if the operation was successful, `false` if there was an error.
+     */
+    public boolean operationsDB(int mode, ArrayList<String> newLine, int lineIndex) {
         switch (mode) {
             case 1: // ADD
             {
@@ -81,8 +115,7 @@ public class CSVEditor extends CSVReader{
                             if (DEBUG) logger.log("overcast Done");
                             return true;
                         }
-                    }
-                    else {
+                    } else {
                         if (DEBUG) logger.log("addNewLine failed");
                     }
                     return false;
@@ -109,8 +142,7 @@ public class CSVEditor extends CSVReader{
                             return true;
                         }
                         return false;
-                    }
-                    else {
+                    } else {
                         if (DEBUG) logger.log("editLine failed");
                         return false;
                     }
@@ -121,7 +153,7 @@ public class CSVEditor extends CSVReader{
             }
 
             case 3: // DELETE
-                try{
+                try {
                     if (lineIndex == -1) {
                         if (DEBUG) logger.log("user not found");
                         return false;
@@ -133,8 +165,7 @@ public class CSVEditor extends CSVReader{
                             return true;
                         }
                         return false;
-                    }
-                    else {
+                    } else {
                         if (DEBUG) logger.log("deleteLine failed");
                         return false;
                     }
@@ -149,18 +180,21 @@ public class CSVEditor extends CSVReader{
         }
     }
 
-    // 提交修改到数据库
-    // 先将users.csv 的修改提交到last.csv （历史记录，以后可能做备份恢复功能）
-    // 再将temp_csv 的修改提交到users.csv
+    /**
+     * Commits the changes made in `currentLines` to the database. First, it backs up the current `users.csv` to `last.csv` as a backup.
+     * Then it updates the `users.csv` with the current data.
+     *
+     * @return `true` if the commit process is successful, `false` if there was an error.
+     */
     protected boolean overcast() {
         if (currentLines == null) {
             if (DEBUG) logger.log("currentLines is null");
-            readAll();  // 读取所有内容到 currentLines 中
+            readAll();  // read all the content to the currentLines
         }
 
-        // 调试输出：打印 currentLines 内容，检查是否包含所有行
+        // debug there
         if (DEBUG) {
-            logger.log("currentLines 内容:");
+            logger.log("currentLines content:");
             for (String line : currentLines) {
                 logger.log(line);
             }
@@ -172,7 +206,7 @@ public class CSVEditor extends CSVReader{
         File userCSV = new File(FILEPATH);
         File lastCSV = new File(LAST_FILEPATH);
 
-        // 将 users.csv 的内容复制到 last.csv 作为备份
+        // copy the content in the users.csv to the last.csv to backup
         try (FileInputStream fis = new FileInputStream(userCSV);
              FileOutputStream fos = new FileOutputStream(lastCSV)) {
             byte[] buffer = new byte[1024];
@@ -180,39 +214,51 @@ public class CSVEditor extends CSVReader{
             while ((length = fis.read(buffer)) > 0) {
                 fos.write(buffer, 0, length);
             }
-            if (DEBUG) logger.log("复制 users.csv 到 last.csv 成功");
+            if (DEBUG) logger.log("copy users.csv to last.csv done");
         } catch (IOException e) {
             if (DEBUG) e.printStackTrace();
             return false;
         }
 
-        // 将 currentLines 写入 users.csv，确保 users.csv 始终是最新版本
+        // write the currentLines into the users.csv to make sure the users.csv is always the newest version
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(userCSV))) {
             for (String line : currentLines) {
                 bw.write(line);
                 bw.newLine();
             }
-            if (DEBUG) logger.log("将最新内容写入 users.csv 完成");
+            if (DEBUG) logger.log("writing the newest content to users.csv done");
         } catch (IOException e) {
             if (DEBUG) e.printStackTrace();
             return false;
         }
 
-        if (DEBUG) logger.log("提交修改完成");
+        if (DEBUG) logger.log("commit changed DONE");
         return true;
     }
 
 
-    // 数据库对外的输出格式的api
-    public ArrayList<String> outputLineFormatter(int lineIndex){
+    /**
+     * This method formats the output line from the database. It splits the line at commas and returns an ArrayList
+     * containing the elements of the line. It ensures that the line index is valid before performing the operation.
+     *
+     * @param lineIndex the index of the line to be formatted.
+     * @return an ArrayList<String> containing the formatted line, or null if the index is invalid or the line has fewer than 10 elements.
+     */
+    public ArrayList<String> outputLineFormatter(int lineIndex) {
         if (currentLines == null) readAll();
         if (lineIndex < 0 || lineIndex > currentLines.size() - 1) return null;
-        ArrayList<String> line =  new ArrayList<>(List.of(currentLines.get(lineIndex).split(",")));
+        ArrayList<String> line = new ArrayList<>(List.of(currentLines.get(lineIndex).split(",")));
         if (line.size() >= 10) return line;
         return null;
     }
 
-    protected boolean saveAndUpdate(){
+    /**
+     * This method saves the current changes and updates the data. It attempts to perform an overcast operation,
+     * then reads all lines again to ensure the data is updated.
+     *
+     * @return true if the save and update operation is successful, false otherwise.
+     */
+    protected boolean saveAndUpdate() {
         if (currentLines == null) {
             if (DEBUG) logger.log("currentLines is null");
             return false;
@@ -227,26 +273,42 @@ public class CSVEditor extends CSVReader{
         return true;
     }
 
-    // 辅助函数
-    private boolean isValidString(String str){
+    /**
+     * Validates whether the given string is non-null and not empty.
+     *
+     * @param str the string to be validated.
+     * @return true if the string is valid (non-null and not empty), false otherwise.
+     */
+    private boolean isValidString(String str) {
         return str != null && !str.isEmpty();
     }
 
-    // 辅助函数
-    private boolean isValidDigit(String str){
+    /**
+     * Validates whether the given string can be parsed as a valid integer.
+     *
+     * @param str the string to be validated.
+     * @return true if the string can be parsed as an integer, false otherwise.
+     */
+    private boolean isValidDigit(String str) {
         if (isValidString(str)) {
             try {
                 Integer.parseInt(str);
                 return true;
-            } catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 return false;
             }
         }
         return false;
     }
 
-    // 验证外部输入是否有效
-    protected boolean isFormatValid(ArrayList<String> line){
+    /**
+     * Validates the format of the external input. Checks if the input line contains the correct number of elements
+     * and whether each element has the expected format (string or digit).
+     *
+     * @param line the input line to be validated.
+     * @return true if the line format is valid, false otherwise.
+     */
+    protected boolean isFormatValid(ArrayList<String> line) {
         if (line.size() < 10) return false;
         return (isValidString(line.get(0))) && (isValidString(line.get(1))) && (isValidString(line.get(2)))
                 && (isValidDigit(line.get(3)))
@@ -255,8 +317,13 @@ public class CSVEditor extends CSVReader{
                 && (isValidString(line.get(8))) && (isValidDigit(line.get(9)));
     }
 
-    // 外界的输入进入数据库的API
-    public String inputLineFormatter(ArrayList<String> line){
+    /**
+     * Formats the input line by checking its validity and then joining the elements with commas.
+     *
+     * @param line the input line to be formatted.
+     * @return a string representing the formatted line, or null if the line is invalid.
+     */
+    public String inputLineFormatter(ArrayList<String> line) {
         if (currentLines == null) readAll();
         if (isFormatValid(line)) {
             return String.join(",", line);
@@ -264,10 +331,16 @@ public class CSVEditor extends CSVReader{
         return null;
     }
 
+    /**
+     * The main method to demonstrate the functionality of the CSVEditor. It performs several operations
+     * such as reading lines, adding new lines, editing existing lines, and dumping data to a temporary file.
+     *
+     * @param args command-line arguments (not used in this example).
+     */
     public static void main(String[] args) {
         CSVEditor writer;
 
-        try{
+        try {
             writer = new CSVEditor();
         } catch (Exception e) {
             e.printStackTrace();
@@ -286,7 +359,7 @@ public class CSVEditor extends CSVReader{
         logger.log("3");
         logger.log("");
 
-        if (!writer.dumpAllToTemp()){
+        if (!writer.dumpAllToTemp()) {
             logger.log("failed to dump");
             return;
         }
@@ -305,7 +378,7 @@ public class CSVEditor extends CSVReader{
 
         try {
             for (int i = 0; i < writer.currentLines.size(); i++) logger.log(writer.nextLine());
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.log("out now");
         }
 
@@ -315,7 +388,7 @@ public class CSVEditor extends CSVReader{
         try {
             writer.editLine(1, "edited line");
         } catch (IndexOutOfBoundsException e) {
-            logger.log("shit");
+            logger.log("die there");
         }
         writer.showLines();
 
@@ -326,6 +399,5 @@ public class CSVEditor extends CSVReader{
             logger.log("overcast failed");
         }
     }
-
 
 }
