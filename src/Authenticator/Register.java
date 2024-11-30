@@ -19,38 +19,6 @@ public class Register {
         return input.contains("\n") || input.contains(",") || input.contains("\t") || input.contains("\r") || input.contains("\\");
     }
 
-    private String getUserName(Scanner scanner, Window window) {
-        String nickname;
-        while (true) {
-            window.printContent("Enter your nickname:");
-            nickname = scanner.nextLine().trim();
-
-            if (nickname.equalsIgnoreCase("x")) {
-                window.printContent("Exiting the program...");
-                System.exit(0);
-            }
-            // Check if empty
-            if (nickname.isEmpty()) {
-                window.printContent("Nickname cannot be empty. Please try again.");
-                continue;
-            }
-
-            // Check for illegal characters
-            if (containsIllegalCharacters(nickname)) {
-                window.printContent("Nickname contains illegal characters. Please try again.");
-                continue;
-            }
-
-            // Check if already exists
-            if (user.searchUserLineIndex(nickname) != -1) {
-                window.printContent("Nickname already exists. Please choose a different nickname.");
-            } else {
-                break;
-            }
-        }
-        return nickname;
-    }
-
     // Welcome screen
     public void displayMenu() {
         Window window = new Window();
