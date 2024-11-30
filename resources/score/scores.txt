@@ -13,3 +13,4 @@
 5, test, mathematics, 4, 20
 27, test, mathematics, 4, 15
 29, test, astronomy, 1, 30
+31, test, geography, 1, 20
