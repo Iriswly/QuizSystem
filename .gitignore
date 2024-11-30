@@ -27,3 +27,11 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/lib/javafx-sdk-17.0.13/lib/javafx.base.jar
+/lib/javafx-sdk-17.0.13/lib/javafx.controls.jar
+/lib/javafx-sdk-17.0.13/lib/javafx.fxml.jar
+/lib/javafx-sdk-17.0.13/lib/javafx.graphics.jar
+/lib/javafx-sdk-17.0.13/lib/javafx.media.jar
+/lib/javafx-sdk-17.0.13/lib/javafx.swing.jar
+/lib/javafx-sdk-17.0.13/lib/javafx.web.jar
+/lib/javafx-sdk-17.0.13/lib/javafx-swt.jar
