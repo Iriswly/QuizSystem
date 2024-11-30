@@ -230,7 +230,7 @@ public class Register {
             String password = scanner.nextLine().trim();
 
             // Check if 'x' is entered
-            if (nickname.equalsIgnoreCase("x")) {
+            if (password.equalsIgnoreCase("x")) {
                 window.printContent("Exiting the program...");
                 System.exit(0); // Exit the program
             }
@@ -248,11 +248,11 @@ public class Register {
                 break; // Successful login, exit loop
             } else {
                 window.printContent("Login failed. Please try again. (or enter 'x' to exit)");
-                window.printContent("Do you want to try password again? (Yes/No) ");
+                window.printContent("Do you want to try password again? (Yes/No) (or enter 'x' to exit) ");
                 String choice = scanner.nextLine().trim().toLowerCase();
 
 
-                if (choice.equals("no")) {
+                if (choice.equals("no") || choice.equals("x")) {
                     window.printContent("Returning to main menu...");
                     displayMenu(); // Return to main menu
 
