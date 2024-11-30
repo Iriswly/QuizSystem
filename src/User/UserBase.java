@@ -33,6 +33,7 @@ public class UserBase {
 
     }
 
+    // common getters
     public String getNickname() {
         return nickname;
     }
@@ -73,6 +74,10 @@ public class UserBase {
         return password;
     }
 
+    /*
+    *  Searching the line that contain the use's info
+    *  @return: the line index of the user's info
+     */
     public int searchUserLineIndex(String nickname){
         ArrayList<Integer> temp_result = csvEditor.matchCol_exactly_unit_first(nickname, 0);
         if (!temp_result.isEmpty()) {
@@ -80,6 +85,10 @@ public class UserBase {
         } else return -1;
     }
 
+    /*
+    *  Getting the profile of the user
+    *  @return: the profile of the user
+     */
     public ArrayList<String> getProfile(int lineIndex){
         logger.log("[getProfile(int lineIndex)] Getting Profile on Line: " + lineIndex);
         if (lineIndex < 0 || lineIndex >= csvEditor.getLineCount()) {
@@ -88,6 +97,10 @@ public class UserBase {
         return csvEditor.outputLineFormatter(lineIndex);
     }
 
+    /*
+    *  Finding the account on the nickname
+    *  @return: the profile of the user
+     */
     protected ArrayList<String> findingAccountOnNickName(String nickname){
         logger.log("[findingAccountOnNickName(String nickname)] Finding Account on Nickname: " + nickname);
         int lineIndex = searchUserLineIndex(nickname);
@@ -104,23 +117,40 @@ public class UserBase {
         return profile;
     }
 
-
+    /*
+    *  Adding the account to the database
+    *  @return: true if the account is added successfully, false otherwise
+     */
     public boolean addAccount_DB(ArrayList<String> newProfile){
         logger.log("[addAccount_DB(ArrayList<String> newProfile)] Adding Account: " + newProfile);
         return (csvEditor.operationsDB(1, newProfile, -1)) ;
     }
-    // In UserBase class
+
+    /*
+    *  Editing the account profile when the nickname is not changed
+    *  @return: true if the account is edited successfully, false otherwise
+     */
     protected boolean editAccountProfile_DB(ArrayList<String> newProfile){
         int lineIndex = searchUserLineIndex(newProfile.get(0));
         return csvEditor.operationsDB(2, newProfile, lineIndex);
     }
 
+    /*
+    *  Editing the account profile
+    *  @param newProfile: the new profile of the user
+    *  @return: true if the account is edited successfully, false otherwise
+     */
     protected boolean editAccountProfile_DB(ArrayList<String> newProfile, String nickName){
         // use the nickName in case of the nickname is the item that we are changing
         int lineIndex = searchUserLineIndex(nickName);
         return csvEditor.operationsDB(2, newProfile, lineIndex);
     }
 
+    /*
+    *  Deleting the account profile
+    *  @param nickName: the nickname of the user
+    *  @return: true if the account is deleted successfully, false otherwise
+     */
     protected boolean deleteAccount_DB(String nickName){
         int lineIndex = searchUserLineIndex(nickName);
         return csvEditor.operationsDB(3, null, lineIndex);

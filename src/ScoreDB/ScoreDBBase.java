@@ -21,7 +21,9 @@ public class ScoreDBBase {
     private File tempScoreFile;
 
     /* constructor
-     * 检查scores.csv 是否存在，如果不存在就创建，创建失败就报错 Exception
+     * 检查scores.txt 是否存在，如果不存在就创建，创建失败就报错 Exception
+     * check whether the scores.txt exists, if not, create it,
+     * and if creating failed, throw an Exception
      */
     public ScoreDBBase() throws Exception {
         this.scoreFile = new File(SCORE_FILEPATH);
@@ -42,7 +44,8 @@ public class ScoreDBBase {
     }
 
     /*
-     * 判断scores.csv文件是否存在
+     * 判断scores.txt文件是否存在
+     * tell whether the scores.txt has been existing.
      * @return boolean
      */
     public boolean isScoresCSVExists() {
@@ -55,7 +58,8 @@ public class ScoreDBBase {
     }
 
     /*
-     * 判断temp_scores.csv文件是否存在
+     * 判断temp_scores.txt文件是否存在
+     * tell whether the temp_scores.txt has been existing.
      * @return boolean
      */
     public boolean isTempScoresCSVExists() {
@@ -68,7 +72,8 @@ public class ScoreDBBase {
     }
 
     /*
-     * 判断last_scores.csv文件是否存在
+     * 判断last_scores.txt文件是否存在
+     * tell whether the last_scores.txt has been existing.
      * @return boolean
      */
     public boolean isLastScoresCSVExists() {
@@ -81,7 +86,9 @@ public class ScoreDBBase {
     }
 
     /*
-     * 创建路径 resources/score
+     * 创建路径 resources/score, if failed, return false
+     * creating path resource/score, if failed, return false
+     * @return boolean: whether the creating operation has been successful.
      */
     private boolean scoreFolderCreator() {
         File path = new File(SCORE_FOLDER);
@@ -100,9 +107,16 @@ public class ScoreDBBase {
     }
 
     /*
-     * 根据传入的路径创建csv文件
-     * 支持scores.csv、temp_scores.csv和last_scores.csv
+     * 根据传入的路径创建txt文件
+     * 支持scores.txt、temp_scores.txt 和 last_scores.txt
      * 先检查路径是否存在，如果不存在创建，再创建文件
+     *
+     * creating the txt file according the argument path
+     * check whether the path to the score txt has been exist
+     * if not, create it, then create the scores.txt file
+     *
+     * @param relevantPath: the path of the txt file
+     * @return boolean: whether the creating csv operation has been successful.
      */
     private boolean CSVCreator(String relevantPath) {
         if (!scoreFolderCreator()) {
@@ -126,7 +140,9 @@ public class ScoreDBBase {
     }
 
     /*
-     * 创建scores.csv文件
+     * 创建scores.txt文件
+     * check whether the scores.csv has been existing.
+     * @return boolean: whether the creating csv operation has been successful.
      */
     protected boolean scoresCSVCreator() {
         if (!isScoresCSVExists()) return CSVCreator(SCORE_FILEPATH);
@@ -134,7 +150,9 @@ public class ScoreDBBase {
     }
 
     /*
-     * 创建temp_scores.csv文件
+     * 创建 temp_scores.txt 文件
+     * creating the temp_scores.csv file
+     * @return boolean: whether the creating csv operation has been successful.
      */
     protected boolean tempScoresCSVCreator() {
         if (!isTempScoresCSVExists()) return CSVCreator(TEMP_SCORE_FILEPATH);
@@ -142,7 +160,9 @@ public class ScoreDBBase {
     }
 
     /*
-     * 创建last_scores.csv文件
+     * 创建last_scores.txt文件
+     * creating the last_scores.txt file
+     * @return boolean: whether the creating csv operation has been successful.
      */
     protected boolean lastScoresCSVCreator() {
         if (!isLastScoresCSVExists()) return CSVCreator(LAST_SCORE_FILEPATH);
@@ -151,6 +171,7 @@ public class ScoreDBBase {
 
     /*
      * 测试方法
+     * testing methods above
      */
     public static void main(String[] args) {
         ScoreDBBase base;

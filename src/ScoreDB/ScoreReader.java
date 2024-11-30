@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+ * ScoreReader class
+ * This class provides methods for reading and managing score data from the scores.csv file
+ */
 public class ScoreReader extends ScoreDBBase {
     protected List<String> currentLines = new ArrayList<>();
     private final int MAX_COL_NUM = 5; // id, nickname, topic, difficulty, score
@@ -14,7 +18,11 @@ public class ScoreReader extends ScoreDBBase {
         readAll();
     }
 
-    // put all the data to the currentLines
+    /*
+     * 读取所有数据
+     * Reads all data from the scores.csv file into the currentLines list
+     * @return Returns true if the read is successful, otherwise returns false
+     */
     protected boolean readAll() {
         currentLines = new ArrayList<>();
         if (isScoresCSVExists()) {
@@ -35,7 +43,15 @@ public class ScoreReader extends ScoreDBBase {
         return true;
     }
 
-    // get personal scores, check according to nickname, topic, difficulty, ascending and limit lines
+    /**
+     * 获取个人成绩信息
+     * Gets an individual's score information based on conditions such as nickname, topic, and difficulty
+     * @param nickname The nickname of the player
+     * @param topicFilter The topic filter, null for no filter
+     * @param difficultyFilter The difficulty filter, null for no filter
+     * @param ascending Whether the scores are sorted in ascending order
+     * @return Returns a list of score information that meets the conditions
+     */
     public List<String> getPersonalScores(
             String nickname,
             String topicFilter,
@@ -71,6 +87,14 @@ public class ScoreReader extends ScoreDBBase {
         return results;
     }
 
+    /**
+     * 获取公共成绩信息
+     * Gets public score information based on conditions such as topic and difficulty
+     * @param topic The topic filter, null for no filter
+     * @param difficulty The difficulty filter, null for no filter
+     * @param ascending Whether the scores are sorted in ascending order
+     * @return Returns a list of score information that meets the conditions
+     */
     // sorting and return according to the topic and difficulty, you can specify the limit, ascending rule
     public List<String> getPublicScores(
             String topic,
@@ -105,6 +129,11 @@ public class ScoreReader extends ScoreDBBase {
         return results;
     }
 
+/**
+ * 获取所有成绩信息
+ * Gets all score information
+ * @return Returns a list of all score information
+ */
 public static void main(String[] args) {
     try {
         // 初始化 ScoreReader
