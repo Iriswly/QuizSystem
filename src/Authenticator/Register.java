@@ -163,7 +163,7 @@ public class Register {
             }
 
             // Check if 'x' is entered
-            if (nickname.equalsIgnoreCase("x")) {
+            if (password.equalsIgnoreCase("x")) {
                 window.printContent("Exiting the program...");
                 System.exit(0); // Exit the program
             }
