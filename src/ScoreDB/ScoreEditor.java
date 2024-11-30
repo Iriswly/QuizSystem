@@ -32,9 +32,9 @@ public class ScoreEditor extends ScoreReader {
         return true;
     }
 
-    // 插入新行
+    // Insert a new row
     public boolean insertRow(String nickname, String topic, int difficulty, int score) {
-        // 参数合法性检测
+        // Check the validity of the parameters
         readAll();
         if (!isValidInput(nickname) || !isValidInput(topic)) {
             logger.log("Invalid input: nickname or topic contains illegal characters.");
@@ -69,7 +69,7 @@ public class ScoreEditor extends ScoreReader {
     // when someone update his / her nickname, you'd better use this method to update the nickname in the database
     public boolean updateNickname(String oldNickname, String newNickname) {
         readAll();
-        // 参数合法性检测
+        // Check the validity of the parameters
         if (!isValidInput(oldNickname) || !isValidInput(newNickname)) {
             logger.log("Invalid input: nickname contains illegal characters.");
             return false;
@@ -106,7 +106,7 @@ public class ScoreEditor extends ScoreReader {
 
     public boolean deleteByNickname(String nickname) {
         readAll();
-        // 参数合法性检测
+        // Check the validity of the parameters
         if (!isValidInput(nickname)) {
             logger.log("Invalid input: nickname contains illegal characters.");
             return false;

@@ -30,7 +30,7 @@ public class UserInfo extends UserBase {
             }
             return isLogin();
         } else {
-            // TODO: UI / MENU interface needed here
+
             return false;
         }
     }

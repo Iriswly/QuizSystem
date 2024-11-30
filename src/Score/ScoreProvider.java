@@ -11,22 +11,22 @@ public class ScoreProvider {
     private int currentCount = 0;
 
     public ScoreProvider() {
-        userScores = new String[10][10]; // 假设最多有10个用户
+        userScores = new String[10][10]; // Assume a maximum of 10 users
     }
 
     public String[][] getAllUserScores() {
         try (BufferedReader reader = new BufferedReader(new FileReader(CSV_FILE_PATH))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // 检查是否需要扩展数组
+                // Check if the array needs to be expanded
                 if (currentCount >= userScores.length) {
-                    // 扩展数组容量
-                    String[][] newScores = new String[userScores.length + 10][10]; // 每次扩展10行
+                    // Expand array capacity
+                    String[][] newScores = new String[userScores.length + 10][10]; // Expand by 10 rows each time
                     System.arraycopy(userScores, 0, newScores, 0, userScores.length);
-                    userScores = newScores; // 更新引用
+                    userScores = newScores; // Update reference
                 }
 
-                // 将当前行分割并存入数组
+                // Split the current line and store it in the array
                 userScores[currentCount++] = line.split(",");
             }
         } catch (IOException e) {
